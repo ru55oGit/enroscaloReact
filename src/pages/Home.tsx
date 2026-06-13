@@ -116,8 +116,8 @@ export default function WelcomeScreen() {
           {greeting}
         </Typography>
 
-        <Typography sx={{ color: "#fff", fontSize: 44, fontWeight: 700, lineHeight: 1 }}>
-          A que jugamos hoy?
+        <Typography sx={{ color: "#fff", fontSize: 26, fontWeight: 700, lineHeight: 1 }}>
+          estas para pensar?
         </Typography>
 
         <Box
