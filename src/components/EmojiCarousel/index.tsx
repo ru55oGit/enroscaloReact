@@ -1,110 +1,87 @@
 import React from "react";
 import Box from "@mui/material/Box";
-// TODO: Si quieres usar Swiper instala: npm install swiper
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Pagination } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/pagination";
+import { LetterStatus } from "../../utils/weeklyRoscoState";
 
-// Slides de ejemplo - TODO: personaliza con tu contenido
-// Para proyectos con múltiples categorías como descifraloReact, agrega más slides
-// Para proyectos simples, deja solo 1 slide
-const CAROUSEL_SLIDES = [
-  {
-    id: 1,
-    content: (
-      <Box
-        sx={{
-          display: "grid",
-          gridTemplateColumns: "repeat(5, 1fr)",
-          gap: 1.5,
-          width: "250px",
-          padding: 2,
-          backgroundColor: "#fff",
-          borderRadius: 3,
-          border: "2px solid rgba(255, 255, 255, 0.3)",
-        }}
-      >
-        {Array.from({ length: 35 }, (_, i) => (
-          <Box key={i} sx={{ fontSize: "24px", textAlign: "center" }}>
-            {i === 18 ? "😍" : "😀"}
-          </Box>
-        ))}
-      </Box>
-    ),
-  },
-  // Para agregar más slides (como en descifraloReact):
-  // {
-  //   id: 2,
-  //   content: <Box>Tu segundo slide aquí</Box>,
-  // },
-];
+const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
-const EmojiCarousel: React.FC = () => {
-  // Versión simple con 1 solo item (sin carrusel animado)
-  // Para activar el carrusel con Swiper, usa el código comentado de abajo
-  if (CAROUSEL_SLIDES.length === 1) {
-    return (
-      <Box sx={{ mb: 2, display: "flex", justifyContent: "center" }}>
-        {CAROUSEL_SLIDES[0].content}
-      </Box>
-    );
+interface EmojiCarouselProps {
+  statuses?: LetterStatus[];
+  activeIndex?: number;
+}
+
+const getLetterColor = (
+  status: LetterStatus | undefined,
+  isActive: boolean,
+): string => {
+  if (isActive) {
+    return "#f1c40f";
   }
 
-  // Múltiples slides - versión básica sin librería
-  // Para usar Swiper, reemplaza por la implementación comentada al final
+  switch (status) {
+    case "correct":
+      return "#2ecc71";
+    case "wrong":
+      return "#e74c3c";
+    case "passed":
+      return "#f39c12";
+    default:
+      return "#1565c0";
+  }
+};
+
+const EmojiCarousel: React.FC<EmojiCarouselProps> = ({
+  statuses,
+  activeIndex,
+}) => {
+  const boardSize = 250;
+  const dotSize = 24;
+  const radius = boardSize / 2 - dotSize / 2 - 8;
+
   return (
     <Box
       sx={{
         mb: 2,
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: 1,
+        width: boardSize,
+        height: boardSize,
+        borderRadius: "50%",
+        backgroundColor: "#fff",
+        position: "relative",
+        border: "3px solid rgba(21, 101, 192, 0.24)",
+        boxShadow: "inset 0 0 0 8px rgba(21, 101, 192, 0.08)",
       }}
     >
-      {CAROUSEL_SLIDES.map((slide) => (
-        <Box key={slide.id} sx={{ display: "flex", justifyContent: "center" }}>
-          {slide.content}
-        </Box>
-      ))}
+      {LETTERS.map((letter, index) => {
+        const angle = (-90 + (index * 360) / LETTERS.length) * (Math.PI / 180);
+        const x = boardSize / 2 + radius * Math.cos(angle) - dotSize / 2;
+        const y = boardSize / 2 + radius * Math.sin(angle) - dotSize / 2;
+
+        return (
+          <Box
+            key={letter}
+            sx={{
+              position: "absolute",
+              left: x,
+              top: y,
+              width: dotSize,
+              height: dotSize,
+              borderRadius: "50%",
+              backgroundColor: getLetterColor(statuses?.[index], activeIndex === index),
+              color: "#fff",
+              border: "1.5px solid #fff",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontWeight: 700,
+              fontSize: 13,
+              boxShadow: "0 1px 4px rgba(0,0,0,0.2)",
+            }}
+          >
+            {letter}
+          </Box>
+        );
+      })}
     </Box>
   );
 };
 
 export default EmojiCarousel;
-
-/* 
-// IMPLEMENTACIÓN CON SWIPER (descomentar para activar)
-// Instalar: npm install swiper
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-
-const EmojiCarouselSwiper: React.FC = () => {
-  return (
-    <Box sx={{ mb: 2, width: "100%", maxWidth: 300 }}>
-      <Swiper
-        modules={[Autoplay, Pagination]}
-        spaceBetween={20}
-        slidesPerView={1}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        pagination={{ clickable: true }}
-        loop={CAROUSEL_SLIDES.length > 1}
-        style={{ paddingBottom: "30px" }}
-      >
-        {CAROUSEL_SLIDES.map((slide) => (
-          <SwiperSlide key={slide.id}>
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
-              {slide.content}
-            </Box>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </Box>
-  );
-};
-*/

@@ -1,10 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from "@mui/material/DialogContent";
-import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -24,7 +20,6 @@ interface LayoutProps {
   showFooter?: boolean;
   hits?: number;
   plays?: number;
-  isGridScreen?: boolean;
 }
 
 // TODO: Personalizar con los emojis/decoraciones de tu juego
@@ -69,22 +64,11 @@ const RAIN_EMOJIS = [
   "🌻",
 ];
 
-const GAME_ROUTES = [
-  "/game",
-  "/game-medium",
-  "/game-hard",
-  "/game-flag",
-  "/games-movies",
-  "/game-whatis",
-  "/game-capitals",
-];
-
 const Layout: React.FC<LayoutProps> = ({
   children,
   showFooter = true,
   hits,
   plays,
-  isGridScreen = false,
 }) => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -92,25 +76,10 @@ const Layout: React.FC<LayoutProps> = ({
   const showHeader = location.pathname !== "/";
   const canvasRef = useRef<HTMLDivElement>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const [showExitDialog, setShowExitDialog] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
 
-  const isGameRoute = GAME_ROUTES.includes(location.pathname);
-
-  // Funciones para manejar el dialog de salida
-  const handleExitClick = () => {
-    setShowExitDialog(true);
-  };
-
-  const handleConfirmExit = () => {
-    setShowExitDialog(false);
-    navigate("/levels");
-  };
-
-  const handleCancelExit = () => {
-    setShowExitDialog(false);
-  };
+  const isGameRoute = location.pathname === "/game";
 
   // Funciones para manejar el menú hamburguesa
   const handleMenuToggle = () => {
@@ -250,12 +219,12 @@ const Layout: React.FC<LayoutProps> = ({
             borderBottom: "2px solid #e74c3c",
             background: "#fff",
             boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
-            width: "calc(100% - 32px)",
+            width: "100%",
             position: "relative",
             zIndex: 10,
           }}
         >
-          {/* Back arrow en Game screens, cruz en grid screens, menú en otras pantallas */}
+          {/* Back arrow en game, menú en otras pantallas */}
           {isGameRoute ? (
             <Box
               sx={{
@@ -278,35 +247,6 @@ const Layout: React.FC<LayoutProps> = ({
               >
                 <path
                   d="M26 6L14 19L26 32"
-                  stroke="#e74c3c"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </Box>
-          ) : isGridScreen ? (
-            <Box
-              sx={{
-                position: "absolute",
-                left: 16,
-                top: "50%",
-                transform: "translateY(-50%)",
-                zIndex: 3,
-                cursor: "pointer",
-              }}
-              onClick={handleExitClick}
-              aria-label="Salir"
-            >
-              <svg
-                width="38"
-                height="38"
-                viewBox="0 0 38 38"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11 11L27 27M11 27L27 11"
                   stroke="#e74c3c"
                   strokeWidth="4"
                   strokeLinecap="round"
@@ -357,8 +297,7 @@ const Layout: React.FC<LayoutProps> = ({
             }}
             onClick={() => window.location.replace("/")}
           >
-            {/* TODO: Cambiar por el nombre de tu juego */}
-            Game
+            Enroscalo
           </Box>
           {/* Counter at right */}
           {typeof hits === "number" && typeof plays === "number" && (
@@ -411,7 +350,7 @@ const Layout: React.FC<LayoutProps> = ({
           }}
         >
           {/* TODO: Cambiar por el nombre de tu juego */}©{" "}
-          {new Date().getFullYear()} Games Boilerplate
+          {new Date().getFullYear()} Enroscalo
         </Box>
       )}
 
@@ -439,7 +378,7 @@ const Layout: React.FC<LayoutProps> = ({
               px: 2,
             }}
           >
-            Game
+            Enroscalo
           </Box>
           <List>
             <ListItem disablePadding>
@@ -467,7 +406,7 @@ const Layout: React.FC<LayoutProps> = ({
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton
-                onClick={() => handleMenuNavigation("/levels")}
+                onClick={() => handleMenuNavigation("/game")}
                 sx={{
                   px: 3,
                   py: 2,
@@ -559,61 +498,6 @@ const Layout: React.FC<LayoutProps> = ({
           </List>
         </Box>
       </Drawer>
-
-      {/* Dialog de confirmación para salir */}
-      <Dialog
-        open={showExitDialog}
-        onClose={handleCancelExit}
-        aria-labelledby="exit-dialog-title"
-        PaperProps={{
-          sx: {
-            borderRadius: 3,
-            minWidth: 300,
-          },
-        }}
-      >
-        <DialogTitle
-          id="exit-dialog-title"
-          sx={{
-            textAlign: "center",
-            fontWeight: 700,
-            color: "#e74c3c",
-          }}
-        >
-          {t.confirmExit}
-        </DialogTitle>
-        <DialogContent sx={{ textAlign: "center", pb: 2 }}>
-          {t.loseProgress}
-        </DialogContent>
-        <DialogActions sx={{ justifyContent: "space-around", pb: 2 }}>
-          <Button
-            onClick={handleCancelExit}
-            variant="outlined"
-            sx={{
-              color: "#666",
-              borderColor: "#666",
-              "&:hover": {
-                borderColor: "#999",
-                backgroundColor: "#f5f5f5",
-              },
-            }}
-          >
-            {t.cancel}
-          </Button>
-          <Button
-            onClick={handleConfirmExit}
-            variant="contained"
-            sx={{
-              backgroundColor: "#e74c3c",
-              "&:hover": {
-                backgroundColor: "#c0392b",
-              },
-            }}
-          >
-            {t.confirm}
-          </Button>
-        </DialogActions>
-      </Dialog>
     </Box>
   );
 };

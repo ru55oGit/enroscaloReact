@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import WelcomeScreen from "./pages/Home";
-import Levels from "./pages/levels";
 import Game from "./pages/game";
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<WelcomeScreen />} />
-        <Route path="/levels" element={<Levels />} />
         <Route path="/game" element={<Game />} />
       </Routes>
     </Router>

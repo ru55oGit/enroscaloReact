@@ -1,3 +1,4 @@
+import { useMemo, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import Button from "@mui/material/Button";
@@ -6,159 +7,271 @@ import Typography from "@mui/material/Typography";
 import LanguageSelector from "../components/LanguageSelector";
 import { useLanguage } from "../i18n/LanguageContext";
 import EmojiCarousel from "../components/EmojiCarousel";
+import { getRoscoByDay } from "../data/weeklyRoscos";
+import {
+  DayKey,
+  WEEK_DAYS,
+  getCurrentDayKey,
+  getDayMeta,
+  getDayState,
+  getRoscoStatusLabel,
+  getWeeklyState,
+  isDayAvailable,
+} from "../utils/weeklyRoscoState";
 
 export default function WelcomeScreen() {
   const navigate = useNavigate();
   const { t } = useLanguage();
+  const [refreshKey, setRefreshKey] = useState(0);
+
+  useEffect(() => {
+    const refresh = () => setRefreshKey((prev) => prev + 1);
+    window.addEventListener("focus", refresh);
+    document.addEventListener("visibilitychange", refresh);
+
+    return () => {
+      window.removeEventListener("focus", refresh);
+      document.removeEventListener("visibilitychange", refresh);
+    };
+  }, []);
+
+  const weeklyState = useMemo(() => getWeeklyState(26), [refreshKey]);
+  const currentDayKey = getCurrentDayKey();
+  const [selectedDayKey, setSelectedDayKey] = useState<DayKey>(currentDayKey);
+
+  const selectedDayMeta = getDayMeta(selectedDayKey);
+  const selectedDayRosco = getRoscoByDay(selectedDayKey);
+  const selectedDayState =
+    weeklyState.days[selectedDayKey] ?? getDayState(selectedDayKey, selectedDayRosco.length);
+
+  useEffect(() => {
+    if (!isDayAvailable(selectedDayKey)) {
+      setSelectedDayKey(currentDayKey);
+    }
+  }, [currentDayKey, selectedDayKey]);
+
+  const nowHour = new Date().getHours();
+  const greeting =
+    nowHour < 12
+      ? "Buenos dias"
+      : nowHour < 20
+        ? "Buenas tardes"
+        : "Buenas noches";
+
+  const getButtonLabel = (status: string): string => {
+    if (status === "in_progress") {
+      return "CONTINUAR";
+    }
+    if (status === "completed") {
+      return "VER RESULTADO";
+    }
+    return "JUGAR";
+  };
 
   return (
     <Layout showFooter={false}>
-      {/* Language Selector */}
-      <LanguageSelector />
-
-      {/* TODO: Cambiar por el nombre de tu juego */}
-      <Typography
-        variant="h2"
-        sx={{
-          color: "#fff",
-          fontWeight: 700,
-          mb: 4,
-          letterSpacing: "2px",
-          fontFamily: "Lobster, cursive",
-        }}
-      >
-        {t.appTitle}
-      </Typography>
-
-      {/* Carrusel de preview del juego */}
-      {/* Para descifralo o proyectos con múltiples items usa varios slides */}
-      {/* Para proyectos simples usa un solo item fijo */}
-      <EmojiCarousel />
-
-      {/* Sección ¿Cómo jugar? + Botón */}
       <Box
         sx={{
-          mt: "auto",
+          width: "100%",
+          px: { xs: 1.5, md: 2 },
+          pb: 2,
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
           gap: 2,
-          pb: 2,
-          width: "100%",
         }}
       >
-        <Box sx={{ textAlign: "center" }}>
-          <Typography
-            variant="h6"
+        <LanguageSelector />
+
+        <Typography
+          variant="h2"
+          sx={{
+            color: "#fff",
+            fontWeight: 700,
+            letterSpacing: "1px",
+            fontFamily: "Lobster, cursive",
+            textAlign: "center",
+            width: "100%",
+          }}
+        >
+          {t.appTitle}
+        </Typography>
+
+        <Typography
+          variant="h6"
+          sx={{
+            color: "rgba(255, 255, 255, 0.64)",
+            fontStyle: "italic",
+            letterSpacing: "2px",
+            width: "100%",
+            textAlign: "center",
+            mt: 0.5,
+            mb: 2,
+            fontSize: { xs: 18, md: 22 },
+          }}
+        >
+          {t.tagline}
+        </Typography>
+
+        <Typography sx={{ color: "#ffe6e6", fontSize: 18, fontWeight: 600 }}>
+          {greeting}
+        </Typography>
+
+        <Typography sx={{ color: "#fff", fontSize: 44, fontWeight: 700, lineHeight: 1 }}>
+          A que jugamos hoy?
+        </Typography>
+
+        <Box
+          sx={{
+            width: "100%",
+            borderRadius: 6,
+            backgroundColor: "#eb6f62",
+            p: 2,
+            boxShadow: "0 12px 24px rgba(0,0,0,0.18)",
+          }}
+        >
+          <Box
             sx={{
-              color: "#fff",
-              fontWeight: 700,
+              width: "100%",
+              borderRadius: 4,
+              minHeight: 260,
+              backgroundColor: "#f3f3f3",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
               mb: 2,
-              letterSpacing: "2px",
             }}
           >
-            {t.howToPlay}
-          </Typography>
-
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-            {/* Paso 1 */}
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: 1,
-                backgroundColor: "rgba(255, 255, 255, 0.4)",
-                border: "1px solid rgba(255, 255, 255, 0.6)",
-                height: 35,
-                width: 200,
-                justifyContent: "center",
-              }}
-            >
-              <Typography sx={{ fontSize: "32px" }}>👀</Typography>
-              <Typography
-                sx={{
-                  color: "#fff",
-                  fontSize: 12,
-                  fontWeight: 600,
-                }}
-              >
-                {t.lookAtGrid}
-              </Typography>
+            <Box sx={{ transform: "scale(0.95)" }}>
+              <EmojiCarousel
+                statuses={selectedDayState.statuses}
+                activeIndex={
+                  selectedDayState.status === "in_progress"
+                    ? selectedDayState.currentIndex
+                    : undefined
+                }
+              />
             </Box>
+          </Box>
 
-            {/* Paso 2 */}
-            <Box
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: 1,
+              flexWrap: "wrap",
+            }}
+          >
+            <Button
+              variant="contained"
+              onClick={() => navigate(`/game?day=${selectedDayKey}`)}
               sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: 1,
-                backgroundColor: "rgba(255, 255, 255, 0.4)",
-                border: "1px solid rgba(255, 255, 255, 0.6)",
-                height: 35,
-                width: 200,
-                justifyContent: "center",
+                backgroundColor: "#f3f3f3",
+                color: "#c63b2e",
+                fontWeight: 800,
+                borderRadius: 999,
+                minWidth: 180,
+                px: 4,
+                py: 1.4,
+                fontSize: 26,
+                "&:hover": {
+                  backgroundColor: "#fff",
+                },
               }}
             >
-              <Typography sx={{ fontSize: "32px" }}>🤔</Typography>
-              <Typography
-                sx={{
-                  color: "#fff",
-                  fontSize: 12,
-                  fontWeight: 600,
-                }}
-              >
-                {t.findDifferent}
-              </Typography>
-            </Box>
+              {getButtonLabel(selectedDayState.status)}
+            </Button>
 
-            {/* Paso 3 */}
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: 1,
-                backgroundColor: "rgba(255, 255, 255, 0.4)",
-                border: "1px solid rgba(255, 255, 255, 0.6)",
-                height: 35,
-                width: 200,
-                justifyContent: "center",
-              }}
-            >
-              <Typography sx={{ fontSize: "32px" }}>👆</Typography>
-              <Typography
-                sx={{
-                  color: "#fff",
-                  fontSize: 12,
-                  fontWeight: 600,
-                }}
-              >
-                {t.clickQuickly}
+            <Box sx={{ textAlign: "right", color: "#fff", fontWeight: 700 }}>
+              <Typography sx={{ fontSize: 18 }}>ROSCO DEL {selectedDayMeta.label.toUpperCase()}</Typography>
+              <Typography sx={{ fontSize: 16 }}>
+                {getRoscoStatusLabel(selectedDayState, selectedDayRosco.length)}
               </Typography>
             </Box>
           </Box>
         </Box>
 
-        <Button
-          variant="outlined"
+        <Box
           sx={{
-            width: { md: "75%", xs: "calc(100% - 16px)" },
-            py: 1.5,
-            px: 4,
-            borderRadius: 3,
-            border: "1px solid #fff",
-            background: "none",
-            color: "#fff",
-            fontSize: 20,
-            fontWeight: 600,
-            "&:hover": {
-              background: "#e74c3c22",
-              border: "1px solid #fff",
-            },
+            borderRadius: 4,
+            backgroundColor: "#ededed",
+            p: 2,
+            color: "#222",
           }}
-          onClick={() => navigate("/levels")}
         >
-          {t.playButton}
-        </Button>
+          <Typography sx={{ fontSize: 42, fontWeight: 800, mb: 2 }}>
+            CATEGORIAS
+          </Typography>
+
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: { xs: "repeat(2, 1fr)", md: "repeat(3, 1fr)" },
+              gap: 1.5,
+            }}
+          >
+            {WEEK_DAYS.map((day) => {
+              const available = isDayAvailable(day.key);
+              const rosco = getRoscoByDay(day.key);
+              const dayState =
+                weeklyState.days[day.key] ?? getDayState(day.key, rosco.length);
+
+              return (
+                <Box
+                  key={day.key}
+                  onClick={() => {
+                    if (available) {
+                      setSelectedDayKey(day.key);
+                    }
+                  }}
+                  sx={{
+                    borderRadius: 3,
+                    backgroundColor: "#fff",
+                    border:
+                      selectedDayKey === day.key
+                        ? "2px solid #d84331"
+                        : "1px solid #d7d7d7",
+                    p: 1.5,
+                    opacity: available ? 1 : 0.5,
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 1,
+                    cursor: available ? "pointer" : "not-allowed",
+                  }}
+                >
+                  <Typography sx={{ fontSize: 22, fontWeight: 800, color: "#262a33" }}>
+                    {day.label}
+                  </Typography>
+
+                  <Typography sx={{ fontSize: 14, minHeight: 40, color: "#7a7a7a", fontWeight: 700 }}>
+                    {available
+                      ? getRoscoStatusLabel(dayState, rosco.length)
+                      : `Se habilita ${day.label}`}
+                  </Typography>
+
+                  <Button
+                    variant="contained"
+                    fullWidth
+                    disabled={!available}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      navigate(`/game?day=${day.key}`);
+                    }}
+                    sx={{
+                      mt: "auto",
+                      backgroundColor: available ? "#d84331" : "#bcbcbc",
+                      borderRadius: 999,
+                      fontWeight: 700,
+                    }}
+                  >
+                    {available ? getButtonLabel(dayState.status) : "BLOQUEADO"}
+                  </Button>
+                </Box>
+              );
+            })}
+          </Box>
+        </Box>
       </Box>
     </Layout>
   );
