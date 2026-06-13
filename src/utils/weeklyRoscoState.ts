@@ -22,11 +22,10 @@ export interface DayRoscoState {
 }
 
 interface WeeklyRoscoState {
-  weekId: string;
   days: Partial<Record<DayKey, DayRoscoState>>;
 }
 
-const STORAGE_KEY = "enroscalo_week_state_v1";
+const STORAGE_KEY_PREFIX = "enroscalo_week_state_v2";
 
 export const WEEK_DAYS: DayMeta[] = [
   { key: "sun", label: "Domingo", shortLabel: "Dom" },
@@ -37,21 +36,6 @@ export const WEEK_DAYS: DayMeta[] = [
   { key: "fri", label: "Viernes", shortLabel: "Vie" },
   { key: "sat", label: "Sabado", shortLabel: "Sab" },
 ];
-
-const toLocalIsoDate = (date: Date): string => {
-  const yyyy = date.getFullYear();
-  const mm = String(date.getMonth() + 1).padStart(2, "0");
-  const dd = String(date.getDate()).padStart(2, "0");
-  return `${yyyy}-${mm}-${dd}`;
-};
-
-const getCurrentWeekId = (referenceDate = new Date()): string => {
-  const localDate = new Date(referenceDate);
-  localDate.setHours(0, 0, 0, 0);
-  const sunday = new Date(localDate);
-  sunday.setDate(localDate.getDate() - localDate.getDay());
-  return toLocalIsoDate(sunday);
-};
 
 export const getCurrentDayKey = (referenceDate = new Date()): DayKey => {
   return WEEK_DAYS[referenceDate.getDay()].key;
@@ -80,9 +64,12 @@ const buildEmptyDayState = (wordCount: number): DayRoscoState => ({
 });
 
 const buildEmptyWeekState = (): WeeklyRoscoState => ({
-  weekId: getCurrentWeekId(),
   days: {},
 });
+
+const getStorageKey = (scopeKey: string): string => {
+  return `${STORAGE_KEY_PREFIX}:${scopeKey}`;
+};
 
 export const deriveStatus = (
   statuses: LetterStatus[],
@@ -103,14 +90,15 @@ export const deriveStatus = (
   return "not_started";
 };
 
-export const getWeeklyState = (wordCount: number): WeeklyRoscoState => {
-  const currentWeekId = getCurrentWeekId();
-
+export const getWeeklyState = (
+  wordCount: number,
+  scopeKey = "default",
+): WeeklyRoscoState => {
   if (typeof window === "undefined") {
     return buildEmptyWeekState();
   }
 
-  const raw = window.localStorage.getItem(STORAGE_KEY);
+  const raw = window.localStorage.getItem(getStorageKey(scopeKey));
   if (!raw) {
     return buildEmptyWeekState();
   }
@@ -118,7 +106,7 @@ export const getWeeklyState = (wordCount: number): WeeklyRoscoState => {
   try {
     const parsed = JSON.parse(raw) as WeeklyRoscoState;
 
-    if (!parsed || typeof parsed !== "object" || parsed.weekId !== currentWeekId) {
+    if (!parsed || typeof parsed !== "object") {
       return buildEmptyWeekState();
     }
 
@@ -144,29 +132,31 @@ export const getWeeklyState = (wordCount: number): WeeklyRoscoState => {
       };
     }
 
-    return {
-      weekId: currentWeekId,
-      days: safeDays,
-    };
+    return { days: safeDays };
   } catch {
     return buildEmptyWeekState();
   }
 };
 
-export const getDayState = (dayKey: DayKey, wordCount: number): DayRoscoState => {
-  const weekState = getWeeklyState(wordCount);
+export const getDayState = (
+  dayKey: DayKey,
+  wordCount: number,
+  scopeKey = "default",
+): DayRoscoState => {
+  const weekState = getWeeklyState(wordCount, scopeKey);
   return weekState.days[dayKey] ?? buildEmptyDayState(wordCount);
 };
 
 export const saveDayState = (
   dayKey: DayKey,
   value: Omit<DayRoscoState, "status" | "updatedAt">,
+  scopeKey = "default",
 ): void => {
   if (typeof window === "undefined") {
     return;
   }
 
-  const weekState = getWeeklyState(value.statuses.length);
+  const weekState = getWeeklyState(value.statuses.length, scopeKey);
   const nextDayState: DayRoscoState = {
     ...value,
     status: deriveStatus(value.statuses, value.plays),
@@ -181,7 +171,7 @@ export const saveDayState = (
     },
   };
 
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(nextState));
+  window.localStorage.setItem(getStorageKey(scopeKey), JSON.stringify(nextState));
 };
 
 export const getRoscoStatusLabel = (

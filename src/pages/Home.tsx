@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import LanguageSelector from "../components/LanguageSelector";
 import { useLanguage } from "../i18n/LanguageContext";
 import EmojiCarousel from "../components/EmojiCarousel";
-import { getRoscoByDay } from "../data/weeklyRoscos";
+import { getActiveRoscoContext } from "../data/weeklyRoscos";
 import {
   DayKey,
   WEEK_DAYS,
@@ -35,14 +35,19 @@ export default function WelcomeScreen() {
     };
   }, []);
 
-  const weeklyState = useMemo(() => getWeeklyState(26), [refreshKey]);
+  const activeRoscoContext = useMemo(() => getActiveRoscoContext(), [refreshKey]);
+  const weeklyState = useMemo(
+    () => getWeeklyState(26, activeRoscoContext.scopeKey),
+    [activeRoscoContext.scopeKey],
+  );
   const currentDayKey = getCurrentDayKey();
   const [selectedDayKey, setSelectedDayKey] = useState<DayKey>(currentDayKey);
 
   const selectedDayMeta = getDayMeta(selectedDayKey);
-  const selectedDayRosco = getRoscoByDay(selectedDayKey);
+  const selectedDayRosco = activeRoscoContext.roscos[selectedDayKey];
   const selectedDayState =
-    weeklyState.days[selectedDayKey] ?? getDayState(selectedDayKey, selectedDayRosco.length);
+    weeklyState.days[selectedDayKey] ??
+    getDayState(selectedDayKey, selectedDayRosco.length, activeRoscoContext.scopeKey);
 
   useEffect(() => {
     if (!isDayAvailable(selectedDayKey)) {
@@ -212,9 +217,10 @@ export default function WelcomeScreen() {
           >
             {WEEK_DAYS.map((day) => {
               const available = isDayAvailable(day.key);
-              const rosco = getRoscoByDay(day.key);
+              const rosco = activeRoscoContext.roscos[day.key];
               const dayState =
-                weeklyState.days[day.key] ?? getDayState(day.key, rosco.length);
+                weeklyState.days[day.key] ??
+                getDayState(day.key, rosco.length, activeRoscoContext.scopeKey);
 
               return (
                 <Box

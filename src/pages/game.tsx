@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { useLanguage } from "../i18n/LanguageContext";
 import { useIsMobile } from "../hooks/useIsMobile";
-import { getRoscoByDay } from "../data/weeklyRoscos";
+import { getActiveRoscoContext } from "../data/weeklyRoscos";
 import {
   DayKey,
   LetterStatus,
@@ -51,11 +51,12 @@ const Game: React.FC = () => {
   const todayKey = getCurrentDayKey();
   const rawDay = searchParams.get("day");
   const dayKey: DayKey = isDayKey(rawDay) ? rawDay : todayKey;
-  const roscoWords = getRoscoByDay(dayKey);
+  const activeRoscoContext = useMemo(() => getActiveRoscoContext(), []);
+  const roscoWords = activeRoscoContext.roscos[dayKey];
   const dayMeta = getDayMeta(dayKey);
   const initialDayState = useMemo(
-    () => getDayState(dayKey, roscoWords.length),
-    [dayKey, roscoWords.length],
+    () => getDayState(dayKey, roscoWords.length, activeRoscoContext.scopeKey),
+    [activeRoscoContext.scopeKey, dayKey, roscoWords.length],
   );
 
   const [hits, setHits] = useState(initialDayState.hits);
@@ -99,8 +100,8 @@ const Game: React.FC = () => {
       currentIndex,
       statuses,
       feedback,
-    });
-  }, [currentIndex, dayKey, feedback, hits, plays, roscoWords.length, statuses]);
+    }, activeRoscoContext.scopeKey);
+  }, [activeRoscoContext.scopeKey, currentIndex, dayKey, feedback, hits, plays, roscoWords.length, statuses]);
 
   useEffect(() => {
     if (dayStatus === "completed") {
