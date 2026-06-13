@@ -18,8 +18,7 @@ import { SupportedLanguage } from "../../i18n/translations";
 interface LayoutProps {
   children: React.ReactNode;
   showFooter?: boolean;
-  hits?: number;
-  plays?: number;
+  headerRightText?: string;
 }
 
 // TODO: Personalizar con los emojis/decoraciones de tu juego
@@ -67,8 +66,7 @@ const RAIN_EMOJIS = [
 const Layout: React.FC<LayoutProps> = ({
   children,
   showFooter = true,
-  hits,
-  plays,
+  headerRightText,
 }) => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -299,8 +297,7 @@ const Layout: React.FC<LayoutProps> = ({
           >
             Enroscalo
           </Box>
-          {/* Counter at right */}
-          {typeof hits === "number" && typeof plays === "number" && (
+          {headerRightText && (
             <Box
               sx={{
                 position: "absolute",
@@ -315,9 +312,9 @@ const Layout: React.FC<LayoutProps> = ({
                 borderRadius: 2,
                 boxShadow: "0 1px 4px rgba(0,0,0,0.07)",
               }}
-              aria-label="Contador de aciertos/jugadas"
+              aria-label="Temporizador"
             >
-              {hits}/{plays}
+              {headerRightText}
             </Box>
           )}
         </Box>

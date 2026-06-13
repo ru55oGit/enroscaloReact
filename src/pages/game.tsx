@@ -5,15 +5,14 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { useLanguage } from "../i18n/LanguageContext";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { getActiveRoscoContext } from "../data/weeklyRoscos";
 import {
   DayKey,
   LetterStatus,
+  PlayState,
   deriveStatus,
   getCurrentDayKey,
-  getDayMeta,
   getDayState,
   isDayAvailable,
   isDayKey,
@@ -42,10 +41,15 @@ const findNextPlayableIndex = (
   return -1;
 };
 
+const formatTime = (totalSeconds: number): string => {
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return `${minutes}:${String(seconds).padStart(2, "0")}`;
+};
+
 const Game: React.FC = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { t } = useLanguage();
   const isMobile = useIsMobile();
 
   const todayKey = getCurrentDayKey();
@@ -53,7 +57,6 @@ const Game: React.FC = () => {
   const dayKey: DayKey = isDayKey(rawDay) ? rawDay : todayKey;
   const activeRoscoContext = useMemo(() => getActiveRoscoContext(), []);
   const roscoWords = activeRoscoContext.roscos[dayKey];
-  const dayMeta = getDayMeta(dayKey);
   const initialDayState = useMemo(
     () => getDayState(dayKey, roscoWords.length, activeRoscoContext.scopeKey),
     [activeRoscoContext.scopeKey, dayKey, roscoWords.length],
@@ -65,6 +68,10 @@ const Game: React.FC = () => {
   const [statuses, setStatuses] = useState<LetterStatus[]>(initialDayState.statuses);
   const [answer, setAnswer] = useState("");
   const [feedback, setFeedback] = useState(initialDayState.feedback);
+  const [remainingSeconds, setRemainingSeconds] = useState(
+    initialDayState.remainingSeconds,
+  );
+  const [playState, setPlayState] = useState<PlayState>(initialDayState.playState);
 
   useEffect(() => {
     if (!isDayAvailable(dayKey)) {
@@ -77,6 +84,8 @@ const Game: React.FC = () => {
     setCurrentIndex(initialDayState.currentIndex);
     setStatuses(initialDayState.statuses);
     setFeedback(initialDayState.feedback);
+    setRemainingSeconds(initialDayState.remainingSeconds);
+    setPlayState(initialDayState.playState);
     setAnswer("");
   }, [dayKey, initialDayState, navigate]);
 
@@ -87,7 +96,34 @@ const Game: React.FC = () => {
 
   const dayStatus = deriveStatus(statuses, plays);
   const isFinished = dayStatus === "completed";
+  const isTimeOver = remainingSeconds <= 0 && !isFinished;
   const currentEntry = isFinished ? null : roscoWords[currentIndex];
+  const isTimerRunning = playState === "running" && !isFinished && !isTimeOver;
+  const showResumeOverlay = !isFinished && !isTimeOver && playState !== "running";
+
+  useEffect(() => {
+    if (!isTimerRunning) {
+      return;
+    }
+
+    const timerId = window.setInterval(() => {
+      setRemainingSeconds((previous) => {
+        if (previous <= 1) {
+          return 0;
+        }
+        return previous - 1;
+      });
+    }, 1000);
+
+    return () => window.clearInterval(timerId);
+  }, [isTimerRunning]);
+
+  useEffect(() => {
+    if (remainingSeconds === 0 && !isFinished) {
+      setFeedback("Tiempo agotado");
+      setPlayState("paused");
+    }
+  }, [isFinished, remainingSeconds]);
 
   useEffect(() => {
     if (statuses.length !== roscoWords.length) {
@@ -100,8 +136,10 @@ const Game: React.FC = () => {
       currentIndex,
       statuses,
       feedback,
+      remainingSeconds,
+      playState,
     }, activeRoscoContext.scopeKey);
-  }, [activeRoscoContext.scopeKey, currentIndex, dayKey, feedback, hits, plays, roscoWords.length, statuses]);
+  }, [activeRoscoContext.scopeKey, currentIndex, dayKey, feedback, hits, playState, plays, remainingSeconds, roscoWords.length, statuses]);
 
   useEffect(() => {
     if (dayStatus === "completed") {
@@ -132,7 +170,7 @@ const Game: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    if (!currentEntry || isFinished) {
+    if (!currentEntry || isFinished || isTimeOver) {
       return;
     }
 
@@ -161,7 +199,7 @@ const Game: React.FC = () => {
   };
 
   const handlePass = () => {
-    if (!currentEntry || isFinished) {
+    if (!currentEntry || isFinished || isTimeOver) {
       return;
     }
 
@@ -176,7 +214,16 @@ const Game: React.FC = () => {
 
     setFeedback("Pasapalabra");
     setPlays((prev) => prev + 1);
+    setPlayState("paused");
     setAnswer("");
+  };
+
+  const handleResume = () => {
+    if (isFinished || isTimeOver) {
+      return;
+    }
+
+    setPlayState("running");
   };
 
   const getLetterColor = (index: number): string => {
@@ -196,33 +243,17 @@ const Game: React.FC = () => {
   };
 
   return (
-    <Layout hits={hits} plays={plays}>
+    <Layout headerRightText={formatTime(remainingSeconds)}>
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           width: "100%",
-          gap: 2.5,
+          gap: 2,
           px: 1,
         }}
       >
-        <Typography
-          variant="h6"
-          sx={{
-            color: "#fff",
-            textAlign: "center",
-            fontWeight: 700,
-            mb: 0.5,
-          }}
-        >
-          {`${t.findDifferentEmoji2} - ${dayMeta.label}`}
-        </Typography>
-
-        <Typography sx={{ color: "#ffe6e6", fontWeight: 700, fontSize: 14 }}>
-          {`Pendientes: ${unresolvedCount}`}
-        </Typography>
-
         <Box
           sx={{
             width: boardSize,
@@ -264,6 +295,114 @@ const Game: React.FC = () => {
               </Box>
             );
           })}
+
+          <Box
+            sx={{
+              position: "absolute",
+              inset: 0,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              px: 5,
+              textAlign: "center",
+            }}
+          >
+            {currentEntry && !isTimeOver && !isFinished && (
+              <Box sx={{ maxWidth: boardSize * 0.52 }}>
+                <Typography
+                  sx={{
+                    color: "#44536b",
+                    fontWeight: 800,
+                    fontSize: isMobile ? 18 : 22,
+                    mb: 1,
+                    opacity: showResumeOverlay ? 0 : 1,
+                    transition: "opacity 220ms ease",
+                  }}
+                >
+                  {currentEntry.startOrContain === "start"
+                    ? `Comienza con ${currentEntry.letter}.`
+                    : `Contiene ${currentEntry.letter}.`}
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "#5f6f86",
+                    fontWeight: 600,
+                    fontSize: isMobile ? 14 : 16,
+                    lineHeight: 1.35,
+                    opacity: showResumeOverlay ? 0 : 1,
+                    transition: "opacity 220ms ease",
+                  }}
+                >
+                  {currentEntry.definition}
+                </Typography>
+              </Box>
+            )}
+
+            {showResumeOverlay && (
+              <Button
+                type="button"
+                onClick={handleResume}
+                sx={{
+                  position: "absolute",
+                  width: isMobile ? 126 : 148,
+                  height: isMobile ? 126 : 148,
+                  minWidth: 0,
+                  borderRadius: "50%",
+                  backgroundColor: "#2ecc71",
+                  color: "#fff",
+                  fontWeight: 800,
+                  fontSize: isMobile ? 18 : 20,
+                  lineHeight: 1.1,
+                  boxShadow: "0 16px 28px rgba(46, 204, 113, 0.35)",
+                  opacity: showResumeOverlay ? 1 : 0,
+                  transform: showResumeOverlay ? "scale(1)" : "scale(0.92)",
+                  transition: "opacity 220ms ease, transform 220ms ease",
+                  "&:hover": {
+                    backgroundColor: "#27ae60",
+                    boxShadow: "0 18px 32px rgba(39, 174, 96, 0.38)",
+                  },
+                }}
+              >
+                {playState === "idle" ? "Comenzar" : "Continuar"}
+              </Button>
+            )}
+
+            {isTimeOver && (
+              <Box sx={{ maxWidth: boardSize * 0.52 }}>
+                <Typography
+                  sx={{
+                    color: "#e74c3c",
+                    fontWeight: 800,
+                    fontSize: isMobile ? 22 : 28,
+                    mb: 1,
+                  }}
+                >
+                  Tiempo agotado
+                </Typography>
+                <Typography sx={{ color: "#5f6f86", fontWeight: 600 }}>
+                  {`Aciertos: ${hits} · Pendientes: ${unresolvedCount}`}
+                </Typography>
+              </Box>
+            )}
+
+            {isFinished && (
+              <Box sx={{ maxWidth: boardSize * 0.52 }}>
+                <Typography
+                  sx={{
+                    color: "#2ecc71",
+                    fontWeight: 800,
+                    fontSize: isMobile ? 22 : 28,
+                    mb: 1,
+                  }}
+                >
+                  Rosco completado
+                </Typography>
+                <Typography sx={{ color: "#5f6f86", fontWeight: 600 }}>
+                  {`Resultado: ${hits}/${roscoWords.length}`}
+                </Typography>
+              </Box>
+            )}
+          </Box>
         </Box>
 
         <Box
@@ -277,15 +416,8 @@ const Game: React.FC = () => {
             backdropFilter: "blur(2px)",
           }}
         >
-          {!isFinished && currentEntry && (
+          {!isFinished && !isTimeOver && currentEntry && (
             <>
-              <Typography sx={{ color: "#fff", fontWeight: 700, mb: 1 }}>
-                {currentEntry.startOrContain === "start" ? "Comienza" : "Contiene"} con la letra {currentEntry.letter}
-              </Typography>
-              <Typography sx={{ color: "#fff", mb: 2 }}>
-                {currentEntry.definition}
-              </Typography>
-
               <Box
                 component="form"
                 onSubmit={handleSubmit}
@@ -296,7 +428,7 @@ const Game: React.FC = () => {
                   onChange={(event) => setAnswer(event.target.value)}
                   size="small"
                   placeholder="Escribe tu respuesta"
-                  disabled={isFinished}
+                  disabled={isFinished || showResumeOverlay}
                   sx={{
                     flex: 1,
                     minWidth: 200,
@@ -311,6 +443,7 @@ const Game: React.FC = () => {
                   type="button"
                   variant="outlined"
                   onClick={handlePass}
+                  disabled={showResumeOverlay}
                   sx={{ color: "#fff", borderColor: "#fff", minWidth: 118 }}
                 >
                   Pasapalabra
@@ -321,12 +454,14 @@ const Game: React.FC = () => {
 
           {isFinished && (
             <Box sx={{ textAlign: "center" }}>
-              <Typography sx={{ color: "#fff", fontSize: 22, fontWeight: 700 }}>
-                Rosco completado
-              </Typography>
-              <Typography sx={{ color: "#fff", mt: 0.5, mb: 2 }}>
-                Resultado: {hits}/{roscoWords.length}
-              </Typography>
+              <Button variant="contained" onClick={() => navigate("/")}> 
+                Volver al inicio
+              </Button>
+            </Box>
+          )}
+
+          {isTimeOver && (
+            <Box sx={{ textAlign: "center" }}>
               <Button variant="contained" onClick={() => navigate("/")}> 
                 Volver al inicio
               </Button>

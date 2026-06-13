@@ -10,6 +10,7 @@ export interface DayMeta {
 
 export type LetterStatus = "pending" | "passed" | "correct" | "wrong";
 export type DayProgressStatus = "not_started" | "in_progress" | "completed";
+export type PlayState = "idle" | "running" | "paused";
 
 export interface DayRoscoState {
   status: DayProgressStatus;
@@ -18,6 +19,8 @@ export interface DayRoscoState {
   currentIndex: number;
   statuses: LetterStatus[];
   feedback: string;
+  remainingSeconds: number;
+  playState: PlayState;
   updatedAt: string;
 }
 
@@ -26,6 +29,7 @@ interface WeeklyRoscoState {
 }
 
 const STORAGE_KEY_PREFIX = "enroscalo_week_state_v2";
+export const DEFAULT_ROSCO_TIME_SECONDS = 150;
 
 export const WEEK_DAYS: DayMeta[] = [
   { key: "sun", label: "Domingo", shortLabel: "Dom" },
@@ -60,6 +64,8 @@ const buildEmptyDayState = (wordCount: number): DayRoscoState => ({
   currentIndex: 0,
   statuses: Array.from({ length: wordCount }, () => "pending"),
   feedback: "",
+  remainingSeconds: DEFAULT_ROSCO_TIME_SECONDS,
+  playState: "idle",
   updatedAt: new Date().toISOString(),
 });
 
@@ -69,6 +75,21 @@ const buildEmptyWeekState = (): WeeklyRoscoState => ({
 
 const getStorageKey = (scopeKey: string): string => {
   return `${STORAGE_KEY_PREFIX}:${scopeKey}`;
+};
+
+const normalizePlayState = (
+  value: unknown,
+  fallback: DayRoscoState,
+): PlayState => {
+  if (value === "idle" || value === "running" || value === "paused") {
+    return value;
+  }
+
+  if (fallback.plays === 0 && fallback.remainingSeconds === DEFAULT_ROSCO_TIME_SECONDS) {
+    return "idle";
+  }
+
+  return "running";
 };
 
 export const deriveStatus = (
@@ -121,13 +142,23 @@ export const getWeeklyState = (
         !Array.isArray(dayState.statuses) ||
         dayState.statuses.length !== wordCount ||
         dayState.currentIndex < 0 ||
-        dayState.currentIndex >= wordCount
+        dayState.currentIndex >= wordCount ||
+        typeof dayState.remainingSeconds !== "number"
       ) {
         continue;
       }
 
+      const fallbackState = buildEmptyDayState(wordCount);
+      fallbackState.hits = dayState.hits;
+      fallbackState.plays = dayState.plays;
+      fallbackState.currentIndex = dayState.currentIndex;
+      fallbackState.statuses = dayState.statuses;
+      fallbackState.feedback = dayState.feedback;
+      fallbackState.remainingSeconds = dayState.remainingSeconds;
+
       safeDays[day.key] = {
         ...dayState,
+        playState: normalizePlayState(dayState.playState, fallbackState),
         status: deriveStatus(dayState.statuses, dayState.plays),
       };
     }

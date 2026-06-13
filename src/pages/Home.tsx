@@ -175,10 +175,9 @@ export default function WelcomeScreen() {
                 color: "#c63b2e",
                 fontWeight: 800,
                 borderRadius: 999,
-                minWidth: 180,
                 px: 4,
                 py: 1.4,
-                fontSize: 26,
+                fontSize: 18,
                 "&:hover": {
                   backgroundColor: "#fff",
                 },
@@ -187,7 +186,7 @@ export default function WelcomeScreen() {
               {getButtonLabel(selectedDayState.status)}
             </Button>
 
-            <Box sx={{ textAlign: "right", color: "#fff", fontWeight: 700 }}>
+            <Box sx={{ textAlign: { xs: "left", md: "right" }, color: "#fff", fontWeight: 700 }}>
               <Typography sx={{ fontSize: 18 }}>ROSCO DEL {selectedDayMeta.label.toUpperCase()}</Typography>
               <Typography sx={{ fontSize: 16 }}>
                 {getRoscoStatusLabel(selectedDayState, selectedDayRosco.length)}
