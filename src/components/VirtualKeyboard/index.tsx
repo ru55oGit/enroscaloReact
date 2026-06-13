@@ -10,12 +10,14 @@ interface VirtualKeyboardProps {
   onKeyPress: (key: string) => void;
   guessedLetters?: string[];
   wrongLetters?: string[];
+  includeActionKeys?: boolean;
 }
 
 const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
   onKeyPress,
   guessedLetters = [],
   wrongLetters = [],
+  includeActionKeys = false,
 }) => {
   const isMobile = useIsMobile();
   const { currentLanguage } = useLanguage();
@@ -36,11 +38,17 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
             "A S D F G H J K L Ñ",
             baseLayout[3],
             "Á É Í Ó Ú",
+            ...(includeActionKeys ? ["{bksp} {enter}"] : []),
           ],
         };
       case "pt":
         return {
-          default: [...baseLayout, "Á À Â Ã É Ê", "Í Ó Ô Õ Ú Ç"],
+          default: [
+            ...baseLayout,
+            "Á À Â Ã É Ê",
+            "Í Ó Ô Õ Ú Ç",
+            ...(includeActionKeys ? ["{bksp} {enter}"] : []),
+          ],
         };
       case "fr":
         return {
@@ -49,12 +57,17 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
             "À Â Ä É È Ê Ë",
             "Í Î Ï Ó Ô Ö",
             "Ú Ù Û Ü Ç Œ",
+            ...(includeActionKeys ? ["{bksp} {enter}"] : []),
           ],
         };
       case "en":
       default:
         return {
-          default: [...baseLayout, "Á É Í Ó Ú"],
+          default: [
+            ...baseLayout,
+            "Á É Í Ó Ú",
+            ...(includeActionKeys ? ["{bksp} {enter}"] : []),
+          ],
         };
     }
   };
@@ -135,6 +148,12 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
             color: "#fff !important",
             cursor: "not-allowed",
           },
+          "& .hg-button.action": {
+            backgroundColor: "#223a75",
+            borderColor: "#1a2d58",
+            minWidth: "64px",
+            fontSize: "11px",
+          },
           "@media (max-width: 480px)": {
             "& .hg-button": {
               minWidth: "24px",
@@ -174,7 +193,12 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
             class: "incorrect",
             buttons: wrongLetters.join(" "),
           },
+          {
+            class: "action",
+            buttons: "{bksp} {enter}",
+          },
         ]}
+        display={{ "{bksp}": "Borrar", "{enter}": "OK" }}
         theme="hg-theme-default"
         disableButtonHold
         preventMouseDownDefault

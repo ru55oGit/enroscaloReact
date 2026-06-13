@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
+import VirtualKeyboard from "../components/VirtualKeyboard";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { getActiveRoscoContext } from "../data/weeklyRoscos";
 import {
@@ -25,6 +25,13 @@ const normalizeText = (value: string): string => {
     .replace(/\p{Diacritic}/gu, "")
     .toLowerCase()
     .trim();
+};
+
+const normalizeKeyUpper = (value: string): string => {
+  return value
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toUpperCase();
 };
 
 const findNextPlayableIndex = (
@@ -66,7 +73,8 @@ const Game: React.FC = () => {
   const [plays, setPlays] = useState(initialDayState.plays);
   const [currentIndex, setCurrentIndex] = useState(initialDayState.currentIndex);
   const [statuses, setStatuses] = useState<LetterStatus[]>(initialDayState.statuses);
-  const [answer, setAnswer] = useState("");
+  const [answerChars, setAnswerChars] = useState<string[]>([]);
+  const [lockedIndex, setLockedIndex] = useState<number>(-1);
   const [feedback, setFeedback] = useState(initialDayState.feedback);
   const [remainingSeconds, setRemainingSeconds] = useState(
     initialDayState.remainingSeconds,
@@ -86,7 +94,6 @@ const Game: React.FC = () => {
     setFeedback(initialDayState.feedback);
     setRemainingSeconds(initialDayState.remainingSeconds);
     setPlayState(initialDayState.playState);
-    setAnswer("");
   }, [dayKey, initialDayState, navigate]);
 
   const unresolvedCount = useMemo(() => {
@@ -100,6 +107,26 @@ const Game: React.FC = () => {
   const currentEntry = isFinished ? null : roscoWords[currentIndex];
   const isTimerRunning = playState === "running" && !isFinished && !isTimeOver;
   const showResumeOverlay = !isFinished && !isTimeOver && playState !== "running";
+
+  useEffect(() => {
+    if (!currentEntry || isFinished || isTimeOver) {
+      setAnswerChars([]);
+      setLockedIndex(-1);
+      return;
+    }
+
+    const normalizedWord = normalizeKeyUpper(currentEntry.word);
+    const forcedLetter = normalizeKeyUpper(currentEntry.letter).charAt(0);
+    const forcedIdx =
+      currentEntry.startOrContain === "start"
+        ? 0
+        : Math.max(0, normalizedWord.indexOf(forcedLetter));
+    const nextChars = Array.from({ length: normalizedWord.length }, () => "");
+    nextChars[forcedIdx] = forcedLetter;
+
+    setLockedIndex(forcedIdx);
+    setAnswerChars(nextChars);
+  }, [currentEntry, isFinished, isTimeOver]);
 
   useEffect(() => {
     if (!isTimerRunning) {
@@ -168,16 +195,16 @@ const Game: React.FC = () => {
     }
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
+  const commitAnswer = (chars: string[]) => {
     if (!currentEntry || isFinished || isTimeOver) {
       return;
     }
 
-    const normalizedAnswer = normalizeText(answer);
-    if (!normalizedAnswer) {
+    if (chars.some((char) => char.length === 0)) {
       return;
     }
+
+    const normalizedAnswer = normalizeText(chars.join(""));
 
     const isCorrect = normalizeText(currentEntry.word) === normalizedAnswer;
 
@@ -195,8 +222,85 @@ const Game: React.FC = () => {
     } else {
       setFeedback(`Incorrecto. Era: ${currentEntry.word}`);
     }
-    setAnswer("");
   };
+
+  const handleKeyInput = (rawKey: string) => {
+    if (!currentEntry || isFinished || isTimeOver || showResumeOverlay) {
+      return;
+    }
+
+    if (rawKey === "{enter}" || rawKey === "ENTER") {
+      commitAnswer(answerChars);
+      return;
+    }
+
+    if (rawKey === "{bksp}" || rawKey === "BACKSPACE") {
+      setAnswerChars((previous) => {
+        const next = [...previous];
+        for (let index = next.length - 1; index >= 0; index -= 1) {
+          if (index === lockedIndex) {
+            continue;
+          }
+          if (next[index]) {
+            next[index] = "";
+            break;
+          }
+        }
+        return next;
+      });
+      return;
+    }
+
+    const key = normalizeKeyUpper(rawKey);
+    if (!/^[A-Z]$/.test(key)) {
+      return;
+    }
+
+    setAnswerChars((previous) => {
+      const next = [...previous];
+      const fillIndex = next.findIndex(
+        (char, index) => !char && index !== lockedIndex,
+      );
+      if (fillIndex < 0) {
+        return previous;
+      }
+
+      next[fillIndex] = key;
+      if (next.every((char) => char.length > 0)) {
+        commitAnswer(next);
+      }
+      return next;
+    });
+  };
+
+  useEffect(() => {
+    if (isMobile) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      const key = event.key;
+      const isLetter = /^[a-zA-Z]$/.test(key);
+      const isBackspace = key === "Backspace";
+      const isEnter = key === "Enter";
+
+      if (!isLetter && !isBackspace && !isEnter) {
+        return;
+      }
+
+      event.preventDefault();
+      if (isBackspace) {
+        handleKeyInput("BACKSPACE");
+      } else if (isEnter) {
+        handleKeyInput("ENTER");
+      } else {
+        handleKeyInput(key.toUpperCase());
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isMobile, handleKeyInput]);
 
   const handlePass = () => {
     if (!currentEntry || isFinished || isTimeOver) {
@@ -215,7 +319,6 @@ const Game: React.FC = () => {
     setFeedback("Pasapalabra");
     setPlays((prev) => prev + 1);
     setPlayState("paused");
-    setAnswer("");
   };
 
   const handleResume = () => {
@@ -419,32 +522,51 @@ const Game: React.FC = () => {
           {!isFinished && !isTimeOver && currentEntry && (
             <>
               <Box
-                component="form"
-                onSubmit={handleSubmit}
-                sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: 0.2,
+                  flexWrap: "wrap",
+                  mb: 2,
+                }}
               >
-                <TextField
-                  value={answer}
-                  onChange={(event) => setAnswer(event.target.value)}
-                  size="small"
-                  placeholder="Escribe tu respuesta"
-                  disabled={isFinished || showResumeOverlay}
-                  sx={{
-                    flex: 1,
-                    minWidth: 200,
-                    backgroundColor: "#fff",
-                    borderRadius: 1,
-                  }}
-                />
-                <Button type="submit" variant="contained" sx={{ minWidth: 96 }}>
-                  Responder
-                </Button>
+                {answerChars.map((char, index) => (
+                  <Box
+                    key={`${currentEntry.letter}-${index}`}
+                    sx={{
+                      width: isMobile ? 32 : 42,
+                      height: isMobile ? 32 : 50,
+                      borderRadius: 1,
+                      border: "2px solid #1f2f64",
+                      backgroundColor: "#fff",
+                      color: index === lockedIndex ? "#1f2f64" : "#111827",
+                      fontWeight: 800,
+                      fontSize: isMobile ? 18 : 24,
+                      display: "flex",
+                      alignItems: "flex-end",
+                      justifyContent: "center",
+                      pb: 0.5,
+                      boxShadow: "0 4px 10px rgba(0,0,0,0.18)",
+                      opacity: showResumeOverlay ? 0.8 : 1,
+                    }}
+                  >
+                    {char || "_"}
+                  </Box>
+                ))}
+              </Box>
+
+              <Box sx={{ textAlign: "center" }}>
                 <Button
                   type="button"
                   variant="outlined"
                   onClick={handlePass}
                   disabled={showResumeOverlay}
-                  sx={{ color: "#fff", borderColor: "#fff", minWidth: 118 }}
+                  sx={{
+                    color: "#fff",
+                    borderColor: "#fff",
+                    minWidth: 154,
+                    fontWeight: 700,
+                  }}
                 >
                   Pasapalabra
                 </Button>
@@ -480,6 +602,11 @@ const Game: React.FC = () => {
           </Typography>
         </Box>
       </Box>
+
+      <VirtualKeyboard
+        onKeyPress={handleKeyInput}
+        includeActionKeys
+      />
     </Layout>
   );
 };
