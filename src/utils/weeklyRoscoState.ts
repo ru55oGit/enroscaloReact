@@ -1,5 +1,3 @@
-import { RoscoEntry } from "../data/roscoWords";
-
 export type DayKey = "sun" | "mon" | "tue" | "wed" | "thu" | "fri" | "sat";
 
 export interface DayMeta {
@@ -7,6 +5,16 @@ export interface DayMeta {
   label: string;
   shortLabel: string;
 }
+
+export type RoscoRule = "start" | "contain";
+
+export interface RoscoEntry {
+  word: string;
+  startOrContain: RoscoRule;
+  letter: string;
+  definition: string;
+}
+
 
 export type LetterStatus = "pending" | "passed" | "correct" | "wrong";
 export type DayProgressStatus = "not_started" | "in_progress" | "completed";

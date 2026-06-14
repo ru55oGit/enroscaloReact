@@ -535,7 +535,7 @@ const Game: React.FC = () => {
                     key={`${currentEntry.letter}-${index}`}
                     sx={{
                       width: isMobile ? 32 : 42,
-                      height: isMobile ? 32 : 50,
+                      height: isMobile ? 32 : 42,
                       borderRadius: 1,
                       border: "2px solid #1f2f64",
                       backgroundColor: "#fff",

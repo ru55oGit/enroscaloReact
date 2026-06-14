@@ -1,7 +1,15 @@
-import { ROSCO_WORDS, RoscoEntry } from "./roscoWords";
 import { ROSCO_SET_001 } from "./roscos/sets/set-001";
 import { ROSCO_SCHEDULE } from "./roscos/schedule";
 import { DayKey } from "../utils/weeklyRoscoState";
+
+export type RoscoRule = "start" | "contain";
+
+export interface RoscoEntry {
+  word: string;
+  startOrContain: RoscoRule;
+  letter: string;
+  definition: string;
+}
 
 export interface ActiveRoscoContext {
   setId: string;
@@ -31,15 +39,7 @@ const getWeekStart = (referenceDate = new Date()): string => {
   return toLocalIsoDate(sunday);
 };
 
-const DEFAULT_ROSCO_SET: Record<DayKey, RoscoEntry[]> = {
-  sun: ROSCO_WORDS,
-  mon: ROSCO_WORDS,
-  tue: ROSCO_WORDS,
-  wed: ROSCO_WORDS,
-  thu: ROSCO_WORDS,
-  fri: ROSCO_WORDS,
-  sat: ROSCO_WORDS,
-};
+const DEFAULT_ROSCO_SET: Record<DayKey, RoscoEntry[]> = ROSCO_SET_001;
 
 const validateRosco = (entries: RoscoEntry[]): boolean => {
   if (entries.length !== 26) {
@@ -123,5 +123,5 @@ export const getRoscoByDay = (
   referenceDate = new Date(),
 ): RoscoEntry[] => {
   const context = getActiveRoscoContext(referenceDate);
-  return context.roscos[dayKey] ?? ROSCO_WORDS;
+  return context.roscos[dayKey];
 };
