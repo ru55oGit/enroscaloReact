@@ -343,7 +343,7 @@ const Layout: React.FC<LayoutProps> = ({
             textAlign: "center",
             fontSize: 16,
             position: "relative",
-            zIndex: 5,
+            zIndex: 1,
           }}
         >
           {/* TODO: Cambiar por el nombre de tu juego */}©{" "}

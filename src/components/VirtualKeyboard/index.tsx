@@ -100,7 +100,7 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
         right: 0,
         backgroundColor: "rgba(0, 0, 0, 0.9)",
         padding: "8px 4px 12px",
-        zIndex: 1000,
+        zIndex: 9999,
         borderTop: "1px solid #555",
         "& .hg-theme-default": {
           backgroundColor: "transparent",
