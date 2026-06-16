@@ -295,7 +295,7 @@ const Layout: React.FC<LayoutProps> = ({
             }}
             onClick={() => window.location.replace("/")}
           >
-            Enroscalo
+            Enroscado
           </Box>
           {headerRightText && (
             <Box
@@ -347,7 +347,7 @@ const Layout: React.FC<LayoutProps> = ({
           }}
         >
           {/* TODO: Cambiar por el nombre de tu juego */}©{" "}
-          {new Date().getFullYear()} Enroscalo
+          {new Date().getFullYear()} Enroscado
         </Box>
       )}
 
@@ -375,7 +375,7 @@ const Layout: React.FC<LayoutProps> = ({
               px: 2,
             }}
           >
-            Enroscalo
+            Enroscado
           </Box>
           <List>
             <ListItem disablePadding>

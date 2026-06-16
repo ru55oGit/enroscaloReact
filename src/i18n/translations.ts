@@ -67,7 +67,7 @@ export interface Translation {
 
 export const translations: Record<string, Translation> = {
   es: {
-    appTitle: "Enroscalo",
+    appTitle: "Enroscado",
     tagline: "pensá · respondé · ganá",
     howToPlay: "¿CÓMO JUGAR?",
     lookAtGrid: "Leé la pista",
@@ -119,7 +119,7 @@ export const translations: Record<string, Translation> = {
   },
 
   en: {
-    appTitle: "Enroscalo",
+    appTitle: "Enroscado",
     tagline: "think · answer · win",
     howToPlay: "HOW TO PLAY?",
     lookAtGrid: "Read the clue",
@@ -171,7 +171,7 @@ export const translations: Record<string, Translation> = {
   },
 
   pt: {
-    appTitle: "Enroscalo",
+    appTitle: "Enroscado",
     tagline: "pense · responda · ganhe",
     howToPlay: "COMO JOGAR?",
     lookAtGrid: "Leia a dica",
@@ -223,7 +223,7 @@ export const translations: Record<string, Translation> = {
   },
 
   fr: {
-    appTitle: "Enroscalo",
+    appTitle: "Enroscado",
     tagline: "pensez · repondez · gagnez",
     howToPlay: "COMMENT JOUER?",
     lookAtGrid: "Lisez l'indice",

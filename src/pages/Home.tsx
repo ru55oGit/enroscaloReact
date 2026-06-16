@@ -122,7 +122,7 @@ export default function WelcomeScreen() {
         </Typography>
 
         <Typography sx={{ color: "#fff", fontSize: 26, fontWeight: 700, lineHeight: 1 }}>
-          estas para pensar?
+          ¿Listo para jugar Enroscado?
         </Typography>
 
         <Box
@@ -203,8 +203,8 @@ export default function WelcomeScreen() {
             color: "#222",
           }}
         >
-          <Typography sx={{ fontSize: 42, fontWeight: 800, mb: 2 }}>
-            CATEGORIAS
+          <Typography sx={{ fontSize: 36, fontWeight: 800, mb: 2 }}>
+            Semanal
           </Typography>
 
           <Box
