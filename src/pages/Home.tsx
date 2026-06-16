@@ -109,8 +109,6 @@ export default function WelcomeScreen() {
             letterSpacing: "2px",
             width: "100%",
             textAlign: "center",
-            mt: 0.5,
-            mb: 2,
             fontSize: { xs: 18, md: 22 },
           }}
         >
@@ -121,8 +119,8 @@ export default function WelcomeScreen() {
           {greeting}
         </Typography>
 
-        <Typography sx={{ color: "#fff", fontSize: 26, fontWeight: 700, lineHeight: 1 }}>
-          ¿Listo para jugar Enroscado?
+        <Typography sx={{ color: "#fff", fontSize: 24, fontWeight: 700, lineHeight: 1.4 }}>
+          ¿Listo para jugar Enroscado? 😳
         </Typography>
 
         <Box
@@ -268,6 +266,7 @@ export default function WelcomeScreen() {
                       backgroundColor: available ? "#d84331" : "#bcbcbc",
                       borderRadius: 999,
                       fontWeight: 700,
+                      fontSize: 9,
                     }}
                   >
                     {available ? getButtonLabel(dayState.status) : "BLOQUEADO"}

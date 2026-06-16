@@ -43,7 +43,7 @@ export const WEEK_DAYS: DayMeta[] = [
   { key: "sun", label: "Domingo", shortLabel: "Dom" },
   { key: "mon", label: "Lunes", shortLabel: "Lun" },
   { key: "tue", label: "Martes", shortLabel: "Mar" },
-  { key: "wed", label: "Mierc", shortLabel: "Mie" },
+  { key: "wed", label: "Miércoles", shortLabel: "Mié" },
   { key: "thu", label: "Jueves", shortLabel: "Jue" },
   { key: "fri", label: "Viernes", shortLabel: "Vie" },
   { key: "sat", label: "Sabado", shortLabel: "Sab" },
