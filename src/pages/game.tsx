@@ -76,6 +76,7 @@ const Game: React.FC = () => {
   const [answerChars, setAnswerChars] = useState<string[]>([]);
   const [lockedIndex, setLockedIndex] = useState<number>(-1);
   const [lockedConsumed, setLockedConsumed] = useState(false);
+  const [pendingAdvance, setPendingAdvance] = useState(false);
   const [feedback, setFeedback] = useState(initialDayState.feedback);
   const [remainingSeconds, setRemainingSeconds] = useState(
     initialDayState.remainingSeconds,
@@ -171,7 +172,7 @@ const Game: React.FC = () => {
   }, [activeRoscoContext.scopeKey, currentIndex, dayKey, feedback, hits, playState, plays, remainingSeconds, roscoWords.length, statuses]);
 
   useEffect(() => {
-    if (dayStatus === "completed") {
+    if (dayStatus === "completed" || pendingAdvance) {
       return;
     }
 
@@ -184,11 +185,30 @@ const Game: React.FC = () => {
     if (nextIndex >= 0) {
       setCurrentIndex(nextIndex);
     }
-  }, [currentIndex, dayStatus, statuses]);
+  }, [currentIndex, dayStatus, pendingAdvance, statuses]);
 
   const boardSize = isMobile ? 290 : 380;
   const letterSize = isMobile ? 31 : 36;
   const radius = boardSize / 2 - letterSize / 2 - 8;
+
+  const playErrorSound = () => {
+    try {
+      const ctx = new AudioContext();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.type = "square";
+      osc.frequency.setValueAtTime(280, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(120, ctx.currentTime + 0.25);
+      gain.gain.setValueAtTime(0.25, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.25);
+      osc.start(ctx.currentTime);
+      osc.stop(ctx.currentTime + 0.25);
+    } catch {
+      // audio not supported
+    }
+  };
 
   const moveToNext = (nextStatuses: LetterStatus[]) => {
     const nextIndex = findNextPlayableIndex(nextStatuses, currentIndex);
@@ -213,7 +233,9 @@ const Game: React.FC = () => {
     setStatuses((prevStatuses) => {
       const nextStatuses = [...prevStatuses];
       nextStatuses[currentIndex] = isCorrect ? "correct" : "wrong";
-      moveToNext(nextStatuses);
+      if (isCorrect) {
+        moveToNext(nextStatuses);
+      }
       return nextStatuses;
     });
 
@@ -223,6 +245,12 @@ const Game: React.FC = () => {
       setFeedback("Correcto");
     } else {
       setFeedback(`Incorrecto. Era: ${currentEntry.word}`);
+      setPendingAdvance(true);
+      setPlayState("paused");
+      playErrorSound();
+      if (navigator.vibrate) {
+        navigator.vibrate([150, 60, 150]);
+      }
     }
   };
 
@@ -333,11 +361,16 @@ const Game: React.FC = () => {
       return;
     }
 
+    if (pendingAdvance) {
+      setPendingAdvance(false);
+      moveToNext(statuses);
+    }
+
     setPlayState("running");
   };
 
   const getLetterColor = (index: number): string => {
-    if (!isFinished && index === currentIndex) {
+    if (!isFinished && !pendingAdvance && index === currentIndex) {
       return "#f1c40f";
     }
     switch (statuses[index]) {
@@ -394,7 +427,7 @@ const Game: React.FC = () => {
                   alignItems: "center",
                   justifyContent: "center",
                   backgroundColor: getLetterColor(index),
-                  color: !isFinished && index === currentIndex ? "#1f2937" : "#fff",
+                  color: !isFinished && !pendingAdvance && index === currentIndex ? "#1f2937" : "#fff",
                   fontWeight: 700,
                   fontSize: isMobile ? 15 : 16,
                   border: "2px solid #fff",
@@ -515,6 +548,22 @@ const Game: React.FC = () => {
           </Box>
         </Box>
 
+<Box sx={{ textAlign: "center" }}>
+                <Button
+                  type="button"
+                  variant="outlined"
+                  onClick={handlePass}
+                  disabled={showResumeOverlay}
+                  sx={{
+                    color: "#fff",
+                    borderColor: "#fff",
+                    minWidth: 154,
+                    fontWeight: 700,
+                  }}
+                >
+                  Pasapalabra
+                </Button>
+              </Box>
         <Box
           sx={{
             width: "100%",
@@ -560,23 +609,6 @@ const Game: React.FC = () => {
                     {char || "_"}
                   </Box>
                 ))}
-              </Box>
-
-              <Box sx={{ textAlign: "center" }}>
-                <Button
-                  type="button"
-                  variant="outlined"
-                  onClick={handlePass}
-                  disabled={showResumeOverlay}
-                  sx={{
-                    color: "#fff",
-                    borderColor: "#fff",
-                    minWidth: 154,
-                    fontWeight: 700,
-                  }}
-                >
-                  Pasapalabra
-                </Button>
               </Box>
             </>
           )}
