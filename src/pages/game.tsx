@@ -75,6 +75,7 @@ const Game: React.FC = () => {
   const [statuses, setStatuses] = useState<LetterStatus[]>(initialDayState.statuses);
   const [answerChars, setAnswerChars] = useState<string[]>([]);
   const [lockedIndex, setLockedIndex] = useState<number>(-1);
+  const [lockedConsumed, setLockedConsumed] = useState(false);
   const [feedback, setFeedback] = useState(initialDayState.feedback);
   const [remainingSeconds, setRemainingSeconds] = useState(
     initialDayState.remainingSeconds,
@@ -125,6 +126,7 @@ const Game: React.FC = () => {
     nextChars[forcedIdx] = forcedLetter;
 
     setLockedIndex(forcedIdx);
+    setLockedConsumed(false);
     setAnswerChars(nextChars);
   }, [currentEntry, isFinished, isTimeOver]);
 
@@ -253,6 +255,11 @@ const Game: React.FC = () => {
 
     const key = normalizeKeyUpper(rawKey);
     if (!/^[A-Z]$/.test(key)) {
+      return;
+    }
+
+    if (lockedIndex >= 0 && key === answerChars[lockedIndex] && !lockedConsumed) {
+      setLockedConsumed(true);
       return;
     }
 
