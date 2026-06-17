@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import LanguageSelector from "../components/LanguageSelector";
 import { useLanguage } from "../i18n/LanguageContext";
 import EmojiCarousel from "../components/EmojiCarousel";
+import { useIsMobile } from "../hooks/useIsMobile";
 import { getActiveRoscoContext } from "../data/weeklyRoscos";
 import {
   DayKey,
@@ -34,6 +35,11 @@ export default function WelcomeScreen() {
       document.removeEventListener("visibilitychange", refresh);
     };
   }, []);
+
+  const isMobile = useIsMobile();
+  const miniRoscoSize = isMobile ? 93 : 118;
+  const miniDotSize = isMobile ? 9 : 11;
+  const miniDotFontSize = isMobile ? 5 : 6;
 
   const activeRoscoContext = useMemo(() => getActiveRoscoContext(), [refreshKey]);
   const weeklyState = useMemo(
@@ -239,19 +245,40 @@ export default function WelcomeScreen() {
                     boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
                     display: "flex",
                     flexDirection: "column",
-                    gap: 1,
+                    alignItems: "center",
+                    gap: 0.5,
                     cursor: available ? "pointer" : "not-allowed",
                   }}
                 >
-                  <Typography sx={{ fontSize: 22, fontWeight: 800, color: "#262a33" }}>
+                  <Typography sx={{ fontSize: 22, fontWeight: 800, color: "#262a33", alignSelf: "flex-start" }}>
                     {day.label}
                   </Typography>
 
-                  <Typography sx={{ fontSize: 14, minHeight: 40, color: "#7a7a7a", fontWeight: 700 }}>
-                    {available
-                      ? getRoscoStatusLabel(dayState, rosco.length)
-                      : `Se habilita ${day.label}`}
-                  </Typography>
+                  {available ? (
+                    <>
+                      <Box sx={{ width: miniRoscoSize, height: miniRoscoSize, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+                        <EmojiCarousel
+                          statuses={dayState.statuses}
+                          activeIndex={
+                            dayState.status === "in_progress"
+                              ? dayState.currentIndex
+                              : undefined
+                          }
+                          boardSize={miniRoscoSize}
+                          dotSize={miniDotSize}
+                          dotFontSize={miniDotFontSize}
+                          mb={0}
+                        />
+                      </Box>
+                      <Typography sx={{ fontSize: 12, textAlign: "center", color: "#7a7a7a", fontWeight: 700, mb: 1 }}>
+                        {getRoscoStatusLabel(dayState, rosco.length)}
+                      </Typography>
+                    </>
+                  ) : (
+                    <Typography sx={{ fontSize: 14, color: "#7a7a7a", fontWeight: 700, my: "auto" }}>
+                      {`Se habilita ${day.label}`}
+                    </Typography>
+                  )}
 
                   <Button
                     variant="contained"

@@ -49,15 +49,15 @@ const LanguageSelector: React.FC = () => {
         <IconButton
           onClick={handleClick}
           sx={{
-            backgroundColor: "rgba(255, 255, 255, 0.2)",
-            backdropFilter: "blur(10px)",
-            border: "1px solid rgba(255, 255, 255, 0.3)",
-            color: "#fff",
+            backgroundColor: "#ececef",
+            border: "2px solid #f2a39a",
+            color: "#e74c3c",
             width: 48,
             height: 48,
             fontSize: "20px",
+            boxShadow: "0 2px 10px rgba(0, 0, 0, 0.12)",
             "&:hover": {
-              backgroundColor: "rgba(255, 255, 255, 0.3)",
+              backgroundColor: "#f4f4f6",
             },
           }}
           aria-describedby={id}

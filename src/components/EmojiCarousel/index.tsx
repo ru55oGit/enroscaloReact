@@ -7,6 +7,10 @@ const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 interface EmojiCarouselProps {
   statuses?: LetterStatus[];
   activeIndex?: number;
+  boardSize?: number;
+  dotSize?: number;
+  dotFontSize?: number;
+  mb?: number;
 }
 
 const getLetterColor = (
@@ -32,28 +36,35 @@ const getLetterColor = (
 const EmojiCarousel: React.FC<EmojiCarouselProps> = ({
   statuses,
   activeIndex,
+  boardSize = 250,
+  dotSize = 24,
+  dotFontSize = 13,
+  mb = 2,
 }) => {
-  const boardSize = 250;
-  const dotSize = 24;
+  const borderWidth = 3;
   const radius = boardSize / 2 - dotSize / 2 - 8;
+  // Absolute children are measured from the padding edge (inside the border),
+  // so the visual center in absolute coords is boardSize/2 - borderWidth.
+  const cx = boardSize / 2 - borderWidth;
+  const cy = boardSize / 2 - borderWidth;
 
   return (
     <Box
       sx={{
-        mb: 2,
+        mb,
         width: boardSize,
         height: boardSize,
         borderRadius: "50%",
         backgroundColor: "#fff",
         position: "relative",
-        border: "3px solid rgba(21, 101, 192, 0.24)",
+        border: `${borderWidth}px solid rgba(21, 101, 192, 0.24)`,
         boxShadow: "inset 0 0 0 8px rgba(21, 101, 192, 0.08)",
       }}
     >
       {LETTERS.map((letter, index) => {
         const angle = (-90 + (index * 360) / LETTERS.length) * (Math.PI / 180);
-        const x = boardSize / 2 + radius * Math.cos(angle) - dotSize / 2;
-        const y = boardSize / 2 + radius * Math.sin(angle) - dotSize / 2;
+        const x = cx + radius * Math.cos(angle) - dotSize / 2;
+        const y = cy + radius * Math.sin(angle) - dotSize / 2;
 
         return (
           <Box
@@ -72,7 +83,7 @@ const EmojiCarousel: React.FC<EmojiCarouselProps> = ({
               alignItems: "center",
               justifyContent: "center",
               fontWeight: 700,
-              fontSize: 13,
+              fontSize: dotFontSize,
               boxShadow: "0 1px 4px rgba(0,0,0,0.2)",
             }}
           >
