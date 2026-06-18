@@ -11,6 +11,8 @@ interface VirtualKeyboardProps {
   guessedLetters?: string[];
   wrongLetters?: string[];
   includeActionKeys?: boolean;
+  soundEnabled?: boolean;
+  onSoundToggle?: () => void;
 }
 
 const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
@@ -18,9 +20,11 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
   guessedLetters = [],
   wrongLetters = [],
   includeActionKeys = false,
+  soundEnabled = true,
+  onSoundToggle,
 }) => {
   const isMobile = useIsMobile();
-  const { currentLanguage } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
 
   const getKeyboardLayout = () => {
     const baseLayout = [
@@ -38,7 +42,7 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
             "A S D F G H J K L Ñ",
             baseLayout[3],
             "Á É Í Ó Ú",
-            ...(includeActionKeys ? ["{bksp} {enter}"] : []),
+            ...(includeActionKeys ? ["{bksp} {sound}"] : []),
           ],
         };
       case "pt":
@@ -47,7 +51,7 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
             ...baseLayout,
             "Á À Â Ã É Ê",
             "Í Ó Ô Õ Ú Ç",
-            ...(includeActionKeys ? ["{bksp} {enter}"] : []),
+            ...(includeActionKeys ? ["{bksp} {sound}"] : []),
           ],
         };
       case "fr":
@@ -57,7 +61,7 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
             "À Â Ä É È Ê Ë",
             "Í Î Ï Ó Ô Ö",
             "Ú Ù Û Ü Ç Œ",
-            ...(includeActionKeys ? ["{bksp} {enter}"] : []),
+            ...(includeActionKeys ? ["{bksp} {sound}"] : []),
           ],
         };
       case "en":
@@ -66,7 +70,7 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
           default: [
             ...baseLayout,
             "Á É Í Ó Ú",
-            ...(includeActionKeys ? ["{bksp} {enter}"] : []),
+            ...(includeActionKeys ? ["{bksp} {sound}"] : []),
           ],
         };
     }
@@ -75,6 +79,11 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
   const layout = getKeyboardLayout();
 
   const handleKeyPress = (key: string) => {
+    if (key === "{sound}") {
+      onSoundToggle?.();
+      return;
+    }
+
     const normalizedKey = normalizeText(key);
     const alreadyTried = guessedLetters.some(
       (guessed) => normalizeText(guessed) === normalizedKey,
@@ -195,10 +204,10 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
           },
           {
             class: "action",
-            buttons: "{bksp} {enter}",
+            buttons: "{bksp} {sound}",
           },
         ]}
-        display={{ "{bksp}": "Borrar", "{enter}": "OK" }}
+        display={{ "{bksp}": t.deleteKey, "{sound}": soundEnabled ? "🔊" : "🔇" }}
         theme="hg-theme-default"
         disableButtonHold
         preventMouseDownDefault

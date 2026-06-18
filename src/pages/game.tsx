@@ -84,6 +84,9 @@ const Game: React.FC = () => {
     initialDayState.remainingSeconds,
   );
   const [playState, setPlayState] = useState<PlayState>(initialDayState.playState);
+  const [soundEnabled, setSoundEnabled] = useState(() => {
+    return localStorage.getItem("enroscalo_sound_enabled") !== "false";
+  });
 
   useEffect(() => {
     if (!isDayAvailable(dayKey)) {
@@ -212,6 +215,26 @@ const Game: React.FC = () => {
     }
   };
 
+  const playSuccessSound = () => {
+    try {
+      const ctx = new AudioContext();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(523, ctx.currentTime);
+      osc.frequency.setValueAtTime(784, ctx.currentTime + 0.1);
+      osc.frequency.setValueAtTime(1047, ctx.currentTime + 0.2);
+      gain.gain.setValueAtTime(0.2, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35);
+      osc.start(ctx.currentTime);
+      osc.stop(ctx.currentTime + 0.35);
+    } catch {
+      // audio not supported
+    }
+  };
+
   const moveToNext = (nextStatuses: LetterStatus[]) => {
     const nextIndex = findNextPlayableIndex(nextStatuses, currentIndex);
     if (nextIndex >= 0) {
@@ -245,14 +268,14 @@ const Game: React.FC = () => {
     if (isCorrect) {
       setHits((prev) => prev + 1);
       setFeedback(t.feedbackCorrect);
+      if (soundEnabled) playSuccessSound();
+      if (navigator.vibrate) navigator.vibrate([80]);
     } else {
       setFeedback(`Incorrecto. Era: ${currentEntry.word}`);
       setPendingAdvance(true);
       setPlayState("paused");
-      playErrorSound();
-      if (navigator.vibrate) {
-        navigator.vibrate([150, 60, 150]);
-      }
+      if (soundEnabled) playErrorSound();
+      if (navigator.vibrate) navigator.vibrate([150, 60, 150]);
     }
   };
 
@@ -653,6 +676,14 @@ const Game: React.FC = () => {
       <VirtualKeyboard
         onKeyPress={handleKeyInput}
         includeActionKeys
+        soundEnabled={soundEnabled}
+        onSoundToggle={() => {
+          setSoundEnabled((prev) => {
+            const next = !prev;
+            localStorage.setItem("enroscalo_sound_enabled", String(next));
+            return next;
+          });
+        }}
       />
     </Layout>
   );

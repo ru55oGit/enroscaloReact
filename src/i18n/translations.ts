@@ -104,6 +104,7 @@ export interface Translation {
   dayThu: string;
   dayFri: string;
   daySat: string;
+  deleteKey: string;
 }
 
 export const translations: Record<string, Translation> = {
@@ -190,6 +191,7 @@ export const translations: Record<string, Translation> = {
     dayThu: "Jueves",
     dayFri: "Viernes",
     daySat: "Sábado",
+    deleteKey: "Borrar",
   },
 
   en: {
@@ -275,6 +277,7 @@ export const translations: Record<string, Translation> = {
     dayThu: "Thursday",
     dayFri: "Friday",
     daySat: "Saturday",
+    deleteKey: "Delete",
   },
 
   pt: {
@@ -360,6 +363,7 @@ export const translations: Record<string, Translation> = {
     dayThu: "Quinta",
     dayFri: "Sexta",
     daySat: "Sábado",
+    deleteKey: "Apagar",
   },
 
   fr: {
@@ -445,6 +449,7 @@ export const translations: Record<string, Translation> = {
     dayThu: "Jeudi",
     dayFri: "Vendredi",
     daySat: "Samedi",
+    deleteKey: "Effacer",
   },
 };
 
