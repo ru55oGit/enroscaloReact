@@ -388,7 +388,13 @@ const Game: React.FC = () => {
   };
 
   return (
-    <Layout headerRightText={formatTime(remainingSeconds)}>
+    <Layout
+      headerRightText={formatTime(remainingSeconds)}
+      onBack={() => {
+        setPlayState("paused");
+        navigate(-1);
+      }}
+    >
       <Box
         sx={{
           display: "flex",

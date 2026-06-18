@@ -19,6 +19,7 @@ interface LayoutProps {
   children: React.ReactNode;
   showFooter?: boolean;
   headerRightText?: string;
+  onBack?: () => void;
 }
 
 // TODO: Personalizar con los emojis/decoraciones de tu juego
@@ -67,6 +68,7 @@ const Layout: React.FC<LayoutProps> = ({
   children,
   showFooter = true,
   headerRightText,
+  onBack,
 }) => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -233,7 +235,7 @@ const Layout: React.FC<LayoutProps> = ({
                 zIndex: 3,
                 cursor: "pointer",
               }}
-              onClick={() => navigate(-1)}
+              onClick={() => onBack ? onBack() : navigate(-1)}
               aria-label="Volver"
             >
               <svg
