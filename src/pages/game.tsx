@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import VirtualKeyboard from "../components/VirtualKeyboard";
 import { useIsMobile } from "../hooks/useIsMobile";
+import { useLanguage } from "../i18n/LanguageContext";
 import { getActiveRoscoContext } from "../data/weeklyRoscos";
 import {
   DayKey,
@@ -58,11 +59,12 @@ const Game: React.FC = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const isMobile = useIsMobile();
+  const { currentLanguage } = useLanguage();
 
   const todayKey = getCurrentDayKey();
   const rawDay = searchParams.get("day");
   const dayKey: DayKey = isDayKey(rawDay) ? rawDay : todayKey;
-  const activeRoscoContext = useMemo(() => getActiveRoscoContext(), []);
+  const activeRoscoContext = useMemo(() => getActiveRoscoContext(new Date(), currentLanguage), [currentLanguage]);
   const roscoWords = activeRoscoContext.roscos[dayKey];
   const initialDayState = useMemo(
     () => getDayState(dayKey, roscoWords.length, activeRoscoContext.scopeKey),

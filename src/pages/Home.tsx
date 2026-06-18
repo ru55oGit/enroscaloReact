@@ -22,7 +22,7 @@ import {
 
 export default function WelcomeScreen() {
   const navigate = useNavigate();
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const [refreshKey, setRefreshKey] = useState(0);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function WelcomeScreen() {
   const miniDotSize = isMobile ? 9 : 11;
   const miniDotFontSize = isMobile ? 5 : 6;
 
-  const activeRoscoContext = useMemo(() => getActiveRoscoContext(), [refreshKey]);
+  const activeRoscoContext = useMemo(() => getActiveRoscoContext(new Date(), currentLanguage), [refreshKey, currentLanguage]);
   const weeklyState = useMemo(
     () => getWeeklyState(26, activeRoscoContext.scopeKey),
     [activeRoscoContext.scopeKey],
@@ -68,6 +68,51 @@ export default function WelcomeScreen() {
       : nowHour < 20
         ? "Buenas tardes"
         : "Buenas noches";
+
+  const CATEGORY_META: Record<string, { label: string; icon: string }> = {
+    "naturaleza": { label: "Naturaleza", icon: "🌿" },
+    "ciencias": { label: "Ciencias", icon: "🔬" },
+    "cultura-general": { label: "Cultura General", icon: "📚" },
+    "gastronomia": { label: "Gastronomía", icon: "🍽️" },
+    "arte-musica": { label: "Arte y Música", icon: "🎨" },
+    "transporte": { label: "Transporte", icon: "🚗" },
+    "deporte-juego": { label: "Deporte y Juego", icon: "⚽" },
+    "mitologia-fantasia": { label: "Mitología y Fantasía", icon: "🐉" },
+    "educacion-sociedad": { label: "Educación y Sociedad", icon: "🎓" },
+    "personalidades": { label: "Personalidades", icon: "🌟" },
+    // English categories
+    "nature": { label: "Nature", icon: "🌿" },
+    "science": { label: "Science", icon: "🔬" },
+    "general": { label: "General Knowledge", icon: "📚" },
+    "food": { label: "Food", icon: "🍽️" },
+    "art-music": { label: "Art & Music", icon: "🎨" },
+    "transport": { label: "Transport", icon: "🚗" },
+    "sport-game": { label: "Sport & Games", icon: "⚽" },
+    "myth-fantasy": { label: "Myth & Fantasy", icon: "🐉" },
+    "society": { label: "Society", icon: "🎓" },
+    "people": { label: "People", icon: "🌟" },
+  };
+
+  const categoryStats = useMemo(() => {
+    const stats: Record<string, { correct: number; wrong: number }> = {};
+    for (const day of WEEK_DAYS) {
+      if (!isDayAvailable(day.key)) continue;
+      const dayState = weeklyState.days[day.key];
+      if (!dayState) continue;
+      const rosco = activeRoscoContext.roscos[day.key];
+      dayState.statuses.forEach((status, i) => {
+        if (status !== "correct" && status !== "wrong") return;
+        const category = rosco[i]?.category;
+        if (!category) return;
+        if (!stats[category]) stats[category] = { correct: 0, wrong: 0 };
+        if (status === "correct") stats[category].correct++;
+        else stats[category].wrong++;
+      });
+    }
+    return stats;
+  }, [weeklyState, activeRoscoContext]);
+
+  const hasCategoryStats = Object.keys(categoryStats).length > 0;
 
   const getButtonLabel = (status: string): string => {
     if (status === "in_progress") {
@@ -303,6 +348,56 @@ export default function WelcomeScreen() {
             })}
           </Box>
         </Box>
+
+        {hasCategoryStats && (
+          <Box
+            sx={{
+              borderRadius: 4,
+              backgroundColor: "#ededed",
+              p: 2,
+              color: "#222",
+            }}
+          >
+            <Typography sx={{ fontSize: 28, fontWeight: 800, mb: 2 }}>
+              Por categoría
+            </Typography>
+
+            <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
+              {Object.entries(categoryStats)
+                .sort((a, b) => (b[1].correct + b[1].wrong) - (a[1].correct + a[1].wrong))
+                .map(([cat, { correct, wrong }]) => {
+                  const total = correct + wrong;
+                  const pct = Math.round((correct / total) * 100);
+                  const meta = CATEGORY_META[cat] ?? { label: cat, icon: "📌" };
+                  const barColor = pct >= 70 ? "#2ecc71" : pct >= 40 ? "#f39c12" : "#e74c3c";
+
+                  return (
+                    <Box key={cat}>
+                      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 0.5 }}>
+                        <Typography sx={{ fontSize: 13, fontWeight: 700, color: "#333" }}>
+                          {meta.icon} {meta.label}
+                        </Typography>
+                        <Typography sx={{ fontSize: 12, fontWeight: 700, color: "#555" }}>
+                          {correct}/{total} · {pct}%
+                        </Typography>
+                      </Box>
+                      <Box sx={{ height: 8, borderRadius: 4, backgroundColor: "#d0d0d0", overflow: "hidden" }}>
+                        <Box
+                          sx={{
+                            height: "100%",
+                            width: `${pct}%`,
+                            backgroundColor: barColor,
+                            borderRadius: 4,
+                            transition: "width 0.5s ease",
+                          }}
+                        />
+                      </Box>
+                    </Box>
+                  );
+                })}
+            </Box>
+          </Box>
+        )}
       </Box>
     </Layout>
   );
