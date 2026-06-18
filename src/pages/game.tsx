@@ -76,8 +76,6 @@ const Game: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(initialDayState.currentIndex);
   const [statuses, setStatuses] = useState<LetterStatus[]>(initialDayState.statuses);
   const [answerChars, setAnswerChars] = useState<string[]>([]);
-  const [lockedIndex, setLockedIndex] = useState<number>(-1);
-  const [lockedConsumed, setLockedConsumed] = useState(false);
   const [pendingAdvance, setPendingAdvance] = useState(false);
   const [feedback, setFeedback] = useState(initialDayState.feedback);
   const [remainingSeconds, setRemainingSeconds] = useState(
@@ -118,22 +116,11 @@ const Game: React.FC = () => {
   useEffect(() => {
     if (!currentEntry || isFinished || isTimeOver) {
       setAnswerChars([]);
-      setLockedIndex(-1);
       return;
     }
 
     const normalizedWord = normalizeKeyUpper(currentEntry.word);
-    const forcedLetter = normalizeKeyUpper(currentEntry.letter).charAt(0);
-    const forcedIdx =
-      currentEntry.startOrContain === "start"
-        ? 0
-        : Math.max(0, normalizedWord.indexOf(forcedLetter));
-    const nextChars = Array.from({ length: normalizedWord.length }, () => "");
-    nextChars[forcedIdx] = forcedLetter;
-
-    setLockedIndex(forcedIdx);
-    setLockedConsumed(false);
-    setAnswerChars(nextChars);
+    setAnswerChars(Array.from({ length: normalizedWord.length }, () => ""));
   }, [currentEntry, isFinished, isTimeOver]);
 
   useEffect(() => {
@@ -293,9 +280,6 @@ const Game: React.FC = () => {
       setAnswerChars((previous) => {
         const next = [...previous];
         for (let index = next.length - 1; index >= 0; index -= 1) {
-          if (index === lockedIndex) {
-            continue;
-          }
           if (next[index]) {
             next[index] = "";
             break;
@@ -311,16 +295,9 @@ const Game: React.FC = () => {
       return;
     }
 
-    if (lockedIndex >= 0 && key === answerChars[lockedIndex] && !lockedConsumed) {
-      setLockedConsumed(true);
-      return;
-    }
-
     setAnswerChars((previous) => {
       const next = [...previous];
-      const fillIndex = next.findIndex(
-        (char, index) => !char && index !== lockedIndex,
-      );
+      const fillIndex = next.findIndex((char) => !char);
       if (fillIndex < 0) {
         return previous;
       }
@@ -626,7 +603,7 @@ const Game: React.FC = () => {
                       borderRadius: 1,
                       border: "2px solid #1f2f64",
                       backgroundColor: "#fff",
-                      color: index === lockedIndex ? "#1f2f64" : "#111827",
+                      color: "#111827",
                       fontWeight: 800,
                       fontSize: isMobile ? 18 : 24,
                       display: "flex",
