@@ -63,6 +63,47 @@ export interface Translation {
   congratulations: string;
   completedAllScreens: string;
   clearProgress: string;
+
+  // Rosco Home
+  goodMorning: string;
+  goodAfternoon: string;
+  goodEvening: string;
+  readyToPlay: string;
+  weeklySection: string;
+  categorySection: string;
+  continueGame: string;
+  viewResult: string;
+  lockedDay: string;
+  unlocksOn: string;
+  roscoOfThe: string;
+
+  // Rosco status
+  statusCompleted: string;
+  statusInProgress: string;
+  statusNotStarted: string;
+
+  // Rosco game
+  startGame: string;
+  continueGameBtn: string;
+  feedbackTimeout: string;
+  feedbackPassed: string;
+  feedbackCorrect: string;
+  roscoCompleted: string;
+  hitsLabel: string;
+  pendingLabel: string;
+  resultLabel: string;
+  backToHome: string;
+  startsWith: string;
+  contains: string;
+
+  // Day names
+  daySun: string;
+  dayMon: string;
+  dayTue: string;
+  dayWed: string;
+  dayThu: string;
+  dayFri: string;
+  daySat: string;
 }
 
 export const translations: Record<string, Translation> = {
@@ -116,6 +157,39 @@ export const translations: Record<string, Translation> = {
     congratulations: "¡Felicitaciones!",
     completedAllScreens: "¡Completaste todas las pantallas!",
     clearProgress: "Borrar Progreso",
+    goodMorning: "Buenos días",
+    goodAfternoon: "Buenas tardes",
+    goodEvening: "Buenas noches",
+    readyToPlay: "¿Listo para jugar Enroscado? 😳",
+    weeklySection: "Semanal",
+    categorySection: "Por categoría",
+    continueGame: "CONTINUAR",
+    viewResult: "VER RESULTADO",
+    lockedDay: "BLOQUEADO",
+    unlocksOn: "Se habilita el",
+    roscoOfThe: "ROSCO DEL",
+    statusCompleted: "Completado",
+    statusInProgress: "En progreso",
+    statusNotStarted: "Sin jugar",
+    startGame: "Comenzar",
+    continueGameBtn: "Continuar",
+    feedbackTimeout: "Tiempo agotado",
+    feedbackPassed: "Pasapalabra",
+    feedbackCorrect: "Correcto",
+    roscoCompleted: "Rosco completado",
+    hitsLabel: "Aciertos",
+    pendingLabel: "Pendientes",
+    resultLabel: "Resultado",
+    backToHome: "Volver al inicio",
+    startsWith: "Comienza con",
+    contains: "Contiene",
+    daySun: "Domingo",
+    dayMon: "Lunes",
+    dayTue: "Martes",
+    dayWed: "Miércoles",
+    dayThu: "Jueves",
+    dayFri: "Viernes",
+    daySat: "Sábado",
   },
 
   en: {
@@ -168,6 +242,39 @@ export const translations: Record<string, Translation> = {
     congratulations: "Congratulations!",
     completedAllScreens: "You completed all the screens!",
     clearProgress: "Clear Progress",
+    goodMorning: "Good morning",
+    goodAfternoon: "Good afternoon",
+    goodEvening: "Good evening",
+    readyToPlay: "Ready to play Enroscado? 😳",
+    weeklySection: "Weekly",
+    categorySection: "By category",
+    continueGame: "CONTINUE",
+    viewResult: "VIEW RESULT",
+    lockedDay: "LOCKED",
+    unlocksOn: "Unlocks on",
+    roscoOfThe: "ROSCO OF",
+    statusCompleted: "Completed",
+    statusInProgress: "In progress",
+    statusNotStarted: "Not played",
+    startGame: "Start",
+    continueGameBtn: "Continue",
+    feedbackTimeout: "Time's up",
+    feedbackPassed: "Pass",
+    feedbackCorrect: "Correct!",
+    roscoCompleted: "Rosco complete",
+    hitsLabel: "Correct",
+    pendingLabel: "Pending",
+    resultLabel: "Result",
+    backToHome: "Back to home",
+    startsWith: "Starts with",
+    contains: "Contains",
+    daySun: "Sunday",
+    dayMon: "Monday",
+    dayTue: "Tuesday",
+    dayWed: "Wednesday",
+    dayThu: "Thursday",
+    dayFri: "Friday",
+    daySat: "Saturday",
   },
 
   pt: {
@@ -220,6 +327,39 @@ export const translations: Record<string, Translation> = {
     congratulations: "Parabéns!",
     completedAllScreens: "Você completou todas as telas!",
     clearProgress: "Limpar Progresso",
+    goodMorning: "Bom dia",
+    goodAfternoon: "Boa tarde",
+    goodEvening: "Boa noite",
+    readyToPlay: "Pronto para jogar Enroscado? 😳",
+    weeklySection: "Semanal",
+    categorySection: "Por categoria",
+    continueGame: "CONTINUAR",
+    viewResult: "VER RESULTADO",
+    lockedDay: "BLOQUEADO",
+    unlocksOn: "Disponível em",
+    roscoOfThe: "ROSCO DE",
+    statusCompleted: "Concluído",
+    statusInProgress: "Em andamento",
+    statusNotStarted: "Não jogado",
+    startGame: "Começar",
+    continueGameBtn: "Continuar",
+    feedbackTimeout: "Tempo esgotado",
+    feedbackPassed: "Passa a palavra",
+    feedbackCorrect: "Correto!",
+    roscoCompleted: "Rosco concluído",
+    hitsLabel: "Acertos",
+    pendingLabel: "Pendentes",
+    resultLabel: "Resultado",
+    backToHome: "Voltar ao início",
+    startsWith: "Começa com",
+    contains: "Contém",
+    daySun: "Domingo",
+    dayMon: "Segunda",
+    dayTue: "Terça",
+    dayWed: "Quarta",
+    dayThu: "Quinta",
+    dayFri: "Sexta",
+    daySat: "Sábado",
   },
 
   fr: {
@@ -272,6 +412,39 @@ export const translations: Record<string, Translation> = {
     congratulations: "Félicitations!",
     completedAllScreens: "Vous avez terminé tous les écrans!",
     clearProgress: "Effacer Progression",
+    goodMorning: "Bonjour",
+    goodAfternoon: "Bon après-midi",
+    goodEvening: "Bonsoir",
+    readyToPlay: "Prêt à jouer à Enroscado? 😳",
+    weeklySection: "Hebdomadaire",
+    categorySection: "Par catégorie",
+    continueGame: "CONTINUER",
+    viewResult: "VOIR RÉSULTAT",
+    lockedDay: "VERROUILLÉ",
+    unlocksOn: "Disponible le",
+    roscoOfThe: "ROSCO DU",
+    statusCompleted: "Complété",
+    statusInProgress: "En cours",
+    statusNotStarted: "Non joué",
+    startGame: "Commencer",
+    continueGameBtn: "Continuer",
+    feedbackTimeout: "Temps écoulé",
+    feedbackPassed: "Passez le mot",
+    feedbackCorrect: "Correct!",
+    roscoCompleted: "Rosco complété",
+    hitsLabel: "Bons réponses",
+    pendingLabel: "En attente",
+    resultLabel: "Résultat",
+    backToHome: "Retour à l'accueil",
+    startsWith: "Commence par",
+    contains: "Contient",
+    daySun: "Dimanche",
+    dayMon: "Lundi",
+    dayTue: "Mardi",
+    dayWed: "Mercredi",
+    dayThu: "Jeudi",
+    dayFri: "Vendredi",
+    daySat: "Samedi",
   },
 };
 

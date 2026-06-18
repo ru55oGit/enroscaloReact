@@ -216,16 +216,17 @@ export const saveDayState = (
 export const getRoscoStatusLabel = (
   dayState: DayRoscoState,
   totalWords: number,
+  labels = { completed: "Completado", inProgress: "En progreso", notStarted: "Sin jugar" },
 ): string => {
   if (dayState.status === "completed") {
-    return `Completado ${dayState.hits}/${totalWords}`;
+    return `${labels.completed} ${dayState.hits}/${totalWords}`;
   }
 
   if (dayState.status === "in_progress") {
-    return `En progreso ${dayState.hits}/${totalWords}`;
+    return `${labels.inProgress} ${dayState.hits}/${totalWords}`;
   }
 
-  return "Sin jugar";
+  return labels.notStarted;
 };
 
 export const getDayMeta = (dayKey: DayKey): DayMeta => {

@@ -59,7 +59,7 @@ const Game: React.FC = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const isMobile = useIsMobile();
-  const { currentLanguage } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
 
   const todayKey = getCurrentDayKey();
   const rawDay = searchParams.get("day");
@@ -152,7 +152,7 @@ const Game: React.FC = () => {
 
   useEffect(() => {
     if (remainingSeconds === 0 && !isFinished) {
-      setFeedback("Tiempo agotado");
+      setFeedback(t.feedbackTimeout);
       setPlayState("paused");
     }
   }, [isFinished, remainingSeconds]);
@@ -244,7 +244,7 @@ const Game: React.FC = () => {
     setPlays((prev) => prev + 1);
     if (isCorrect) {
       setHits((prev) => prev + 1);
-      setFeedback("Correcto");
+      setFeedback(t.feedbackCorrect);
     } else {
       setFeedback(`Incorrecto. Era: ${currentEntry.word}`);
       setPendingAdvance(true);
@@ -353,7 +353,7 @@ const Game: React.FC = () => {
       return nextStatuses;
     });
 
-    setFeedback("Pasapalabra");
+    setFeedback(t.feedbackPassed);
     setPlays((prev) => prev + 1);
     setPlayState("paused");
   };
@@ -465,8 +465,8 @@ const Game: React.FC = () => {
                   }}
                 >
                   {currentEntry.startOrContain === "start"
-                    ? `Comienza con ${currentEntry.letter}.`
-                    : `Contiene ${currentEntry.letter}.`}
+                    ? `${t.startsWith} ${currentEntry.letter}.`
+                    : `${t.contains} ${currentEntry.letter}.`}
                 </Typography>
                 <Typography
                   sx={{
@@ -508,7 +508,7 @@ const Game: React.FC = () => {
                   },
                 }}
               >
-                {playState === "idle" ? "Comenzar" : "Continuar"}
+                {playState === "idle" ? t.startGame : t.continueGameBtn}
               </Button>
             )}
 
@@ -522,10 +522,10 @@ const Game: React.FC = () => {
                     mb: 1,
                   }}
                 >
-                  Tiempo agotado
+                  {t.feedbackTimeout}
                 </Typography>
                 <Typography sx={{ color: "#5f6f86", fontWeight: 600 }}>
-                  {`Aciertos: ${hits} · Pendientes: ${unresolvedCount}`}
+                  {`${t.hitsLabel}: ${hits} · ${t.pendingLabel}: ${unresolvedCount}`}
                 </Typography>
               </Box>
             )}
@@ -540,10 +540,10 @@ const Game: React.FC = () => {
                     mb: 1,
                   }}
                 >
-                  Rosco completado
+                  {t.roscoCompleted}
                 </Typography>
                 <Typography sx={{ color: "#5f6f86", fontWeight: 600 }}>
-                  {`Resultado: ${hits}/${roscoWords.length}`}
+                  {`${t.resultLabel}: ${hits}/${roscoWords.length}`}
                 </Typography>
               </Box>
             )}
@@ -563,7 +563,7 @@ const Game: React.FC = () => {
                     fontWeight: 700,
                   }}
                 >
-                  Pasapalabra
+                  {t.feedbackPassed}
                 </Button>
               </Box>
         <Box
@@ -617,16 +617,16 @@ const Game: React.FC = () => {
 
           {isFinished && (
             <Box sx={{ textAlign: "center" }}>
-              <Button variant="contained" onClick={() => navigate("/")}> 
-                Volver al inicio
+              <Button variant="contained" onClick={() => navigate("/")}>
+                {t.backToHome}
               </Button>
             </Box>
           )}
 
           {isTimeOver && (
             <Box sx={{ textAlign: "center" }}>
-              <Button variant="contained" onClick={() => navigate("/")}> 
-                Volver al inicio
+              <Button variant="contained" onClick={() => navigate("/")}>
+                {t.backToHome}
               </Button>
             </Box>
           )}

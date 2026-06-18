@@ -64,10 +64,17 @@ export default function WelcomeScreen() {
   const nowHour = new Date().getHours();
   const greeting =
     nowHour < 12
-      ? "Buenos dias"
+      ? t.goodMorning
       : nowHour < 20
-        ? "Buenas tardes"
-        : "Buenas noches";
+        ? t.goodAfternoon
+        : t.goodEvening;
+
+  const DAY_LABELS: Record<string, string> = {
+    sun: t.daySun, mon: t.dayMon, tue: t.dayTue, wed: t.dayWed,
+    thu: t.dayThu, fri: t.dayFri, sat: t.daySat,
+  };
+
+  const statusLabels = { completed: t.statusCompleted, inProgress: t.statusInProgress, notStarted: t.statusNotStarted };
 
   const CATEGORY_META: Record<string, { label: string; icon: string }> = {
     "naturaleza": { label: "Naturaleza", icon: "🌿" },
@@ -115,13 +122,9 @@ export default function WelcomeScreen() {
   const hasCategoryStats = Object.keys(categoryStats).length > 0;
 
   const getButtonLabel = (status: string): string => {
-    if (status === "in_progress") {
-      return "CONTINUAR";
-    }
-    if (status === "completed") {
-      return "VER RESULTADO";
-    }
-    return "JUGAR";
+    if (status === "in_progress") return t.continueGame;
+    if (status === "completed") return t.viewResult;
+    return t.playButton;
   };
 
   return (
@@ -171,7 +174,7 @@ export default function WelcomeScreen() {
         </Typography>
 
         <Typography sx={{ color: "#fff", fontSize: 24, fontWeight: 700, lineHeight: 1.4 }}>
-          ¿Listo para jugar Enroscado? 😳
+          {t.readyToPlay}
         </Typography>
 
         <Box
@@ -236,9 +239,9 @@ export default function WelcomeScreen() {
             </Button>
 
             <Box sx={{ textAlign: { xs: "left", md: "right" }, color: "#fff", fontWeight: 700 }}>
-              <Typography sx={{ fontSize: 18 }}>ROSCO DEL {selectedDayMeta.label.toUpperCase()}</Typography>
+              <Typography sx={{ fontSize: 18 }}>{t.roscoOfThe} {DAY_LABELS[selectedDayMeta.key].toUpperCase()}</Typography>
               <Typography sx={{ fontSize: 16 }}>
-                {getRoscoStatusLabel(selectedDayState, selectedDayRosco.length)}
+                {getRoscoStatusLabel(selectedDayState, selectedDayRosco.length, statusLabels)}
               </Typography>
             </Box>
           </Box>
@@ -253,7 +256,7 @@ export default function WelcomeScreen() {
           }}
         >
           <Typography sx={{ fontSize: 36, fontWeight: 800, mb: 2 }}>
-            Semanal
+            {t.weeklySection}
           </Typography>
 
           <Box
@@ -296,7 +299,7 @@ export default function WelcomeScreen() {
                   }}
                 >
                   <Typography sx={{ fontSize: 22, fontWeight: 800, color: "#262a33", alignSelf: "flex-start" }}>
-                    {day.label}
+                    {DAY_LABELS[day.key]}
                   </Typography>
 
                   {available ? (
@@ -316,12 +319,12 @@ export default function WelcomeScreen() {
                         />
                       </Box>
                       <Typography sx={{ fontSize: 12, textAlign: "center", color: "#7a7a7a", fontWeight: 700, mb: 1 }}>
-                        {getRoscoStatusLabel(dayState, rosco.length)}
+                        {getRoscoStatusLabel(dayState, rosco.length, statusLabels)}
                       </Typography>
                     </>
                   ) : (
                     <Typography sx={{ fontSize: 14, color: "#7a7a7a", fontWeight: 700, my: "auto" }}>
-                      {`Se habilita ${day.label}`}
+                      {`${t.unlocksOn} ${DAY_LABELS[day.key]}`}
                     </Typography>
                   )}
 
@@ -341,7 +344,7 @@ export default function WelcomeScreen() {
                       fontSize: 9,
                     }}
                   >
-                    {available ? getButtonLabel(dayState.status) : "BLOQUEADO"}
+                    {available ? getButtonLabel(dayState.status) : t.lockedDay}
                   </Button>
                 </Box>
               );
@@ -359,7 +362,7 @@ export default function WelcomeScreen() {
             }}
           >
             <Typography sx={{ fontSize: 28, fontWeight: 800, mb: 2 }}>
-              Por categoría
+              {t.categorySection}
             </Typography>
 
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
