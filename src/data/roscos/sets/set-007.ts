@@ -18,7 +18,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Naftalina", startOrContain: "start", letter: "N", definition: "Bolita de olor fuerte que protege la ropa de las polillas.", category: "cultura-general" },
   { word: "Organizador", startOrContain: "start", letter: "O", definition: "Caja con divisiones para ordenar objetos pequeños.", category: "cultura-general" },
   { word: "Placard", startOrContain: "start", letter: "P", definition: "Armario empotrado en la pared para guardar ropa.", category: "cultura-general" },
-  { word: "Quijada", startOrContain: "contain", letter: "Q", definition: "Hueso de la cara donde están los dientes de abajo.", category: "ciencias" },
+  { word: "Quijada", startOrContain: "start", letter: "Q", definition: "Hueso de la cara donde están los dientes de abajo.", category: "ciencias" },
   { word: "Ropero", startOrContain: "start", letter: "R", definition: "Mueble alto con puertas para colgar y guardar la ropa.", category: "cultura-general" },
   { word: "Sofa", startOrContain: "start", letter: "S", definition: "Asiento amplio y mullido para varias personas.", category: "cultura-general" },
   { word: "Totti", startOrContain: "start", letter: "T", definition: "Apellido del ídolo futbolista italiano de la Roma.", category: "personalidades" },

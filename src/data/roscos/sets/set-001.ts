@@ -23,7 +23,7 @@ export interface RoscoEntry {
 
 export const ROSCO_1: RoscoEntry[] = [
   { word: "Avion", startOrContain: "start", letter: "A", definition: "Medio de transporte aéreo que vuela impulsado por motores.", category: "transporte" },
-  { word: "Bardem", startOrContain: "start", letter: "B", definition: "Apellido de un famoso actor español, el primero en ganar un Oscar de Hollywood.", category: "personalidades" },
+  { word: "Belgrano", startOrContain: "start", letter: "B", definition: "Apellido del prócer argentino que creó la bandera nacional celeste y blanca.", category: "personalidades" },
   { word: "Roca", startOrContain: "contain", letter: "C", definition: "Masa sólida de origen mineral que forma parte de la corteza terrestre.", category: "naturaleza" },
   { word: "Dado", startOrContain: "start", letter: "D", definition: "Objeto cúbico con números en sus caras usado en juegos de azar.", category: "deporte-juego" },
   { word: "Einstein", startOrContain: "start", letter: "E", definition: "Apellido del físico alemán autor de la teoría de la relatividad.", category: "personalidades" },
@@ -111,7 +111,7 @@ const ROSCO_3: RoscoEntry[] = [
 const ROSCO_4: RoscoEntry[] = [
   { word: "Aguero", startOrContain: "start", letter: "A", definition: "Apellido del futbolista argentino apodado Kun, goleador del Manchester City.", category: "personalidades" },
   { word: "Banco", startOrContain: "start", letter: "B", definition: "Asiento largo y estrecho sin respaldo donde pueden sentarse varias personas.", category: "cultura-general" },
-  { word: "Circo", startOrContain: "contain", letter: "C", definition: "Espectáculo itinerante con artistas que realizan acrobacias, magia y números con animales.", category: "arte-musica" },
+  { word: "Circo", startOrContain: "start", letter: "C", definition: "Espectáculo itinerante con artistas que realizan acrobacias, magia y números con animales.", category: "arte-musica" },
   { word: "Dulce", startOrContain: "start", letter: "D", definition: "Alimento con sabor azucarado elaborado con azúcar, miel u otros endulzantes naturales.", category: "gastronomia" },
   { word: "Enano", startOrContain: "start", letter: "E", definition: "Persona o ser de estatura muy reducida en comparación con el promedio de su especie.", category: "mitologia-fantasia" },
   { word: "Fuego", startOrContain: "start", letter: "F", definition: "Combustión que produce calor, luz y llamas al oxidarse una sustancia con oxígeno.", category: "ciencias" },
@@ -121,13 +121,13 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Jaula", startOrContain: "start", letter: "J", definition: "Estructura de barrotes o rejilla usada para encerrar y transportar animales de forma segura.", category: "cultura-general" },
   { word: "Kilo", startOrContain: "start", letter: "K", definition: "Unidad de masa del sistema métrico equivalente a mil gramos.", category: "ciencias" },
   { word: "Lanza", startOrContain: "start", letter: "L", definition: "Arma arrojadiza formada por un palo largo con una punta afilada en su extremo.", category: "cultura-general" },
-  { word: "Mesa", startOrContain: "contain", letter: "M", definition: "Mueble con un tablero horizontal sostenido por patas sobre el que se trabaja o come.", category: "cultura-general" },
+  { word: "Mesa", startOrContain: "start", letter: "M", definition: "Mueble con un tablero horizontal sostenido por patas sobre el que se trabaja o come.", category: "cultura-general" },
   { word: "Nuez", startOrContain: "start", letter: "N", definition: "Fruto seco con cáscara dura y semilla comestible rica en grasas saludables y proteínas.", category: "gastronomia" },
   { word: "Oreja", startOrContain: "start", letter: "O", definition: "Parte externa del órgano auditivo ubicado a los lados de la cabeza que capta los sonidos.", category: "ciencias" },
   { word: "Pera", startOrContain: "start", letter: "P", definition: "Fruta de pulpa jugosa y suave con forma alargada y color verde o amarillo.", category: "gastronomia" },
   { word: "Plaqueta", startOrContain: "contain", letter: "Q", definition: "Célula sanguínea de tamaño pequeño que participa en la coagulación de la sangre.", category: "ciencias" },
   { word: "Rama", startOrContain: "start", letter: "R", definition: "Parte lateral que crece desde el tronco de un árbol y sostiene las hojas y frutos.", category: "naturaleza" },
-  { word: "Segura", startOrContain: "start", letter: "S", definition: "Apellido de un actor y director español, conocido por la saga de comedias de Torrente.", category: "personalidades" },
+  { word: "Sarmiento", startOrContain: "start", letter: "S", definition: "Apellido del prócer argentino impulsor de la educación, llamado el padre del aula.", category: "personalidades" },
   { word: "Tesla", startOrContain: "start", letter: "T", definition: "Apellido del inventor serbio pionero en el uso de la corriente eléctrica alterna.", category: "personalidades" },
   { word: "Alturas", startOrContain: "contain", letter: "U", definition: "Zonas elevadas del terreno o el cielo que se encuentran a gran distancia del suelo.", category: "naturaleza" },
   { word: "Vaca", startOrContain: "start", letter: "V", definition: "Animal mamífero doméstico que produce leche y es criado en granjas para consumo humano.", category: "naturaleza" },
@@ -140,7 +140,7 @@ const ROSCO_4: RoscoEntry[] = [
 const ROSCO_5: RoscoEntry[] = [
   { word: "Arpa", startOrContain: "start", letter: "A", definition: "Instrumento musical de cuerdas verticales que se toca pulsando con los dedos de ambas manos.", category: "arte-musica" },
   { word: "Beethoven", startOrContain: "start", letter: "B", definition: "Apellido del compositor alemán que creó grandes sinfonías pese a quedar sordo.", category: "personalidades" },
-  { word: "Carro", startOrContain: "contain", letter: "C", definition: "Vehículo con ruedas tirado por animales o impulsado por un motor para transportar cosas.", category: "transporte" },
+  { word: "Carro", startOrContain: "start", letter: "C", definition: "Vehículo con ruedas tirado por animales o impulsado por un motor para transportar cosas.", category: "transporte" },
   { word: "Duna", startOrContain: "start", letter: "D", definition: "Montículo de arena formado naturalmente por la acción continua del viento en desiertos y playas.", category: "naturaleza" },
   { word: "Envase", startOrContain: "start", letter: "E", definition: "Recipiente fabricado para contener, proteger y trasladar productos sólidos o líquidos.", category: "cultura-general" },
   { word: "Flecha", startOrContain: "start", letter: "F", definition: "Proyectil delgado y puntiagudo disparado con un arco que se usa en caza y deporte.", category: "deporte-juego" },
@@ -169,7 +169,7 @@ const ROSCO_5: RoscoEntry[] = [
 const ROSCO_6: RoscoEntry[] = [
   { word: "Asado", startOrContain: "start", letter: "A", definition: "Carne cocinada lentamente sobre brasas o parrilla, plato típico de la cocina argentina.", category: "gastronomia" },
   { word: "Anfibio", startOrContain: "contain", letter: "B", definition: "Animal vertebrado que puede vivir tanto en el agua como en la tierra, como la rana.", category: "naturaleza" },
-  { word: "Cocina", startOrContain: "contain", letter: "C", definition: "Lugar del hogar donde se preparan y cocinan los alimentos con distintos utensilios.", category: "cultura-general" },
+  { word: "Cocina", startOrContain: "start", letter: "C", definition: "Lugar del hogar donde se preparan y cocinan los alimentos con distintos utensilios.", category: "cultura-general" },
   { word: "Dybala", startOrContain: "start", letter: "D", definition: "Apellido del futbolista argentino de nombre Paulo, apodado la Joya.", category: "personalidades" },
   { word: "Espada", startOrContain: "start", letter: "E", definition: "Arma blanca de hoja larga y afilada usada en combate y esgrima como deporte.", category: "deporte-juego" },
   { word: "Fangio", startOrContain: "start", letter: "F", definition: "Apellido del piloto argentino cinco veces campeón mundial de Fórmula 1.", category: "personalidades" },
@@ -179,7 +179,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Juego", startOrContain: "start", letter: "J", definition: "Actividad recreativa con reglas que realizan personas o animales para divertirse.", category: "deporte-juego" },
   { word: "Kimono", startOrContain: "start", letter: "K", definition: "Vestimenta tradicional japonesa de corte recto, mangas amplias y cierre con faja.", category: "cultura-general" },
   { word: "Limon", startOrContain: "start", letter: "L", definition: "Fruta cítrica amarilla de sabor muy ácido usada en cocina y bebidas refrescantes.", category: "gastronomia" },
-  { word: "Motor", startOrContain: "contain", letter: "M", definition: "Máquina que transforma la energía eléctrica o química en movimiento mecánico.", category: "ciencias" },
+  { word: "Motor", startOrContain: "start", letter: "M", definition: "Máquina que transforma la energía eléctrica o química en movimiento mecánico.", category: "ciencias" },
   { word: "Nogal", startOrContain: "start", letter: "N", definition: "Árbol de madera oscura y valiosa cuyo fruto comestible es la nuez.", category: "naturaleza" },
   { word: "Ojo", startOrContain: "start", letter: "O", definition: "Órgano de la vista que permite percibir la luz, los colores y las formas del entorno.", category: "ciencias" },
   { word: "Puerta", startOrContain: "start", letter: "P", definition: "Abertura en una pared con una hoja móvil que permite entrar o salir de un espacio.", category: "cultura-general" },
@@ -208,11 +208,11 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Jugo", startOrContain: "start", letter: "J", definition: "Líquido natural extraído de frutas o verduras al presionarlas o procesarlas.", category: "gastronomia" },
   { word: "Kiosco", startOrContain: "start", letter: "K", definition: "Puesto pequeño ubicado en la calle donde se venden diarios, revistas, golosinas y bebidas.", category: "educacion-sociedad" },
   { word: "Linterna", startOrContain: "start", letter: "L", definition: "Lámpara portátil que funciona con baterías y se usa para iluminar en la oscuridad.", category: "cultura-general" },
-  { word: "Martillo", startOrContain: "contain", letter: "M", definition: "Herramienta con cabeza metálica y mango de madera usada para clavar o golpear con fuerza.", category: "cultura-general" },
+  { word: "Martillo", startOrContain: "start", letter: "M", definition: "Herramienta con cabeza metálica y mango de madera usada para clavar o golpear con fuerza.", category: "cultura-general" },
   { word: "Noria", startOrContain: "start", letter: "N", definition: "Rueda giratoria de gran tamaño usada en ferias o para extraer agua de pozos.", category: "cultura-general" },
   { word: "Oruga", startOrContain: "start", letter: "O", definition: "Larva de mariposa con cuerpo alargado y segmentado que se alimenta de hojas antes de metamorfosearse.", category: "naturaleza" },
   { word: "Piedra", startOrContain: "start", letter: "P", definition: "Fragmento duro y sólido de roca que se encuentra en la naturaleza en distintos tamaños.", category: "naturaleza" },
-  { word: "Queso", startOrContain: "contain", letter: "Q", definition: "Alimento sólido elaborado con leche cuajada y madurada de distintas formas y sabores.", category: "gastronomia" },
+  { word: "Queso", startOrContain: "start", letter: "Q", definition: "Alimento sólido elaborado con leche cuajada y madurada de distintas formas y sabores.", category: "gastronomia" },
   { word: "Riquelme", startOrContain: "start", letter: "R", definition: "Apellido del futbolista argentino de nombre Juan Román, ídolo de Boca.", category: "personalidades" },
   { word: "Salto", startOrContain: "start", letter: "S", definition: "Acción de impulsarse desde el suelo para elevarse en el aire y caer en otro punto.", category: "deporte-juego" },
   { word: "Tinta", startOrContain: "start", letter: "T", definition: "Líquido de color usado para escribir, imprimir o tatuar sobre distintas superficies.", category: "cultura-general" },
@@ -221,7 +221,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Wellington", startOrContain: "start", letter: "W", definition: "Bota impermeable de goma que cubre hasta la rodilla y protege del agua y el barro.", category: "cultura-general" },
   { word: "Oxigeno", startOrContain: "contain", letter: "X", definition: "Gas incoloro e inodoro esencial para la respiración de los seres vivos y la combustión.", category: "ciencias" },
   { word: "Yuca", startOrContain: "start", letter: "Y", definition: "Tubérculo tropical de raíz grande y harinosa ampliamente consumido en América Latina.", category: "gastronomia" },
-  { word: "Zorro", startOrContain: "contain", letter: "Z", definition: "Mamífero cánido de hocico fino, orejas puntiagudas y cola tupida conocido por su astucia.", category: "naturaleza" },
+  { word: "Zorro", startOrContain: "start", letter: "Z", definition: "Mamífero cánido de hocico fino, orejas puntiagudas y cola tupida conocido por su astucia.", category: "naturaleza" },
 ];
 
 export const ROSCO_SET_001: Record<DayKey, RoscoEntry[]> = {
