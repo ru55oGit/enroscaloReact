@@ -34,6 +34,7 @@ export const availableLanguages = [
   { code: "en" as SupportedLanguage, name: "English", flag: "🇺🇸" },
   { code: "pt" as SupportedLanguage, name: "Português", flag: "🇧🇷" },
   { code: "fr" as SupportedLanguage, name: "Français", flag: "🇫🇷" },
+  { code: "de" as SupportedLanguage, name: "Deutsch", flag: "🇩🇪" },
 ];
 
 interface LanguageProviderProps {

@@ -64,6 +64,16 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
             ...(includeActionKeys ? ["{bksp} {sound}"] : []),
           ],
         };
+      case "de":
+        return {
+          default: [
+            ...baseLayout.slice(0, 2),
+            "A S D F G H J K L Ö",
+            "Z X C V B N M Ü",
+            "Ä ß",
+            ...(includeActionKeys ? ["{bksp} {sound}"] : []),
+          ],
+        };
       case "en":
       default:
         return {

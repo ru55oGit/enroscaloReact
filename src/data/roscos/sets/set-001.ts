@@ -23,7 +23,7 @@ export interface RoscoEntry {
 
 export const ROSCO_1: RoscoEntry[] = [
   { word: "Avion", startOrContain: "start", letter: "A", definition: "Medio de transporte aéreo que vuela impulsado por motores.", category: "transporte" },
-  { word: "Belgrano", startOrContain: "start", letter: "B", definition: "Apellido del prócer argentino que creó la bandera nacional celeste y blanca.", category: "personalidades" },
+  { word: "Bardem", startOrContain: "start", letter: "B", definition: "Apellido de un famoso actor español, el primero en ganar un Oscar de Hollywood.", category: "personalidades" },
   { word: "Roca", startOrContain: "contain", letter: "C", definition: "Masa sólida de origen mineral que forma parte de la corteza terrestre.", category: "naturaleza" },
   { word: "Dado", startOrContain: "start", letter: "D", definition: "Objeto cúbico con números en sus caras usado en juegos de azar.", category: "deporte-juego" },
   { word: "Einstein", startOrContain: "start", letter: "E", definition: "Apellido del físico alemán autor de la teoría de la relatividad.", category: "personalidades" },
@@ -127,7 +127,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Pera", startOrContain: "start", letter: "P", definition: "Fruta de pulpa jugosa y suave con forma alargada y color verde o amarillo.", category: "gastronomia" },
   { word: "Plaqueta", startOrContain: "contain", letter: "Q", definition: "Célula sanguínea de tamaño pequeño que participa en la coagulación de la sangre.", category: "ciencias" },
   { word: "Rama", startOrContain: "start", letter: "R", definition: "Parte lateral que crece desde el tronco de un árbol y sostiene las hojas y frutos.", category: "naturaleza" },
-  { word: "Sarmiento", startOrContain: "start", letter: "S", definition: "Apellido del prócer argentino impulsor de la educación, llamado el padre del aula.", category: "personalidades" },
+  { word: "Segura", startOrContain: "start", letter: "S", definition: "Apellido de un actor y director español, conocido por la saga de comedias de Torrente.", category: "personalidades" },
   { word: "Tesla", startOrContain: "start", letter: "T", definition: "Apellido del inventor serbio pionero en el uso de la corriente eléctrica alterna.", category: "personalidades" },
   { word: "Alturas", startOrContain: "contain", letter: "U", definition: "Zonas elevadas del terreno o el cielo que se encuentran a gran distancia del suelo.", category: "naturaleza" },
   { word: "Vaca", startOrContain: "start", letter: "V", definition: "Animal mamífero doméstico que produce leche y es criado en granjas para consumo humano.", category: "naturaleza" },

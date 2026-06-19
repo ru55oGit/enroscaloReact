@@ -4,6 +4,10 @@ import { ROSCO_SET_EN_001 } from "./roscos/sets/en/set-en-001";
 import { ROSCO_SET_EN_002 } from "./roscos/sets/en/set-en-002";
 import { ROSCO_SET_FR_001 } from "./roscos/sets/fr/set-fr-001";
 import { ROSCO_SET_FR_002 } from "./roscos/sets/fr/set-fr-002";
+import { ROSCO_SET_PT_001 } from "./roscos/sets/pt/set-pt-001";
+import { ROSCO_SET_PT_002 } from "./roscos/sets/pt/set-pt-002";
+import { ROSCO_SET_DE_001 } from "./roscos/sets/de/set-de-001";
+import { ROSCO_SET_DE_002 } from "./roscos/sets/de/set-de-002";
 import { ROSCO_SCHEDULE } from "./roscos/schedule";
 import { DayKey } from "../utils/weeklyRoscoState";
 
@@ -27,8 +31,8 @@ export interface ActiveRoscoContext {
 type LangSets = Partial<Record<string, Record<DayKey, RoscoEntry[]>>>;
 
 const ROSCO_SET_REGISTRY: Record<string, LangSets> = {
-  "set-001": { es: ROSCO_SET_001, en: ROSCO_SET_EN_001, fr: ROSCO_SET_FR_001 },
-  "set-002": { es: ROSCO_SET_002, en: ROSCO_SET_EN_002, fr: ROSCO_SET_FR_002 },
+  "set-001": { es: ROSCO_SET_001, en: ROSCO_SET_EN_001, fr: ROSCO_SET_FR_001, pt: ROSCO_SET_PT_001, de: ROSCO_SET_DE_001 },
+  "set-002": { es: ROSCO_SET_002, en: ROSCO_SET_EN_002, fr: ROSCO_SET_FR_002, pt: ROSCO_SET_PT_002, de: ROSCO_SET_DE_002 },
 };
 
 const EXPECTED_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
