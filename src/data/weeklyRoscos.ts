@@ -28,7 +28,6 @@ import { ROSCO_SET_PT_001 } from "./roscos/sets/pt/set-pt-001";
 import { ROSCO_SET_PT_002 } from "./roscos/sets/pt/set-pt-002";
 import { ROSCO_SET_DE_001 } from "./roscos/sets/de/set-de-001";
 import { ROSCO_SET_DE_002 } from "./roscos/sets/de/set-de-002";
-import { ROSCO_SCHEDULE } from "./roscos/schedule";
 import { DayKey } from "../utils/weeklyRoscoState";
 
 export type RoscoRule = "start" | "contain";
@@ -135,18 +134,18 @@ const resolveSetById = (setId: string, language: string): Record<DayKey, RoscoEn
   return setData;
 };
 
+const CYCLE_BASE_DATE = "2025-12-29"; // domingo de la semana del 01/01/2026, set-001
+const CYCLE_SIZE = 18;
+const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
+
 const resolveScheduleItem = (referenceDate = new Date()) => {
   const weekStart = getWeekStart(referenceDate);
-  const sorted = [...ROSCO_SCHEDULE].sort((a, b) => a.weekStart.localeCompare(b.weekStart));
-  const eligible = sorted.filter((item) => item.weekStart <= weekStart);
-  const selected =
-    (eligible.length > 0 ? eligible[eligible.length - 1] : undefined) ?? sorted[0];
-
-  if (!selected) {
-    return { weekStart, setId: "default" };
-  }
-
-  return { weekStart, setId: selected.setId };
+  const weeksSinceBase = Math.floor(
+    (new Date(weekStart).getTime() - new Date(CYCLE_BASE_DATE).getTime()) / MS_PER_WEEK,
+  );
+  const setIndex = ((weeksSinceBase % CYCLE_SIZE) + CYCLE_SIZE) % CYCLE_SIZE;
+  const setId = `set-${String(setIndex + 1).padStart(3, "0")}`;
+  return { weekStart, setId };
 };
 
 export const getActiveRoscoContext = (
