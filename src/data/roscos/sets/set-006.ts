@@ -2,7 +2,7 @@ import { DayKey } from "../../../utils/weeklyRoscoState";
 import { RoscoEntry } from "./set-001";
 
 const ROSCO_1: RoscoEntry[] = [
-  { word: "Alberdi", startOrContain: "start", letter: "A", definition: "Apellido del pensador que inspiró la Constitución argentina de 1853.", category: "personalidades" },
+  { word: "Almodovar", startOrContain: "start", letter: "A", definition: "Uno de los directores de cine más destacados de España.", category: "personalidades" },
   { word: "Barbilla", startOrContain: "start", letter: "B", definition: "Parte saliente del rostro debajo de la boca, también llamada mentón.", category: "ciencias" },
   { word: "Codo", startOrContain: "start", letter: "C", definition: "Articulación que une el brazo con el antebrazo.", category: "ciencias" },
   { word: "Dentadura", startOrContain: "start", letter: "D", definition: "Conjunto de todos los dientes de la boca.", category: "ciencias" },
@@ -14,7 +14,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Jaqueca", startOrContain: "start", letter: "J", definition: "Dolor de cabeza fuerte y molesto.", category: "ciencias" },
   { word: "Kayak", startOrContain: "start", letter: "K", definition: "Bote angosto que se impulsa con un remo de dos palas.", category: "deporte-juego" },
   { word: "Lengua", startOrContain: "start", letter: "L", definition: "Órgano de la boca con el que sentimos los sabores y hablamos.", category: "ciencias" },
-  { word: "Mitre", startOrContain: "start", letter: "M", definition: "Apellido del presidente e historiador argentino del siglo XIX.", category: "personalidades" },
+  { word: "Madonna", startOrContain: "start", letter: "M", definition: "Nombre artístico de la cantante estadounidense considerada la reina del pop, conocida por éxitos como Like a Virgin y Material Girl.", category: "personalidades" },
   { word: "Nervio", startOrContain: "start", letter: "N", definition: "Fibra del cuerpo que lleva las señales hasta el cerebro.", category: "ciencias" },
   { word: "Ombligo", startOrContain: "start", letter: "O", definition: "Pequeña marca en el centro de la panza que queda al nacer.", category: "ciencias" },
   { word: "Pulmon", startOrContain: "start", letter: "P", definition: "Órgano con el que respiramos y tomamos el oxígeno del aire.", category: "ciencias" },
@@ -42,7 +42,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Injerto", startOrContain: "start", letter: "I", definition: "Unión de una rama de una planta con otra para que crezcan juntas.", category: "naturaleza" },
   { word: "Jardinera", startOrContain: "start", letter: "J", definition: "Recipiente alargado donde se cultivan plantas y flores.", category: "naturaleza" },
   { word: "Kimono", startOrContain: "start", letter: "K", definition: "Túnica tradicional japonesa de mangas anchas.", category: "cultura-general" },
-  { word: "Lavalle", startOrContain: "start", letter: "L", definition: "Apellido del general argentino de las guerras de independencia.", category: "personalidades" },
+  { word: "Paella", startOrContain: "contain", letter: "L", definition: "Plato típico español de arroz cocinado con azafrán, verduras, carne o mariscos en una sartén ancha.", category: "gastronomia" },
   { word: "Maceta", startOrContain: "start", letter: "M", definition: "Recipiente con tierra donde se cultiva una planta.", category: "naturaleza" },
   { word: "Nenufar", startOrContain: "start", letter: "N", definition: "Planta acuática de hojas redondas que flotan sobre el agua.", category: "naturaleza" },
   { word: "Orquidea", startOrContain: "start", letter: "O", definition: "Flor exótica de formas y colores muy variados.", category: "naturaleza" },

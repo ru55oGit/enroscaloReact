@@ -32,7 +32,7 @@ const ROSCO_1: RoscoEntry[] = [
 
 const ROSCO_2: RoscoEntry[] = [
   { word: "Anteojos", startOrContain: "start", letter: "A", definition: "Par de lentes montados en una armazón que ayudan a ver mejor.", category: "cultura-general" },
-  { word: "Burruchaga", startOrContain: "start", letter: "B", definition: "Apellido del futbolista que metió el gol del título argentino en 1986.", category: "personalidades" },
+  { word: "Bogota", startOrContain: "start", letter: "B", definition: "Capital de Colombia, ciudad ubicada en la cordillera de los Andes y una de las más pobladas de América Latina.", category: "cultura-general" },
   { word: "Crespo", startOrContain: "start", letter: "C", definition: "Apellido del futbolista argentino goleador de nombre Hernán.", category: "personalidades" },
   { word: "Disfraz", startOrContain: "start", letter: "D", definition: "Traje que se usa para parecer otro personaje, típico de carnaval.", category: "cultura-general" },
   { word: "Estampilla", startOrContain: "start", letter: "E", definition: "Pequeño sello que se pega en las cartas para poder enviarlas.", category: "cultura-general" },
