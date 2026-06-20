@@ -31,7 +31,7 @@ const ROSCO_1: RoscoEntry[] = [
 ];
 
 const ROSCO_2: RoscoEntry[] = [
-  { word: "Alfajor", startOrContain: "start", letter: "A", definition: "Dulce de dos tapas con relleno, típico de Argentina.", category: "gastronomia" },
+  { word: "Amsterdam", startOrContain: "start", letter: "A", definition: "Capital de los Países Bajos, famosa por sus canales, sus museos y su arquitectura de fachadas angostas.", category: "cultura-general" },
   { word: "Bergkamp", startOrContain: "start", letter: "B", definition: "Apellido del elegante delantero holandés del Arsenal.", category: "personalidades" },
   { word: "Cantona", startOrContain: "start", letter: "C", definition: "Apellido del carismático delantero francés del Manchester United.", category: "personalidades" },
   { word: "Donut", startOrContain: "start", letter: "D", definition: "Rosquita dulce y esponjosa con un agujero en el medio.", category: "gastronomia" },

@@ -26,7 +26,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Vermeer", startOrContain: "start", letter: "V", definition: "Apellido del pintor holandés de La joven de la perla.", category: "personalidades" },
   { word: "Washington", startOrContain: "start", letter: "W", definition: "Capital de los Estados Unidos.", category: "cultura-general" },
   { word: "Reflexion", startOrContain: "contain", letter: "X", definition: "Acción de pensar con cuidado sobre algo.", category: "educacion-sociedad" },
-  { word: "Yatay", startOrContain: "start", letter: "Y", definition: "Palmera típica del nordeste argentino.", category: "naturaleza" },
+  { word: "Yokohama", startOrContain: "start", letter: "Y", definition: "Ciudad portuaria japonesa ubicada junto a Tokio, la segunda más grande del país, famosa por su barrio chino, su puerto histórico y sus rascacielos modernos.", category: "cultura-general" },
   { word: "Mozo", startOrContain: "contain", letter: "Z", definition: "Persona que atiende las mesas en un bar o restaurante.", category: "educacion-sociedad" },
 ];
 

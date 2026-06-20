@@ -3,7 +3,7 @@ import { RoscoEntry } from "./set-001";
 
 const ROSCO_1: RoscoEntry[] = [
   { word: "Alfombra", startOrContain: "start", letter: "A", definition: "Tejido que se pone en el piso para abrigar y decorar.", category: "cultura-general" },
-  { word: "Bianchi", startOrContain: "start", letter: "B", definition: "Apellido del director técnico argentino multicampeón con Boca.", category: "personalidades" },
+  { word: "Bunuelo", startOrContain: "start", letter: "B", definition: "Masa frita esponjosa espolvoreada con azúcar o miel, típica de la gastronomía española y mexicana, muy popular en fiestas y celebraciones.", category: "gastronomia" },
   { word: "Cortina", startOrContain: "start", letter: "C", definition: "Tela que se cuelga en la ventana para tapar la luz.", category: "cultura-general" },
   { word: "Divan", startOrContain: "start", letter: "D", definition: "Sillón largo y cómodo donde recostarse.", category: "cultura-general" },
   { word: "Escritorio", startOrContain: "start", letter: "E", definition: "Mueble con tabla para escribir, leer o estudiar.", category: "cultura-general" },
@@ -31,8 +31,8 @@ const ROSCO_1: RoscoEntry[] = [
 ];
 
 const ROSCO_2: RoscoEntry[] = [
-  { word: "Ayala", startOrContain: "start", letter: "A", definition: "Apellido del defensor argentino apodado el Ratón.", category: "personalidades" },
-  { word: "Birome", startOrContain: "start", letter: "B", definition: "Lapicera que escribe con tinta, invento argentino.", category: "educacion-sociedad" },
+  { word: "Kahlo", startOrContain: "contain", letter: "A", definition: "Apellido de Frida, icónica pintora mexicana conocida por sus autorretratos llenos de simbolismo, dolor y colorido, símbolo del feminismo y la identidad mexicana.", category: "personalidades" },
+  { word: "Boligrafo", startOrContain: "start", letter: "B", definition: "Instrumento de escritura con tinta de secado rápido contenida en un cartucho interno, conocido también como pluma en México o boli en España.", category: "educacion-sociedad" },
   { word: "Cuaderno", startOrContain: "start", letter: "C", definition: "Conjunto de hojas unidas donde se escribe y dibuja.", category: "educacion-sociedad" },
   { word: "Dibujo", startOrContain: "start", letter: "D", definition: "Imagen hecha con líneas y colores sobre el papel.", category: "arte-musica" },
   { word: "Estuche", startOrContain: "start", letter: "E", definition: "Bolsito o caja para guardar lápices y útiles.", category: "educacion-sociedad" },
@@ -49,13 +49,13 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Pizarron", startOrContain: "start", letter: "P", definition: "Tablero del aula donde el maestro escribe con tiza.", category: "educacion-sociedad" },
   { word: "Banquete", startOrContain: "contain", letter: "Q", definition: "Comida abundante para celebrar algo especial.", category: "gastronomia" },
   { word: "Regla", startOrContain: "start", letter: "R", definition: "Instrumento recto que sirve para medir y trazar líneas.", category: "educacion-sociedad" },
-  { word: "Samuel", startOrContain: "start", letter: "S", definition: "Apellido del defensor argentino apodado el Jefecito.", category: "personalidades" },
+  { word: "Sudafrica", startOrContain: "start", letter: "S", definition: "País ubicado en el extremo sur de África, famoso por sus safaris, su biodiversidad, el rugby y haber sido sede del Mundial de fútbol 2010.", category: "cultura-general" },
   { word: "Tijera", startOrContain: "start", letter: "T", definition: "Herramienta de dos hojas que sirve para cortar papel o tela.", category: "educacion-sociedad" },
   { word: "Buque", startOrContain: "contain", letter: "U", definition: "Barco grande que navega por el mar.", category: "transporte" },
   { word: "Vocabulario", startOrContain: "start", letter: "V", definition: "Conjunto de palabras que conoce o usa una persona.", category: "educacion-sociedad" },
   { word: "Waterpolo", startOrContain: "start", letter: "W", definition: "Deporte de equipo que se juega dentro de una pileta con una pelota.", category: "deporte-juego" },
   { word: "Anexo", startOrContain: "contain", letter: "X", definition: "Parte que se agrega a algo principal.", category: "cultura-general" },
-  { word: "Yaguarete", startOrContain: "start", letter: "Y", definition: "El felino más grande de América, vive en las selvas del norte argentino.", category: "naturaleza" },
+  { word: "Yoko", startOrContain: "start", letter: "Y", definition: "Nombre de Ono, artista conceptual japonesa, activista por la paz y compañera de John Lennon, figura influyente en el arte y la cultura del siglo XX.", category: "personalidades" },
   { word: "Cazo", startOrContain: "contain", letter: "Z", definition: "Recipiente con mango para calentar comida.", category: "gastronomia" },
 ];
 
@@ -132,7 +132,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Liszt", startOrContain: "start", letter: "L", definition: "Apellido del gran pianista y compositor húngaro.", category: "personalidades" },
   { word: "Monumento", startOrContain: "start", letter: "M", definition: "Obra que se construye para recordar a alguien o algo.", category: "cultura-general" },
   { word: "Nobel", startOrContain: "start", letter: "N", definition: "Apellido del inventor sueco que creó los famosos premios.", category: "personalidades" },
-  { word: "Obelisco", startOrContain: "start", letter: "O", definition: "Monumento alto y puntiagudo, símbolo de Buenos Aires.", category: "cultura-general" },
+  { word: "Osaka", startOrContain: "start", letter: "O", definition: "Segunda ciudad más grande de Japón, famosa por su gastronomía callejera, su castillo histórico y ser sede de la Expo 2025.", category: "cultura-general" },
   { word: "Plazoleta", startOrContain: "start", letter: "P", definition: "Plaza pequeña en una esquina o entre calles.", category: "cultura-general" },
   { word: "Etiqueta", startOrContain: "contain", letter: "Q", definition: "Papelito con datos que se pega en un producto.", category: "cultura-general" },
   { word: "Rascacielos", startOrContain: "start", letter: "R", definition: "Edificio altísimo de muchísimos pisos.", category: "cultura-general" },

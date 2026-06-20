@@ -23,7 +23,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Salamandra", startOrContain: "start", letter: "S", definition: "Pequeño anfibio de piel húmeda y colores llamativos.", category: "naturaleza" },
   { word: "Tapir", startOrContain: "start", letter: "T", definition: "Animal de hocico alargado que vive cerca del agua en la selva.", category: "naturaleza" },
   { word: "Uva", startOrContain: "start", letter: "U", definition: "Fruta pequeña y dulce que crece en racimos.", category: "gastronomia" },
-  { word: "Vizcacha", startOrContain: "start", letter: "V", definition: "Roedor de la llanura argentina que cava cuevas.", category: "naturaleza" },
+  { word: "Venecia", startOrContain: "start", letter: "V", definition: "Ciudad italiana construida sobre canales y lagunas, famosa por sus góndolas, el Carnaval y la Plaza de San Marcos.", category: "cultura-general" },
   { word: "Wok", startOrContain: "start", letter: "W", definition: "Sartén honda de origen asiático para saltear alimentos.", category: "gastronomia" },
   { word: "Galaxia", startOrContain: "contain", letter: "X", definition: "Enorme conjunto de estrellas unidas por la gravedad.", category: "ciencias" },
   { word: "Yoga", startOrContain: "start", letter: "Y", definition: "Disciplina que combina posturas del cuerpo y respiración.", category: "deporte-juego" },
@@ -148,7 +148,7 @@ const ROSCO_5: RoscoEntry[] = [
 
 const ROSCO_6: RoscoEntry[] = [
   { word: "Asimov", startOrContain: "start", letter: "A", definition: "Apellido del célebre escritor de novelas de ciencia ficción.", category: "personalidades" },
-  { word: "Bioy", startOrContain: "start", letter: "B", definition: "Apellido del escritor argentino, gran amigo de Borges.", category: "personalidades" },
+  { word: "Bruscheta", startOrContain: "start", letter: "B", definition: "Tostada italiana de pan a la parrilla frotado con ajo y cubierto con tomate fresco, albahaca y aceite de oliva.", category: "gastronomia" },
   { word: "Capitulo", startOrContain: "start", letter: "C", definition: "Cada una de las partes en que se divide un libro.", category: "cultura-general" },
   { word: "Desenlace", startOrContain: "start", letter: "D", definition: "Final de una historia, donde se resuelve todo.", category: "cultura-general" },
   { word: "Epilogo", startOrContain: "start", letter: "E", definition: "Parte final que se agrega al terminar una historia.", category: "cultura-general" },
@@ -162,7 +162,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Manuscrito", startOrContain: "start", letter: "M", definition: "Texto escrito a mano.", category: "cultura-general" },
   { word: "Narrador", startOrContain: "start", letter: "N", definition: "Quien cuenta la historia en un relato.", category: "cultura-general" },
   { word: "Obra", startOrContain: "start", letter: "O", definition: "Trabajo creado por un autor, como un libro o una pintura.", category: "arte-musica" },
-  { word: "Pizarnik", startOrContain: "start", letter: "P", definition: "Apellido de la célebre poeta argentina.", category: "personalidades" },
+  { word: "Praga", startOrContain: "start", letter: "P", definition: "Capital de la República Checa, una de las ciudades medievales mejor conservadas de Europa, famosa por su castillo, su puente de Carlos y su cerveza.", category: "cultura-general" },
   { word: "Esquina", startOrContain: "contain", letter: "Q", definition: "Punto donde se cruzan dos calles.", category: "cultura-general" },
   { word: "Resumen", startOrContain: "start", letter: "R", definition: "Versión corta que cuenta lo más importante de un texto.", category: "educacion-sociedad" },
   { word: "Saga", startOrContain: "start", letter: "S", definition: "Conjunto de varias historias relacionadas entre sí.", category: "cultura-general" },

@@ -200,7 +200,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Vegetacion", startOrContain: "start", letter: "V", definition: "Conjunto de plantas que crecen en un lugar.", category: "naturaleza" },
   { word: "Waflera", startOrContain: "start", letter: "W", definition: "Plancha para cocinar wafles con forma de cuadrícula.", category: "gastronomia" },
   { word: "Latex", startOrContain: "contain", letter: "X", definition: "Sustancia elástica con la que se fabrica el caucho.", category: "ciencias" },
-  { word: "Yatay", startOrContain: "start", letter: "Y", definition: "Palmera típica del nordeste argentino.", category: "naturaleza" },
+  { word: "Yuri", startOrContain: "start", letter: "Y", definition: "Nombre del cosmonauta soviético Gagarin, primer ser humano en viajar al espacio en 1961.", category: "personalidades" },
   { word: "Luz", startOrContain: "contain", letter: "Z", definition: "Energía que ilumina y nos permite ver las cosas.", category: "ciencias" },
 ];
 
