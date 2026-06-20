@@ -74,7 +74,7 @@ export default function WelcomeScreen() {
     thu: t.dayThu, fri: t.dayFri, sat: t.daySat,
   };
 
-  const statusLabels = { completed: t.statusCompleted, inProgress: t.statusInProgress, notStarted: t.statusNotStarted };
+  const statusLabels = { completed: t.statusCompleted, inProgress: t.statusInProgress, notStarted: t.statusNotStarted, timedOut: t.statusTimedOut };
 
   const CATEGORY_META: Record<string, { label: string; icon: string }> = {
     "naturaleza": { label: "Naturaleza", icon: "🌿" },

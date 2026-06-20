@@ -82,6 +82,7 @@ export interface Translation {
   statusCompleted: string;
   statusInProgress: string;
   statusNotStarted: string;
+  statusTimedOut: string;
 
   // Rosco game
   startGame: string;
@@ -174,6 +175,7 @@ export const translations: Record<string, Translation> = {
     statusCompleted: "Completado",
     statusInProgress: "En progreso",
     statusNotStarted: "Sin jugar",
+    statusTimedOut: "Tiempo agotado",
     startGame: "Comenzar",
     continueGameBtn: "Continuar",
     feedbackTimeout: "Tiempo agotado",
@@ -261,6 +263,7 @@ export const translations: Record<string, Translation> = {
     statusCompleted: "Completed",
     statusInProgress: "In progress",
     statusNotStarted: "Not played",
+    statusTimedOut: "Time's up",
     startGame: "Start",
     continueGameBtn: "Continue",
     feedbackTimeout: "Time's up",
@@ -348,6 +351,7 @@ export const translations: Record<string, Translation> = {
     statusCompleted: "Concluído",
     statusInProgress: "Em andamento",
     statusNotStarted: "Não jogado",
+    statusTimedOut: "Tempo esgotado",
     startGame: "Começar",
     continueGameBtn: "Continuar",
     feedbackTimeout: "Tempo esgotado",
@@ -435,6 +439,7 @@ export const translations: Record<string, Translation> = {
     statusCompleted: "Complété",
     statusInProgress: "En cours",
     statusNotStarted: "Non joué",
+    statusTimedOut: "Temps écoulé",
     startGame: "Commencer",
     continueGameBtn: "Continuer",
     feedbackTimeout: "Temps écoulé",
@@ -522,6 +527,7 @@ export const translations: Record<string, Translation> = {
     statusCompleted: "Abgeschlossen",
     statusInProgress: "In Bearbeitung",
     statusNotStarted: "Nicht gespielt",
+    statusTimedOut: "Zeit abgelaufen",
     startGame: "Starten",
     continueGameBtn: "Weiter",
     feedbackTimeout: "Zeit abgelaufen",
