@@ -39,24 +39,30 @@ const isVowel = (c: string): boolean => /[aeiouáéíóúü]/i.test(c);
 
 const getWordBreakPoint = (word: string, maxPerRow: number): number | null => {
   if (word.length <= maxPerRow) return null;
-  // Leave at least 2 chars on the second row
   const hardMax = Math.min(word.length - 2, maxPerRow);
   const ideal = Math.ceil(word.length / 2);
 
-  const candidates: number[] = [];
+  // Prefer vowel→consonant (e.g. DIRI|GIBLE) over consonant→vowel (e.g. DIRIG|IBLE)
+  // because in Spanish consonants belong to the following syllable (V-CV rule)
+  const vcCandidates: number[] = [];
+  const cvCandidates: number[] = [];
+
   for (let i = 2; i <= hardMax; i += 1) {
     const prev = word[i - 1];
     const curr = word[i];
-    if (prev && curr && isVowel(prev) !== isVowel(curr)) {
-      candidates.push(i);
-    }
+    if (!prev || !curr) continue;
+    if (isVowel(prev) && !isVowel(curr)) vcCandidates.push(i);
+    else if (!isVowel(prev) && isVowel(curr)) cvCandidates.push(i);
   }
 
-  if (candidates.length === 0) return hardMax;
+  const pickBest = (arr: number[]) =>
+    arr.length === 0
+      ? null
+      : arr.reduce((best, c) =>
+          Math.abs(c - ideal) < Math.abs(best - ideal) ? c : best,
+        );
 
-  return candidates.reduce((best, c) =>
-    Math.abs(c - ideal) < Math.abs(best - ideal) ? c : best,
-  );
+  return pickBest(vcCandidates) ?? pickBest(cvCandidates) ?? hardMax;
 };
 
 const findNextPlayableIndex = (
