@@ -21,7 +21,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Quimica", startOrContain: "start", letter: "Q", definition: "Ciencia que estudia la composición y las transformaciones de la materia.", category: "ciencias" },
   { word: "Racimo", startOrContain: "start", letter: "R", definition: "Conjunto de frutos o flores que crecen agrupados en una misma rama, como las uvas.", category: "naturaleza" },
   { word: "Sopa", startOrContain: "start", letter: "S", definition: "Comida líquida caliente elaborada con caldo, verduras, pasta o carne.", category: "gastronomia" },
-  { word: "Tevez", startOrContain: "start", letter: "T", definition: "Apellido del futbolista argentino de nombre Carlos, apodado el Apache.", category: "personalidades" },
+  { word: "Tortilla", startOrContain: "start", letter: "T", definition: "Popular plato de la gastronomía española elaborado a base de huevo batido y patatas cortadas, que se fríe en una sartén y puede llevar o no cebolla.", category: "gastronomia" },
   { word: "Uva", startOrContain: "start", letter: "U", definition: "Pequeño fruto redondo que crece en racimos y se usa para hacer vino.", category: "gastronomia" },
   { word: "Vaso", startOrContain: "start", letter: "V", definition: "Recipiente cilíndrico sin asa usado para beber líquidos.", category: "cultura-general" },
   { word: "Wasabi", startOrContain: "start", letter: "W", definition: "Pasta verde de sabor muy picante típica de la cocina japonesa.", category: "gastronomia" },

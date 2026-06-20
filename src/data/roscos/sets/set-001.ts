@@ -170,7 +170,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Asado", startOrContain: "start", letter: "A", definition: "Carne cocinada lentamente sobre brasas o parrilla, plato típico de la cocina argentina.", category: "gastronomia" },
   { word: "Anfibio", startOrContain: "contain", letter: "B", definition: "Animal vertebrado que puede vivir tanto en el agua como en la tierra, como la rana.", category: "naturaleza" },
   { word: "Cocina", startOrContain: "start", letter: "C", definition: "Lugar del hogar donde se preparan y cocinan los alimentos con distintos utensilios.", category: "cultura-general" },
-  { word: "Dybala", startOrContain: "start", letter: "D", definition: "Apellido del futbolista argentino de nombre Paulo, apodado la Joya.", category: "personalidades" },
+  { word: "Dali", startOrContain: "start", letter: "D", definition: "Apellido del pintor surrealista español de nombre Salvador, famoso por sus relojes derretidos.", category: "arte-musica" },
   { word: "Espada", startOrContain: "start", letter: "E", definition: "Arma blanca de hoja larga y afilada usada en combate y esgrima como deporte.", category: "deporte-juego" },
   { word: "Fangio", startOrContain: "start", letter: "F", definition: "Apellido del piloto argentino cinco veces campeón mundial de Fórmula 1.", category: "personalidades" },
   { word: "Galileo", startOrContain: "start", letter: "G", definition: "Apellido del astrónomo italiano que perfeccionó el telescopio para observar el cielo.", category: "personalidades" },
@@ -197,7 +197,7 @@ const ROSCO_6: RoscoEntry[] = [
 
 const ROSCO_7: RoscoEntry[] = [
   { word: "Aguila", startOrContain: "start", letter: "A", definition: "Ave rapaz de gran tamaño con vista aguda que caza presas desde las alturas.", category: "naturaleza" },
-  { word: "Batistuta", startOrContain: "start", letter: "B", definition: "Apellido del futbolista argentino goleador histórico apodado Batigol.", category: "personalidades" },
+  { word: "Belinda", startOrContain: "start", letter: "B", definition: "Nombre de la cantante y actriz mexicana conocida por sus éxitos pop y su participación en series juveniles.", category: "personalidades" },
   { word: "Chaplin", startOrContain: "start", letter: "C", definition: "Apellido del actor y director británico del cine mudo, creador del personaje Charlot.", category: "personalidades" },
   { word: "Dardo", startOrContain: "start", letter: "D", definition: "Proyectil pequeño y puntiagudo que se lanza con la mano hacia un blanco circular.", category: "deporte-juego" },
   { word: "Escudo", startOrContain: "start", letter: "E", definition: "Objeto de defensa portátil usado para proteger el cuerpo de golpes y proyectiles enemigos.", category: "cultura-general" },

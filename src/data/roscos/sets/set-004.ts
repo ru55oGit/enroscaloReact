@@ -17,7 +17,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Mascherano", startOrContain: "start", letter: "M", definition: "Apellido del futbolista argentino apodado el Jefecito.", category: "personalidades" },
   { word: "Nevado", startOrContain: "start", letter: "N", definition: "Montaña cuya cima permanece cubierta de nieve durante todo el año.", category: "naturaleza" },
   { word: "Oleaje", startOrContain: "start", letter: "O", definition: "Movimiento continuo y sucesivo de las olas del mar.", category: "naturaleza" },
-  { word: "Passarella", startOrContain: "start", letter: "P", definition: "Apellido del futbolista argentino capitán campeón del Mundial de 1978.", category: "personalidades" },
+  { word: "Pozole", startOrContain: "start", letter: "P", definition: "Sopa tradicional mexicana elaborada con maíz cacahuazintle, carne de cerdo o pollo y chiles, que se sirve con tostadas, lechuga y rábano.", category: "gastronomia" },
   { word: "Etiqueta", startOrContain: "contain", letter: "Q", definition: "Papel o adhesivo con datos que se pega sobre un producto.", category: "cultura-general" },
   { word: "Rocio", startOrContain: "start", letter: "R", definition: "Gotas de agua que aparecen de madrugada sobre las plantas.", category: "naturaleza" },
   { word: "Selva", startOrContain: "start", letter: "S", definition: "Bosque tropical muy denso y húmedo lleno de animales y plantas.", category: "naturaleza" },

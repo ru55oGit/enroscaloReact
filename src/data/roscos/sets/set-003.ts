@@ -189,7 +189,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Kremlin", startOrContain: "start", letter: "K", definition: "Fortaleza amurallada de Moscú que es sede del gobierno ruso.", category: "cultura-general" },
   { word: "Liga", startOrContain: "start", letter: "L", definition: "Competencia en la que varios equipos juegan todos contra todos.", category: "deporte-juego" },
   { word: "Maraton", startOrContain: "start", letter: "M", definition: "Carrera a pie de larguísima distancia que exige gran resistencia.", category: "deporte-juego" },
-  { word: "Nocioni", startOrContain: "start", letter: "N", definition: "Apellido del basquetbolista argentino campeón olímpico en el año 2004.", category: "personalidades" },
+  { word: "Nachos", startOrContain: "start", letter: "N", definition: "Triángulos de tortilla de maíz fritos y crujientes, típicos de la cocina mexicana, que se sirven cubiertos de queso fundido y rodajas de chiles jalapeños.", category: "gastronomia" },
   { word: "Ovacion", startOrContain: "start", letter: "O", definition: "Aplauso largo e intenso con que el público celebra a alguien.", category: "cultura-general" },
   { word: "Pelotari", startOrContain: "start", letter: "P", definition: "Jugador del deporte de la pelota vasca.", category: "deporte-juego" },
   { word: "Arquero", startOrContain: "contain", letter: "Q", definition: "Jugador encargado de defender el arco en distintos deportes.", category: "deporte-juego" },
