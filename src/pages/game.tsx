@@ -39,12 +39,24 @@ const isVowel = (c: string): boolean => /[aeiouáéíóúü]/i.test(c);
 
 const getWordBreakPoint = (word: string, maxPerRow: number): number | null => {
   if (word.length <= maxPerRow) return null;
-  for (let i = maxPerRow; i >= Math.max(2, maxPerRow - 5); i -= 1) {
+  // Leave at least 2 chars on the second row
+  const hardMax = Math.min(word.length - 2, maxPerRow);
+  const ideal = Math.ceil(word.length / 2);
+
+  const candidates: number[] = [];
+  for (let i = 2; i <= hardMax; i += 1) {
     const prev = word[i - 1];
     const curr = word[i];
-    if (prev && curr && isVowel(prev) !== isVowel(curr)) return i;
+    if (prev && curr && isVowel(prev) !== isVowel(curr)) {
+      candidates.push(i);
+    }
   }
-  return maxPerRow;
+
+  if (candidates.length === 0) return hardMax;
+
+  return candidates.reduce((best, c) =>
+    Math.abs(c - ideal) < Math.abs(best - ideal) ? c : best,
+  );
 };
 
 const findNextPlayableIndex = (
