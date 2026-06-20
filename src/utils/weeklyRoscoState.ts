@@ -37,7 +37,7 @@ interface WeeklyRoscoState {
 }
 
 const STORAGE_KEY_PREFIX = "enroscalo_week_state_v2";
-export const DEFAULT_ROSCO_TIME_SECONDS = 150;
+export const DEFAULT_ROSCO_TIME_SECONDS = 180;
 
 export const WEEK_DAYS: DayMeta[] = [
   { key: "sun", label: "Domingo", shortLabel: "Dom" },

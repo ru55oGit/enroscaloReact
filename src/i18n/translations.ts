@@ -95,6 +95,7 @@ export interface Translation {
   pendingLabel: string;
   resultLabel: string;
   backToHome: string;
+  reloadTime: string;
   startsWith: string;
   contains: string;
 
@@ -186,6 +187,7 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "Pendientes",
     resultLabel: "Resultado",
     backToHome: "Volver al inicio",
+    reloadTime: "Recargar tiempo",
     startsWith: "Comienza con",
     contains: "Contiene",
     daySun: "Domingo",
@@ -274,6 +276,7 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "Pending",
     resultLabel: "Result",
     backToHome: "Back to home",
+    reloadTime: "Add time",
     startsWith: "Starts with",
     contains: "Contains",
     daySun: "Sunday",
@@ -362,6 +365,7 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "Pendentes",
     resultLabel: "Resultado",
     backToHome: "Voltar ao início",
+    reloadTime: "Recarregar tempo",
     startsWith: "Começa com",
     contains: "Contém",
     daySun: "Domingo",
@@ -450,6 +454,7 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "En attente",
     resultLabel: "Résultat",
     backToHome: "Retour à l'accueil",
+    reloadTime: "Recharger le temps",
     startsWith: "Commence par",
     contains: "Contient",
     daySun: "Dimanche",
@@ -538,6 +543,7 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "Ausstehend",
     resultLabel: "Ergebnis",
     backToHome: "Zurück zum Start",
+    reloadTime: "Zeit aufladen",
     startsWith: "Beginnt mit",
     contains: "Enthält",
     daySun: "Sonntag",

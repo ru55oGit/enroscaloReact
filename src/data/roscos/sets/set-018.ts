@@ -161,7 +161,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Leviatan", startOrContain: "start", letter: "L", definition: "Monstruo marino gigante de las antiguas leyendas.", category: "mitologia-fantasia" },
   { word: "Mandragora", startOrContain: "start", letter: "M", definition: "Planta mágica de las leyendas, con forma de figura humana.", category: "mitologia-fantasia" },
   { word: "Nemesis", startOrContain: "start", letter: "N", definition: "Diosa griega de la justicia y la venganza.", category: "mitologia-fantasia" },
-  { word: "Okinawa", startOrContain: "start", letter: "O", definition: "Isla japonesa del Pacífico, escenario de una de las batallas más cruentas de la Segunda Guerra Mundial.", category: "cultura-general" },
+  { word: "Okinawa", startOrContain: "start", letter: "O", definition: "Isla japonesa del Pacífico, escenario de una de las batallas más cruentas de la Segunda Guerra.", category: "cultura-general" },
   { word: "Perseo", startOrContain: "start", letter: "P", definition: "Héroe griego que venció a la Medusa.", category: "mitologia-fantasia" },
   { word: "Quimera", startOrContain: "start", letter: "Q", definition: "Monstruo mítico formado por partes de varios animales.", category: "mitologia-fantasia" },
   { word: "Romulo", startOrContain: "start", letter: "R", definition: "Personaje legendario que fundó la ciudad de Roma.", category: "mitologia-fantasia" },

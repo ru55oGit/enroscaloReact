@@ -3,7 +3,7 @@ import { RoscoEntry } from "./set-001";
 
 const ROSCO_1: RoscoEntry[] = [
   { word: "Armadillo", startOrContain: "start", letter: "A", definition: "Mamífero con caparazón duro que se enrosca para protegerse de los peligros.", category: "naturaleza" },
-  { word: "Barcelona", startOrContain: "start", letter: "B", definition: "Ciudad española, capital de Cataluña, famosa por la arquitectura de Gaudí, las Ramblas y uno de los clubes de fútbol más importantes del mundo.", category: "cultura-general" },
+  { word: "Barcelona", startOrContain: "start", letter: "B", definition: "Capital catalana, famosa por la arquitectura de Gaudí, las Ramblas y su histórico club de fútbol.", category: "cultura-general" },
   { word: "Ciervo", startOrContain: "start", letter: "C", definition: "Animal del bosque con grandes astas ramificadas en la cabeza.", category: "naturaleza" },
   { word: "Dromedario", startOrContain: "start", letter: "D", definition: "Animal del desierto parecido al camello pero con una sola joroba.", category: "naturaleza" },
   { word: "Escorpion", startOrContain: "start", letter: "E", definition: "Animal con pinzas y una cola terminada en aguijón venenoso.", category: "naturaleza" },
@@ -31,7 +31,7 @@ const ROSCO_1: RoscoEntry[] = [
 ];
 
 const ROSCO_2: RoscoEntry[] = [
-  { word: "Acapulco", startOrContain: "start", letter: "A", definition: "Ciudad costera mexicana del estado de Guerrero, famosa por sus playas, vida nocturna y los espectaculares clavados desde La Quebrada.", category: "cultura-general" },
+  { word: "Acapulco", startOrContain: "start", letter: "A", definition: "Ciudad de Guerrero, México, famosa por sus playas y los espectaculares clavados desde La Quebrada.", category: "cultura-general" },
   { word: "Bandeja", startOrContain: "start", letter: "B", definition: "Pieza plana con bordes que sirve para llevar platos o vasos.", category: "cultura-general" },
   { word: "Cuchara", startOrContain: "start", letter: "C", definition: "Utensilio con mango y parte hueca para tomar sopas y líquidos.", category: "gastronomia" },
   { word: "Destornillador", startOrContain: "start", letter: "D", definition: "Herramienta que sirve para apretar o aflojar tornillos.", category: "cultura-general" },
@@ -62,11 +62,11 @@ const ROSCO_2: RoscoEntry[] = [
 const ROSCO_3: RoscoEntry[] = [
   { word: "Anana", startOrContain: "start", letter: "A", definition: "Fruta tropical de cáscara áspera y pulpa amarilla muy dulce.", category: "gastronomia" },
   { word: "Berenjena", startOrContain: "start", letter: "B", definition: "Verdura alargada de color violeta oscuro y piel brillante.", category: "gastronomia" },
-  { word: "Cancun", startOrContain: "start", letter: "C", definition: "Ciudad turística mexicana ubicada en el Caribe, en el estado de Quintana Roo, famosa por sus playas de arena blanca, hoteles y vida nocturna.", category: "cultura-general" },
+  { word: "Cancun", startOrContain: "start", letter: "C", definition: "Ciudad del Caribe mexicano, en Quintana Roo, famosa por sus playas de arena blanca y vida nocturna.", category: "cultura-general" },
   { word: "Damasco", startOrContain: "start", letter: "D", definition: "Fruta anaranjada y aterciopelada parecida a un durazno pequeño.", category: "gastronomia" },
   { word: "Endivia", startOrContain: "start", letter: "E", definition: "Verdura de hojas apretadas y sabor algo amargo usada en ensaladas.", category: "gastronomia" },
   { word: "Flan", startOrContain: "start", letter: "F", definition: "Postre suave hecho con huevo, leche y azúcar cubierto de caramelo.", category: "gastronomia" },
-  { word: "Gaudi", startOrContain: "start", letter: "G", definition: "Apellido del arquitecto catalán Antoni, genio del modernismo español, autor de la Sagrada Familia y el Parque Güell en Barcelona.", category: "personalidades" },
+  { word: "Gaudi", startOrContain: "start", letter: "G", definition: "Apellido del arquitecto catalán Antoni, autor de la Sagrada Familia y el Parque Güell.", category: "personalidades" },
   { word: "Higo", startOrContain: "start", letter: "H", definition: "Fruta dulce de piel oscura y muchas semillas pequeñas por dentro.", category: "gastronomia" },
   { word: "Insignia", startOrContain: "start", letter: "I", definition: "Símbolo o distintivo que representa a un grupo o institución.", category: "cultura-general" },
   { word: "Jornada", startOrContain: "start", letter: "J", definition: "Período de un día dedicado a una actividad o al trabajo.", category: "educacion-sociedad" },
@@ -200,7 +200,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Vereda", startOrContain: "start", letter: "V", definition: "Camino al costado de la calle por donde caminan las personas.", category: "cultura-general" },
   { word: "Western", startOrContain: "start", letter: "W", definition: "Tipo de película ambientada en el lejano oeste americano.", category: "cultura-general" },
   { word: "Conexion", startOrContain: "contain", letter: "X", definition: "Unión o enlace entre dos cosas o lugares.", category: "ciencias" },
-  { word: "Yucateco", startOrContain: "start", letter: "Y", definition: "Adjetivo que describe todo lo perteneciente al estado mexicano de Yucatán, famoso por su cocina, sus ruinas mayas y su cultura.", category: "cultura-general" },
+  { word: "Yucateco", startOrContain: "start", letter: "Y", definition: "Adjetivo que describe lo relativo al estado mexicano de Yucatán y su cultura maya.", category: "cultura-general" },
   { word: "Plaza", startOrContain: "contain", letter: "Z", definition: "Espacio público abierto en una ciudad, con bancos y árboles.", category: "cultura-general" },
 ];
 

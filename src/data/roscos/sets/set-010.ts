@@ -4,7 +4,7 @@ import { RoscoEntry } from "./set-001";
 const ROSCO_1: RoscoEntry[] = [
   { word: "Acelga", startOrContain: "start", letter: "A", definition: "Verdura de hojas grandes y verdes con tallo blanco.", category: "gastronomia" },
   { word: "Batata", startOrContain: "start", letter: "B", definition: "Raíz dulce y anaranjada que se cocina al horno o hervida.", category: "gastronomia" },
-  { word: "Ceviche", startOrContain: "start", letter: "C", definition: "Plato peruano de pescado crudo marinado en jugo de limón con cebolla, cilantro y ají, muy popular en toda América Latina.", category: "gastronomia" },
+  { word: "Ceviche", startOrContain: "start", letter: "C", definition: "Plato peruano de pescado crudo marinado en limón con cebolla, cilantro y ají.", category: "gastronomia" },
   { word: "Datil", startOrContain: "start", letter: "D", definition: "Fruta dulce y marrón que da la palmera datilera.", category: "gastronomia" },
   { word: "Escarola", startOrContain: "start", letter: "E", definition: "Verdura de hojas rizadas que se come en ensalada.", category: "gastronomia" },
   { word: "Forlan", startOrContain: "start", letter: "F", definition: "Apellido del delantero uruguayo goleador de un Mundial.", category: "personalidades" },

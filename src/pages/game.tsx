@@ -35,6 +35,18 @@ const normalizeKeyUpper = (value: string): string => {
     .toUpperCase();
 };
 
+const isVowel = (c: string): boolean => /[aeiouáéíóúü]/i.test(c);
+
+const getWordBreakPoint = (word: string, maxPerRow: number): number | null => {
+  if (word.length <= maxPerRow) return null;
+  for (let i = maxPerRow; i >= Math.max(2, maxPerRow - 5); i -= 1) {
+    const prev = word[i - 1];
+    const curr = word[i];
+    if (prev && curr && isVowel(prev) !== isVowel(curr)) return i;
+  }
+  return maxPerRow;
+};
+
 const findNextPlayableIndex = (
   statuses: LetterStatus[],
   fromIndex: number,
@@ -48,6 +60,8 @@ const findNextPlayableIndex = (
 
   return -1;
 };
+
+const RELOAD_TIME_SECONDS = 120;
 
 const formatTime = (totalSeconds: number): string => {
   const minutes = Math.floor(totalSeconds / 60);
@@ -85,6 +99,7 @@ const Game: React.FC = () => {
   const [soundEnabled, setSoundEnabled] = useState(() => {
     return localStorage.getItem("enroscalo_sound_enabled") !== "false";
   });
+  const [windowWidth, setWindowWidth] = useState(() => window.innerWidth);
 
   useEffect(() => {
     if (!isDayAvailable(dayKey)) {
@@ -178,6 +193,15 @@ const Game: React.FC = () => {
       setCurrentIndex(nextIndex);
     }
   }, [currentIndex, dayStatus, pendingAdvance, statuses]);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const tileSize = isMobile ? 32 : 42;
+  const charsPerRow = Math.max(6, Math.floor((Math.min(520, windowWidth) - 48 + 1.6) / (tileSize + 1.6)));
 
   const boardSize = isMobile ? 290 : 380;
   const letterSize = isMobile ? 31 : 36;
@@ -371,6 +395,12 @@ const Game: React.FC = () => {
     setPlayState("running");
   };
 
+  const handleReloadTime = () => {
+    setRemainingSeconds((prev) => prev + RELOAD_TIME_SECONDS);
+    setPlayState("running");
+    setFeedback("");
+  };
+
   const getLetterColor = (index: number): string => {
     if (!isFinished && !pendingAdvance && index === currentIndex) {
       return "#f1c40f";
@@ -386,6 +416,11 @@ const Game: React.FC = () => {
         return "#1565c0";
     }
   };
+
+  const currentWordStr = currentEntry ? normalizeKeyUpper(currentEntry.word) : "";
+  const tileBreakPoint = currentWordStr ? getWordBreakPoint(currentWordStr, charsPerRow) : null;
+  const tileRow1 = tileBreakPoint !== null ? answerChars.slice(0, tileBreakPoint) : answerChars;
+  const tileRow2 = tileBreakPoint !== null ? answerChars.slice(tileBreakPoint) : [];
 
   return (
     <Layout
@@ -584,22 +619,14 @@ const Game: React.FC = () => {
           }}
         >
           {!isFinished && !isTimeOver && currentEntry && (
-            <>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  gap: 0.2,
-                  flexWrap: "wrap",
-                  mb: 2,
-                }}
-              >
-                {answerChars.map((char, index) => (
+            <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 0.5, mb: 2 }}>
+              <Box sx={{ display: "flex", justifyContent: "center", gap: 0.2 }}>
+                {tileRow1.map((char, i) => (
                   <Box
-                    key={`${currentEntry.letter}-${index}`}
+                    key={`${currentEntry.letter}-${i}`}
                     sx={{
-                      width: isMobile ? 32 : 42,
-                      height: isMobile ? 32 : 42,
+                      width: tileSize,
+                      height: tileSize,
                       borderRadius: 1,
                       border: "2px solid #1f2f64",
                       backgroundColor: "#fff",
@@ -617,8 +644,40 @@ const Game: React.FC = () => {
                     {char || "_"}
                   </Box>
                 ))}
+                {tileRow2.length > 0 && (
+                  <Box sx={{ display: "flex", alignItems: "flex-end", color: "#fff", fontWeight: 800, fontSize: isMobile ? 18 : 24, pb: 0.5, ml: 0.3 }}>
+                    -
+                  </Box>
+                )}
               </Box>
-            </>
+              {tileRow2.length > 0 && (
+                <Box sx={{ display: "flex", justifyContent: "center", gap: 0.2 }}>
+                  {tileRow2.map((char, i) => (
+                    <Box
+                      key={`${currentEntry.letter}-${(tileBreakPoint ?? 0) + i}`}
+                      sx={{
+                        width: tileSize,
+                        height: tileSize,
+                        borderRadius: 1,
+                        border: "2px solid #1f2f64",
+                        backgroundColor: "#fff",
+                        color: "#111827",
+                        fontWeight: 800,
+                        fontSize: isMobile ? 18 : 24,
+                        display: "flex",
+                        alignItems: "flex-end",
+                        justifyContent: "center",
+                        pb: 0.5,
+                        boxShadow: "0 4px 10px rgba(0,0,0,0.18)",
+                        opacity: showResumeOverlay ? 0.8 : 1,
+                      }}
+                    >
+                      {char || "_"}
+                    </Box>
+                  ))}
+                </Box>
+              )}
+            </Box>
           )}
 
           {isFinished && (
@@ -630,9 +689,16 @@ const Game: React.FC = () => {
           )}
 
           {isTimeOver && (
-            <Box sx={{ textAlign: "center" }}>
+            <Box sx={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 1.5 }}>
               <Button variant="contained" onClick={() => navigate("/")}>
                 {t.backToHome}
+              </Button>
+              <Button
+                variant="outlined"
+                onClick={handleReloadTime}
+                sx={{ color: "#fff", borderColor: "#fff", fontWeight: 700 }}
+              >
+                {t.reloadTime}
               </Button>
             </Box>
           )}

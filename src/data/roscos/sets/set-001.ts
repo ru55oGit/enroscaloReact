@@ -23,7 +23,7 @@ export interface RoscoEntry {
 
 export const ROSCO_1: RoscoEntry[] = [
   { word: "Avion", startOrContain: "start", letter: "A", definition: "Medio de transporte aéreo que vuela impulsado por motores.", category: "transporte" },
-  { word: "Beyonce", startOrContain: "start", letter: "B", definition: "Nombre de la cantante y bailarina estadounidense, una de las artistas más influyentes del pop y el R&B.", category: "personalidades" },
+  { word: "Beyonce", startOrContain: "start", letter: "B", definition: "Cantante y bailarina estadounidense, una de las artistas más influyentes del pop mundial.", category: "personalidades" },
   { word: "Roca", startOrContain: "contain", letter: "C", definition: "Masa sólida de origen mineral que forma parte de la corteza terrestre.", category: "naturaleza" },
   { word: "Dado", startOrContain: "start", letter: "D", definition: "Objeto cúbico con números en sus caras usado en juegos de azar.", category: "deporte-juego" },
   { word: "Einstein", startOrContain: "start", letter: "E", definition: "Apellido del físico alemán autor de la teoría de la relatividad.", category: "personalidades" },
@@ -89,7 +89,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Globo", startOrContain: "start", letter: "G", definition: "Objeto inflable de goma o látex que se usa como decoración o juguete para fiestas.", category: "cultura-general" },
   { word: "Horno", startOrContain: "start", letter: "H", definition: "Aparato cerrado que produce calor intenso para cocinar alimentos o fundir materiales.", category: "gastronomia" },
   { word: "Iglesia", startOrContain: "start", letter: "I", definition: "Templo cristiano donde los fieles se reúnen para orar y celebrar ceremonias religiosas.", category: "educacion-sociedad" },
-  { word: "Jirafa", startOrContain: "start", letter: "J", definition: "Animal africano con el cuello más largo de todos los mamíferos que le permite alcanzar las hojas altas.", category: "naturaleza" },
+  { word: "Jirafa", startOrContain: "start", letter: "J", definition: "Animal africano de cuello larguísimo que le permite alcanzar hojas en las ramas más altas.", category: "naturaleza" },
   { word: "Karate", startOrContain: "start", letter: "K", definition: "Arte marcial de origen japonés que utiliza golpes de manos y pies como técnica de defensa.", category: "deporte-juego" },
   { word: "Lago", startOrContain: "start", letter: "L", definition: "Gran masa de agua dulce rodeada de tierra por todos sus lados en zonas naturales.", category: "naturaleza" },
   { word: "Tomate", startOrContain: "contain", letter: "M", definition: "Fruto rojo y jugoso muy usado en cocina como base de salsas y ensaladas.", category: "gastronomia" },
@@ -197,7 +197,7 @@ const ROSCO_6: RoscoEntry[] = [
 
 const ROSCO_7: RoscoEntry[] = [
   { word: "Aguila", startOrContain: "start", letter: "A", definition: "Ave rapaz de gran tamaño con vista aguda que caza presas desde las alturas.", category: "naturaleza" },
-  { word: "Belinda", startOrContain: "start", letter: "B", definition: "Nombre de la cantante y actriz mexicana conocida por sus éxitos pop y su participación en series juveniles.", category: "personalidades" },
+  { word: "Belinda", startOrContain: "start", letter: "B", definition: "Cantante y actriz mexicana conocida por sus éxitos pop y series juveniles.", category: "personalidades" },
   { word: "Chaplin", startOrContain: "start", letter: "C", definition: "Apellido del actor y director británico del cine mudo, creador del personaje Charlot.", category: "personalidades" },
   { word: "Dardo", startOrContain: "start", letter: "D", definition: "Proyectil pequeño y puntiagudo que se lanza con la mano hacia un blanco circular.", category: "deporte-juego" },
   { word: "Escudo", startOrContain: "start", letter: "E", definition: "Objeto de defensa portátil usado para proteger el cuerpo de golpes y proyectiles enemigos.", category: "cultura-general" },
@@ -210,10 +210,10 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Linterna", startOrContain: "start", letter: "L", definition: "Lámpara portátil que funciona con baterías y se usa para iluminar en la oscuridad.", category: "cultura-general" },
   { word: "Martillo", startOrContain: "start", letter: "M", definition: "Herramienta con cabeza metálica y mango de madera usada para clavar o golpear con fuerza.", category: "cultura-general" },
   { word: "Noria", startOrContain: "start", letter: "N", definition: "Rueda giratoria de gran tamaño usada en ferias o para extraer agua de pozos.", category: "cultura-general" },
-  { word: "Oruga", startOrContain: "start", letter: "O", definition: "Larva de mariposa con cuerpo alargado y segmentado que se alimenta de hojas antes de metamorfosearse.", category: "naturaleza" },
+  { word: "Oruga", startOrContain: "start", letter: "O", definition: "Larva de mariposa de cuerpo alargado que se alimenta de hojas antes de metamorfosearse.", category: "naturaleza" },
   { word: "Piedra", startOrContain: "start", letter: "P", definition: "Fragmento duro y sólido de roca que se encuentra en la naturaleza en distintos tamaños.", category: "naturaleza" },
   { word: "Queso", startOrContain: "start", letter: "Q", definition: "Alimento sólido elaborado con leche cuajada y madurada de distintas formas y sabores.", category: "gastronomia" },
-  { word: "Rodri", startOrContain: "start", letter: "R", definition: "Apodo del centrocampista español Rodrigo Hernández, ganador del Balón de Oro 2024 con el Manchester City.", category: "personalidades" },
+  { word: "Rodri", startOrContain: "start", letter: "R", definition: "Apodo del centrocampista español Rodrigo Hernández, ganador del Balón de Oro 2024.", category: "personalidades" },
   { word: "Salto", startOrContain: "start", letter: "S", definition: "Acción de impulsarse desde el suelo para elevarse en el aire y caer en otro punto.", category: "deporte-juego" },
   { word: "Tinta", startOrContain: "start", letter: "T", definition: "Líquido de color usado para escribir, imprimir o tatuar sobre distintas superficies.", category: "cultura-general" },
   { word: "Turismo", startOrContain: "contain", letter: "U", definition: "Actividad de viajar por placer o descanso para conocer lugares, culturas y personas nuevas.", category: "educacion-sociedad" },

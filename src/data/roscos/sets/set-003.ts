@@ -20,7 +20,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Pala", startOrContain: "start", letter: "P", definition: "Herramienta con mango largo usada para cavar y mover tierra o arena.", category: "cultura-general" },
   { word: "Quinteto", startOrContain: "start", letter: "Q", definition: "Grupo musical formado por cinco integrantes que tocan juntos.", category: "arte-musica" },
   { word: "Rana", startOrContain: "start", letter: "R", definition: "Anfibio saltador de piel lisa que vive cerca del agua y croa.", category: "naturaleza" },
-  { word: "Sanchez", startOrContain: "start", letter: "S", definition: "Apellido de la icónica cantante pop madrileña, ex vocalista de Olé Olé y famosa por éxitos como Desesperada y Arena y sol.", category: "personalidades" },
+  { word: "Sanchez", startOrContain: "start", letter: "S", definition: "Apellido de la cantante pop madrileña, ex vocalista de Olé Olé, famosa por Desesperada.", category: "personalidades" },
   { word: "Tambor", startOrContain: "start", letter: "T", definition: "Instrumento de percusión que se golpea con las manos o con palillos.", category: "arte-musica" },
   { word: "Humo", startOrContain: "contain", letter: "U", definition: "Mezcla de gases y partículas que se desprende de algo que se quema.", category: "ciencias" },
   { word: "Vibora", startOrContain: "start", letter: "V", definition: "Serpiente venenosa de cuerpo delgado que habita en campos y montes.", category: "naturaleza" },
@@ -32,7 +32,7 @@ const ROSCO_1: RoscoEntry[] = [
 
 const ROSCO_2: RoscoEntry[] = [
   { word: "Avispa", startOrContain: "start", letter: "A", definition: "Insecto volador de cintura fina y aguijón que puede picar varias veces.", category: "naturaleza" },
-  { word: "Marbella", startOrContain: "contain", letter: "B", definition: "Ciudad costera de la provincia de Málaga, en el sur de España, famosa por su puerto deportivo y sus playas.", category: "cultura-general" },
+  { word: "Marbella", startOrContain: "contain", letter: "B", definition: "Ciudad costera malagueña famosa por su puerto deportivo y sus playas.", category: "cultura-general" },
   { word: "Caracol", startOrContain: "start", letter: "C", definition: "Pequeño animal de cuerpo blando que lleva su concha en espiral a cuestas.", category: "naturaleza" },
   { word: "Diamante", startOrContain: "start", letter: "D", definition: "Piedra preciosa transparente, el mineral más duro de la naturaleza.", category: "ciencias" },
   { word: "Escarabajo", startOrContain: "start", letter: "E", definition: "Insecto de caparazón duro y brillante que existe en miles de especies.", category: "naturaleza" },
@@ -45,8 +45,8 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Lobo", startOrContain: "start", letter: "L", definition: "Mamífero salvaje parecido al perro que caza en manada y aúlla a la luna.", category: "naturaleza" },
   { word: "Mono", startOrContain: "start", letter: "M", definition: "Animal trepador de cola larga muy emparentado con el ser humano.", category: "naturaleza" },
   { word: "Niebla", startOrContain: "start", letter: "N", definition: "Nube baja de gotitas que dificulta ver a lo lejos.", category: "naturaleza" },
-  { word: "Oslo", startOrContain: "start", letter: "O", definition: "Capital de Noruega, ciudad costera conocida por sus fiordos, sus museos y ser sede del Premio Nobel de la Paz.", category: "cultura-general" },
-  { word: "Penelope", startOrContain: "start", letter: "P", definition: "Nombre de la actriz española de apellido Cruz, ganadora del Oscar y una de las más reconocidas internacionalmente.", category: "personalidades" },
+  { word: "Oslo", startOrContain: "start", letter: "O", definition: "Capital de Noruega, conocida por sus fiordos, museos y ser sede del Premio Nobel de la Paz.", category: "cultura-general" },
+  { word: "Penelope", startOrContain: "start", letter: "P", definition: "Nombre de la actriz española de apellido Cruz, ganadora del Óscar e icono del cine internacional.", category: "personalidades" },
   { word: "Esquina", startOrContain: "contain", letter: "Q", definition: "Punto donde se cruzan o encuentran dos calles.", category: "cultura-general" },
   { word: "Reno", startOrContain: "start", letter: "R", definition: "Ciervo de grandes astas que vive en las regiones frías del norte.", category: "naturaleza" },
   { word: "Sapo", startOrContain: "start", letter: "S", definition: "Anfibio de piel rugosa parecido a la rana que vive en zonas húmedas.", category: "naturaleza" },
@@ -84,7 +84,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Vicuña", startOrContain: "start", letter: "V", definition: "Camélido andino de fina lana emparentado con la llama y el guanaco.", category: "naturaleza" },
   { word: "Webcam", startOrContain: "start", letter: "W", definition: "Cámara conectada a la computadora usada para las videollamadas.", category: "ciencias" },
   { word: "Sexto", startOrContain: "contain", letter: "X", definition: "Que ocupa el lugar número seis dentro de una serie ordenada.", category: "educacion-sociedad" },
-  { word: "Rayo", startOrContain: "contain", letter: "Y", definition: "Descarga eléctrica de gran intensidad que se produce entre las nubes y la tierra durante una tormenta.", category: "naturaleza" },
+  { word: "Rayo", startOrContain: "contain", letter: "Y", definition: "Descarga eléctrica intensa entre las nubes y la tierra durante una tormenta.", category: "naturaleza" },
   { word: "Taza", startOrContain: "contain", letter: "Z", definition: "Recipiente con asa usado para tomar bebidas calientes como el café.", category: "gastronomia" },
 ];
 
@@ -113,7 +113,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Vainilla", startOrContain: "start", letter: "V", definition: "Aroma dulce extraído de una vaina usado en postres y helados.", category: "gastronomia" },
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unidad que mide la potencia eléctrica de un aparato.", category: "ciencias" },
   { word: "Experto", startOrContain: "contain", letter: "X", definition: "Persona que posee mucho conocimiento y práctica en un tema.", category: "educacion-sociedad" },
-  { word: "Uruguay", startOrContain: "contain", letter: "Y", definition: "País sudamericano vecino de Argentina, conocido por sus playas, su estabilidad democrática y sus dos estrellas mundialistas.", category: "cultura-general" },
+  { word: "Uruguay", startOrContain: "contain", letter: "Y", definition: "País sudamericano vecino de Argentina, con dos estrellas mundialistas y famosas playas.", category: "cultura-general" },
   { word: "Pinza", startOrContain: "contain", letter: "Z", definition: "Herramienta de dos brazos usada para sujetar o apretar objetos pequeños.", category: "cultura-general" },
 ];
 
@@ -136,7 +136,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Pandereta", startOrContain: "start", letter: "P", definition: "Instrumento redondo con sonajas que se golpea con la mano.", category: "arte-musica" },
   { word: "Chaqueta", startOrContain: "contain", letter: "Q", definition: "Prenda de abrigo con mangas que cubre la parte superior del cuerpo.", category: "cultura-general" },
   { word: "Redoblante", startOrContain: "start", letter: "R", definition: "Tambor de sonido seco y vibrante usado en bandas y desfiles.", category: "arte-musica" },
-  { word: "Sevilla", startOrContain: "start", letter: "S", definition: "Ciudad del sur de España, capital de Andalucía, famosa por su catedral, la Giralda y su tradición flamenca.", category: "cultura-general" },
+  { word: "Sevilla", startOrContain: "start", letter: "S", definition: "Capital de Andalucía, famosa por su catedral, la Giralda y el flamenco.", category: "cultura-general" },
   { word: "Trompeta", startOrContain: "start", letter: "T", definition: "Instrumento de viento metálico de sonido brillante con tres pistones.", category: "arte-musica" },
   { word: "Cuna", startOrContain: "contain", letter: "U", definition: "Camita con barandas donde duermen los bebés.", category: "cultura-general" },
   { word: "Verdi", startOrContain: "start", letter: "V", definition: "Apellido del compositor italiano autor de óperas mundialmente famosas.", category: "personalidades" },
@@ -148,7 +148,7 @@ const ROSCO_5: RoscoEntry[] = [
 
 const ROSCO_6: RoscoEntry[] = [
   { word: "Atletismo", startOrContain: "start", letter: "A", definition: "Conjunto de deportes de carreras, saltos y lanzamientos.", category: "deporte-juego" },
-  { word: "Berna", startOrContain: "start", letter: "B", definition: "Capital de Suiza, ciudad histórica a orillas del río Aar conocida por su casco antiguo declarado Patrimonio de la Humanidad.", category: "cultura-general" },
+  { word: "Berna", startOrContain: "start", letter: "B", definition: "Capital de Suiza a orillas del río Aar, con casco antiguo declarado Patrimonio de la Humanidad.", category: "cultura-general" },
   { word: "Ciclismo", startOrContain: "start", letter: "C", definition: "Deporte que consiste en competir o desplazarse en bicicleta.", category: "deporte-juego" },
   { word: "Defensa", startOrContain: "start", letter: "D", definition: "Jugador cuya tarea es proteger el arco propio de los rivales.", category: "deporte-juego" },
   { word: "Esgrima", startOrContain: "start", letter: "E", definition: "Deporte de combate en el que los rivales luchan con espadas o floretes.", category: "deporte-juego" },
@@ -159,7 +159,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Judo", startOrContain: "start", letter: "J", definition: "Arte marcial japonés basado en derribar al rival usando su propia fuerza.", category: "deporte-juego" },
   { word: "Kabuki", startOrContain: "start", letter: "K", definition: "Teatro tradicional japonés muy colorido con vestuario y maquillaje llamativos.", category: "arte-musica" },
   { word: "Lucha", startOrContain: "start", letter: "L", definition: "Deporte de combate en el que se intenta derribar y dominar al rival.", category: "deporte-juego" },
-  { word: "Roma", startOrContain: "contain", letter: "M", definition: "Capital de Italia, conocida como la Ciudad Eterna, famosa por el Coliseo, el Vaticano y su historia milenaria.", category: "cultura-general" },
+  { word: "Roma", startOrContain: "contain", letter: "M", definition: "Capital de Italia, la Ciudad Eterna, famosa por el Coliseo y el Vaticano.", category: "cultura-general" },
   { word: "Natacion", startOrContain: "start", letter: "N", definition: "Deporte que consiste en desplazarse por el agua con distintos estilos.", category: "deporte-juego" },
   { word: "Olimpiada", startOrContain: "start", letter: "O", definition: "Gran competencia deportiva mundial que se celebra cada cuatro años.", category: "deporte-juego" },
   { word: "Pasteur", startOrContain: "start", letter: "P", definition: "Apellido del científico francés que dio nombre a la pasteurización.", category: "personalidades" },
@@ -178,7 +178,7 @@ const ROSCO_6: RoscoEntry[] = [
 const ROSCO_7: RoscoEntry[] = [
   { word: "Aro", startOrContain: "start", letter: "A", definition: "Anillo por el que debe pasar la pelota para anotar en el básquet.", category: "deporte-juego" },
   { word: "Balero", startOrContain: "start", letter: "B", definition: "Juguete de un palo y una bola unidos por un hilo que hay que ensartar.", category: "deporte-juego" },
-  { word: "Canberra", startOrContain: "start", letter: "C", definition: "Capital de Australia, ciudad planificada que alberga el Parlamento y los principales museos del país.", category: "cultura-general" },
+  { word: "Canberra", startOrContain: "start", letter: "C", definition: "Capital de Australia, ciudad planificada que alberga el Parlamento y los museos nacionales.", category: "cultura-general" },
   { word: "Domo", startOrContain: "start", letter: "D", definition: "Cúpula con forma de media esfera que cubre un edificio.", category: "cultura-general" },
   { word: "Estadio", startOrContain: "start", letter: "E", definition: "Gran recinto con tribunas donde se disputan partidos y espectáculos.", category: "deporte-juego" },
   { word: "Ficha", startOrContain: "start", letter: "F", definition: "Pieza pequeña usada para jugar o contar puntos en los juegos de mesa.", category: "deporte-juego" },
@@ -189,12 +189,12 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Kremlin", startOrContain: "start", letter: "K", definition: "Fortaleza amurallada de Moscú que es sede del gobierno ruso.", category: "cultura-general" },
   { word: "Liga", startOrContain: "start", letter: "L", definition: "Competencia en la que varios equipos juegan todos contra todos.", category: "deporte-juego" },
   { word: "Maraton", startOrContain: "start", letter: "M", definition: "Carrera a pie de larguísima distancia que exige gran resistencia.", category: "deporte-juego" },
-  { word: "Nachos", startOrContain: "start", letter: "N", definition: "Triángulos de tortilla de maíz fritos y crujientes, típicos de la cocina mexicana, que se sirven cubiertos de queso fundido y rodajas de chiles jalapeños.", category: "gastronomia" },
+  { word: "Nachos", startOrContain: "start", letter: "N", definition: "Triángulos de tortilla de maíz fritos, cubiertos de queso fundido y chiles jalapeños.", category: "gastronomia" },
   { word: "Ovacion", startOrContain: "start", letter: "O", definition: "Aplauso largo e intenso con que el público celebra a alguien.", category: "cultura-general" },
   { word: "Pelotari", startOrContain: "start", letter: "P", definition: "Jugador del deporte de la pelota vasca.", category: "deporte-juego" },
   { word: "Arquero", startOrContain: "contain", letter: "Q", definition: "Jugador encargado de defender el arco en distintos deportes.", category: "deporte-juego" },
   { word: "Ranking", startOrContain: "start", letter: "R", definition: "Lista que ordena a los competidores según su nivel o sus resultados.", category: "deporte-juego" },
-  { word: "Castanuelas", startOrContain: "contain", letter: "S", definition: "Instrumento de percusión típico del flamenco español formado por dos piezas cóncavas de madera que se golpean con los dedos.", category: "arte-musica" },
+  { word: "Castanuelas", startOrContain: "contain", letter: "S", definition: "Instrumento de percusión del flamenco formado por dos piezas cóncavas de madera.", category: "arte-musica" },
   { word: "Trofeo", startOrContain: "start", letter: "T", definition: "Premio, generalmente una copa, que recibe el ganador de una competencia.", category: "deporte-juego" },
   { word: "Aguja", startOrContain: "contain", letter: "U", definition: "Pieza fina y puntiaguda con un ojo en un extremo usada para coser.", category: "cultura-general" },
   { word: "Valla", startOrContain: "start", letter: "V", definition: "Obstáculo que los atletas deben saltar en ciertas carreras.", category: "deporte-juego" },

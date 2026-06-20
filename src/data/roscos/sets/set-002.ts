@@ -2,7 +2,7 @@ import { DayKey } from "../../../utils/weeklyRoscoState";
 import { RoscoEntry } from "./set-001";
 
 const ROSCO_1: RoscoEntry[] = [
-  { word: "Aitana", startOrContain: "start", letter: "A", definition: "Nombre de la cantante española Aitana Ocaña, una de las artistas más populares del pop en habla hispana.", category: "personalidades" },
+  { word: "Aitana", startOrContain: "start", letter: "A", definition: "Nombre de la cantante española Aitana Ocaña, popular estrella del pop en habla hispana.", category: "personalidades" },
   { word: "Barco", startOrContain: "start", letter: "B", definition: "Vehículo grande que navega por el agua transportando personas o carga.", category: "transporte" },
   { word: "Cuerda", startOrContain: "start", letter: "C", definition: "Soga larga y resistente formada por hilos entrelazados usada para atar, trepar o colgar.", category: "cultura-general" },
   { word: "Diente", startOrContain: "start", letter: "D", definition: "Estructura dura ubicada en la boca que sirve para morder y masticar los alimentos.", category: "ciencias" },
@@ -21,7 +21,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Quimica", startOrContain: "start", letter: "Q", definition: "Ciencia que estudia la composición y las transformaciones de la materia.", category: "ciencias" },
   { word: "Racimo", startOrContain: "start", letter: "R", definition: "Conjunto de frutos o flores que crecen agrupados en una misma rama, como las uvas.", category: "naturaleza" },
   { word: "Sopa", startOrContain: "start", letter: "S", definition: "Comida líquida caliente elaborada con caldo, verduras, pasta o carne.", category: "gastronomia" },
-  { word: "Tortilla", startOrContain: "start", letter: "T", definition: "Popular plato de la gastronomía española elaborado a base de huevo batido y patatas cortadas, que se fríe en una sartén y puede llevar o no cebolla.", category: "gastronomia" },
+  { word: "Tortilla", startOrContain: "start", letter: "T", definition: "Plato de la gastronomía española de huevo batido y patatas fritas, con o sin cebolla.", category: "gastronomia" },
   { word: "Uva", startOrContain: "start", letter: "U", definition: "Pequeño fruto redondo que crece en racimos y se usa para hacer vino.", category: "gastronomia" },
   { word: "Vaso", startOrContain: "start", letter: "V", definition: "Recipiente cilíndrico sin asa usado para beber líquidos.", category: "cultura-general" },
   { word: "Wasabi", startOrContain: "start", letter: "W", definition: "Pasta verde de sabor muy picante típica de la cocina japonesa.", category: "gastronomia" },
@@ -32,7 +32,7 @@ const ROSCO_1: RoscoEntry[] = [
 
 const ROSCO_2: RoscoEntry[] = [
   { word: "Ancla", startOrContain: "start", letter: "A", definition: "Pieza pesada de metal que se lanza al fondo del mar para fijar una embarcación en su lugar.", category: "transporte" },
-  { word: "Budapest", startOrContain: "start", letter: "B", definition: "Capital de Hungría, conocida por sus baños termales, el río Danubio y su imponente arquitectura histórica.", category: "cultura-general" },
+  { word: "Budapest", startOrContain: "start", letter: "B", definition: "Capital de Hungría, famosa por sus baños termales, el Danubio y su arquitectura histórica.", category: "cultura-general" },
   { word: "Caballo", startOrContain: "start", letter: "C", definition: "Animal mamífero de patas largas usado para montar, tirar de carros o competir.", category: "naturaleza" },
   { word: "Disco", startOrContain: "start", letter: "D", definition: "Objeto circular y plano que puede almacenar música, datos o usarse en atletismo.", category: "cultura-general" },
   { word: "Elefante", startOrContain: "start", letter: "E", definition: "Enorme mamífero de orejas grandes y larga trompa que habita en África y Asia.", category: "naturaleza" },
@@ -101,7 +101,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Jazmin", startOrContain: "start", letter: "J", definition: "Planta de flores blancas y pequeñas conocida por su aroma intenso y agradable.", category: "naturaleza" },
   { word: "Karaoke", startOrContain: "start", letter: "K", definition: "Actividad de cantar canciones siguiendo la letra que aparece en una pantalla.", category: "arte-musica" },
   { word: "Lampara", startOrContain: "start", letter: "L", definition: "Aparato que produce luz artificial para iluminar un espacio.", category: "cultura-general" },
-  { word: "Madrid", startOrContain: "start", letter: "M", definition: "Capital de España y una de las ciudades más grandes de Europa, sede del gobierno y del famoso museo del Prado.", category: "cultura-general" },
+  { word: "Madrid", startOrContain: "start", letter: "M", definition: "Capital de España, sede del gobierno y del famoso museo del Prado.", category: "cultura-general" },
   { word: "Nutria", startOrContain: "start", letter: "N", definition: "Mamífero acuático de pelaje denso y cuerpo alargado que nada con gran agilidad.", category: "naturaleza" },
   { word: "Ostra", startOrContain: "start", letter: "O", definition: "Molusco marino de concha dura del que se extraen perlas y que se come como manjar.", category: "naturaleza" },
   { word: "Pulpo", startOrContain: "start", letter: "P", definition: "Animal marino de cuerpo blando y ocho brazos cubiertos de ventosas.", category: "naturaleza" },
@@ -139,7 +139,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Sabato", startOrContain: "start", letter: "S", definition: "Apellido del escritor argentino autor de la novela Sobre héroes y tumbas.", category: "personalidades" },
   { word: "Trueno", startOrContain: "start", letter: "T", definition: "Fuerte ruido que se escucha después de un relámpago durante las tormentas.", category: "naturaleza" },
   { word: "Universo", startOrContain: "start", letter: "U", definition: "Conjunto de todo lo que existe: estrellas, planetas, galaxias y el espacio entre ellos.", category: "ciencias" },
-  { word: "Viggo", startOrContain: "start", letter: "V", definition: "Nombre del actor estadounidense Mortensen, conocido por su papel en la trilogía El Señor de los Anillos.", category: "personalidades" },
+  { word: "Viggo", startOrContain: "start", letter: "V", definition: "Nombre del actor estadounidense Mortensen, famoso por El Señor de los Anillos.", category: "personalidades" },
   { word: "Western", startOrContain: "start", letter: "W", definition: "Género de películas ambientado en el lejano oeste con vaqueros y duelos.", category: "arte-musica" },
   { word: "Exoplaneta", startOrContain: "contain", letter: "X", definition: "Planeta que gira alrededor de una estrella distinta a nuestro Sol.", category: "ciencias" },
   { word: "Yerba", startOrContain: "start", letter: "Y", definition: "Hojas secas y molidas con las que se prepara el mate, infusión típica del Río de la Plata.", category: "gastronomia" },
@@ -157,13 +157,13 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Hamburguesa", startOrContain: "start", letter: "H", definition: "Comida formada por carne picada y cocida servida dentro de un pan redondo.", category: "gastronomia" },
   { word: "Infusion", startOrContain: "start", letter: "I", definition: "Bebida caliente que se prepara echando agua sobre hierbas o frutas.", category: "gastronomia" },
   { word: "Jalea", startOrContain: "start", letter: "J", definition: "Dulce gelatinoso y transparente elaborado con el jugo de las frutas.", category: "gastronomia" },
-  { word: "Koke", startOrContain: "start", letter: "K", definition: "Apodo del futbolista madrileño Jorge Resurrección, mediocampista histórico y capitán del Atlético de Madrid.", category: "personalidades" },
+  { word: "Koke", startOrContain: "start", letter: "K", definition: "Apodo del futbolista Jorge Resurrección, mediocampista y capitán histórico del Atlético de Madrid.", category: "personalidades" },
   { word: "Leche", startOrContain: "start", letter: "L", definition: "Líquido blanco y nutritivo producido por las hembras de los mamíferos.", category: "gastronomia" },
   { word: "Mermelada", startOrContain: "start", letter: "M", definition: "Dulce espeso preparado cocinando frutas con azúcar para untar en el pan.", category: "gastronomia" },
   { word: "Nabo", startOrContain: "start", letter: "N", definition: "Hortaliza de raíz redonda y blanca que se cultiva para comer cocida o cruda.", category: "gastronomia" },
   { word: "Oregano", startOrContain: "start", letter: "O", definition: "Hierba aromática de hojas pequeñas usada para condimentar comidas como la pizza.", category: "gastronomia" },
   { word: "Pizza", startOrContain: "start", letter: "P", definition: "Masa redonda y plana cubierta con salsa de tomate, queso y otros ingredientes.", category: "gastronomia" },
-  { word: "Quentin", startOrContain: "start", letter: "Q", definition: "Nombre del director y guionista estadounidense de apellido Tarantino que revolucionó el cine con películas como Pulp Fiction o Kill Bill.", category: "personalidades" },
+  { word: "Quentin", startOrContain: "start", letter: "Q", definition: "Nombre del director Tarantino, que revolucionó el cine con Pulp Fiction y Kill Bill.", category: "personalidades" },
   { word: "Rosalia", startOrContain: "start", letter: "R", definition: "La estrella musical española más internacional y revolucionaria de la industria urbana global.", category: "personalidades" },
   { word: "Sandia", startOrContain: "start", letter: "S", definition: "Fruta grande de cáscara verde y pulpa roja y jugosa muy refrescante en verano.", category: "gastronomia" },
   { word: "Tallarin", startOrContain: "start", letter: "T", definition: "Pasta larga y delgada con forma de cinta que se sirve con distintas salsas.", category: "gastronomia" },
@@ -192,7 +192,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Nadador", startOrContain: "start", letter: "N", definition: "Deportista que compite desplazándose por el agua con distintos estilos.", category: "deporte-juego" },
   { word: "Obrero", startOrContain: "start", letter: "O", definition: "Persona que realiza un trabajo manual, especialmente en la construcción o la industria.", category: "educacion-sociedad" },
   { word: "Pintor", startOrContain: "start", letter: "P", definition: "Artista que crea cuadros o persona que pinta paredes y superficies.", category: "arte-musica" },
-  { word: "Quico", startOrContain: "start", letter: "Q", definition: "Nombre del icónico y consentido personaje infantil de la serie El Chavo del 8, interpretado por Carlos Villagrán, famoso por sus grandes cachetes y su traje de marinero.", category: "personalidades" },
+  { word: "Quico", startOrContain: "start", letter: "Q", definition: "Personaje de El Chavo del 8 con grandes cachetes, interpretado por Carlos Villagrán.", category: "personalidades" },
   { word: "Reportero", startOrContain: "start", letter: "R", definition: "Periodista que busca noticias en el lugar de los hechos para informar al público.", category: "educacion-sociedad" },
   { word: "Soldado", startOrContain: "start", letter: "S", definition: "Persona que forma parte de un ejército y sirve en la defensa de su país.", category: "educacion-sociedad" },
   { word: "Tenista", startOrContain: "start", letter: "T", definition: "Deportista que juega al tenis golpeando la pelota con una raqueta.", category: "deporte-juego" },
@@ -200,7 +200,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Veterinario", startOrContain: "start", letter: "V", definition: "Profesional que cuida y cura la salud de los animales.", category: "educacion-sociedad" },
   { word: "Waterpolista", startOrContain: "start", letter: "W", definition: "Deportista que juega al waterpolo dentro de una piscina.", category: "deporte-juego" },
   { word: "Boxeador", startOrContain: "contain", letter: "X", definition: "Deportista que practica el boxeo enfrentando a un rival con los puños.", category: "deporte-juego" },
-  { word: "Yellowstone", startOrContain: "start", letter: "Y", definition: "Parque Nacional de los Estados Unidos situado principalmente en Wyoming, famoso por sus fuentes termales y el géiser Old Faithful.", category: "naturaleza" },
+  { word: "Yellowstone", startOrContain: "start", letter: "Y", definition: "Parque Nacional en Wyoming, famoso por sus fuentes termales y el géiser Old Faithful.", category: "naturaleza" },
   { word: "Zoologo", startOrContain: "start", letter: "Z", definition: "Científico que estudia a los animales y su comportamiento en la naturaleza.", category: "ciencias" },
 ];
 
