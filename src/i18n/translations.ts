@@ -90,6 +90,7 @@ export interface Translation {
   feedbackTimeout: string;
   feedbackPassed: string;
   feedbackCorrect: string;
+  feedbackWrong: string;
   roscoCompleted: string;
   hitsLabel: string;
   pendingLabel: string;
@@ -182,6 +183,7 @@ export const translations: Record<string, Translation> = {
     feedbackTimeout: "Tiempo agotado",
     feedbackPassed: "Pasapalabra",
     feedbackCorrect: "Correcto",
+    feedbackWrong: "Incorrecto. Era:",
     roscoCompleted: "Rosco completado",
     hitsLabel: "Aciertos",
     pendingLabel: "Pendientes",
@@ -271,6 +273,7 @@ export const translations: Record<string, Translation> = {
     feedbackTimeout: "Time's up",
     feedbackPassed: "Pass",
     feedbackCorrect: "Correct!",
+    feedbackWrong: "Wrong. It was:",
     roscoCompleted: "Rosco complete",
     hitsLabel: "Correct",
     pendingLabel: "Pending",
@@ -360,6 +363,7 @@ export const translations: Record<string, Translation> = {
     feedbackTimeout: "Tempo esgotado",
     feedbackPassed: "Passa a palavra",
     feedbackCorrect: "Correto!",
+    feedbackWrong: "Incorreto. Era:",
     roscoCompleted: "Rosco concluído",
     hitsLabel: "Acertos",
     pendingLabel: "Pendentes",
@@ -449,6 +453,7 @@ export const translations: Record<string, Translation> = {
     feedbackTimeout: "Temps écoulé",
     feedbackPassed: "Passez le mot",
     feedbackCorrect: "Correct!",
+    feedbackWrong: "Incorrect. C'était:",
     roscoCompleted: "Rosco complété",
     hitsLabel: "Bons réponses",
     pendingLabel: "En attente",
@@ -538,6 +543,7 @@ export const translations: Record<string, Translation> = {
     feedbackTimeout: "Zeit abgelaufen",
     feedbackPassed: "Weiter",
     feedbackCorrect: "Richtig!",
+    feedbackWrong: "Falsch. Es war:",
     roscoCompleted: "Rosco abgeschlossen",
     hitsLabel: "Treffer",
     pendingLabel: "Ausstehend",

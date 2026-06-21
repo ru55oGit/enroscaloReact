@@ -312,7 +312,7 @@ const Game: React.FC = () => {
       if (soundEnabled) playSuccessSound();
       if (navigator.vibrate) navigator.vibrate([80]);
     } else {
-      setFeedback(`Incorrecto. Era: ${currentEntry.word}`);
+      setFeedback(`${t.feedbackWrong} ${currentEntry.word}`);
       setPendingAdvance(true);
       setPlayState("paused");
       if (soundEnabled) playErrorSound();
