@@ -22,6 +22,18 @@ import { ROSCO_SET_EN_003 } from "./roscos/sets/en/set-en-003";
 import { ROSCO_SET_EN_004 } from "./roscos/sets/en/set-en-004";
 import { ROSCO_SET_EN_005 } from "./roscos/sets/en/set-en-005";
 import { ROSCO_SET_EN_006 } from "./roscos/sets/en/set-en-006";
+import { ROSCO_SET_EN_007 } from "./roscos/sets/en/set-en-007";
+import { ROSCO_SET_EN_008 } from "./roscos/sets/en/set-en-008";
+import { ROSCO_SET_EN_009 } from "./roscos/sets/en/set-en-009";
+import { ROSCO_SET_EN_010 } from "./roscos/sets/en/set-en-010";
+import { ROSCO_SET_EN_011 } from "./roscos/sets/en/set-en-011";
+import { ROSCO_SET_EN_012 } from "./roscos/sets/en/set-en-012";
+import { ROSCO_SET_EN_013 } from "./roscos/sets/en/set-en-013";
+import { ROSCO_SET_EN_014 } from "./roscos/sets/en/set-en-014";
+import { ROSCO_SET_EN_015 } from "./roscos/sets/en/set-en-015";
+import { ROSCO_SET_EN_016 } from "./roscos/sets/en/set-en-016";
+import { ROSCO_SET_EN_017 } from "./roscos/sets/en/set-en-017";
+import { ROSCO_SET_EN_018 } from "./roscos/sets/en/set-en-018";
 import { ROSCO_SET_FR_001 } from "./roscos/sets/fr/set-fr-001";
 import { ROSCO_SET_FR_002 } from "./roscos/sets/fr/set-fr-002";
 import { ROSCO_SET_FR_003 } from "./roscos/sets/fr/set-fr-003";
@@ -104,18 +116,18 @@ const ROSCO_SET_REGISTRY: Record<string, LangSets> = {
   "set-004": { es: ROSCO_SET_004, en: ROSCO_SET_EN_004, fr: ROSCO_SET_FR_004, pt: ROSCO_SET_PT_004, de: ROSCO_SET_DE_004 },
   "set-005": { es: ROSCO_SET_005, en: ROSCO_SET_EN_005, fr: ROSCO_SET_FR_005, pt: ROSCO_SET_PT_005, de: ROSCO_SET_DE_005 },
   "set-006": { es: ROSCO_SET_006, en: ROSCO_SET_EN_006, fr: ROSCO_SET_FR_006, pt: ROSCO_SET_PT_006, de: ROSCO_SET_DE_006 },
-  "set-007": { es: ROSCO_SET_007, fr: ROSCO_SET_FR_007, pt: ROSCO_SET_PT_007, de: ROSCO_SET_DE_007 },
-  "set-008": { es: ROSCO_SET_008, fr: ROSCO_SET_FR_008, pt: ROSCO_SET_PT_008, de: ROSCO_SET_DE_008 },
-  "set-009": { es: ROSCO_SET_009, fr: ROSCO_SET_FR_009, pt: ROSCO_SET_PT_009, de: ROSCO_SET_DE_009 },
-  "set-010": { es: ROSCO_SET_010, fr: ROSCO_SET_FR_010, pt: ROSCO_SET_PT_010, de: ROSCO_SET_DE_010 },
-  "set-011": { es: ROSCO_SET_011, fr: ROSCO_SET_FR_011, pt: ROSCO_SET_PT_011, de: ROSCO_SET_DE_011 },
-  "set-012": { es: ROSCO_SET_012, fr: ROSCO_SET_FR_012, pt: ROSCO_SET_PT_012, de: ROSCO_SET_DE_012 },
-  "set-013": { es: ROSCO_SET_013, fr: ROSCO_SET_FR_013, pt: ROSCO_SET_PT_013, de: ROSCO_SET_DE_013 },
-  "set-014": { es: ROSCO_SET_014, fr: ROSCO_SET_FR_014, pt: ROSCO_SET_PT_014, de: ROSCO_SET_DE_014 },
-  "set-015": { es: ROSCO_SET_015, fr: ROSCO_SET_FR_015, pt: ROSCO_SET_PT_015, de: ROSCO_SET_DE_015 },
-  "set-016": { es: ROSCO_SET_016, fr: ROSCO_SET_FR_016, pt: ROSCO_SET_PT_016, de: ROSCO_SET_DE_016 },
-  "set-017": { es: ROSCO_SET_017, fr: ROSCO_SET_FR_017, pt: ROSCO_SET_PT_017, de: ROSCO_SET_DE_017 },
-  "set-018": { es: ROSCO_SET_018, fr: ROSCO_SET_FR_018, pt: ROSCO_SET_PT_018, de: ROSCO_SET_DE_018 },
+  "set-007": { es: ROSCO_SET_007, en: ROSCO_SET_EN_007, fr: ROSCO_SET_FR_007, pt: ROSCO_SET_PT_007, de: ROSCO_SET_DE_007 },
+  "set-008": { es: ROSCO_SET_008, en: ROSCO_SET_EN_008, fr: ROSCO_SET_FR_008, pt: ROSCO_SET_PT_008, de: ROSCO_SET_DE_008 },
+  "set-009": { es: ROSCO_SET_009, en: ROSCO_SET_EN_009, fr: ROSCO_SET_FR_009, pt: ROSCO_SET_PT_009, de: ROSCO_SET_DE_009 },
+  "set-010": { es: ROSCO_SET_010, en: ROSCO_SET_EN_010, fr: ROSCO_SET_FR_010, pt: ROSCO_SET_PT_010, de: ROSCO_SET_DE_010 },
+  "set-011": { es: ROSCO_SET_011, en: ROSCO_SET_EN_011, fr: ROSCO_SET_FR_011, pt: ROSCO_SET_PT_011, de: ROSCO_SET_DE_011 },
+  "set-012": { es: ROSCO_SET_012, en: ROSCO_SET_EN_012, fr: ROSCO_SET_FR_012, pt: ROSCO_SET_PT_012, de: ROSCO_SET_DE_012 },
+  "set-013": { es: ROSCO_SET_013, en: ROSCO_SET_EN_013, fr: ROSCO_SET_FR_013, pt: ROSCO_SET_PT_013, de: ROSCO_SET_DE_013 },
+  "set-014": { es: ROSCO_SET_014, en: ROSCO_SET_EN_014, fr: ROSCO_SET_FR_014, pt: ROSCO_SET_PT_014, de: ROSCO_SET_DE_014 },
+  "set-015": { es: ROSCO_SET_015, en: ROSCO_SET_EN_015, fr: ROSCO_SET_FR_015, pt: ROSCO_SET_PT_015, de: ROSCO_SET_DE_015 },
+  "set-016": { es: ROSCO_SET_016, en: ROSCO_SET_EN_016, fr: ROSCO_SET_FR_016, pt: ROSCO_SET_PT_016, de: ROSCO_SET_DE_016 },
+  "set-017": { es: ROSCO_SET_017, en: ROSCO_SET_EN_017, fr: ROSCO_SET_FR_017, pt: ROSCO_SET_PT_017, de: ROSCO_SET_DE_017 },
+  "set-018": { es: ROSCO_SET_018, en: ROSCO_SET_EN_018, fr: ROSCO_SET_FR_018, pt: ROSCO_SET_PT_018, de: ROSCO_SET_DE_018 },
 };
 
 const EXPECTED_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
