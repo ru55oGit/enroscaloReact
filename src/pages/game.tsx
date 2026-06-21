@@ -1,4 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
+import Hypher from "hypher";
+import spanishHyphenation from "hyphenation.es";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Layout from "../components/Layout";
 import Box from "@mui/material/Box";
@@ -35,34 +37,44 @@ const normalizeKeyUpper = (value: string): string => {
     .toUpperCase();
 };
 
-const isVowel = (c: string): boolean => /[aeiouáéíóúü]/i.test(c);
+const spanishHypher = new Hypher(spanishHyphenation as Record<string, unknown>);
 
-const getWordBreakPoint = (word: string, maxPerRow: number): number | null => {
-  if (word.length <= maxPerRow) return null;
-  const hardMax = Math.min(word.length - 2, maxPerRow);
-  const ideal = Math.ceil(word.length / 2);
+const isVowelChar = (c: string): boolean => /[aeiouáéíóúü]/i.test(c);
 
-  // Prefer vowel→consonant (e.g. DIRI|GIBLE) over consonant→vowel (e.g. DIRIG|IBLE)
-  // because in Spanish consonants belong to the following syllable (V-CV rule)
-  const vcCandidates: number[] = [];
-  const cvCandidates: number[] = [];
-
-  for (let i = 2; i <= hardMax; i += 1) {
-    const prev = word[i - 1];
-    const curr = word[i];
-    if (!prev || !curr) continue;
-    if (isVowel(prev) && !isVowel(curr)) vcCandidates.push(i);
-    else if (!isVowel(prev) && isVowel(curr)) cvCandidates.push(i);
+const getRecommendedBreakPoint = (chars: string[], maxChunkLength: number): number => {
+  const safeMax = Math.max(2, Math.min(maxChunkLength, chars.length - 1));
+  const preferredMin = Math.max(2, safeMax - 3);
+  for (let i = safeMax; i >= preferredMin; i -= 1) {
+    const prev = chars[i - 1];
+    const next = chars[i];
+    if (!prev || !next) continue;
+    if (isVowelChar(prev) !== isVowelChar(next) || (isVowelChar(prev) && isVowelChar(next))) return i;
   }
+  return safeMax;
+};
 
-  const pickBest = (arr: number[]) =>
-    arr.length === 0
-      ? null
-      : arr.reduce((best, c) =>
-          Math.abs(c - ideal) < Math.abs(best - ideal) ? c : best,
-        );
+const getSyllableBreakPoint = (word: string, maxChunkLength: number): number | null => {
+  if (!word || maxChunkLength < 2 || word.length <= 2) return null;
+  const safeMax = Math.max(2, Math.min(maxChunkLength, word.length - 1));
+  if (safeMax < 2) return null;
 
-  return pickBest(vcCandidates) ?? pickBest(cvCandidates) ?? hardMax;
+  const syllables = spanishHypher.hyphenate(word);
+  if (!Array.isArray(syllables) || syllables.length <= 1) return null;
+
+  const breakpoints: number[] = [];
+  let consumed = 0;
+  syllables.slice(0, -1).forEach((syl: string) => {
+    consumed += syl.length;
+    breakpoints.push(consumed);
+  });
+
+  const strong = breakpoints.filter((p) => p >= 2 && p <= safeMax && word.length - p >= 2);
+  if (strong.length > 0) return strong[strong.length - 1];
+
+  const weak = breakpoints.filter((p) => p >= 2 && p <= safeMax);
+  if (weak.length > 0) return weak[weak.length - 1];
+
+  return null;
 };
 
 const findNextPlayableIndex = (
@@ -436,7 +448,11 @@ const Game: React.FC = () => {
   };
 
   const currentWordStr = currentEntry ? normalizeKeyUpper(currentEntry.word) : "";
-  const tileBreakPoint = currentWordStr ? getWordBreakPoint(currentWordStr, charsPerRow) : null;
+  const maxChunkLength = Math.max(2, charsPerRow - 1);
+  const tileBreakPoint = (currentWordStr && currentWordStr.length > charsPerRow)
+    ? (getSyllableBreakPoint(currentWordStr, maxChunkLength) ??
+       getRecommendedBreakPoint(currentWordStr.split(""), maxChunkLength))
+    : null;
   const tileRow1 = tileBreakPoint !== null ? answerChars.slice(0, tileBreakPoint) : answerChars;
   const tileRow2 = tileBreakPoint !== null ? answerChars.slice(tileBreakPoint) : [];
 
