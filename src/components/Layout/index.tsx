@@ -229,7 +229,7 @@ const Layout: React.FC<LayoutProps> = ({
             <Box
               sx={{
                 position: "absolute",
-                left: 16,
+                left: 8,
                 top: "50%",
                 transform: "translateY(-50%)",
                 zIndex: 3,
@@ -303,7 +303,7 @@ const Layout: React.FC<LayoutProps> = ({
             <Box
               sx={{
                 position: "absolute",
-                right: 16,
+                right: 0,
                 top: "50%",
                 transform: "translateY(-50%)",
                 fontSize: 24,
