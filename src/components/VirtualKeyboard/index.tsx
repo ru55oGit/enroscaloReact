@@ -13,6 +13,7 @@ interface VirtualKeyboardProps {
   includeActionKeys?: boolean;
   soundEnabled?: boolean;
   onSoundToggle?: () => void;
+  hidden?: boolean;
 }
 
 const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
@@ -22,6 +23,7 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
   includeActionKeys = false,
   soundEnabled = true,
   onSoundToggle,
+  hidden = false,
 }) => {
   const isMobile = useIsMobile();
   const { t, currentLanguage } = useLanguage();
@@ -121,6 +123,10 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
         padding: "8px 4px 12px",
         zIndex: 9999,
         borderTop: "1px solid #555",
+        opacity: hidden ? 0 : 1,
+        transform: hidden ? "translateY(40px)" : "translateY(0px)",
+        transition: "opacity 0.3s ease, transform 0.3s ease",
+        pointerEvents: hidden ? "none" : "auto",
         "& .hg-theme-default": {
           backgroundColor: "transparent",
           maxWidth: "100%",

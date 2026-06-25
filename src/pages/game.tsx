@@ -625,22 +625,23 @@ const Game: React.FC = () => {
           </Box>
         </Box>
 
-<Box sx={{ textAlign: "center" }}>
-                <Button
-                  type="button"
-                  variant="outlined"
-                  onClick={handlePass}
-                  disabled={showResumeOverlay}
-                  sx={{
-                    color: "#fff",
-                    borderColor: "#fff",
-                    minWidth: 154,
-                    fontWeight: 700,
-                  }}
-                >
-                  {t.feedbackPassed}
-                </Button>
-              </Box>
+        <Box sx={{ textAlign: "center" }}>
+          <Button
+            type="button"
+            variant="outlined"
+            onClick={handlePass}
+            disabled={showResumeOverlay}
+            sx={{
+              color: "#fff",
+              borderColor: "#fff",
+              minWidth: 154,
+              fontWeight: 700,
+            }}
+          >
+            {t.feedbackPassed}
+          </Button>
+        </Box>
+        {!isFinished && !isTimeOver && currentEntry && (
         <Box
           sx={{
             width: "100%",
@@ -652,7 +653,7 @@ const Game: React.FC = () => {
             backdropFilter: "blur(2px)",
           }}
         >
-          {!isFinished && !isTimeOver && currentEntry && (
+          
             <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 0.5, mb: 2 }}>
               <Box sx={{ display: "flex", justifyContent: "center", gap: 0.2 }}>
                 {tileRow1.map((char, i) => (
@@ -677,7 +678,6 @@ const Game: React.FC = () => {
                   >
                     {char || "_"}
                   </Box>
-                ))}
                 {tileRow2.length > 0 && (
                   <Box sx={{ display: "flex", alignItems: "flex-end", color: "#fff", fontWeight: 800, fontSize: isMobile ? 18 : 24, pb: 0.5, ml: 0.3 }}>
                     -
@@ -721,7 +721,20 @@ const Game: React.FC = () => {
               </Button>
             </Box>
           )}
+        </Box>
+                ))}
 
+        <Box
+          sx={{
+            width: "100%",
+            maxWidth: 520,
+            borderRadius: 3,
+            backgroundColor: "rgba(255, 255, 255, 0.18)",
+            border: "1px solid rgba(255, 255, 255, 0.35)",
+            p: 2,
+            backdropFilter: "blur(2px)",
+          }}
+        >
           {isTimeOver && (
             <Box sx={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 1.5 }}>
               <Button variant="contained" onClick={() => navigate("/")}>
@@ -740,9 +753,9 @@ const Game: React.FC = () => {
           <Typography
             sx={{
               color: "#fff",
-              mt: isFinished ? 2 : 1.5,
-              minHeight: 24,
+              mt: 2,
               fontWeight: 600,
+              textAlign: "center",
             }}
           >
             {feedback}
@@ -754,6 +767,7 @@ const Game: React.FC = () => {
         onKeyPress={handleKeyInput}
         includeActionKeys
         soundEnabled={soundEnabled}
+        hidden={showResumeOverlay || isFinished || isTimeOver}
         onSoundToggle={() => {
           setSoundEnabled((prev) => {
             const next = !prev;
