@@ -61,7 +61,7 @@ const ROSCO_2: RoscoEntry[] = [
 
 const ROSCO_3: RoscoEntry[] = [
   { word: "Ahorro", startOrContain: "start", letter: "A", definition: "Dinero que se guarda para usarlo más adelante.", category: "educacion-sociedad" },
-  { word: "Bell", startOrContain: "start", letter: "B", definition: "Apellido del inventor del teléfono.", category: "personalidades" },
+  { word: "Bell", startOrContain: "start", letter: "B", definition: "Apellido del inventor escocés Alexander Graham, creador del teléfono.", category: "personalidades" },
   { word: "Cronica", startOrContain: "start", letter: "C", definition: "Relato que cuenta los hechos en el orden en que ocurrieron.", category: "educacion-sociedad" },
   { word: "Dumas", startOrContain: "start", letter: "D", definition: "Apellido del escritor francés de Los tres mosqueteros.", category: "personalidades" },
   { word: "Enchufe", startOrContain: "start", letter: "E", definition: "Pieza que conecta un aparato a la electricidad.", category: "ciencias" },
@@ -89,7 +89,7 @@ const ROSCO_3: RoscoEntry[] = [
 ];
 
 const ROSCO_4: RoscoEntry[] = [
-  { word: "Asimov", startOrContain: "start", letter: "A", definition: "Apellido del célebre escritor de novelas de ciencia ficción.", category: "personalidades" },
+  { word: "Asimov", startOrContain: "start", letter: "A", definition: "Apellido del célebre escritor Isaac, autor de novelas de ciencia ficción.", category: "personalidades" },
   { word: "Buscador", startOrContain: "start", letter: "B", definition: "Programa que ayuda a encontrar información en internet.", category: "ciencias" },
   { word: "Canada", startOrContain: "start", letter: "C", definition: "Gran país del norte de América conocido por su hoja de arce.", category: "cultura-general" },
   { word: "Desenlace", startOrContain: "start", letter: "D", definition: "Final de una historia, donde se resuelve todo.", category: "cultura-general" },
@@ -147,7 +147,7 @@ const ROSCO_5: RoscoEntry[] = [
 ];
 
 const ROSCO_6: RoscoEntry[] = [
-  { word: "Amundsen", startOrContain: "start", letter: "A", definition: "Apellido del explorador noruego, primero en llegar al Polo Sur.", category: "personalidades" },
+  { word: "Arnold", startOrContain: "start", letter: "A", definition: "Nombre del actor y político austriaco Schwarzenegger, famoso por Terminator.", category: "personalidades" },
   { word: "Bruscheta", startOrContain: "start", letter: "B", definition: "Tostada italiana de pan con ajo, tomate fresco, albahaca y aceite de oliva.", category: "gastronomia" },
   { word: "Chimpance", startOrContain: "start", letter: "C", definition: "Mono muy inteligente que vive en las selvas de África.", category: "naturaleza" },
   { word: "Durlock", startOrContain: "start", letter: "D", definition: "Placa liviana usada para levantar paredes interiores.", category: "cultura-general" },

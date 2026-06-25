@@ -23,7 +23,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Salsa", startOrContain: "start", letter: "S", definition: "Música y baile caribeño de ritmo alegre.", category: "arte-musica" },
   { word: "Tractor", startOrContain: "start", letter: "T", definition: "Máquina potente que se usa para trabajar el campo.", category: "transporte" },
   { word: "Uniforme", startOrContain: "start", letter: "U", definition: "Ropa igual que usan los integrantes de un grupo.", category: "cultura-general" },
-  { word: "Vermeer", startOrContain: "start", letter: "V", definition: "Apellido del pintor holandés de La joven de la perla.", category: "personalidades" },
+  { word: "Ventimiglia", startOrContain: "start", letter: "V", definition: "Apellido del actor estadounidense Milo, famoso por This Is Us y Gilmore Girls.", category: "personalidades" },
   { word: "Welter", startOrContain: "start", letter: "W", definition: "Categoría de peso en el boxeo.", category: "deporte-juego" },
   { word: "Exilio", startOrContain: "contain", letter: "X", definition: "Vivir fuera del país propio, lejos del hogar.", category: "educacion-sociedad" },
   { word: "Yegua", startOrContain: "start", letter: "Y", definition: "Hembra del caballo.", category: "naturaleza" },
@@ -60,8 +60,8 @@ const ROSCO_2: RoscoEntry[] = [
 ];
 
 const ROSCO_3: RoscoEntry[] = [
-  { word: "Agassi", startOrContain: "start", letter: "A", definition: "Apellido del célebre tenista estadounidense.", category: "personalidades" },
-  { word: "Becker", startOrContain: "start", letter: "B", definition: "Apellido del célebre tenista alemán.", category: "personalidades" },
+  { word: "Agassi", startOrContain: "start", letter: "A", definition: "Apellido del célebre tenista estadounidense de nombre Andre.", category: "personalidades" },
+  { word: "Becker", startOrContain: "start", letter: "B", definition: "Apellido del célebre tenista alemán Boris, ganador de Wimbledon.", category: "personalidades" },
   { word: "Caravaggio", startOrContain: "start", letter: "C", definition: "Apellido del pintor italiano famoso por sus fuertes contrastes de luz.", category: "personalidades" },
   { word: "Dehesa", startOrContain: "start", letter: "D", definition: "Campo de pastos donde se cría el ganado.", category: "naturaleza" },
   { word: "Espuma", startOrContain: "start", letter: "E", definition: "Capa de burbujas blancas que forman las olas.", category: "naturaleza" },
@@ -136,7 +136,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Pleamar", startOrContain: "start", letter: "P", definition: "Momento en que el mar alcanza su nivel más alto.", category: "naturaleza" },
   { word: "Pequeño", startOrContain: "contain", letter: "Q", definition: "De tamaño chico o reducido.", category: "cultura-general" },
   { word: "Reina", startOrContain: "start", letter: "R", definition: "Abeja principal del panal, la única que pone huevos.", category: "naturaleza" },
-  { word: "Stockton", startOrContain: "start", letter: "S", definition: "Apellido del base histórico de la NBA, rey de las asistencias.", category: "personalidades" },
+  { word: "Sandler", startOrContain: "start", letter: "S", definition: "Apellido del actor y comediante estadounidense Adam, famoso por sus comedias y por Diamante en bruto.", category: "personalidades" },
   { word: "Tango", startOrContain: "start", letter: "T", definition: "Música y baile característico de Buenos Aires.", category: "arte-musica" },
   { word: "Alturas", startOrContain: "contain", letter: "U", definition: "Lugares muy elevados sobre el nivel del mar.", category: "naturaleza" },
   { word: "Vals", startOrContain: "start", letter: "V", definition: "Baile elegante en el que la pareja gira al compás de la música.", category: "arte-musica" },
