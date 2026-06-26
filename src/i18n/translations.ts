@@ -204,7 +204,7 @@ export const translations: Record<string, Translation> = {
 
   en: {
     appTitle: "Enroscado",
-    tagline: "think · answer · win",
+    tagline: "The Alphabet Game",
     howToPlay: "HOW TO PLAY?",
     lookAtGrid: "Read the clue",
     findDifferent: "Type your answer",
@@ -384,7 +384,7 @@ export const translations: Record<string, Translation> = {
 
   fr: {
     appTitle: "Enroscado",
-    tagline: "pensez · repondez · gagnez",
+    tagline: "En toutes lettres",
     howToPlay: "COMMENT JOUER?",
     lookAtGrid: "Lisez l'indice",
     findDifferent: "Ecrivez la reponse",
@@ -474,7 +474,7 @@ export const translations: Record<string, Translation> = {
 
   de: {
     appTitle: "Enroscado",
-    tagline: "denke · antworte · gewinne",
+    tagline: "Buchstaben Battle",
     howToPlay: "WIE SPIELEN?",
     lookAtGrid: "Lies den Hinweis",
     findDifferent: "Schreib die Antwort",
