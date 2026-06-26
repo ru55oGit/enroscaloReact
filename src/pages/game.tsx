@@ -625,22 +625,24 @@ const Game: React.FC = () => {
           </Box>
         </Box>
 
-        <Box sx={{ textAlign: "center" }}>
-          <Button
-            type="button"
-            variant="outlined"
-            onClick={handlePass}
-            disabled={showResumeOverlay}
-            sx={{
-              color: "#fff",
-              borderColor: "#fff",
-              minWidth: 154,
-              fontWeight: 700,
-            }}
-          >
-            {t.feedbackPassed}
-          </Button>
-        </Box>
+        {!isFinished && (
+          <Box sx={{ textAlign: "center" }}>
+            <Button
+              type="button"
+              variant="outlined"
+              onClick={handlePass}
+              disabled={showResumeOverlay}
+              sx={{
+                color: "#fff",
+                borderColor: "#fff",
+                minWidth: 200,
+                fontWeight: 700,
+              }}
+            >
+              {t.feedbackPassed}
+            </Button>
+          </Box>
+        )}
         {!isFinished && !isTimeOver && currentEntry && (
         <Box
           sx={{
@@ -653,7 +655,6 @@ const Game: React.FC = () => {
             backdropFilter: "blur(2px)",
           }}
         >
-          
             <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 0.5, mb: 2 }}>
               <Box sx={{ display: "flex", justifyContent: "center", gap: 0.2 }}>
                 {tileRow1.map((char, i) => (
@@ -678,6 +679,7 @@ const Game: React.FC = () => {
                   >
                     {char || "_"}
                   </Box>
+                ))}
                 {tileRow2.length > 0 && (
                   <Box sx={{ display: "flex", alignItems: "flex-end", color: "#fff", fontWeight: 800, fontSize: isMobile ? 18 : 24, pb: 0.5, ml: 0.3 }}>
                     -
@@ -712,7 +714,7 @@ const Game: React.FC = () => {
                 </Box>
               )}
             </Box>
-          )}
+          
 
           {isFinished && (
             <Box sx={{ textAlign: "center" }}>
@@ -722,45 +724,118 @@ const Game: React.FC = () => {
             </Box>
           )}
         </Box>
-                ))}
-
-        <Box
-          sx={{
-            width: "100%",
-            maxWidth: 520,
-            borderRadius: 3,
-            backgroundColor: "rgba(255, 255, 255, 0.18)",
-            border: "1px solid rgba(255, 255, 255, 0.35)",
-            p: 2,
-            backdropFilter: "blur(2px)",
-          }}
-        >
-          {isTimeOver && (
-            <Box sx={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 1.5 }}>
-              <Button variant="contained" onClick={() => navigate("/")}>
-                {t.backToHome}
-              </Button>
-              <Button
-                variant="outlined"
-                onClick={handleReloadTime}
-                sx={{ color: "#fff", borderColor: "#fff", fontWeight: 700 }}
-              >
-                {t.reloadTime}
-              </Button>
-            </Box>
-          )}
-
-          <Typography
+        )}
+        {!isFinished && (
+          <Box
             sx={{
-              color: "#fff",
-              mt: 2,
-              fontWeight: 600,
-              textAlign: "center",
+              width: "100%",
+              maxWidth: 520,
+              borderRadius: 3,
+              backgroundColor: "rgba(255, 255, 255, 0.18)",
+              border: "1px solid rgba(255, 255, 255, 0.35)",
+              p: 2,
+              backdropFilter: "blur(2px)",
             }}
           >
-            {feedback}
-          </Typography>
-        </Box>
+            {isTimeOver && (
+              <Box sx={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 1.5 }}>
+                <Button
+                  variant="contained"
+                  onClick={handleReloadTime}
+                  sx={{
+                    backgroundColor: "#f0b429",
+                    color: "#1a1a1a",
+                    fontWeight: 800,
+                    minWidth: 200,
+                    "&:hover": { backgroundColor: "#d99f1a" },
+                  }}
+                >
+                  {t.reloadTime}
+                </Button>
+                <Button
+                  variant="outlined"
+                  onClick={() => navigate("/")}
+                  sx={{ color: "#fff", borderColor: "#fff", fontWeight: 700, minWidth: 200, mb: 2 }}
+                >
+                  {t.backToHome}
+                </Button>
+              </Box>
+            )}
+            <Typography
+              sx={{
+                color: "#fff",
+                fontWeight: 600,
+                textAlign: "center",
+              }}
+            >
+              {feedback}
+            </Typography>
+          </Box>
+        )}
+
+        {isFinished && (
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: 520,
+              borderRadius: 3,
+              backgroundColor: "#fff",
+              border: "1px solid #d7d7d7",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+              p: 2,
+              color: "#222",
+            }}
+          >
+            <Box sx={{ textAlign: "center", mb: 2 }}>
+              <Button
+                variant="outlined"
+                onClick={() => navigate("/")}
+                sx={{ color: "#d84331", borderColor: "#d84331", fontWeight: 700 }}
+              >
+                {t.backToHome}
+              </Button>
+            </Box>
+            {roscoWords.map((entry, index) => (
+              <Box
+                key={entry.letter}
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: 1.5,
+                  py: 1,
+                  borderBottom: index < roscoWords.length - 1 ? "1px solid #eee" : "none",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: 28,
+                    height: 28,
+                    borderRadius: "50%",
+                    backgroundColor: getLetterColor(index),
+                    color: "#fff",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontWeight: 800,
+                    fontSize: 13,
+                    flexShrink: 0,
+                    mt: 0.3,
+                  }}
+                >
+                  {entry.letter}
+                </Box>
+                <Box sx={{ flex: 1 }}>
+                  <Typography sx={{ fontSize: 12, color: "#777", lineHeight: 1.3, mb: 0.25 }}>
+                    {entry.definition}
+                  </Typography>
+                  <Typography sx={{ fontSize: 14, fontWeight: 800, color: getLetterColor(index) }}>
+                    {entry.word}
+                  </Typography>
+                </Box>
+              </Box>
+            ))}
+          </Box>
+        )}
       </Box>
 
       <VirtualKeyboard
