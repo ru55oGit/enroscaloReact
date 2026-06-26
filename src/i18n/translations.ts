@@ -71,6 +71,10 @@ export interface Translation {
   goodEvening: string;
   readyToPlay: string;
   weeklySection: string;
+  statsSection: string;
+  statsCorrect: string;
+  statsWrong: string;
+  statsPassed: string;
   categorySection: string;
   continueGame: string;
   viewResult: string;
@@ -168,6 +172,10 @@ export const translations: Record<string, Translation> = {
     goodEvening: "Buenas noches",
     readyToPlay: "¿Listo para jugar Enroscado? 😳",
     weeklySection: "Semanal",
+    statsSection: "Estadísticas",
+    statsCorrect: "Palabras Acertadas",
+    statsWrong: "Palabras Erradas",
+    statsPassed: "Palabras Pasadas",
     categorySection: "Por categoría",
     continueGame: "CONTINUAR",
     viewResult: "VER RESULTADO",
@@ -258,6 +266,10 @@ export const translations: Record<string, Translation> = {
     goodEvening: "Good evening",
     readyToPlay: "Ready to play Enroscado? 😳",
     weeklySection: "Weekly",
+    statsSection: "Statistics",
+    statsCorrect: "Correct Words",
+    statsWrong: "Wrong Words",
+    statsPassed: "Passed Words",
     categorySection: "By category",
     continueGame: "CONTINUE",
     viewResult: "VIEW RESULT",
@@ -348,6 +360,10 @@ export const translations: Record<string, Translation> = {
     goodEvening: "Boa noite",
     readyToPlay: "Pronto para jogar Enroscado? 😳",
     weeklySection: "Semanal",
+    statsSection: "Estatísticas",
+    statsCorrect: "Palavras Acertadas",
+    statsWrong: "Palavras Erradas",
+    statsPassed: "Palavras Puladas",
     categorySection: "Por categoria",
     continueGame: "CONTINUAR",
     viewResult: "VER RESULTADO",
@@ -438,6 +454,10 @@ export const translations: Record<string, Translation> = {
     goodEvening: "Bonsoir",
     readyToPlay: "Prêt à jouer à Enroscado? 😳",
     weeklySection: "Hebdomadaire",
+    statsSection: "Statistiques",
+    statsCorrect: "Mots Réussis",
+    statsWrong: "Mots Ratés",
+    statsPassed: "Mots Passés",
     categorySection: "Par catégorie",
     continueGame: "CONTINUER",
     viewResult: "VOIR RÉSULTAT",
@@ -528,6 +548,10 @@ export const translations: Record<string, Translation> = {
     goodEvening: "Guten Abend",
     readyToPlay: "Bereit, Enroscado zu spielen? 😳",
     weeklySection: "Wöchentlich",
+    statsSection: "Statistiken",
+    statsCorrect: "Richtige Wörter",
+    statsWrong: "Falsche Wörter",
+    statsPassed: "Übersprungene Wörter",
     categorySection: "Nach Kategorie",
     continueGame: "WEITER",
     viewResult: "ERGEBNIS SEHEN",

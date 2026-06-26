@@ -100,6 +100,21 @@ export default function WelcomeScreen() {
     "people": { label: "People", icon: "🌟" },
   };
 
+  const globalStats = useMemo(() => {
+    let correct = 0, wrong = 0, passed = 0;
+    for (const day of WEEK_DAYS) {
+      if (!isDayAvailable(day.key)) continue;
+      const dayState = weeklyState.days[day.key];
+      if (!dayState) continue;
+      dayState.statuses.forEach((status) => {
+        if (status === "correct") correct++;
+        else if (status === "wrong") wrong++;
+        else if (status === "passed") passed++;
+      });
+    }
+    return { correct, wrong, passed };
+  }, [weeklyState]);
+
   const categoryStats = useMemo(() => {
     const stats: Record<string, { correct: number; wrong: number }> = {};
     for (const day of WEEK_DAYS) {
@@ -120,6 +135,7 @@ export default function WelcomeScreen() {
   }, [weeklyState, activeRoscoContext]);
 
   const hasCategoryStats = Object.keys(categoryStats).length > 0;
+  const hasGlobalStats = globalStats.correct + globalStats.wrong + globalStats.passed > 0;
 
   const getButtonLabel = (status: string): string => {
     if (status === "in_progress") return t.continueGame;
@@ -351,6 +367,38 @@ export default function WelcomeScreen() {
             })}
           </Box>
         </Box>
+
+        {hasGlobalStats && (() => {
+          const total = globalStats.correct + globalStats.wrong + globalStats.passed;
+          const correctPct = Math.round((globalStats.correct / total) * 100);
+          const wrongPct = Math.round((globalStats.wrong / total) * 100);
+          const passedPct = Math.round((globalStats.passed / total) * 100);
+
+          const StatRow = ({ label, count, pct, color }: { label: string; count: number; pct: number; color: string }) => (
+            <Box>
+              <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 0.5 }}>
+                <Typography sx={{ fontSize: 13, fontWeight: 700, color: "#333" }}>{label}</Typography>
+                <Typography sx={{ fontSize: 12, fontWeight: 700, color: "#555" }}>{count}/{total} · {pct}%</Typography>
+              </Box>
+              <Box sx={{ height: 8, borderRadius: 4, backgroundColor: "#d0d0d0", overflow: "hidden" }}>
+                <Box sx={{ height: "100%", width: `${pct}%`, backgroundColor: color, borderRadius: 4, transition: "width 0.5s ease" }} />
+              </Box>
+            </Box>
+          );
+
+          return (
+            <Box sx={{ borderRadius: 4, backgroundColor: "#fff", p: 2, color: "#222", boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}>
+              <Typography sx={{ fontSize: 28, fontWeight: 800, mb: 2 }}>{t.statsSection}</Typography>
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
+                <StatRow label={t.statsCorrect} count={globalStats.correct} pct={correctPct} color="#2ecc71" />
+                <StatRow label={t.statsWrong} count={globalStats.wrong} pct={wrongPct} color="#e74c3c" />
+                {globalStats.passed > 0 && (
+                  <StatRow label={t.statsPassed} count={globalStats.passed} pct={passedPct} color="#f39c12" />
+                )}
+              </Box>
+            </Box>
+          );
+        })()}
 
         {hasCategoryStats && (
           <Box
