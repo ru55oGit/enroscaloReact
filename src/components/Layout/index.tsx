@@ -348,8 +348,13 @@ const Layout: React.FC<LayoutProps> = ({
             zIndex: 1,
           }}
         >
-          {/* TODO: Cambiar por el nombre de tu juego */}©{" "}
-          {new Date().getFullYear()} Enroscado
+          © {new Date().getFullYear()} Enroscado ·{" "}
+          <a
+            href="/privacidad"
+            style={{ color: "inherit", textDecoration: "underline" }}
+          >
+            Política de Privacidad
+          </a>
         </Box>
       )}
 
@@ -494,6 +499,28 @@ const Layout: React.FC<LayoutProps> = ({
                 ))}
               </List>
             </Collapse>
+
+            <ListItem disablePadding>
+              <ListItemButton
+                onClick={() => handleMenuNavigation("/privacidad")}
+                sx={{
+                  px: 3,
+                  py: 2,
+                  backgroundColor: "#fff",
+                  borderBottom: "1px solid #e0e0e0",
+                  "&:hover": { backgroundColor: "#f5f5f5" },
+                }}
+              >
+                <ListItemText
+                  primary="Política de Privacidad"
+                  primaryTypographyProps={{
+                    fontSize: 22,
+                    fontWeight: 500,
+                    color: "#e74c3c",
+                  }}
+                />
+              </ListItemButton>
+            </ListItem>
           </List>
         </Box>
       </Drawer>
