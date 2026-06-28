@@ -8,7 +8,14 @@ import LanguageSelector from "../components/LanguageSelector";
 import { useLanguage } from "../i18n/LanguageContext";
 import EmojiCarousel from "../components/EmojiCarousel";
 import { useIsMobile } from "../hooks/useIsMobile";
-import { getActiveRoscoContext, RoscoEntry } from "../data/weeklyRoscos";
+import { getActiveRoscoContext } from "../data/weeklyRoscos";
+import {
+  upsertHistoryDay,
+  getCumulativeStats,
+  getBestStreak,
+  CumulativeStats,
+  BestStreak,
+} from "../utils/historyStore";
 import {
   DayKey,
   WEEK_DAYS,
@@ -100,71 +107,37 @@ export default function WelcomeScreen() {
     "people": { label: "People", icon: "🌟" },
   };
 
-  const globalStats = useMemo(() => {
-    let correct = 0, wrong = 0, passed = 0;
-    for (const day of WEEK_DAYS) {
-      if (!isDayAvailable(day.key)) continue;
-      const dayState = weeklyState.days[day.key];
-      if (!dayState) continue;
-      dayState.statuses.forEach((status) => {
-        if (status === "correct") correct++;
-        else if (status === "wrong") wrong++;
-        else if (status === "passed") passed++;
-      });
-    }
-    return { correct, wrong, passed };
-  }, [weeklyState]);
-
-  const categoryStats = useMemo(() => {
-    const stats: Record<string, { correct: number; wrong: number }> = {};
-    for (const day of WEEK_DAYS) {
-      if (!isDayAvailable(day.key)) continue;
-      const dayState = weeklyState.days[day.key];
-      if (!dayState) continue;
-      const rosco = activeRoscoContext.roscos[day.key];
-      dayState.statuses.forEach((status, i) => {
-        if (status !== "correct" && status !== "wrong") return;
-        const category = rosco[i]?.category;
-        if (!category) return;
-        if (!stats[category]) stats[category] = { correct: 0, wrong: 0 };
-        if (status === "correct") stats[category].correct++;
-        else stats[category].wrong++;
-      });
-    }
-    return stats;
-  }, [weeklyState, activeRoscoContext]);
-
-  const hasCategoryStats = Object.keys(categoryStats).length > 0;
-  const hasGlobalStats = globalStats.correct + globalStats.wrong + globalStats.passed > 0;
-
   const LANG_LOCALE: Record<string, string> = { es: "es-AR", en: "en-US", pt: "pt-BR", fr: "fr-FR", de: "de-DE" };
   const DAY_OFFSETS: Record<DayKey, number> = { sun: 0, mon: 1, tue: 2, wed: 3, thu: 4, fri: 5, sat: 6 };
 
-  const bestStreak = useMemo(() => {
-    let best: { words: RoscoEntry[]; date: Date } | null = null;
+  const [cumulativeStats, setCumulativeStats] = useState<CumulativeStats>(() => getCumulativeStats());
+  const [bestStreak, setBestStreak] = useState<BestStreak | null>(() => getBestStreak());
+
+  useEffect(() => {
     for (const day of WEEK_DAYS) {
       if (!isDayAvailable(day.key)) continue;
       const dayState = weeklyState.days[day.key];
       if (!dayState) continue;
+      const hasData = dayState.statuses.some((s) => s !== "pending");
+      if (!hasData) continue;
       const rosco = activeRoscoContext.roscos[day.key];
-      let current: RoscoEntry[] = [];
-      let longest: RoscoEntry[] = [];
-      dayState.statuses.forEach((status, i) => {
-        if (status === "correct") {
-          current.push(rosco[i]);
-          if (current.length > longest.length) longest = [...current];
-        } else {
-          current = [];
-        }
+      const [y, m, d] = activeRoscoContext.weekStart.split("-").map(Number);
+      const date = new Date(y, m - 1, d + DAY_OFFSETS[day.key]);
+      const isoDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+      upsertHistoryDay({
+        weekStart: activeRoscoContext.weekStart,
+        dayKey: day.key,
+        date: isoDate,
+        statuses: dayState.statuses,
+        entries: rosco.map((e) => ({ word: e.word, definition: e.definition, letter: e.letter, category: e.category })),
       });
-      if (longest.length > (best?.words.length ?? 0)) {
-        const [y, m, d] = activeRoscoContext.weekStart.split("-").map(Number);
-        const date = new Date(y, m - 1, d + DAY_OFFSETS[day.key]);
-        best = { words: longest, date };
-      }
     }
-    return best;
+    setCumulativeStats(getCumulativeStats());
+    setBestStreak(getBestStreak());
   }, [weeklyState, activeRoscoContext]);
+
+  const hasCategoryStats = Object.keys(cumulativeStats.byCategory).length > 0;
+  const hasGlobalStats = cumulativeStats.correct + cumulativeStats.wrong + cumulativeStats.passed > 0;
 
   const getButtonLabel = (status: string): string => {
     if (status === "in_progress") return t.continueGame;
@@ -398,12 +371,12 @@ export default function WelcomeScreen() {
         </Box>
 
         {hasGlobalStats && (() => {
-          const total = globalStats.correct + globalStats.wrong + globalStats.passed;
-          const correctPct = Math.round((globalStats.correct / total) * 100);
-          const wrongPct = Math.round((globalStats.wrong / total) * 100);
-          const passedPct = Math.round((globalStats.passed / total) * 100);
+          const total = cumulativeStats.correct + cumulativeStats.wrong + cumulativeStats.passed;
+          const correctPct = Math.round((cumulativeStats.correct / total) * 100);
+          const wrongPct = Math.round((cumulativeStats.wrong / total) * 100);
+          const passedPct = Math.round((cumulativeStats.passed / total) * 100);
 
-          const topCategory = Object.entries(categoryStats).sort((a, b) => {
+          const topCategory = Object.entries(cumulativeStats.byCategory).sort((a, b) => {
             const pctA = b[1].correct / (b[1].correct + b[1].wrong);
             const pctB = a[1].correct / (a[1].correct + a[1].wrong);
             const totalA = b[1].correct + b[1].wrong;
@@ -428,10 +401,10 @@ export default function WelcomeScreen() {
             <Box sx={{ borderRadius: 4, backgroundColor: "#fff", p: 2, color: "#222", boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}>
               <Typography sx={{ fontSize: 28, fontWeight: 800, mb: 2 }}>{t.statsSection}</Typography>
               <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
-                <StatRow label={t.statsCorrect} count={globalStats.correct} pct={correctPct} color="#2ecc71" />
-                <StatRow label={t.statsWrong} count={globalStats.wrong} pct={wrongPct} color="#e74c3c" />
-                {globalStats.passed > 0 && (
-                  <StatRow label={t.statsPassed} count={globalStats.passed} pct={passedPct} color="#f39c12" />
+                <StatRow label={t.statsCorrect} count={cumulativeStats.correct} pct={correctPct} color="#2ecc71" />
+                <StatRow label={t.statsWrong} count={cumulativeStats.wrong} pct={wrongPct} color="#e74c3c" />
+                {cumulativeStats.passed > 0 && (
+                  <StatRow label={t.statsPassed} count={cumulativeStats.passed} pct={passedPct} color="#f39c12" />
                 )}
               </Box>
               {topMeta && (
@@ -471,7 +444,7 @@ export default function WelcomeScreen() {
             </Typography>
 
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
-              {Object.entries(categoryStats)
+              {Object.entries(cumulativeStats.byCategory)
                 .sort((a, b) => (b[1].correct + b[1].wrong) - (a[1].correct + a[1].wrong))
                 .map(([cat, { correct, wrong }]) => {
                   const total = correct + wrong;
@@ -511,7 +484,7 @@ export default function WelcomeScreen() {
           <Box sx={{ borderRadius: 4, backgroundColor: "#fff", p: 2, boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}>
             <Typography sx={{ fontSize: 28, fontWeight: 800, color: "#222" }}>{t.bestStreakSection}</Typography>
             <Typography sx={{ fontSize: 13, color: "#888", mb: 2 }}>
-              {bestStreak.words.length} {t.bestStreakWords} · {bestStreak.date.toLocaleDateString(LANG_LOCALE[currentLanguage], { weekday: "long", day: "numeric", month: "long" })}
+              {bestStreak.words.length} {t.bestStreakWords} · {(() => { const [y,m,d] = bestStreak.date.split("-").map(Number); return new Date(y, m-1, d).toLocaleDateString(LANG_LOCALE[currentLanguage], { weekday: "long", day: "numeric", month: "long" }); })()}
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
               {bestStreak.words.map((entry) => (
