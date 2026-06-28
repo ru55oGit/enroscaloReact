@@ -8,7 +8,7 @@ import LanguageSelector from "../components/LanguageSelector";
 import { useLanguage } from "../i18n/LanguageContext";
 import EmojiCarousel from "../components/EmojiCarousel";
 import { useIsMobile } from "../hooks/useIsMobile";
-import { getActiveRoscoContext } from "../data/weeklyRoscos";
+import { getActiveRoscoContext, RoscoEntry } from "../data/weeklyRoscos";
 import {
   DayKey,
   WEEK_DAYS,
@@ -136,6 +136,35 @@ export default function WelcomeScreen() {
 
   const hasCategoryStats = Object.keys(categoryStats).length > 0;
   const hasGlobalStats = globalStats.correct + globalStats.wrong + globalStats.passed > 0;
+
+  const LANG_LOCALE: Record<string, string> = { es: "es-AR", en: "en-US", pt: "pt-BR", fr: "fr-FR", de: "de-DE" };
+  const DAY_OFFSETS: Record<DayKey, number> = { sun: 0, mon: 1, tue: 2, wed: 3, thu: 4, fri: 5, sat: 6 };
+
+  const bestStreak = useMemo(() => {
+    let best: { words: RoscoEntry[]; date: Date } | null = null;
+    for (const day of WEEK_DAYS) {
+      if (!isDayAvailable(day.key)) continue;
+      const dayState = weeklyState.days[day.key];
+      if (!dayState) continue;
+      const rosco = activeRoscoContext.roscos[day.key];
+      let current: RoscoEntry[] = [];
+      let longest: RoscoEntry[] = [];
+      dayState.statuses.forEach((status, i) => {
+        if (status === "correct") {
+          current.push(rosco[i]);
+          if (current.length > longest.length) longest = [...current];
+        } else {
+          current = [];
+        }
+      });
+      if (longest.length > (best?.words.length ?? 0)) {
+        const [y, m, d] = activeRoscoContext.weekStart.split("-").map(Number);
+        const date = new Date(y, m - 1, d + DAY_OFFSETS[day.key]);
+        best = { words: longest, date };
+      }
+    }
+    return best;
+  }, [weeklyState, activeRoscoContext]);
 
   const getButtonLabel = (status: string): string => {
     if (status === "in_progress") return t.continueGame;
@@ -374,6 +403,15 @@ export default function WelcomeScreen() {
           const wrongPct = Math.round((globalStats.wrong / total) * 100);
           const passedPct = Math.round((globalStats.passed / total) * 100);
 
+          const topCategory = Object.entries(categoryStats).sort((a, b) => {
+            const pctA = b[1].correct / (b[1].correct + b[1].wrong);
+            const pctB = a[1].correct / (a[1].correct + a[1].wrong);
+            const totalA = b[1].correct + b[1].wrong;
+            const totalB = a[1].correct + a[1].wrong;
+            return totalA > 3 && totalB > 3 ? pctA - pctB : totalA - totalB;
+          }).pop();
+          const topMeta = topCategory ? (CATEGORY_META[topCategory[0]] ?? { label: topCategory[0], icon: "📌" }) : null;
+
           const StatRow = ({ label, count, pct, color }: { label: string; count: number; pct: number; color: string }) => (
             <Box>
               <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 0.5 }}>
@@ -396,6 +434,25 @@ export default function WelcomeScreen() {
                   <StatRow label={t.statsPassed} count={globalStats.passed} pct={passedPct} color="#f39c12" />
                 )}
               </Box>
+              {topMeta && (
+                <Box sx={{ mt: 2, pt: 2, borderTop: "1px solid #eee", display: "flex", alignItems: "center", gap: 1.5 }}>
+                  <Box sx={{
+                    fontSize: 28, lineHeight: 1,
+                    width: 48, height: 48, borderRadius: 3,
+                    backgroundColor: "#f5f5f5",
+                    display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+                  }}>
+                    {topMeta.icon}
+                  </Box>
+                  <Box>
+                    <Typography sx={{ fontSize: 11, fontWeight: 700, color: "#999", textTransform: "uppercase", letterSpacing: "0.8px" }}>
+                      {t.knowledgeProfile}
+                    </Typography>
+                    <Typography sx={{ fontSize: 15, fontWeight: 800, color: "#222" }}>{topMeta.label}</Typography>
+                    <Typography sx={{ fontSize: 11, color: "#aaa" }}>{t.topCategoryLabel}</Typography>
+                  </Box>
+                </Box>
+              )}
             </Box>
           );
         })()}
@@ -446,6 +503,32 @@ export default function WelcomeScreen() {
                     </Box>
                   );
                 })}
+            </Box>
+          </Box>
+        )}
+
+        {bestStreak && (
+          <Box sx={{ borderRadius: 4, backgroundColor: "#fff", p: 2, boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}>
+            <Typography sx={{ fontSize: 28, fontWeight: 800, color: "#222" }}>{t.bestStreakSection}</Typography>
+            <Typography sx={{ fontSize: 13, color: "#888", mb: 2 }}>
+              {bestStreak.words.length} {t.bestStreakWords} · {bestStreak.date.toLocaleDateString(LANG_LOCALE[currentLanguage], { weekday: "long", day: "numeric", month: "long" })}
+            </Typography>
+            <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
+              {bestStreak.words.map((entry) => (
+                <Box key={entry.letter} sx={{ display: "flex", gap: 1.5, alignItems: "flex-start" }}>
+                  <Box sx={{
+                    minWidth: 28, height: 28, borderRadius: "50%",
+                    backgroundColor: "#2ecc71", display: "flex", alignItems: "center",
+                    justifyContent: "center", color: "#fff", fontWeight: 800, fontSize: 12, flexShrink: 0,
+                  }}>
+                    {entry.letter.toUpperCase()}
+                  </Box>
+                  <Box>
+                    <Typography sx={{ fontSize: 13, fontWeight: 800, color: "#222" }}>{entry.word}</Typography>
+                    <Typography sx={{ fontSize: 12, color: "#666", lineHeight: 1.4 }}>{entry.definition}</Typography>
+                  </Box>
+                </Box>
+              ))}
             </Box>
           </Box>
         )}

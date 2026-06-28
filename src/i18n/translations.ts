@@ -76,6 +76,10 @@ export interface Translation {
   statsWrong: string;
   statsPassed: string;
   categorySection: string;
+  bestStreakSection: string;
+  bestStreakWords: string;
+  knowledgeProfile: string;
+  topCategoryLabel: string;
   continueGame: string;
   viewResult: string;
   lockedDay: string;
@@ -177,6 +181,10 @@ export const translations: Record<string, Translation> = {
     statsWrong: "Palabras Erradas",
     statsPassed: "Palabras Pasadas",
     categorySection: "Por categoría",
+    bestStreakSection: "Mejor racha",
+    bestStreakWords: "palabras consecutivas",
+    knowledgeProfile: "Tu perfil",
+    topCategoryLabel: "Tu categoría más fuerte esta semana",
     continueGame: "CONTINUAR",
     viewResult: "VER RESULTADO",
     lockedDay: "BLOQUEADO",
@@ -271,6 +279,10 @@ export const translations: Record<string, Translation> = {
     statsWrong: "Wrong Words",
     statsPassed: "Passed Words",
     categorySection: "By category",
+    bestStreakSection: "Best streak",
+    bestStreakWords: "consecutive words",
+    knowledgeProfile: "Your profile",
+    topCategoryLabel: "Your strongest category this week",
     continueGame: "CONTINUE",
     viewResult: "VIEW RESULT",
     lockedDay: "LOCKED",
@@ -365,6 +377,10 @@ export const translations: Record<string, Translation> = {
     statsWrong: "Palavras Erradas",
     statsPassed: "Palavras Puladas",
     categorySection: "Por categoria",
+    bestStreakSection: "Melhor sequência",
+    bestStreakWords: "palavras consecutivas",
+    knowledgeProfile: "Seu perfil",
+    topCategoryLabel: "Sua categoria mais forte esta semana",
     continueGame: "CONTINUAR",
     viewResult: "VER RESULTADO",
     lockedDay: "BLOQUEADO",
@@ -459,6 +475,10 @@ export const translations: Record<string, Translation> = {
     statsWrong: "Mots Ratés",
     statsPassed: "Mots Passés",
     categorySection: "Par catégorie",
+    bestStreakSection: "Meilleure série",
+    bestStreakWords: "mots consécutifs",
+    knowledgeProfile: "Ton profil",
+    topCategoryLabel: "Ta catégorie la plus forte cette semaine",
     continueGame: "CONTINUER",
     viewResult: "VOIR RÉSULTAT",
     lockedDay: "VERROUILLÉ",
@@ -553,6 +573,10 @@ export const translations: Record<string, Translation> = {
     statsWrong: "Falsche Wörter",
     statsPassed: "Übersprungene Wörter",
     categorySection: "Nach Kategorie",
+    bestStreakSection: "Beste Serie",
+    bestStreakWords: "aufeinanderfolgende Wörter",
+    knowledgeProfile: "Dein Profil",
+    topCategoryLabel: "Deine stärkste Kategorie diese Woche",
     continueGame: "WEITER",
     viewResult: "ERGEBNIS SEHEN",
     lockedDay: "GESPERRT",
