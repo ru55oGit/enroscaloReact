@@ -506,22 +506,42 @@ export default function WelcomeScreen() {
             </Box>
           </Box>
         )}
-      </Box>
-
-      <Box sx={{ width: "100%", px: 2, pb: 4, mt: 4 }}>
+         <Box
+          component="section"
+          sx={{
+            backgroundColor: "rgba(0,0,0,0.18)",
+            borderRadius: 4,
+            px: 2,
+            py: 2.5,
+            mb: 2
+          }}
+        >
         <Typography variant="h5" sx={{ fontWeight: 800, color: "#fff", mb: 1 }}>
-          ¿Qué es Enroscado?
+          {t.aboutTitle}
         </Typography>
         <Typography sx={{ color: "rgba(255,255,255,0.85)", lineHeight: 1.7, mb: 3 }}>
-          Enroscado es un juego de vocabulario diario inspirado en el clásico rosco. Cada día aparece un nuevo rosco con 27 letras del abecedario — tenés que adivinar una palabra para cada letra usando la definición como pista. Jugá en español, inglés, portugués, francés o alemán y poné a prueba tu conocimiento.
+          {t.aboutText}
         </Typography>
+        </Box>
+        <Box
+          component="section"
+          sx={{
+            backgroundColor: "rgba(0,0,0,0.18)",
+            borderRadius: 4,
+            px: 2,
+            py: 2.5,
+            mb: 2
+          }}
+        >
         <Typography variant="h5" sx={{ fontWeight: 800, color: "#fff", mb: 1 }}>
-          ¿Cómo jugar?
+          {t.howToPlayTitle}
         </Typography>
         <Typography sx={{ color: "rgba(255,255,255,0.85)", lineHeight: 1.7 }}>
-          Cada letra del rosco tiene una definición. Escribí la palabra que creés que corresponde y confirmala. Si acertás, la letra queda en verde. Si errás, queda en rojo. Podés pasar una letra y volver a ella más tarde. El objetivo es completar el rosco con la mayor cantidad de aciertos posibles. Un nuevo rosco aparece cada día, así que ¡volvé mañana!
+          {t.howToPlayText}
         </Typography>
+        </Box>
       </Box>
+
     </Layout>
   );
 }
