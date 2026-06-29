@@ -167,7 +167,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Reaccion", startOrContain: "start", letter: "R", definition: "Cambio que se produce cuando dos o más sustancias se combinan.", category: "ciencias" },
   { word: "Saavedra", startOrContain: "start", letter: "S", definition: "Apellido del presidente Cornelio, que encabezó la Primera Junta de Gobierno de 1810.", category: "personalidades" },
   { word: "Termometro", startOrContain: "start", letter: "T", definition: "Instrumento que se utiliza para medir la temperatura.", category: "ciencias" },
-  { word: "Tubo", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada por la que circula un líquido o un gas.", category: "ciencias" },
+  { word: "Nube", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada por la que circula un líquido o un gas.", category: "ciencias" },
   { word: "Valija", startOrContain: "start", letter: "V", definition: "Maleta donde se guardan las pertenencias para un viaje.", category: "transporte" },
   { word: "Waflera", startOrContain: "start", letter: "W", definition: "Aparato con dos planchas calientes para cocinar wafles.", category: "gastronomia" },
   { word: "Auxilio", startOrContain: "contain", letter: "X", definition: "Ayuda que se presta a alguien que está en una emergencia.", category: "educacion-sociedad" },

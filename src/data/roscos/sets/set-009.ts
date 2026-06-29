@@ -83,7 +83,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Luna", startOrContain: "contain", letter: "U", definition: "Satélite natural que gira alrededor de la Tierra.", category: "ciencias" },
   { word: "Vuelto", startOrContain: "start", letter: "V", definition: "Dinero que se devuelve al pagar con un billete grande.", category: "educacion-sociedad" },
   { word: "Walkman", startOrContain: "start", letter: "W", definition: "Aparato antiguo y portátil para escuchar música.", category: "cultura-general" },
-  { word: "Oxigeno", startOrContain: "contain", letter: "X", definition: "Gas del aire que necesitamos respirar para vivir.", category: "ciencias" },
+  { word: "Fenix", startOrContain: "contain", letter: "X", definition: "Gas del aire que necesitamos respirar para vivir.", category: "ciencias" },
   { word: "Yema", startOrContain: "start", letter: "Y", definition: "Parte amarilla y central del huevo.", category: "gastronomia" },
   { word: "Zorro", startOrContain: "start", letter: "Z", definition: "Mamífero astuto de cola peluda y hocico puntiagudo.", category: "naturaleza" },
 ];
@@ -109,7 +109,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Remache", startOrContain: "start", letter: "R", definition: "Pieza metálica que une dos materiales con firmeza.", category: "cultura-general" },
   { word: "Stewart", startOrContain: "start", letter: "S", definition: "Apellido del piloto escocés campeón de Fórmula 1.", category: "personalidades" },
   { word: "Tomo", startOrContain: "start", letter: "T", definition: "Cada uno de los libros que forman una obra extensa.", category: "cultura-general" },
-  { word: "Tubo", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada por la que pasan líquidos o gases.", category: "ciencias" },
+  { word: "Buque", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada por la que pasan líquidos o gases.", category: "ciencias" },
   { word: "Venecia", startOrContain: "start", letter: "V", definition: "Ciudad italiana sobre canales, famosa por sus góndolas, el Carnaval y la Plaza de San Marcos.", category: "cultura-general" },
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unidad que mide la potencia eléctrica.", category: "ciencias" },
   { word: "Examen", startOrContain: "contain", letter: "X", definition: "Prueba para medir lo que una persona aprendió.", category: "educacion-sociedad" },
@@ -199,7 +199,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Ruta", startOrContain: "contain", letter: "U", definition: "Camino ancho que une ciudades o pueblos.", category: "transporte" },
   { word: "Viga", startOrContain: "start", letter: "V", definition: "Pieza larga y fuerte que sostiene un techo o un puente.", category: "cultura-general" },
   { word: "Wok", startOrContain: "start", letter: "W", definition: "Sartén honda de origen asiático para saltear alimentos.", category: "gastronomia" },
-  { word: "Boxeo", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas pelean con los puños.", category: "deporte-juego" },
+  { word: "Saxofon", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas pelean con los puños.", category: "deporte-juego" },
   { word: "Yate", startOrContain: "start", letter: "Y", definition: "Embarcación de recreo elegante con motor o velas.", category: "transporte" },
   { word: "Maiz", startOrContain: "contain", letter: "Z", definition: "Planta de granos amarillos que se come y da harina.", category: "gastronomia" },
 ];

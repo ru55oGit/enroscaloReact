@@ -13,7 +13,7 @@ export interface RoscoEntry {
 }
 
 const ROSCO_1: RoscoEntry[] = [
-  { word: "Ananas", startOrContain: "start", letter: "A", definition: "Süße Frucht mit einem Schopf aus Blättern.", category: "essen" },
+  { word: "Arzt", startOrContain: "start", letter: "A", definition: "Person, die Kranke heilt.", category: "gesellschaft" },
   { word: "Busch", startOrContain: "start", letter: "B", definition: "Nachname von Wilhelm, Erfinder von Max und Moritz.", category: "personen" },
   { word: "Cent", startOrContain: "start", letter: "C", definition: "Kleine Münze; hundert davon sind ein Euro.", category: "gesellschaft" },
   { word: "Dünger", startOrContain: "start", letter: "D", definition: "Stoff, der die Pflanzen wachsen lässt.", category: "natur" },
@@ -28,7 +28,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Markt", startOrContain: "start", letter: "M", definition: "Platz, wo man Obst und Gemüse kauft.", category: "gesellschaft" },
   { word: "Nachtigall", startOrContain: "start", letter: "N", definition: "Vogel, der nachts besonders schön singt.", category: "natur" },
   { word: "Osten", startOrContain: "start", letter: "O", definition: "Die Richtung, aus der die Sonne aufgeht.", category: "natur" },
-  { word: "Papagei", startOrContain: "start", letter: "P", definition: "Bunter Vogel, der sprechen lernen kann.", category: "natur" },
+  { word: "Pfütze", startOrContain: "start", letter: "P", definition: "Kleine Wasserlache nach dem Regen.", category: "natur" },
   { word: "Quitte", startOrContain: "start", letter: "Q", definition: "Gelbe harte Frucht für Marmelade.", category: "essen" },
   { word: "Rind", startOrContain: "start", letter: "R", definition: "Großes Tier wie Kuh oder Ochse.", category: "natur" },
   { word: "Schweinsteiger", startOrContain: "start", letter: "S", definition: "Nachname eines deutschen Fußballspielers, Weltmeister 2014.", category: "personen" },
@@ -114,7 +114,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Limonade", startOrContain: "start", letter: "L", definition: "Süßes Sprudelgetränk.", category: "essen" },
   { word: "Merkel", startOrContain: "start", letter: "M", definition: "Nachname der ersten Kanzlerin Deutschlands.", category: "personen" },
   { word: "Nebenstraße", startOrContain: "start", letter: "N", definition: "Eine kleine, ruhige Straße.", category: "gesellschaft" },
-  { word: "Obst", startOrContain: "start", letter: "O", definition: "Früchte wie Apfel und Birne.", category: "essen" },
+  { word: "Ordner", startOrContain: "start", letter: "O", definition: "Mappe, in der man Blätter abheftet.", category: "gesellschaft" },
   { word: "Premiere", startOrContain: "start", letter: "P", definition: "Die erste Aufführung eines Stücks.", category: "kunst-musik" },
   { word: "Quelle", startOrContain: "start", letter: "Q", definition: "Ort, an dem Wasser aus dem Boden kommt.", category: "natur" },
   { word: "Ring", startOrContain: "start", letter: "R", definition: "Der Reif aus Eis und Staub um den Saturn.", category: "wissenschaft" },
@@ -132,7 +132,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Apotheke", startOrContain: "start", letter: "A", definition: "Laden, der Medikamente verkauft.", category: "gesellschaft" },
   { word: "Blauer Planet", startOrContain: "start", letter: "B", definition: "Ein Name für die Erde.", category: "wissenschaft" },
   { word: "Café", startOrContain: "start", letter: "C", definition: "Ort, an dem man Kaffee und Kuchen bekommt.", category: "kultur" },
-  { word: "Dose", startOrContain: "start", letter: "D", definition: "Konserve aus Blech mit Essen darin.", category: "essen" },
+  { word: "Daimler", startOrContain: "start", letter: "D", definition: "Nachname eines Erfinders des Autos.", category: "personen" },
   { word: "Einkaufswagen", startOrContain: "start", letter: "E", definition: "Wagen zum Schieben im Supermarkt.", category: "gesellschaft" },
   { word: "Frack", startOrContain: "start", letter: "F", definition: "Festlicher Anzug mit langen Schößen.", category: "kultur" },
   { word: "Gemüse", startOrContain: "start", letter: "G", definition: "Pflanzliche Nahrung wie Möhren und Erbsen.", category: "essen" },
@@ -140,7 +140,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Inventur", startOrContain: "start", letter: "I", definition: "Wenn der Laden alle Waren zählt.", category: "gesellschaft" },
   { word: "Jupitermond", startOrContain: "start", letter: "J", definition: "Ein Mond des Planeten Jupiter.", category: "wissenschaft" },
   { word: "Kasse", startOrContain: "start", letter: "K", definition: "Wo man im Laden bezahlt.", category: "gesellschaft" },
-  { word: "Liebermann", startOrContain: "start", letter: "L", definition: "Nachname von Max, einem deutschen Maler.", category: "personen" },
+  { word: "Lichtung", startOrContain: "start", letter: "L", definition: "Freie Stelle im Wald.", category: "natur" },
   { word: "Marx", startOrContain: "start", letter: "M", definition: "Nachname eines bekannten deutschen Denkers.", category: "personen" },
   { word: "Neptun", startOrContain: "start", letter: "N", definition: "Der äußerste blaue Planet.", category: "wissenschaft" },
   { word: "Oberliga", startOrContain: "start", letter: "O", definition: "Eine hohe Spielklasse im Sport.", category: "sport-spiel" },
@@ -183,7 +183,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Weide", startOrContain: "start", letter: "W", definition: "Wiese, auf der die Kühe grasen.", category: "natur" },
   { word: "Hexe", startOrContain: "contain", letter: "X", definition: "Zauberin in Märchen.", category: "mythos" },
   { word: "Yacht", startOrContain: "start", letter: "Y", definition: "Schickes Segelboot.", category: "verkehr" },
-  { word: "Ziege", startOrContain: "start", letter: "Z", definition: "Meckerndes Tier mit Hörnern.", category: "natur" },
+  { word: "Zander", startOrContain: "start", letter: "Z", definition: "Ein Raubfisch aus Seen und Flüssen.", category: "natur" },
 ];
 
 const ROSCO_7: RoscoEntry[] = [
@@ -201,7 +201,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Landwirt", startOrContain: "start", letter: "L", definition: "Ein anderes Wort für Bauer.", category: "gesellschaft" },
   { word: "Meise", startOrContain: "start", letter: "M", definition: "Kleiner bunter Gartenvogel.", category: "natur" },
   { word: "Nietzsche", startOrContain: "start", letter: "N", definition: "Nachname eines berühmten deutschen Denkers.", category: "personen" },
-  { word: "Ochse", startOrContain: "start", letter: "O", definition: "Starkes Rind, das den Wagen zieht.", category: "natur" },
+  { word: "Orkan", startOrContain: "start", letter: "O", definition: "Ein extrem starker Sturm.", category: "natur" },
   { word: "Pokal", startOrContain: "start", letter: "P", definition: "Becher, den der Sieger bekommt.", category: "sport-spiel" },
   { word: "Quiz", startOrContain: "start", letter: "Q", definition: "Spiel mit vielen Fragen.", category: "gesellschaft" },
   { word: "Rabatt", startOrContain: "start", letter: "R", definition: "Wenn etwas billiger angeboten wird.", category: "gesellschaft" },

@@ -141,7 +141,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Universitario", startOrContain: "start", letter: "U", definition: "Estudiante que cursa una carrera en una universidad para obtener un título.", category: "educacion-sociedad" },
   { word: "Vidrio", startOrContain: "start", letter: "V", definition: "Material duro y transparente que se rompe con facilidad usado en ventanas y vasos.", category: "cultura-general" },
   { word: "Wonton", startOrContain: "start", letter: "W", definition: "Pequeña masa rellena de carne o verduras típica de la cocina china.", category: "gastronomia" },
-  { word: "Boxeo", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas se enfrentan usando los puños con guantes.", category: "deporte-juego" },
+  { word: "Flexion", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas se enfrentan usando los puños con guantes.", category: "deporte-juego" },
   { word: "Yellowstone", startOrContain: "start", letter: "Y", definition: "Parque Nacional en Wyoming, famoso por sus fuentes termales y el géiser Old Faithful.", category: "naturaleza" },
   { word: "Manzana", startOrContain: "contain", letter: "Z", definition: "Fruta redonda de cáscara roja o verde y pulpa jugosa muy consumida en el mundo.", category: "gastronomia" },
 ];
@@ -200,7 +200,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Veterinario", startOrContain: "start", letter: "V", definition: "Profesional que cuida y cura la salud de los animales.", category: "educacion-sociedad" },
   { word: "Wasabi", startOrContain: "start", letter: "W", definition: "Pasta verde de sabor muy picante típica de la cocina japonesa.", category: "gastronomia" },
   { word: "Galaxia", startOrContain: "contain", letter: "X", definition: "Enorme conjunto de estrellas, gas y polvo unidos por la gravedad en el espacio.", category: "ciencias" },
-  { word: "Yodo", startOrContain: "start", letter: "Y", definition: "Elemento químico usado como antiséptico para desinfectar heridas en la piel.", category: "ciencias" },
+  { word: "Yokohama", startOrContain: "start", letter: "Y", definition: "Elemento químico usado como antiséptico para desinfectar heridas en la piel.", category: "ciencias" },
   { word: "Avestruz", startOrContain: "contain", letter: "Z", definition: "Ave corredora de gran tamaño que no vuela, posee patas largas y es la más grande del mundo.", category: "naturaleza" },
 ];
 

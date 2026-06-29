@@ -51,7 +51,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Risco", startOrContain: "start", letter: "R", definition: "Roca alta y escarpada.", category: "naturaleza" },
   { word: "Savia", startOrContain: "start", letter: "S", definition: "Líquido que alimenta a las plantas por dentro.", category: "naturaleza" },
   { word: "Templado", startOrContain: "start", letter: "T", definition: "Clima que no es ni muy frío ni muy caluroso.", category: "naturaleza" },
-  { word: "Tubo", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada por la que pasan líquidos o gases.", category: "ciencias" },
+  { word: "Murcielago", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada por la que pasan líquidos o gases.", category: "ciencias" },
   { word: "Vasija", startOrContain: "start", letter: "V", definition: "Recipiente de barro usado desde tiempos antiguos.", category: "cultura-general" },
   { word: "Wifi", startOrContain: "start", letter: "W", definition: "Conexión sin cables que permite acceder a internet.", category: "ciencias" },
   { word: "Saxo", startOrContain: "contain", letter: "X", definition: "Instrumento de viento de metal muy usado en el jazz.", category: "arte-musica" },
@@ -83,7 +83,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Puño", startOrContain: "contain", letter: "U", definition: "Mano cerrada con los dedos doblados.", category: "ciencias" },
   { word: "Vampiro", startOrContain: "start", letter: "V", definition: "Ser de las leyendas que sale de noche a morder cuellos.", category: "mitologia-fantasia" },
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unidad que mide la potencia eléctrica.", category: "ciencias" },
-  { word: "Boxeo", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas pelean con los puños.", category: "deporte-juego" },
+  { word: "Sexteto", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas pelean con los puños.", category: "deporte-juego" },
   { word: "Yoga", startOrContain: "start", letter: "Y", definition: "Disciplina que combina posturas del cuerpo y respiración.", category: "deporte-juego" },
   { word: "Zorro", startOrContain: "start", letter: "Z", definition: "Mamífero astuto de cola peluda y hocico puntiagudo.", category: "naturaleza" },
 ];
@@ -170,7 +170,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Humo", startOrContain: "contain", letter: "U", definition: "Gas gris que se desprende de algo que se quema.", category: "ciencias" },
   { word: "Vertiente", startOrContain: "start", letter: "V", definition: "Lugar por donde corre el agua que baja de una montaña.", category: "naturaleza" },
   { word: "Walkman", startOrContain: "start", letter: "W", definition: "Aparato antiguo y portátil para escuchar música.", category: "cultura-general" },
-  { word: "Oxigeno", startOrContain: "contain", letter: "X", definition: "Gas del aire que necesitamos respirar para vivir.", category: "ciencias" },
+  { word: "Latex", startOrContain: "contain", letter: "X", definition: "Gas del aire que necesitamos respirar para vivir.", category: "ciencias" },
   { word: "Yerba", startOrContain: "start", letter: "Y", definition: "Hojas secas y molidas con las que se prepara el mate.", category: "gastronomia" },
   { word: "Manzana", startOrContain: "contain", letter: "Z", definition: "Fruta redonda y crujiente que puede ser roja o verde.", category: "gastronomia" },
 ];
@@ -200,7 +200,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Vespucio", startOrContain: "start", letter: "V", definition: "Apellido del navegante italiano Américo, que dio su nombre a América.", category: "personalidades" },
   { word: "Wagon", startOrContain: "start", letter: "W", definition: "Cada uno de los vagones que arrastra una locomotora.", category: "transporte" },
   { word: "Examen", startOrContain: "contain", letter: "X", definition: "Prueba para medir lo que una persona aprendió.", category: "educacion-sociedad" },
-  { word: "Yodo", startOrContain: "start", letter: "Y", definition: "Elemento químico usado para desinfectar heridas.", category: "ciencias" },
+  { word: "Yucatan", startOrContain: "start", letter: "Y", definition: "Elemento químico usado para desinfectar heridas.", category: "ciencias" },
   { word: "Maiz", startOrContain: "contain", letter: "Z", definition: "Planta de granos amarillos que se come y da harina.", category: "gastronomia" },
 ];
 

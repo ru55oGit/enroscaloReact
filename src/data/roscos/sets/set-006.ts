@@ -138,7 +138,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Rosal", startOrContain: "start", letter: "R", definition: "Arbusto espinoso que da rosas.", category: "naturaleza" },
   { word: "Sequia", startOrContain: "start", letter: "S", definition: "Largo período sin lluvias que seca la tierra.", category: "naturaleza" },
   { word: "Tranvia", startOrContain: "start", letter: "T", definition: "Tren pequeño que circula por las calles de la ciudad sobre rieles.", category: "transporte" },
-  { word: "Tubo", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada por la que pasan líquidos o gases.", category: "ciencias" },
+  { word: "Mueble", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada por la que pasan líquidos o gases.", category: "ciencias" },
   { word: "Varita", startOrContain: "start", letter: "V", definition: "Palito mágico con el que las hadas hacen sus encantamientos.", category: "mitologia-fantasia" },
   { word: "Wagon", startOrContain: "start", letter: "W", definition: "Cada uno de los vagones que arrastra una locomotora.", category: "transporte" },
   { word: "Maximo", startOrContain: "contain", letter: "X", definition: "Lo más alto o lo más grande que algo puede llegar a ser.", category: "cultura-general" },

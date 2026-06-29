@@ -26,7 +26,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Verdura", startOrContain: "start", letter: "V", definition: "Planta comestible como la lechuga o la zanahoria.", category: "gastronomia" },
   { word: "Windsurf", startOrContain: "start", letter: "W", definition: "Deporte de deslizarse sobre el agua en una tabla con vela.", category: "deporte-juego" },
   { word: "Galaxia", startOrContain: "contain", letter: "X", definition: "Enorme conjunto de estrellas, gas y polvo unidos por la gravedad.", category: "ciencias" },
-  { word: "Yodo", startOrContain: "start", letter: "Y", definition: "Elemento químico usado para desinfectar heridas.", category: "ciencias" },
+  { word: "Yeti", startOrContain: "start", letter: "Y", definition: "Elemento químico usado para desinfectar heridas.", category: "ciencias" },
   { word: "Zorro", startOrContain: "start", letter: "Z", definition: "Mamífero astuto de cola peluda y hocico puntiagudo.", category: "naturaleza" },
 ];
 
@@ -83,7 +83,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Triunfo", startOrContain: "contain", letter: "U", definition: "Victoria que se obtiene al ganar una competencia.", category: "deporte-juego" },
   { word: "Vajilla", startOrContain: "start", letter: "V", definition: "Conjunto de platos, vasos y fuentes para servir la comida.", category: "gastronomia" },
   { word: "Wok", startOrContain: "start", letter: "W", definition: "Sartén honda de origen asiático usada para saltear alimentos.", category: "gastronomia" },
-  { word: "Oxigeno", startOrContain: "contain", letter: "X", definition: "Gas del aire que necesitamos respirar para vivir.", category: "ciencias" },
+  { word: "Auxilio", startOrContain: "contain", letter: "X", definition: "Gas del aire que necesitamos respirar para vivir.", category: "ciencias" },
   { word: "Yate", startOrContain: "start", letter: "Y", definition: "Embarcación de recreo elegante con motor o velas.", category: "transporte" },
   { word: "Arroz", startOrContain: "contain", letter: "Z", definition: "Cereal en granos blancos que se cocina y acompaña muchas comidas.", category: "gastronomia" },
 ];
@@ -141,7 +141,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Uva", startOrContain: "start", letter: "U", definition: "Fruta pequeña y dulce que crece en racimos y sirve para hacer vino.", category: "gastronomia" },
   { word: "Viola", startOrContain: "start", letter: "V", definition: "Instrumento de cuerda parecido al violín pero algo más grande.", category: "arte-musica" },
   { word: "Wifi", startOrContain: "start", letter: "W", definition: "Conexión sin cables que permite acceder a internet.", category: "ciencias" },
-  { word: "Boxeo", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas pelean con los puños.", category: "deporte-juego" },
+  { word: "Exilio", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas pelean con los puños.", category: "deporte-juego" },
   { word: "Yucateco", startOrContain: "start", letter: "Y", definition: "Adjetivo que describe lo relativo al estado mexicano de Yucatán y su cultura maya.", category: "cultura-general" },
   { word: "Plaza", startOrContain: "contain", letter: "Z", definition: "Espacio público abierto en una ciudad, con bancos y árboles.", category: "cultura-general" },
 ];

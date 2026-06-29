@@ -55,7 +55,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Volea", startOrContain: "start", letter: "V", definition: "Golpe a la pelota en el aire antes de que toque el suelo.", category: "deporte-juego" },
   { word: "Wagon", startOrContain: "start", letter: "W", definition: "Cada uno de los vagones que arrastra una locomotora.", category: "transporte" },
   { word: "Saxo", startOrContain: "contain", letter: "X", definition: "Instrumento de viento de metal muy usado en el jazz.", category: "arte-musica" },
-  { word: "Yodo", startOrContain: "start", letter: "Y", definition: "Elemento químico usado para desinfectar heridas.", category: "ciencias" },
+  { word: "Yuri", startOrContain: "start", letter: "Y", definition: "Elemento químico usado para desinfectar heridas.", category: "ciencias" },
   { word: "Plaza", startOrContain: "contain", letter: "Z", definition: "Espacio público abierto de una ciudad, con bancos y árboles.", category: "cultura-general" },
 ];
 
@@ -83,7 +83,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Burro", startOrContain: "contain", letter: "U", definition: "Animal parecido al caballo, de orejas largas.", category: "naturaleza" },
   { word: "Vibrato", startOrContain: "start", letter: "V", definition: "Pequeño temblor que se le da a una nota al cantarla o tocarla.", category: "arte-musica" },
   { word: "Web", startOrContain: "start", letter: "W", definition: "Conjunto de páginas a las que se accede por internet.", category: "ciencias" },
-  { word: "Oxigeno", startOrContain: "contain", letter: "X", definition: "Gas del aire que necesitamos respirar para vivir.", category: "ciencias" },
+  { word: "Reflexion", startOrContain: "contain", letter: "X", definition: "Gas del aire que necesitamos respirar para vivir.", category: "ciencias" },
   { word: "Yate", startOrContain: "start", letter: "Y", definition: "Embarcación de recreo elegante con motor o velas.", category: "transporte" },
   { word: "Manzana", startOrContain: "contain", letter: "Z", definition: "Fruta redonda y crujiente que puede ser roja o verde.", category: "gastronomia" },
 ];
@@ -112,7 +112,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Mundo", startOrContain: "contain", letter: "U", definition: "El planeta Tierra y todo lo que existe en él.", category: "cultura-general" },
   { word: "Vendaval", startOrContain: "start", letter: "V", definition: "Viento muy fuerte.", category: "naturaleza" },
   { word: "Wafle", startOrContain: "start", letter: "W", definition: "Masa dulce con forma de cuadrícula cocida en una plancha.", category: "gastronomia" },
-  { word: "Boxeo", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas pelean con los puños.", category: "deporte-juego" },
+  { word: "Boxeador", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas pelean con los puños.", category: "deporte-juego" },
   { word: "Yema", startOrContain: "start", letter: "Y", definition: "Parte amarilla y central del huevo.", category: "gastronomia" },
   { word: "Zorro", startOrContain: "start", letter: "Z", definition: "Mamífero astuto de cola peluda y hocico puntiagudo.", category: "naturaleza" },
 ];
@@ -138,7 +138,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Roddick", startOrContain: "start", letter: "R", definition: "Apellido del tenista estadounidense Andy, de potente saque.", category: "personalidades" },
   { word: "Sharapova", startOrContain: "start", letter: "S", definition: "Apellido de la célebre tenista rusa campeona.", category: "personalidades" },
   { word: "Trompo", startOrContain: "start", letter: "T", definition: "Juguete de madera que baila girando sobre su punta.", category: "deporte-juego" },
-  { word: "Tubo", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada por la que pasan líquidos o gases.", category: "ciencias" },
+  { word: "Tunica", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada por la que pasan líquidos o gases.", category: "ciencias" },
   { word: "Videojuego", startOrContain: "start", letter: "V", definition: "Juego electrónico que se juega en una pantalla.", category: "deporte-juego" },
   { word: "Walkman", startOrContain: "start", letter: "W", definition: "Aparato antiguo y portátil para escuchar música.", category: "cultura-general" },
   { word: "Conexion", startOrContain: "contain", letter: "X", definition: "Unión o enlace entre dos cosas o lugares.", category: "ciencias" },
