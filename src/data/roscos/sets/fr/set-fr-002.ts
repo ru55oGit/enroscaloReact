@@ -138,7 +138,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Fraise", startOrContain: "start", letter: "F", definition: "Petit fruit rouge et sucré.", category: "nourriture" },
   { word: "Grange", startOrContain: "start", letter: "G", definition: "Bâtiment où l'on range le foin.", category: "nature" },
   { word: "Hache", startOrContain: "start", letter: "H", definition: "Outil tranchant pour couper le bois.", category: "culture" },
-  { word: "Igname", startOrContain: "start", letter: "I", definition: "Gros tubercule qui se mange dans les pays chauds.", category: "nourriture" },
+  { word: "Idée", startOrContain: "start", letter: "I", definition: "Pensée qui nous vient à l'esprit.", category: "culture" },
   { word: "Judo", startOrContain: "start", letter: "J", definition: "Sport de combat venu du Japon.", category: "sport-jeu" },
   { word: "Ketchup", startOrContain: "start", letter: "K", definition: "Sauce rouge faite avec de la tomate.", category: "nourriture" },
   { word: "Lully", startOrContain: "start", letter: "L", definition: "Nom de famille d'un compositeur du roi Louis XIV.", category: "personnalites" },

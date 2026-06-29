@@ -50,7 +50,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Fable", startOrContain: "start", letter: "F", definition: "Petite histoire avec une leçon, souvent des animaux.", category: "societe" },
   { word: "Gamme", startOrContain: "start", letter: "G", definition: "Suite de notes qui montent ou descendent.", category: "art-musique" },
   { word: "Hydravion", startOrContain: "start", letter: "H", definition: "Avion qui se pose sur l'eau.", category: "transport" },
-  { word: "Igloo", startOrContain: "start", letter: "I", definition: "Maison faite de blocs de neige.", category: "culture" },
+  { word: "Iris", startOrContain: "start", letter: "I", definition: "Fleur élégante aux pétales dressés.", category: "nature" },
   { word: "Jonquille", startOrContain: "start", letter: "J", definition: "Fleur jaune du printemps.", category: "nature" },
   { word: "Koala", startOrContain: "start", letter: "K", definition: "Petit animal d'Australie.", category: "nature" },
   { word: "Libraire", startOrContain: "start", letter: "L", definition: "Personne qui vend des livres.", category: "societe" },

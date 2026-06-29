@@ -126,7 +126,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Fresque", startOrContain: "start", letter: "F", definition: "Grande peinture faite sur un mur.", category: "art-musique" },
   { word: "Galop", startOrContain: "start", letter: "G", definition: "Allure la plus rapide du cheval.", category: "sport-jeu" },
   { word: "Haricot", startOrContain: "start", letter: "H", definition: "Légume vert long ou petite graine à cuire.", category: "nourriture" },
-  { word: "Igloo", startOrContain: "start", letter: "I", definition: "Maison faite de blocs de neige.", category: "culture" },
+  { word: "Île", startOrContain: "start", letter: "I", definition: "Terre entourée d'eau de tous côtés.", category: "nature" },
   { word: "Jardin", startOrContain: "start", letter: "J", definition: "Endroit où poussent fleurs et légumes.", category: "nature" },
   { word: "Ketchup", startOrContain: "start", letter: "K", definition: "Sauce rouge faite avec de la tomate.", category: "nourriture" },
   { word: "Laplace", startOrContain: "start", letter: "L", definition: "Nom d'un grand savant français des mathématiques.", category: "personnalites" },

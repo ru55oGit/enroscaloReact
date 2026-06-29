@@ -97,7 +97,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Fourier", startOrContain: "start", letter: "F", definition: "Nom d'un savant français qui a étudié la chaleur.", category: "personnalites" },
   { word: "Garros", startOrContain: "start", letter: "G", definition: "Nom de famille d'un pionnier de l'aviation française.", category: "personnalites" },
   { word: "Herse", startOrContain: "start", letter: "H", definition: "Outil à dents pour égaliser la terre.", category: "nature" },
-  { word: "Iguane", startOrContain: "start", letter: "I", definition: "Grand lézard d'Amérique.", category: "nature" },
+  { word: "Ibis", startOrContain: "start", letter: "I", definition: "Oiseau au long bec courbé.", category: "nature" },
   { word: "Jupe", startOrContain: "start", letter: "J", definition: "Vêtement qui descend de la taille aux jambes.", category: "culture" },
   { word: "Képi", startOrContain: "start", letter: "K", definition: "Chapeau rigide de militaire.", category: "culture" },
   { word: "Lutte", startOrContain: "start", letter: "L", definition: "Sport où deux personnes essaient de se renverser.", category: "sport-jeu" },
