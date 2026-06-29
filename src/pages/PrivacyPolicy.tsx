@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
         </Typography>
 
         <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
-          En <strong>Enroscado</strong> (enroscaloapp.com) respetamos tu privacidad. Esta política explica qué información se recopila y cómo se usa.
+          En <strong>Enroscado</strong> (enroscado.com) respetamos tu privacidad. Esta política explica qué información se recopila y cómo se usa.
         </Typography>
 
         <Typography variant="h6" sx={{ fontWeight: 700, mt: 3, mb: 1 }}>
@@ -77,8 +77,8 @@ export default function PrivacyPolicy() {
         </Typography>
         <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
           Si tenés preguntas sobre esta política, podés contactarnos en{" "}
-          <a href="mailto:contacto@enroscaloapp.com" style={{ color: "#ffd" }}>
-            contacto@enroscaloapp.com
+          <a href="mailto:patricio.ezequiel.toledo@gmail.com" style={{ color: "#ffd" }}>
+            patricio.ezequiel.toledo@gmail.com
           </a>.
         </Typography>
       </Box>
