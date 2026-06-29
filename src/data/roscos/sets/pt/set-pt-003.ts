@@ -43,7 +43,7 @@ const ROSCO_1: RoscoEntry[] = [
 
 const ROSCO_2: RoscoEntry[] = [
   { word: "Adriano", startOrContain: "start", letter: "A", definition: "Sobrenome de um atacante brasileiro chamado de Imperador.", category: "personalidades" },
-  { word: "Bebeto", startOrContain: "start", letter: "B", definition: "Sobrenome de um atacante campeão do mundo em 1994.", category: "personalidades" },
+  { word: "Bebeto", startOrContain: "start", letter: "B", definition: "Apelido do atacante José Roberto Gama de Oliveira, campeão do mundo de futebol em 1994 pela seleção.", category: "personalidades" },
   { word: "Cabra", startOrContain: "start", letter: "C", definition: "Animal de chifres que dá leite.", category: "natureza" },
   { word: "Duna", startOrContain: "start", letter: "D", definition: "Morro de areia perto do mar.", category: "natureza" },
   { word: "Especiaria", startOrContain: "start", letter: "E", definition: "Tempero cheiroso, como a canela do doce.", category: "gastronomia" },
@@ -94,7 +94,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Utensílio", startOrContain: "start", letter: "U", definition: "Objeto usado na cozinha, como a colher.", category: "cultura-geral" },
   { word: "Volpi", startOrContain: "start", letter: "V", definition: "Sobrenome de Alfredo, pintor brasileiro das bandeirinhas.", category: "personalidades" },
   { word: "Web", startOrContain: "start", letter: "W", definition: "Outro nome para a internet.", category: "ciencias" },
-  { word: "Exame", startOrContain: "contain", letter: "X", definition: "Prova ou teste.", category: "sociedade" },
+  { word: "Exame", startOrContain: "contain", letter: "X", definition: "Avaliação feita para medir os conhecimentos do aluno ou verificar a saúde, como o exame de sangue.", category: "sociedade" },
   { word: "Yak", startOrContain: "start", letter: "Y", definition: "Boi peludo das montanhas da Ásia.", category: "natureza" },
   { word: "Zíper", startOrContain: "start", letter: "Z", definition: "Fecho com dentinhos para roupas.", category: "cultura-geral" },
 ];
@@ -106,7 +106,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Dado", startOrContain: "start", letter: "D", definition: "Cubinho com pontinhos usado em vários jogos.", category: "esporte-jogo" },
   { word: "Espreguiçadeira", startOrContain: "start", letter: "E", definition: "Cadeira comprida para deitar ao sol.", category: "cultura-geral" },
   { word: "Formiga", startOrContain: "start", letter: "F", definition: "Inseto pequeno que trabalha em grupo.", category: "natureza" },
-  { word: "Gerson", startOrContain: "start", letter: "G", definition: "Sobrenome de um craque campeão do mundo em 1970.", category: "personalidades" },
+  { word: "Gerson", startOrContain: "start", letter: "G", definition: "Prenome do meia apelidado de Canhotinha de Ouro, cérebro da seleção brasileira campeã do mundo em 1970.", category: "personalidades" },
   { word: "Hóquei", startOrContain: "start", letter: "H", definition: "Esporte jogado com taco e disco.", category: "esporte-jogo" },
   { word: "Inverno", startOrContain: "start", letter: "I", definition: "A estação fria, quando alguns répteis dormem.", category: "natureza" },
   { word: "Júpiter", startOrContain: "start", letter: "J", definition: "O maior planeta do Sistema Solar.", category: "ciencias" },
@@ -131,8 +131,8 @@ const ROSCO_4: RoscoEntry[] = [
 const ROSCO_5: RoscoEntry[] = [
   { word: "Arado", startOrContain: "start", letter: "A", definition: "Ferramenta puxada para revolver a terra.", category: "sociedade" },
   { word: "Bezerro", startOrContain: "start", letter: "B", definition: "O filhote da vaca.", category: "natureza" },
-  { word: "Cazuza", startOrContain: "start", letter: "C", definition: "Sobrenome de um famoso cantor e compositor de rock brasileiro.", category: "personalidades" },
-  { word: "Dida", startOrContain: "start", letter: "D", definition: "Sobrenome de um goleiro brasileiro campeão em 2002.", category: "personalidades" },
+  { word: "Cazuza", startOrContain: "start", letter: "C", definition: "Nome artístico do cantor e compositor de rock Agenor de Miranda Araújo Neto, ícone da música brasileira.", category: "personalidades" },
+  { word: "Dida", startOrContain: "start", letter: "D", definition: "Apelido do goleiro Nelson de Jesus Silva, campeão do mundo de futebol pela seleção brasileira em 2002.", category: "personalidades" },
   { word: "Eucalipto", startOrContain: "start", letter: "E", definition: "Árvore alta de folhas bem cheirosas.", category: "natureza" },
   { word: "Freire", startOrContain: "start", letter: "F", definition: "Sobrenome de Paulo, educador brasileiro famoso no mundo todo.", category: "personalidades" },
   { word: "Girassol", startOrContain: "start", letter: "G", definition: "Flor amarela que se vira para o sol.", category: "natureza" },
@@ -146,7 +146,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Origami", startOrContain: "start", letter: "O", definition: "Arte japonesa de dobrar papel.", category: "arte-musica" },
   { word: "Pinheiro", startOrContain: "start", letter: "P", definition: "Árvore de folhas como agulhas que dá pinhão.", category: "natureza" },
   { word: "Quadro", startOrContain: "start", letter: "Q", definition: "Pintura pendurada na parede.", category: "arte-musica" },
-  { word: "Rivelino", startOrContain: "start", letter: "R", definition: "Sobrenome de um craque da seleção dos anos 70.", category: "personalidades" },
+  { word: "Rivelino", startOrContain: "start", letter: "R", definition: "Sobrenome do craque Roberto, meia da seleção brasileira de futebol dos anos 70, dono de um chute potente.", category: "personalidades" },
   { word: "Salgado", startOrContain: "start", letter: "S", definition: "Sobrenome de Sebastião, fotógrafo brasileiro famoso no mundo.", category: "personalidades" },
   { word: "Tartaruga", startOrContain: "start", letter: "T", definition: "Réptil de casco duro, lento em terra firme.", category: "natureza" },
   { word: "Unha", startOrContain: "start", letter: "U", definition: "Lâmina córnea na ponta dos dedos.", category: "ciencias" },

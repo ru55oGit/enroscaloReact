@@ -90,7 +90,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Quai", startOrContain: "start", letter: "Q", definition: "Bord aménagé d'un port ou d'une gare.", category: "transport" },
   { word: "Renoir", startOrContain: "start", letter: "R", definition: "Nom d'un célèbre peintre français.", category: "personnalites" },
   { word: "Saint-Saëns", startOrContain: "start", letter: "S", definition: "Nom d'un célèbre compositeur français.", category: "personnalites" },
-  { word: "Tambour", startOrContain: "start", letter: "T", definition: "Instrument de percussion.", category: "art-musique" },
+  { word: "Tambour", startOrContain: "start", letter: "T", definition: "Instrument rond que l'on frappe avec des baguettes pour marquer le rythme.", category: "art-musique" },
   { word: "Univers", startOrContain: "start", letter: "U", definition: "L'ensemble de tout ce qui existe.", category: "science" },
   { word: "Vélo", startOrContain: "start", letter: "V", definition: "Autre nom de la bicyclette.", category: "transport" },
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unité de puissance électrique.", category: "science" },
@@ -131,7 +131,7 @@ const ROSCO_4: RoscoEntry[] = [
 const ROSCO_5: RoscoEntry[] = [
   { word: "Abricot", startOrContain: "start", letter: "A", definition: "Fruit orangé à noyau.", category: "nourriture" },
   { word: "Balafon", startOrContain: "start", letter: "B", definition: "Xylophone traditionnel africain.", category: "art-musique" },
-  { word: "Cabri", startOrContain: "start", letter: "C", definition: "Le petit de la chèvre.", category: "nature" },
+  { word: "Cabri", startOrContain: "start", letter: "C", definition: "Tout jeune de la chèvre, vif et joueur, qui bondit gaiement dans les rochers.", category: "nature" },
   { word: "Damas", startOrContain: "start", letter: "D", definition: "Étoffe à motifs tissés; aussi un acier.", category: "culture" },
   { word: "Éponge", startOrContain: "start", letter: "E", definition: "Objet poreux qui absorbe l'eau.", category: "culture" },
   { word: "Fanon", startOrContain: "start", letter: "F", definition: "Lame cornée dans la bouche de la baleine.", category: "nature" },

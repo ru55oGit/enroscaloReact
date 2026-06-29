@@ -14,7 +14,7 @@ export interface RoscoEntry {
 
 const ROSCO_1: RoscoEntry[] = [
   { word: "Anteater", startOrContain: "start", letter: "A", definition: "An animal that eats ants with a long sticky tongue.", category: "nature" },
-  { word: "Bison", startOrContain: "start", letter: "B", definition: "A big shaggy wild ox.", category: "nature" },
+  { word: "Bison", startOrContain: "start", letter: "B", definition: "A huge wild ox of the North American plains, with a shaggy dark mane and a large hump on its shoulders.", category: "nature" },
   { word: "Curry", startOrContain: "start", letter: "C", definition: "Surname of NBA guard Stephen, famous for long three-pointers, who plays for Golden State.", category: "people" },
   { word: "Deer", startOrContain: "start", letter: "D", definition: "A graceful animal with antlers.", category: "nature" },
   { word: "Elephant", startOrContain: "start", letter: "E", definition: "A huge animal with a trunk.", category: "nature" },
@@ -131,7 +131,7 @@ const ROSCO_4: RoscoEntry[] = [
 const ROSCO_5: RoscoEntry[] = [
   { word: "Apron", startOrContain: "start", letter: "A", definition: "A cover worn over clothes while cooking.", category: "general" },
   { word: "Boots", startOrContain: "start", letter: "B", definition: "Strong shoes that cover the ankle.", category: "general" },
-  { word: "Coat", startOrContain: "start", letter: "C", definition: "A warm outer garment.", category: "general" },
+  { word: "Coat", startOrContain: "start", letter: "C", definition: "A warm piece of clothing with long sleeves that you put on over your other clothes when you go outside.", category: "general" },
   { word: "Dress", startOrContain: "start", letter: "D", definition: "A one-piece garment for girls and women.", category: "general" },
   { word: "Embiid", startOrContain: "start", letter: "E", definition: "Surname of Cameroonian NBA center Joel, who plays for the Philadelphia 76ers.", category: "people" },
   { word: "Fleece", startOrContain: "start", letter: "F", definition: "A soft, fuzzy warm jacket.", category: "general" },

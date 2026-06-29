@@ -14,7 +14,7 @@ export interface RoscoEntry {
 
 const ROSCO_1: RoscoEntry[] = [
   { word: "Avion", startOrContain: "start", letter: "A", definition: "Appareil volant à moteur.", category: "transport" },
-  { word: "Braque", startOrContain: "start", letter: "B", definition: "Nom d'un peintre français.", category: "personnalites" },
+  { word: "Braque", startOrContain: "start", letter: "B", definition: "Peintre cubiste français qui inventa ce courant aux côtés de Picasso.", category: "personnalites" },
   { word: "Camus", startOrContain: "start", letter: "C", definition: "Nom de famille d'un célèbre écrivain français.", category: "personnalites" },
   { word: "Druide", startOrContain: "start", letter: "D", definition: "Prêtre des anciens Gaulois.", category: "societe" },
   { word: "Étoile", startOrContain: "start", letter: "E", definition: "Astre qui brille de sa propre lumière.", category: "science" },
@@ -90,7 +90,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Quai", startOrContain: "start", letter: "Q", definition: "Bord aménagé d'un port ou d'une gare.", category: "transport" },
   { word: "Rousseau", startOrContain: "start", letter: "R", definition: "Nom de famille d'un peintre français surnommé le Douanier.", category: "personnalites" },
   { word: "Satie", startOrContain: "start", letter: "S", definition: "Nom de famille d'un compositeur français aux mélodies célèbres.", category: "personnalites" },
-  { word: "Tambour", startOrContain: "start", letter: "T", definition: "Instrument de percussion.", category: "art-musique" },
+  { word: "Tambour", startOrContain: "start", letter: "T", definition: "Instrument rond que l'on frappe avec des baguettes pour marquer le rythme.", category: "art-musique" },
   { word: "Univers", startOrContain: "start", letter: "U", definition: "L'ensemble de tout ce qui existe.", category: "science" },
   { word: "Vélo", startOrContain: "start", letter: "V", definition: "Autre nom de la bicyclette.", category: "transport" },
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unité de puissance électrique.", category: "science" },

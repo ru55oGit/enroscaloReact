@@ -90,7 +90,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Quai", startOrContain: "start", letter: "Q", definition: "Bord aménagé d'un port ou d'une gare.", category: "transport" },
   { word: "Rigole", startOrContain: "start", letter: "R", definition: "Petit canal qui évacue l'eau.", category: "nature" },
   { word: "Sand", startOrContain: "start", letter: "S", definition: "Nom de famille d'une grande femme écrivain française.", category: "personnalites" },
-  { word: "Tambour", startOrContain: "start", letter: "T", definition: "Instrument de percussion.", category: "art-musique" },
+  { word: "Tambour", startOrContain: "start", letter: "T", definition: "Instrument rond que l'on frappe avec des baguettes pour marquer le rythme.", category: "art-musique" },
   { word: "Univers", startOrContain: "start", letter: "U", definition: "L'ensemble de tout ce qui existe.", category: "science" },
   { word: "Voltaire", startOrContain: "start", letter: "V", definition: "Nom d'un grand écrivain et penseur français.", category: "personnalites" },
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unité de puissance électrique.", category: "science" },

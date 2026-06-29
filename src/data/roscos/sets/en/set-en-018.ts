@@ -60,7 +60,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Paredes", startOrContain: "start", letter: "P", definition: "Surname of an Argentine midfielder who has played in Major League Soccer.", category: "people" },
   { word: "Quicksand", startOrContain: "start", letter: "Q", definition: "Wet sand that sucks things slowly downward.", category: "nature" },
   { word: "Rosemary", startOrContain: "start", letter: "R", definition: "A fragrant herb with needle leaves.", category: "food" },
-  { word: "Shovel", startOrContain: "start", letter: "S", definition: "A tool for digging.", category: "general" },
+  { word: "Shovel", startOrContain: "start", letter: "S", definition: "A tool with a wide, scooped blade and a long handle, used for lifting and moving soil, sand, or snow.", category: "general" },
   { word: "Trombone", startOrContain: "start", letter: "T", definition: "A brass instrument with a sliding tube.", category: "art-music" },
   { word: "Fungus", startOrContain: "contain", letter: "U", definition: "A living thing like mushrooms or mould.", category: "nature" },
   { word: "Voyage", startOrContain: "start", letter: "V", definition: "A long journey by sea.", category: "transport" },
@@ -73,7 +73,7 @@ const ROSCO_2: RoscoEntry[] = [
 const ROSCO_3: RoscoEntry[] = [
   { word: "Atrium", startOrContain: "start", letter: "A", definition: "A big open space inside a building.", category: "society" },
   { word: "Bobsleigh", startOrContain: "start", letter: "B", definition: "A fast sled raced down an ice track.", category: "sport-game" },
-  { word: "Cloak", startOrContain: "start", letter: "C", definition: "A loose coat with no sleeves.", category: "general" },
+  { word: "Cloak", startOrContain: "start", letter: "C", definition: "A long, loose outer garment with no sleeves that hangs from the neck over the shoulders, often with a hood.", category: "general" },
   { word: "Duvet", startOrContain: "start", letter: "D", definition: "A soft, thick bed cover.", category: "general" },
   { word: "Edinburgh", startOrContain: "start", letter: "E", definition: "The capital city of Scotland.", category: "society" },
   { word: "Fretsaw", startOrContain: "start", letter: "F", definition: "A thin saw for cutting curves.", category: "general" },

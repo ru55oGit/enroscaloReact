@@ -130,7 +130,7 @@ const ROSCO_4: RoscoEntry[] = [
 
 const ROSCO_5: RoscoEntry[] = [
   { word: "Apartamento", startOrContain: "start", letter: "A", definition: "Casa dentro de um prédio.", category: "sociedade" },
-  { word: "Buzina", startOrContain: "start", letter: "B", definition: "Faz barulho no carro.", category: "transporte" },
+  { word: "Buzina", startOrContain: "start", letter: "B", definition: "Dispositivo do carro que o motorista aciona para emitir um som alto e avisar os outros no trânsito.", category: "transporte" },
   { word: "Cogumelo", startOrContain: "start", letter: "C", definition: "Planta de chapéu que nasce na sombra.", category: "natureza" },
   { word: "Dueto", startOrContain: "start", letter: "D", definition: "Música cantada por dois.", category: "arte-musica" },
   { word: "Elevador", startOrContain: "start", letter: "E", definition: "Máquina que sobe e desce as pessoas em um prédio.", category: "transporte" },

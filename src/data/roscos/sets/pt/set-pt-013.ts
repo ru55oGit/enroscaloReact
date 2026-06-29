@@ -44,7 +44,7 @@ const ROSCO_1: RoscoEntry[] = [
 const ROSCO_2: RoscoEntry[] = [
   { word: "Ametista", startOrContain: "start", letter: "A", definition: "Pedra preciosa de cor roxa.", category: "ciencias" },
   { word: "Barroso", startOrContain: "start", letter: "B", definition: "Sobrenome de Ary, compositor de Aquarela do Brasil.", category: "personalidades" },
-  { word: "Cazuza", startOrContain: "start", letter: "C", definition: "Sobrenome de um famoso cantor e compositor de rock brasileiro.", category: "personalidades" },
+  { word: "Cazuza", startOrContain: "start", letter: "C", definition: "Nome artístico do cantor e compositor de rock Agenor de Miranda Araújo Neto, ícone da música brasileira.", category: "personalidades" },
   { word: "Daiane", startOrContain: "start", letter: "D", definition: "Nome de Daiane dos Santos, ginasta brasileira.", category: "personalidades" },
   { word: "Eco", startOrContain: "start", letter: "E", definition: "Som que volta depois de bater em algo.", category: "arte-musica" },
   { word: "Fosso", startOrContain: "start", letter: "F", definition: "Vala funda que cercava os castelos.", category: "sociedade" },
@@ -55,7 +55,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Kiwi", startOrContain: "start", letter: "K", definition: "Fruta de polpa verde e casca pilosa.", category: "gastronomia" },
   { word: "Lodo", startOrContain: "start", letter: "L", definition: "Lama mole do fundo das águas.", category: "natureza" },
   { word: "Mirante", startOrContain: "start", letter: "M", definition: "Ponto alto de onde se observa a paisagem.", category: "sociedade" },
-  { word: "Neymar", startOrContain: "start", letter: "N", definition: "Sobrenome de um craque brasileiro de futebol.", category: "personalidades" },
+  { word: "Neymar", startOrContain: "start", letter: "N", definition: "Primeiro nome do atacante Da Silva Santos Júnior, craque brasileiro revelado no Santos e ídolo no Barcelona.", category: "personalidades" },
   { word: "Oceano", startOrContain: "start", letter: "O", definition: "Mar muito grande e salgado.", category: "natureza" },
   { word: "Pomar", startOrContain: "start", letter: "P", definition: "Terreno plantado de árvores frutíferas.", category: "natureza" },
   { word: "Quadro", startOrContain: "start", letter: "Q", definition: "Obra de pintura emoldurada.", category: "arte-musica" },

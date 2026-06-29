@@ -200,7 +200,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Kit", startOrContain: "start", letter: "K", definition: "Conjunto de peças que vêm juntas.", category: "cultura-geral" },
   { word: "Lebre", startOrContain: "start", letter: "L", definition: "Parecida com o coelho, mas maior.", category: "natureza" },
   { word: "Mamífero", startOrContain: "start", letter: "M", definition: "Animal que mama quando bebê.", category: "ciencias" },
-  { word: "Neymar", startOrContain: "start", letter: "N", definition: "Sobrenome de um craque brasileiro de futebol.", category: "personalidades" },
+  { word: "Neymar", startOrContain: "start", letter: "N", definition: "Primeiro nome do atacante Da Silva Santos Júnior, craque brasileiro revelado no Santos e ídolo no Barcelona.", category: "personalidades" },
   { word: "Ofurô", startOrContain: "start", letter: "O", definition: "Banheira japonesa de madeira.", category: "cultura-geral" },
   { word: "Paraquedas", startOrContain: "start", letter: "P", definition: "Pano que desce devagar do céu.", category: "transporte" },
   { word: "Quati", startOrContain: "start", letter: "Q", definition: "Animal de focinho comprido.", category: "natureza" },

@@ -90,7 +90,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Quai", startOrContain: "start", letter: "Q", definition: "Bord aménagé d'un port ou d'une gare.", category: "transport" },
   { word: "Ruisseau", startOrContain: "start", letter: "R", definition: "Petit cours d'eau.", category: "nature" },
   { word: "Sorbier", startOrContain: "start", letter: "S", definition: "Arbre à petites baies rouges.", category: "nature" },
-  { word: "Tambour", startOrContain: "start", letter: "T", definition: "Instrument de percussion.", category: "art-musique" },
+  { word: "Tambour", startOrContain: "start", letter: "T", definition: "Instrument rond que l'on frappe avec des baguettes pour marquer le rythme.", category: "art-musique" },
   { word: "Univers", startOrContain: "start", letter: "U", definition: "L'ensemble de tout ce qui existe.", category: "science" },
   { word: "Volet", startOrContain: "start", letter: "V", definition: "Panneau qui ferme une fenêtre.", category: "culture" },
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unité de puissance électrique.", category: "science" },
@@ -102,7 +102,7 @@ const ROSCO_3: RoscoEntry[] = [
 const ROSCO_4: RoscoEntry[] = [
   { word: "Aigle", startOrContain: "start", letter: "A", definition: "Grand rapace au bec crochu.", category: "nature" },
   { word: "Bourgeon", startOrContain: "start", letter: "B", definition: "Petite pousse d'où sort la feuille.", category: "nature" },
-  { word: "Chandelle", startOrContain: "start", letter: "C", definition: "Longue bougie.", category: "culture" },
+  { word: "Chandelle", startOrContain: "start", letter: "C", definition: "Bâton de cire ou de suif que l'on brûlait autrefois pour s'éclairer chez soi.", category: "culture" },
   { word: "Diligence", startOrContain: "start", letter: "D", definition: "Ancienne voiture à chevaux des voyageurs.", category: "transport" },
   { word: "Escargot", startOrContain: "start", letter: "E", definition: "Petit animal à coquille en spirale.", category: "nature" },
   { word: "Federer", startOrContain: "start", letter: "F", definition: "Nom d'un grand joueur de tennis suisse.", category: "personnalites" },

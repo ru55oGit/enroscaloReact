@@ -14,7 +14,7 @@ export interface RoscoEntry {
 
 const ROSCO_1: RoscoEntry[] = [
   { word: "Antelope", startOrContain: "start", letter: "A", definition: "A fast plains animal with horns.", category: "nature" },
-  { word: "Buffalo", startOrContain: "start", letter: "B", definition: "A big wild ox of grasslands.", category: "nature" },
+  { word: "Buffalo", startOrContain: "start", letter: "B", definition: "A large wild ox of Africa and Asia with wide, sweeping horns, often found wallowing near water.", category: "nature" },
   { word: "Caicedo", startOrContain: "start", letter: "C", definition: "Surname of Ecuadorian midfielder Moises, who plays for Chelsea in the Premier League.", category: "people" },
   { word: "Dingo", startOrContain: "start", letter: "D", definition: "A wild dog of Australia.", category: "nature" },
   { word: "Echidna", startOrContain: "start", letter: "E", definition: "A spiny animal that eats ants.", category: "nature" },

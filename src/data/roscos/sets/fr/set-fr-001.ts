@@ -86,7 +86,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Loupe", startOrContain: "start", letter: "L", definition: "Verre grossissant pour voir les petites choses.", category: "science" },
   { word: "Mairie", startOrContain: "start", letter: "M", definition: "Bâtiment où travaille le maire.", category: "societe" },
   { word: "Niveau", startOrContain: "start", letter: "N", definition: "Outil avec une bulle qui montre si c'est droit.", category: "culture" },
-  { word: "Orchidée", startOrContain: "start", letter: "O", definition: "Fleur délicate et très jolie.", category: "nature" },
+  { word: "Orchidée", startOrContain: "start", letter: "O", definition: "Fleur exotique aux pétales raffinés, souvent cultivée en pot et offerte en cadeau.", category: "nature" },
   { word: "Péniche", startOrContain: "start", letter: "P", definition: "Long bateau plat des canaux.", category: "transport" },
   { word: "Quiz", startOrContain: "start", letter: "Q", definition: "Jeu de questions pour tester ses connaissances.", category: "societe" },
   { word: "Renoir", startOrContain: "start", letter: "R", definition: "Nom d'un célèbre peintre français.", category: "personnalites" },
@@ -102,7 +102,7 @@ const ROSCO_3: RoscoEntry[] = [
 
 const ROSCO_4: RoscoEntry[] = [
   { word: "Amulette", startOrContain: "start", letter: "A", definition: "Petit objet porté pour éloigner le malheur.", category: "mythe-fantaisie" },
-  { word: "Braque", startOrContain: "start", letter: "B", definition: "Nom d'un peintre français.", category: "personnalites" },
+  { word: "Braque", startOrContain: "start", letter: "B", definition: "Peintre cubiste français qui inventa ce courant aux côtés de Picasso.", category: "personnalites" },
   { word: "Chagall", startOrContain: "start", letter: "C", definition: "Nom de famille d'un peintre aux tableaux colorés et rêveurs.", category: "personnalites" },
   { word: "Digitale", startOrContain: "start", letter: "D", definition: "Fleur en forme de clochettes.", category: "nature" },
   { word: "Équipe", startOrContain: "start", letter: "E", definition: "Groupe de joueurs qui jouent ensemble.", category: "sport-jeu" },

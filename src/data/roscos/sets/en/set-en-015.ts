@@ -42,7 +42,7 @@ const ROSCO_1: RoscoEntry[] = [
 ];
 
 const ROSCO_2: RoscoEntry[] = [
-  { word: "Adder", startOrContain: "start", letter: "A", definition: "A small poisonous snake.", category: "nature" },
+  { word: "Adder", startOrContain: "start", letter: "A", definition: "The only venomous snake that lives wild in Britain, with a dark zigzag pattern running down its back.", category: "nature" },
   { word: "Badge", startOrContain: "start", letter: "B", definition: "A small pin showing who you are.", category: "general" },
   { word: "Cabin", startOrContain: "start", letter: "C", definition: "A small wooden house.", category: "society" },
   { word: "Doku", startOrContain: "start", letter: "D", definition: "Surname of Belgian winger Jeremy, who plays for Manchester City in the Premier League.", category: "people" },

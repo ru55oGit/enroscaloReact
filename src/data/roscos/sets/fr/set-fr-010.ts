@@ -90,7 +90,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Quai", startOrContain: "start", letter: "Q", definition: "Bord aménagé d'un port ou d'une gare.", category: "transport" },
   { word: "Roseau", startOrContain: "start", letter: "R", definition: "Plante haute des bords d'étang.", category: "nature" },
   { word: "Sève", startOrContain: "start", letter: "S", definition: "Liquide qui nourrit la plante.", category: "nature" },
-  { word: "Tambour", startOrContain: "start", letter: "T", definition: "Instrument de percussion.", category: "art-musique" },
+  { word: "Tambour", startOrContain: "start", letter: "T", definition: "Instrument rond que l'on frappe avec des baguettes pour marquer le rythme.", category: "art-musique" },
   { word: "Univers", startOrContain: "start", letter: "U", definition: "L'ensemble de tout ce qui existe.", category: "science" },
   { word: "Verne", startOrContain: "start", letter: "V", definition: "Nom d'un écrivain français d'histoires d'aventures.", category: "personnalites" },
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unité de puissance électrique.", category: "science" },
@@ -159,7 +159,7 @@ const ROSCO_5: RoscoEntry[] = [
 
 const ROSCO_6: RoscoEntry[] = [
   { word: "Aimant", startOrContain: "start", letter: "A", definition: "Objet qui attire le fer.", category: "science" },
-  { word: "Braque", startOrContain: "start", letter: "B", definition: "Nom d'un peintre français.", category: "personnalites" },
+  { word: "Braque", startOrContain: "start", letter: "B", definition: "Peintre cubiste français qui inventa ce courant aux côtés de Picasso.", category: "personnalites" },
   { word: "Cerf-volant", startOrContain: "start", letter: "C", definition: "Jouet de toile qui vole au vent.", category: "sport-jeu" },
   { word: "Diadème", startOrContain: "start", letter: "D", definition: "Petite couronne d'ornement.", category: "culture" },
   { word: "Épée", startOrContain: "start", letter: "E", definition: "Arme blanche à longue lame.", category: "culture" },

@@ -189,7 +189,7 @@ const ROSCO_6: RoscoEntry[] = [
 const ROSCO_7: RoscoEntry[] = [
   { word: "Archote", startOrContain: "start", letter: "A", definition: "Tocha de mão para iluminar.", category: "cultura-geral" },
   { word: "Boldo", startOrContain: "start", letter: "B", definition: "Planta de folhas amargas, usada em chá.", category: "natureza" },
-  { word: "Cazuza", startOrContain: "start", letter: "C", definition: "Sobrenome de um famoso cantor e compositor de rock brasileiro.", category: "personalidades" },
+  { word: "Cazuza", startOrContain: "start", letter: "C", definition: "Nome artístico do cantor e compositor de rock Agenor de Miranda Araújo Neto, ícone da música brasileira.", category: "personalidades" },
   { word: "Domingos", startOrContain: "start", letter: "D", definition: "Nome de da Guia, craque antigo do futebol.", category: "personalidades" },
   { word: "Escova", startOrContain: "start", letter: "E", definition: "Utensílio de cerdas para limpar ou pentear.", category: "cultura-geral" },
   { word: "Fagner", startOrContain: "start", letter: "F", definition: "Nome de um cantor cearense.", category: "personalidades" },

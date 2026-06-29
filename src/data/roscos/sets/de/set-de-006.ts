@@ -101,7 +101,7 @@ const ROSCO_3: RoscoEntry[] = [
 
 const ROSCO_4: RoscoEntry[] = [
   { word: "Adler", startOrContain: "start", letter: "A", definition: "Großer Greifvogel mit scharfem Blick.", category: "natur" },
-  { word: "Beere", startOrContain: "start", letter: "B", definition: "Kleine, saftige Frucht.", category: "essen" },
+  { word: "Beere", startOrContain: "start", letter: "B", definition: "Sammelbegriff für kleine, saftige Früchte, die an Sträuchern oder Stauden wachsen.", category: "essen" },
   { word: "Couch", startOrContain: "start", letter: "C", definition: "Gepolstertes Sofa.", category: "kultur" },
   { word: "Dorf", startOrContain: "start", letter: "D", definition: "Kleine Ansiedlung auf dem Land.", category: "gesellschaft" },
   { word: "Einkaufszentrum", startOrContain: "start", letter: "E", definition: "Großes Gebäude mit vielen Läden.", category: "gesellschaft" },
@@ -204,7 +204,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Otto", startOrContain: "start", letter: "O", definition: "Nachname von Nikolaus, dem Erfinder eines Motors.", category: "personen" },
   { word: "Pirat", startOrContain: "start", letter: "P", definition: "Seeräuber auf dem Meer.", category: "mythos" },
   { word: "Quiz", startOrContain: "start", letter: "Q", definition: "Spiel mit Fragen und Antworten.", category: "sport-spiel" },
-  { word: "Rübe", startOrContain: "start", letter: "R", definition: "Knolle aus dem Boden.", category: "essen" },
+  { word: "Rübe", startOrContain: "start", letter: "R", definition: "Rundliches Wurzelgemüse vom Acker, aus dem man unter anderem Zucker oder Tierfutter gewinnt.", category: "essen" },
   { word: "Storm", startOrContain: "start", letter: "S", definition: "Nachname von Theodor, einem deutschen Dichter.", category: "personen" },
   { word: "Trommel", startOrContain: "start", letter: "T", definition: "Instrument, das man schlägt.", category: "kunst-musik" },
   { word: "Untersetzer", startOrContain: "start", letter: "U", definition: "Platte unter den heißen Topf.", category: "kultur" },

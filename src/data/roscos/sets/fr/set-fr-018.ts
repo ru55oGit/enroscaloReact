@@ -44,7 +44,7 @@ const ROSCO_1: RoscoEntry[] = [
 const ROSCO_2: RoscoEntry[] = [
   { word: "Arbre", startOrContain: "start", letter: "A", definition: "Grand végétal à tronc et branches.", category: "nature" },
   { word: "Bruant", startOrContain: "start", letter: "B", definition: "Petit oiseau chanteur des champs.", category: "nature" },
-  { word: "Chevreau", startOrContain: "start", letter: "C", definition: "Le petit de la chèvre.", category: "nature" },
+  { word: "Chevreau", startOrContain: "start", letter: "C", definition: "Petit de la chèvre, dont la peau souple sert à fabriquer des gants très fins.", category: "nature" },
   { word: "Détroit", startOrContain: "start", letter: "D", definition: "Bras de mer étroit entre deux terres.", category: "nature" },
   { word: "Échelle", startOrContain: "start", letter: "E", definition: "Suite de barreaux pour monter.", category: "culture" },
   { word: "Fumet", startOrContain: "start", letter: "F", definition: "Odeur agréable d'un plat qui cuit.", category: "nourriture" },
@@ -90,7 +90,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Quai", startOrContain: "start", letter: "Q", definition: "Bord aménagé d'un port ou d'une gare.", category: "transport" },
   { word: "Ressac", startOrContain: "start", letter: "R", definition: "Retour violent des vagues sur le rivage.", category: "nature" },
   { word: "Saint-Exupéry", startOrContain: "start", letter: "S", definition: "Nom de famille de l'auteur du Petit Prince.", category: "personnalites" },
-  { word: "Tambour", startOrContain: "start", letter: "T", definition: "Instrument de percussion.", category: "art-musique" },
+  { word: "Tambour", startOrContain: "start", letter: "T", definition: "Instrument rond que l'on frappe avec des baguettes pour marquer le rythme.", category: "art-musique" },
   { word: "Univers", startOrContain: "start", letter: "U", definition: "L'ensemble de tout ce qui existe.", category: "science" },
   { word: "Vélo", startOrContain: "start", letter: "V", definition: "Autre nom de la bicyclette.", category: "transport" },
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unité de puissance électrique.", category: "science" },
