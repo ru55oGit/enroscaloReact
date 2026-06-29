@@ -123,7 +123,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Cuba", startOrContain: "contain", letter: "U", definition: "An island country in the Caribbean.", category: "society" },
   { word: "Vienna", startOrContain: "start", letter: "V", definition: "The capital city of Austria.", category: "society" },
   { word: "Window", startOrContain: "start", letter: "W", definition: "A glass opening that lets in light.", category: "society" },
-  { word: "Taxi", startOrContain: "contain", letter: "X", definition: "A car you pay to ride in.", category: "transport" },
+  { word: "Ox", startOrContain: "contain", letter: "X", definition: "A large strong animal used on farms.", category: "nature" },
   { word: "Germany", startOrContain: "contain", letter: "Y", definition: "A large country in central Europe.", category: "society" },
   { word: "Brazil", startOrContain: "contain", letter: "Z", definition: "The largest country in South America.", category: "society" },
 ];
@@ -152,7 +152,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Peru", startOrContain: "contain", letter: "U", definition: "A country in South America.", category: "society" },
   { word: "Vilnius", startOrContain: "start", letter: "V", definition: "The capital city of Lithuania.", category: "society" },
   { word: "Watkins", startOrContain: "start", letter: "W", definition: "Surname of English striker Ollie, who plays for Aston Villa in the Premier League.", category: "people" },
-  { word: "Exam", startOrContain: "contain", letter: "X", definition: "A test at school.", category: "society" },
+  { word: "Wax", startOrContain: "contain", letter: "X", definition: "A soft substance used to make candles.", category: "general" },
   { word: "Turkey", startOrContain: "contain", letter: "Y", definition: "A country between Europe and Asia.", category: "society" },
   { word: "Switzerland", startOrContain: "contain", letter: "Z", definition: "A mountainous country in Europe.", category: "society" },
 ];
@@ -181,7 +181,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Austria", startOrContain: "contain", letter: "U", definition: "A country in central Europe.", category: "society" },
   { word: "Valletta", startOrContain: "start", letter: "V", definition: "The capital city of Malta.", category: "society" },
   { word: "Waiter", startOrContain: "start", letter: "W", definition: "A person who serves food at a restaurant.", category: "society" },
-  { word: "Oxygen", startOrContain: "contain", letter: "X", definition: "The gas we breathe.", category: "science" },
+  { word: "Lynx", startOrContain: "contain", letter: "X", definition: "A wild cat with pointed ear tufts.", category: "nature" },
   { word: "Hungary", startOrContain: "contain", letter: "Y", definition: "A country in central Europe.", category: "society" },
   { word: "Azerbaijan", startOrContain: "contain", letter: "Z", definition: "A country between Europe and Asia.", category: "society" },
 ];

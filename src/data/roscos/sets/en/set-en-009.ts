@@ -36,8 +36,8 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Ecuador", startOrContain: "contain", letter: "U", definition: "A country on the Equator in South America.", category: "society" },
   { word: "Vietnam", startOrContain: "start", letter: "V", definition: "A country in Southeast Asia.", category: "society" },
   { word: "Woodpecker", startOrContain: "start", letter: "W", definition: "A bird that taps holes in trees.", category: "nature" },
-  { word: "Mexico", startOrContain: "contain", letter: "X", definition: "A country in North America.", category: "society" },
-  { word: "Yemen", startOrContain: "start", letter: "Y", definition: "A country in the Middle East.", category: "society" },
+  { word: "Wax", startOrContain: "contain", letter: "X", definition: "A soft substance used to make candles.", category: "general" },
+  { word: "Yak", startOrContain: "start", letter: "Y", definition: "A large shaggy-haired ox from central Asia.", category: "nature" },
   { word: "Zambia", startOrContain: "start", letter: "Z", definition: "A country in southern Africa.", category: "society" },
 ];
 
@@ -65,7 +65,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Sudan", startOrContain: "contain", letter: "U", definition: "A large country in northeast Africa.", category: "society" },
   { word: "Venezuela", startOrContain: "start", letter: "V", definition: "A country in South America.", category: "society" },
   { word: "Wasp", startOrContain: "start", letter: "W", definition: "A yellow-and-black insect that can sting.", category: "nature" },
-  { word: "Luxembourg", startOrContain: "contain", letter: "X", definition: "A tiny country in western Europe.", category: "society" },
+  { word: "Mix", startOrContain: "contain", letter: "X", definition: "To stir different things together.", category: "food" },
   { word: "Yerevan", startOrContain: "start", letter: "Y", definition: "The capital city of Armenia.", category: "society" },
   { word: "Zimbabwe", startOrContain: "start", letter: "Z", definition: "A country in southern Africa.", category: "society" },
 ];
@@ -80,8 +80,8 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Gutter", startOrContain: "start", letter: "G", definition: "The edge of the street where rain runs.", category: "society" },
   { word: "Hydrant", startOrContain: "start", letter: "H", definition: "A street pipe firefighters get water from.", category: "society" },
   { word: "India", startOrContain: "start", letter: "I", definition: "A large country in southern Asia.", category: "society" },
-  { word: "Japan", startOrContain: "start", letter: "J", definition: "An island country in East Asia.", category: "society" },
-  { word: "Kenya", startOrContain: "start", letter: "K", definition: "A country in East Africa.", category: "society" },
+  { word: "Jar", startOrContain: "start", letter: "J", definition: "A glass container with a wide opening.", category: "general" },
+  { word: "Kite", startOrContain: "start", letter: "K", definition: "A toy that flies in the wind on a long string.", category: "sport-game" },
   { word: "Leonard", startOrContain: "start", letter: "L", definition: "Surname of NBA forward Kawhi, who plays for the LA Clippers.", category: "people" },
   { word: "Museum", startOrContain: "start", letter: "M", definition: "A place that shows old and rare things.", category: "society" },
   { word: "Newsstand", startOrContain: "start", letter: "N", definition: "A small stall that sells newspapers.", category: "society" },
@@ -91,10 +91,10 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Robertson", startOrContain: "start", letter: "R", definition: "Surname of Scottish defender Andy, who plays for Liverpool in the Premier League.", category: "people" },
   { word: "Statue", startOrContain: "start", letter: "S", definition: "A figure carved in stone or metal.", category: "society" },
   { word: "Tagovailoa", startOrContain: "start", letter: "T", definition: "Surname of NFL quarterback Tua, who plays for the Miami Dolphins.", category: "people" },
-  { word: "Uganda", startOrContain: "start", letter: "U", definition: "A country in East Africa.", category: "society" },
+  { word: "Unicorn", startOrContain: "start", letter: "U", definition: "A mythical horse with a single spiraling horn.", category: "myth-fantasy" },
   { word: "Vatican", startOrContain: "start", letter: "V", definition: "The smallest country in the world.", category: "society" },
   { word: "Warehouse", startOrContain: "start", letter: "W", definition: "A big building for storing goods.", category: "society" },
-  { word: "Mexico City", startOrContain: "contain", letter: "X", definition: "The capital city of Mexico.", category: "society" },
+  { word: "Lynx", startOrContain: "contain", letter: "X", definition: "A wild cat with pointed ear tufts.", category: "nature" },
   { word: "Yaounde", startOrContain: "start", letter: "Y", definition: "The capital city of Cameroon.", category: "society" },
   { word: "Zagreb", startOrContain: "start", letter: "Z", definition: "The capital city of Croatia.", category: "society" },
 ];
@@ -123,7 +123,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Ukraine", startOrContain: "start", letter: "U", definition: "A large country in eastern Europe.", category: "society" },
   { word: "Vienna", startOrContain: "start", letter: "V", definition: "The capital city of Austria.", category: "society" },
   { word: "Wrench", startOrContain: "start", letter: "W", definition: "A tool for turning nuts and bolts.", category: "general" },
-  { word: "Taxi", startOrContain: "contain", letter: "X", definition: "A car you pay to ride in.", category: "transport" },
+  { word: "Pixel", startOrContain: "contain", letter: "X", definition: "The smallest dot on a computer screen.", category: "science" },
   { word: "Germany", startOrContain: "contain", letter: "Y", definition: "A large country in central Europe.", category: "society" },
   { word: "Brazil", startOrContain: "contain", letter: "Z", definition: "The largest country in South America.", category: "society" },
 ];
@@ -152,7 +152,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Uruguay", startOrContain: "start", letter: "U", definition: "A country in South America.", category: "society" },
   { word: "Vilnius", startOrContain: "start", letter: "V", definition: "The capital city of Lithuania.", category: "society" },
   { word: "Wormhole", startOrContain: "start", letter: "W", definition: "An imagined tunnel shortcut through space.", category: "science" },
-  { word: "Exam", startOrContain: "contain", letter: "X", definition: "A test at school.", category: "society" },
+  { word: "Reflex", startOrContain: "contain", letter: "X", definition: "A fast automatic reaction your body makes.", category: "science" },
   { word: "Turkey", startOrContain: "contain", letter: "Y", definition: "A country between Europe and Asia.", category: "society" },
   { word: "Switzerland", startOrContain: "contain", letter: "Z", definition: "A mountainous country in Europe.", category: "society" },
 ];
@@ -181,7 +181,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Cuba", startOrContain: "contain", letter: "U", definition: "An island country in the Caribbean.", category: "society" },
   { word: "Valletta", startOrContain: "start", letter: "V", definition: "The capital city of Malta.", category: "society" },
   { word: "Walker", startOrContain: "start", letter: "W", definition: "Surname of English defender Kyle, who plays for Manchester City in the Premier League.", category: "people" },
-  { word: "Oxygen", startOrContain: "contain", letter: "X", definition: "The gas we breathe.", category: "science" },
+  { word: "Exhibit", startOrContain: "contain", letter: "X", definition: "Something put on display for people to see.", category: "art-music" },
   { word: "Hungary", startOrContain: "contain", letter: "Y", definition: "A country in central Europe.", category: "society" },
   { word: "Azerbaijan", startOrContain: "contain", letter: "Z", definition: "A country between Europe and Asia.", category: "society" },
 ];
@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Fries", startOrContain: "start", letter: "F", definition: "Long thin pieces of fried potato.", category: "food" },
   { word: "Gravy", startOrContain: "start", letter: "G", definition: "A warm brown sauce for dinner.", category: "food" },
   { word: "Honey", startOrContain: "start", letter: "H", definition: "A sweet syrup made by bees.", category: "food" },
-  { word: "Iceland", startOrContain: "start", letter: "I", definition: "An island country of volcanoes and ice.", category: "society" },
+  { word: "Ivory", startOrContain: "start", letter: "I", definition: "The creamy white material from elephant tusks.", category: "nature" },
   { word: "Juba", startOrContain: "start", letter: "J", definition: "The capital city of South Sudan.", category: "society" },
   { word: "Kyiv", startOrContain: "start", letter: "K", definition: "The capital city of Ukraine.", category: "society" },
   { word: "Lasagna", startOrContain: "start", letter: "L", definition: "Layers of pasta, sauce and cheese.", category: "food" },
@@ -210,7 +210,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Peru", startOrContain: "contain", letter: "U", definition: "A country in South America.", category: "society" },
   { word: "Victoria", startOrContain: "start", letter: "V", definition: "The capital city of the Seychelles.", category: "society" },
   { word: "Waffle", startOrContain: "start", letter: "W", definition: "A crisp cake with little squares.", category: "food" },
-  { word: "Hexagon", startOrContain: "contain", letter: "X", definition: "A shape with six sides.", category: "science" },
+  { word: "Explore", startOrContain: "contain", letter: "X", definition: "To travel and discover new places.", category: "society" },
   { word: "Paraguay", startOrContain: "contain", letter: "Y", definition: "A country in the middle of South America.", category: "society" },
   { word: "Tanzania", startOrContain: "contain", letter: "Z", definition: "A country in East Africa.", category: "society" },
 ];

@@ -36,7 +36,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Sudan", startOrContain: "contain", letter: "U", definition: "A large country in northeast Africa.", category: "society" },
   { word: "Vietnam", startOrContain: "start", letter: "V", definition: "A country in Southeast Asia.", category: "society" },
   { word: "Whale", startOrContain: "start", letter: "W", definition: "The largest animal in the sea.", category: "nature" },
-  { word: "Mexico", startOrContain: "contain", letter: "X", definition: "A country in North America.", category: "society" },
+  { word: "Fox", startOrContain: "contain", letter: "X", definition: "A clever animal with a bushy red tail.", category: "nature" },
   { word: "Yemen", startOrContain: "start", letter: "Y", definition: "A country in the Middle East.", category: "society" },
   { word: "Zambia", startOrContain: "start", letter: "Z", definition: "A country in southern Africa.", category: "society" },
 ];
@@ -123,7 +123,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Uruguay", startOrContain: "start", letter: "U", definition: "A country in South America.", category: "society" },
   { word: "Vienna", startOrContain: "start", letter: "V", definition: "The capital city of Austria.", category: "society" },
   { word: "Wrestling", startOrContain: "start", letter: "W", definition: "A sport of grappling on a mat.", category: "sport-game" },
-  { word: "Taxi", startOrContain: "contain", letter: "X", definition: "A car you pay to ride in.", category: "transport" },
+  { word: "Lynx", startOrContain: "contain", letter: "X", definition: "A wild cat with pointed ear tufts.", category: "nature" },
   { word: "Germany", startOrContain: "contain", letter: "Y", definition: "A large country in central Europe.", category: "society" },
   { word: "Brazil", startOrContain: "contain", letter: "Z", definition: "The largest country in South America.", category: "society" },
 ];
@@ -152,7 +152,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Cuba", startOrContain: "contain", letter: "U", definition: "An island country in the Caribbean.", category: "society" },
   { word: "Vilnius", startOrContain: "start", letter: "V", definition: "The capital city of Lithuania.", category: "society" },
   { word: "Whisk", startOrContain: "start", letter: "W", definition: "A tool for beating eggs or cream.", category: "general" },
-  { word: "Exam", startOrContain: "contain", letter: "X", definition: "A test at school.", category: "society" },
+  { word: "Ox", startOrContain: "contain", letter: "X", definition: "A large strong animal used on farms.", category: "nature" },
   { word: "Turkey", startOrContain: "contain", letter: "Y", definition: "A country between Europe and Asia.", category: "society" },
   { word: "Switzerland", startOrContain: "contain", letter: "Z", definition: "A mountainous country in Europe.", category: "society" },
 ];
@@ -181,7 +181,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Peru", startOrContain: "contain", letter: "U", definition: "A country in South America.", category: "society" },
   { word: "Valletta", startOrContain: "start", letter: "V", definition: "The capital city of Malta.", category: "society" },
   { word: "Wembanyama", startOrContain: "start", letter: "W", definition: "Surname of very tall French NBA center Victor, who plays for the San Antonio Spurs.", category: "people" },
-  { word: "Oxygen", startOrContain: "contain", letter: "X", definition: "The gas we breathe.", category: "science" },
+  { word: "Mix", startOrContain: "contain", letter: "X", definition: "To stir different things together.", category: "food" },
   { word: "Hungary", startOrContain: "contain", letter: "Y", definition: "A country in central Europe.", category: "society" },
   { word: "Azerbaijan", startOrContain: "contain", letter: "Z", definition: "A country between Europe and Asia.", category: "society" },
 ];
@@ -210,7 +210,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Austria", startOrContain: "contain", letter: "U", definition: "A country in central Europe.", category: "society" },
   { word: "Victoria", startOrContain: "start", letter: "V", definition: "The capital city of the Seychelles.", category: "society" },
   { word: "Wagon", startOrContain: "start", letter: "W", definition: "A cart with four wheels.", category: "transport" },
-  { word: "Hexagon", startOrContain: "contain", letter: "X", definition: "A shape with six sides.", category: "science" },
+  { word: "Wax", startOrContain: "contain", letter: "X", definition: "A soft substance used to make candles.", category: "general" },
   { word: "Paraguay", startOrContain: "contain", letter: "Y", definition: "A country in the middle of South America.", category: "society" },
   { word: "Tanzania", startOrContain: "contain", letter: "Z", definition: "A country in East Africa.", category: "society" },
 ];
