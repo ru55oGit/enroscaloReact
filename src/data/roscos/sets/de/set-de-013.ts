@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Flügel", startOrContain: "start", letter: "F", definition: "Damit fliegt der Vogel.", category: "natur" },
   { word: "Gerste", startOrContain: "start", letter: "G", definition: "Getreide für Brot und Bier.", category: "natur" },
   { word: "Harpune", startOrContain: "start", letter: "H", definition: "Wurfspeer für den Walfang.", category: "verkehr" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schneeblöcken.", category: "gesellschaft" },
+  { word: "Indigo", startOrContain: "start", letter: "I", definition: "Das tiefe Blau der Jeans.", category: "kunst-musik" },
   { word: "Jolle", startOrContain: "start", letter: "J", definition: "Kleines Segelboot.", category: "verkehr" },
   { word: "Karaffe", startOrContain: "start", letter: "K", definition: "Bauchige Flasche für Wasser.", category: "kultur" },
   { word: "Lessing", startOrContain: "start", letter: "L", definition: "Nachname eines berühmten deutschen Dichters.", category: "personen" },

@@ -21,7 +21,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Fenda", startOrContain: "start", letter: "F", definition: "Abertura estreita e comprida.", category: "natureza" },
   { word: "Gnaisse", startOrContain: "start", letter: "G", definition: "Rocha de faixas claras e escuras.", category: "ciencias" },
   { word: "Harpa", startOrContain: "start", letter: "H", definition: "Instrumento de cordas dedilhadas, de formato triangular.", category: "arte-musica" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Abrigo de blocos de gelo dos povos do Ártico.", category: "sociedade" },
+  { word: "Ingresso", startOrContain: "start", letter: "I", definition: "Bilhete que dá entrada em shows ou teatros.", category: "sociedade" },
   { word: "Jacaré", startOrContain: "start", letter: "J", definition: "Réptil de focinho largo dos rios brasileiros.", category: "natureza" },
   { word: "Karatê", startOrContain: "start", letter: "K", definition: "Arte marcial japonesa de golpes secos.", category: "esporte-jogo" },
   { word: "Latão", startOrContain: "start", letter: "L", definition: "Liga amarela de cobre e zinco.", category: "ciencias" },

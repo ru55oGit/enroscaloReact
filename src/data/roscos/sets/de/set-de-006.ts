@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Finger", startOrContain: "start", letter: "F", definition: "Eines der fünf Glieder der Hand.", category: "wissenschaft" },
   { word: "Gitarre", startOrContain: "start", letter: "G", definition: "Instrument mit sechs Saiten.", category: "kunst-musik" },
   { word: "Heizung", startOrContain: "start", letter: "H", definition: "Anlage, die Räume wärmt.", category: "gesellschaft" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schneeblöcken.", category: "gesellschaft" },
+  { word: "Ingwer", startOrContain: "start", letter: "I", definition: "Scharfe Wurzel als Gewürz.", category: "essen" },
   { word: "Jolle", startOrContain: "start", letter: "J", definition: "Kleines Segelboot.", category: "verkehr" },
   { word: "Keks", startOrContain: "start", letter: "K", definition: "Knuspriges, süßes Gebäck.", category: "essen" },
   { word: "Lahm", startOrContain: "start", letter: "L", definition: "Nachname eines deutschen Fußballspielers, Weltmeister.", category: "personen" },

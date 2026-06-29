@@ -21,7 +21,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Filó", startOrContain: "start", letter: "F", definition: "Tecido fino e transparente de rede.", category: "cultura-geral" },
   { word: "Genival", startOrContain: "start", letter: "G", definition: "Nome de Lacerda, cantor de forró.", category: "personalidades" },
   { word: "Harpa", startOrContain: "start", letter: "H", definition: "Instrumento de cordas dedilhadas, de formato triangular.", category: "arte-musica" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Abrigo de blocos de gelo dos povos do Ártico.", category: "sociedade" },
+  { word: "Ilhota", startOrContain: "start", letter: "I", definition: "Ilha bem pequena no meio do mar.", category: "natureza" },
   { word: "Jacaré", startOrContain: "start", letter: "J", definition: "Réptil de focinho largo dos rios brasileiros.", category: "natureza" },
   { word: "Karatê", startOrContain: "start", letter: "K", definition: "Arte marcial japonesa de golpes secos.", category: "esporte-jogo" },
   { word: "Lupicínio", startOrContain: "start", letter: "L", definition: "Nome de Rodrigues, compositor gaúcho.", category: "personalidades" },

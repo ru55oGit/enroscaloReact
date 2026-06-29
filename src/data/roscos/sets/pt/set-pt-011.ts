@@ -21,7 +21,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Fardo", startOrContain: "start", letter: "F", definition: "Volume pesado amarrado para transporte.", category: "cultura-geral" },
   { word: "Gárgula", startOrContain: "start", letter: "G", definition: "Escultura de monstro que escoa a água da chuva.", category: "arte-musica" },
   { word: "Harpa", startOrContain: "start", letter: "H", definition: "Instrumento de cordas dedilhadas, de formato triangular.", category: "arte-musica" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Abrigo de blocos de gelo dos povos do Ártico.", category: "sociedade" },
+  { word: "Iogurte", startOrContain: "start", letter: "I", definition: "Alimento cremoso feito de leite.", category: "gastronomia" },
   { word: "Jacaré", startOrContain: "start", letter: "J", definition: "Réptil de focinho largo dos rios brasileiros.", category: "natureza" },
   { word: "Karatê", startOrContain: "start", letter: "K", definition: "Arte marcial japonesa de golpes secos.", category: "esporte-jogo" },
   { word: "Lápide", startOrContain: "start", letter: "L", definition: "Pedra com inscrições sobre um túmulo.", category: "sociedade" },

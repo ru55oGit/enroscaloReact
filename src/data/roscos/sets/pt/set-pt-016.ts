@@ -21,7 +21,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Fernanda", startOrContain: "start", letter: "F", definition: "Nome de Montenegro, atriz premiada.", category: "personalidades" },
   { word: "Geodésia", startOrContain: "start", letter: "G", definition: "Ciência que mede a forma da Terra.", category: "ciencias" },
   { word: "Harpa", startOrContain: "start", letter: "H", definition: "Instrumento de cordas dedilhadas, de formato triangular.", category: "arte-musica" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Abrigo de blocos de gelo dos povos do Ártico.", category: "sociedade" },
+  { word: "Ídolo", startOrContain: "start", letter: "I", definition: "Uma pessoa muito admirada por todos.", category: "sociedade" },
   { word: "Jacaré", startOrContain: "start", letter: "J", definition: "Réptil de focinho largo dos rios brasileiros.", category: "natureza" },
   { word: "Karatê", startOrContain: "start", letter: "K", definition: "Arte marcial japonesa de golpes secos.", category: "esporte-jogo" },
   { word: "Lança", startOrContain: "start", letter: "L", definition: "Arma de haste longa e ponta de ferro.", category: "cultura-geral" },

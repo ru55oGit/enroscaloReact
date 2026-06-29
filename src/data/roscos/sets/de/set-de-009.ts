@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Fensterbank", startOrContain: "start", letter: "F", definition: "Brett unten am Fenster.", category: "kultur" },
   { word: "Geldbörse", startOrContain: "start", letter: "G", definition: "Kleine Tasche für Münzen und Scheine.", category: "kultur" },
   { word: "Hampelmann", startOrContain: "start", letter: "H", definition: "Figur, deren Glieder an Fäden zappeln.", category: "sport-spiel" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schneeblöcken.", category: "gesellschaft" },
+  { word: "Iris", startOrContain: "start", letter: "I", definition: "Der farbige Ring im Auge.", category: "wissenschaft" },
   { word: "Jolle", startOrContain: "start", letter: "J", definition: "Kleines Segelboot.", category: "verkehr" },
   { word: "Karussell", startOrContain: "start", letter: "K", definition: "Drehendes Fahrgeschäft im Rummel.", category: "sport-spiel" },
   { word: "Lessing", startOrContain: "start", letter: "L", definition: "Nachname eines berühmten deutschen Dichters.", category: "personen" },

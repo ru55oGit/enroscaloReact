@@ -21,7 +21,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Falange", startOrContain: "start", letter: "F", definition: "Cada ossinho dos dedos.", category: "ciencias" },
   { word: "Galpão", startOrContain: "start", letter: "G", definition: "Construção ampla de armazenagem.", category: "sociedade" },
   { word: "Harpa", startOrContain: "start", letter: "H", definition: "Instrumento de cordas dedilhadas, de formato triangular.", category: "arte-musica" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Abrigo de blocos de gelo dos povos do Ártico.", category: "sociedade" },
+  { word: "Inverno", startOrContain: "start", letter: "I", definition: "A estação mais fria do ano.", category: "natureza" },
   { word: "Jacaré", startOrContain: "start", letter: "J", definition: "Réptil de focinho largo dos rios brasileiros.", category: "natureza" },
   { word: "Karatê", startOrContain: "start", letter: "K", definition: "Arte marcial japonesa de golpes secos.", category: "esporte-jogo" },
   { word: "Lattes", startOrContain: "start", letter: "L", definition: "Sobrenome de César, físico brasileiro.", category: "personalidades" },

@@ -21,7 +21,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Fósforo", startOrContain: "start", letter: "F", definition: "Palitinho que acende fogo.", category: "cultura-geral" },
   { word: "Grilo", startOrContain: "start", letter: "G", definition: "Inseto que canta à noite.", category: "natureza" },
   { word: "Harpa", startOrContain: "start", letter: "H", definition: "Instrumento grande de muitas cordas.", category: "arte-musica" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Casa de gelo dos esquimós.", category: "sociedade" },
+  { word: "Iguana", startOrContain: "start", letter: "I", definition: "Lagarto verde e grande das regiões quentes.", category: "natureza" },
   { word: "Jacaré", startOrContain: "start", letter: "J", definition: "Réptil de boca cheia de dentes.", category: "natureza" },
   { word: "Karatê", startOrContain: "start", letter: "K", definition: "Arte marcial japonesa.", category: "esporte-jogo" },
   { word: "Lustre", startOrContain: "start", letter: "L", definition: "Luminária do teto.", category: "cultura-geral" },

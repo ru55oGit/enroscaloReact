@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Forelle", startOrContain: "start", letter: "F", definition: "Fisch der klaren Bäche.", category: "natur" },
   { word: "Gräte", startOrContain: "start", letter: "G", definition: "Knöchelchen im Fisch.", category: "natur" },
   { word: "Hirsch", startOrContain: "start", letter: "H", definition: "Großes Waldtier mit Geweih.", category: "natur" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schneeblöcken.", category: "gesellschaft" },
+  { word: "Insel", startOrContain: "start", letter: "I", definition: "Land, das ganz von Wasser umgeben ist.", category: "natur" },
   { word: "Jolle", startOrContain: "start", letter: "J", definition: "Kleines Segelboot.", category: "verkehr" },
   { word: "Kissen", startOrContain: "start", letter: "K", definition: "Weiche Unterlage für den Kopf.", category: "kultur" },
   { word: "Liebig", startOrContain: "start", letter: "L", definition: "Nachname eines deutschen Chemikers.", category: "personen" },

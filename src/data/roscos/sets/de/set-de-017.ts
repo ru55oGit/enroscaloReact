@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Flügel", startOrContain: "start", letter: "F", definition: "Damit fliegt der Vogel.", category: "natur" },
   { word: "Glasscheibe", startOrContain: "start", letter: "G", definition: "Flaches Stück Glas im Fenster.", category: "kultur" },
   { word: "Heidelerche", startOrContain: "start", letter: "H", definition: "Lerche der Heide.", category: "natur" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schneeblöcken.", category: "gesellschaft" },
+  { word: "Ingenieur", startOrContain: "start", letter: "I", definition: "Person, die Maschinen und Brücken plant.", category: "gesellschaft" },
   { word: "Jolle", startOrContain: "start", letter: "J", definition: "Kleines Segelboot.", category: "verkehr" },
   { word: "Krähe", startOrContain: "start", letter: "K", definition: "Großer schwarzer Vogel.", category: "natur" },
   { word: "Liebermann", startOrContain: "start", letter: "L", definition: "Nachname von Max, einem deutschen Maler.", category: "personen" },

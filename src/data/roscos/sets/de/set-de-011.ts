@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Fußgänger", startOrContain: "start", letter: "F", definition: "Mensch, der zu Fuß geht.", category: "verkehr" },
   { word: "Glockenturm", startOrContain: "start", letter: "G", definition: "Turm, in dem die Glocken hängen.", category: "gesellschaft" },
   { word: "Hundehütte", startOrContain: "start", letter: "H", definition: "Häuschen für den Hund.", category: "gesellschaft" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schneeblöcken.", category: "gesellschaft" },
+  { word: "Idol", startOrContain: "start", letter: "I", definition: "Ein Vorbild, das man bewundert.", category: "gesellschaft" },
   { word: "Jolle", startOrContain: "start", letter: "J", definition: "Kleines Segelboot.", category: "verkehr" },
   { word: "Kraftwerk", startOrContain: "start", letter: "K", definition: "Anlage, die Strom erzeugt.", category: "gesellschaft" },
   { word: "Liebig", startOrContain: "start", letter: "L", definition: "Nachname eines deutschen Chemikers.", category: "personen" },

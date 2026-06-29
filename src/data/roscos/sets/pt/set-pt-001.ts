@@ -166,7 +166,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Fígado", startOrContain: "start", letter: "F", definition: "Órgão que ajuda a limpar o sangue.", category: "ciencias" },
   { word: "Garçom", startOrContain: "start", letter: "G", definition: "Pessoa que serve a comida no restaurante.", category: "sociedade" },
   { word: "Hipopótamo", startOrContain: "start", letter: "H", definition: "Animal grande que vive nos rios da África.", category: "natureza" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Casa feita de blocos de neve.", category: "cultura-geral" },
+  { word: "Ímã", startOrContain: "start", letter: "I", definition: "Objeto que atrai o metal.", category: "ciencias" },
   { word: "Jacaré", startOrContain: "start", letter: "J", definition: "Réptil de boca grande que vive em rios.", category: "natureza" },
   { word: "Kiwi", startOrContain: "start", letter: "K", definition: "Fruta marrom e peluda por fora, verde por dentro.", category: "gastronomia" },
   { word: "Lâmpada", startOrContain: "start", letter: "L", definition: "Objeto que dá luz.", category: "cultura-geral" },

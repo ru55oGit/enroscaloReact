@@ -21,7 +21,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Florbela", startOrContain: "start", letter: "F", definition: "Nome de Espanca, poeta portuguesa.", category: "personalidades" },
   { word: "Guimarães", startOrContain: "start", letter: "G", definition: "Sobrenome de Guimarães Rosa, escritor.", category: "personalidades" },
   { word: "Harpa", startOrContain: "start", letter: "H", definition: "Instrumento grande de muitas cordas.", category: "arte-musica" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Casa de gelo dos esquimós.", category: "sociedade" },
+  { word: "Inseto", startOrContain: "start", letter: "I", definition: "Bichinho de seis patas.", category: "natureza" },
   { word: "Jacaré", startOrContain: "start", letter: "J", definition: "Réptil de boca cheia de dentes.", category: "natureza" },
   { word: "Karatê", startOrContain: "start", letter: "K", definition: "Arte marcial japonesa.", category: "esporte-jogo" },
   { word: "Lentilha", startOrContain: "start", letter: "L", definition: "Grãozinho redondo do prato.", category: "gastronomia" },

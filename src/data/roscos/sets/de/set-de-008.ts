@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Fregatte", startOrContain: "start", letter: "F", definition: "Schnelles Kriegsschiff.", category: "verkehr" },
   { word: "Geier", startOrContain: "start", letter: "G", definition: "Großer Vogel, der Aas frisst.", category: "natur" },
   { word: "Hummel", startOrContain: "start", letter: "H", definition: "Dicke, pelzige Verwandte der Biene.", category: "natur" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schneeblöcken.", category: "gesellschaft" },
+  { word: "Insekt", startOrContain: "start", letter: "I", definition: "Kleines Tier mit sechs Beinen.", category: "natur" },
   { word: "Jolle", startOrContain: "start", letter: "J", definition: "Kleines Segelboot.", category: "verkehr" },
   { word: "Kompass", startOrContain: "start", letter: "K", definition: "Gerät, das nach Norden zeigt.", category: "wissenschaft" },
   { word: "Leibniz", startOrContain: "start", letter: "L", definition: "Nachname eines deutschen Mathematikers und Denkers.", category: "personen" },

@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Flügel", startOrContain: "start", letter: "F", definition: "Damit fliegt der Vogel.", category: "natur" },
   { word: "Gummistiefel", startOrContain: "start", letter: "G", definition: "Wasserdichter Stiefel.", category: "kultur" },
   { word: "Hüpfburg", startOrContain: "start", letter: "H", definition: "Aufblasbare Burg zum Springen.", category: "sport-spiel" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schneeblöcken.", category: "gesellschaft" },
+  { word: "Imbiss", startOrContain: "start", letter: "I", definition: "Kleiner Snack zwischendurch.", category: "essen" },
   { word: "Jolle", startOrContain: "start", letter: "J", definition: "Kleines Segelboot.", category: "verkehr" },
   { word: "Kohlrabi", startOrContain: "start", letter: "K", definition: "Rundes Kohlgemüse.", category: "essen" },
   { word: "Leibniz", startOrContain: "start", letter: "L", definition: "Nachname eines deutschen Mathematikers und Denkers.", category: "personen" },

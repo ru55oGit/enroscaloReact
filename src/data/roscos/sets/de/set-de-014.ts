@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Flügel", startOrContain: "start", letter: "F", definition: "Damit fliegt der Vogel.", category: "natur" },
   { word: "Gleis", startOrContain: "start", letter: "G", definition: "Schienenpaar für den Zug.", category: "verkehr" },
   { word: "Heugabel", startOrContain: "start", letter: "H", definition: "Gabel zum Wenden von Heu.", category: "kultur" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schneeblöcken.", category: "gesellschaft" },
+  { word: "Instrument", startOrContain: "start", letter: "I", definition: "Gerät, mit dem man Musik macht.", category: "kunst-musik" },
   { word: "Jolle", startOrContain: "start", letter: "J", definition: "Kleines Segelboot.", category: "verkehr" },
   { word: "Kirschbaum", startOrContain: "start", letter: "K", definition: "Baum, der Kirschen trägt.", category: "natur" },
   { word: "Lahm", startOrContain: "start", letter: "L", definition: "Nachname eines deutschen Fußballspielers, Weltmeister.", category: "personen" },

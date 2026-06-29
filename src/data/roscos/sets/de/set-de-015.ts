@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Flügel", startOrContain: "start", letter: "F", definition: "Damit fliegt der Vogel.", category: "natur" },
   { word: "Grottenolm", startOrContain: "start", letter: "G", definition: "Blasser Lurch der Höhlen.", category: "natur" },
   { word: "Holunder", startOrContain: "start", letter: "H", definition: "Strauch mit weißen Blüten und schwarzen Beeren.", category: "natur" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schneeblöcken.", category: "gesellschaft" },
+  { word: "Irrlicht", startOrContain: "start", letter: "I", definition: "Geheimnisvolles Licht über dem Moor.", category: "mythos" },
   { word: "Jolle", startOrContain: "start", letter: "J", definition: "Kleines Segelboot.", category: "verkehr" },
   { word: "Klingel", startOrContain: "start", letter: "K", definition: "Glocke, die läutet.", category: "kultur" },
   { word: "Liebig", startOrContain: "start", letter: "L", definition: "Nachname eines deutschen Chemikers.", category: "personen" },

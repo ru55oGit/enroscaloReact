@@ -21,7 +21,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Florete", startOrContain: "start", letter: "F", definition: "Espada fina usada na esgrima.", category: "esporte-jogo" },
   { word: "Guelra", startOrContain: "start", letter: "G", definition: "Órgão com que o peixe respira.", category: "natureza" },
   { word: "Harpa", startOrContain: "start", letter: "H", definition: "Instrumento de cordas dedilhadas, de formato triangular.", category: "arte-musica" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Abrigo de blocos de gelo dos povos do Ártico.", category: "sociedade" },
+  { word: "Íris", startOrContain: "start", letter: "I", definition: "A parte colorida do olho.", category: "ciencias" },
   { word: "Jacaré", startOrContain: "start", letter: "J", definition: "Réptil de focinho largo dos rios brasileiros.", category: "natureza" },
   { word: "Karatê", startOrContain: "start", letter: "K", definition: "Arte marcial japonesa de golpes secos.", category: "esporte-jogo" },
   { word: "Lira", startOrContain: "start", letter: "L", definition: "Instrumento de cordas da Grécia antiga.", category: "arte-musica" },

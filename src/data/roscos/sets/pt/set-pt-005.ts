@@ -21,7 +21,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Figo", startOrContain: "start", letter: "F", definition: "Sobrenome de Luís, craque português.", category: "personalidades" },
   { word: "Gaita", startOrContain: "start", letter: "G", definition: "Instrumento de sopro pequenininho.", category: "arte-musica" },
   { word: "Harpa", startOrContain: "start", letter: "H", definition: "Instrumento grande de muitas cordas.", category: "arte-musica" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Casa de gelo dos esquimós.", category: "sociedade" },
+  { word: "Igreja", startOrContain: "start", letter: "I", definition: "Lugar onde as pessoas vão rezar.", category: "sociedade" },
   { word: "Jacaré", startOrContain: "start", letter: "J", definition: "Réptil de boca cheia de dentes.", category: "natureza" },
   { word: "Karatê", startOrContain: "start", letter: "K", definition: "Arte marcial japonesa.", category: "esporte-jogo" },
   { word: "Lacraia", startOrContain: "start", letter: "L", definition: "Bichinho de muitas patas.", category: "natureza" },

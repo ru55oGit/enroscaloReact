@@ -166,7 +166,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Ferse", startOrContain: "start", letter: "F", definition: "Hinterer Teil des Fußes.", category: "wissenschaft" },
   { word: "Gärtner", startOrContain: "start", letter: "G", definition: "Person, die sich um den Garten kümmert.", category: "gesellschaft" },
   { word: "Hund", startOrContain: "start", letter: "H", definition: "Treues Haustier, das bellt.", category: "natur" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schnee.", category: "kultur" },
+  { word: "Igel", startOrContain: "start", letter: "I", definition: "Kleines Tier mit Stacheln.", category: "natur" },
   { word: "Jaguar", startOrContain: "start", letter: "J", definition: "Große gefleckte Raubkatze.", category: "natur" },
   { word: "Kirsche", startOrContain: "start", letter: "K", definition: "Kleine rote Frucht mit Stein.", category: "essen" },
   { word: "Lampe", startOrContain: "start", letter: "L", definition: "Gerät, das Licht gibt.", category: "kultur" },

@@ -21,7 +21,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Fábula", startOrContain: "start", letter: "F", definition: "Conto curto com animais e uma lição.", category: "arte-musica" },
   { word: "Gabarito", startOrContain: "start", letter: "G", definition: "Lista das respostas certas de uma prova.", category: "sociedade" },
   { word: "Harpa", startOrContain: "start", letter: "H", definition: "Instrumento de cordas dedilhadas, de formato triangular.", category: "arte-musica" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Abrigo de blocos de gelo dos povos do Ártico.", category: "sociedade" },
+  { word: "Instrumento", startOrContain: "start", letter: "I", definition: "Objeto que serve para fazer música.", category: "arte-musica" },
   { word: "Jacaré", startOrContain: "start", letter: "J", definition: "Réptil de focinho largo dos rios brasileiros.", category: "natureza" },
   { word: "Karatê", startOrContain: "start", letter: "K", definition: "Arte marcial japonesa de golpes secos.", category: "esporte-jogo" },
   { word: "Labareda", startOrContain: "start", letter: "L", definition: "Língua de fogo que se ergue.", category: "ciencias" },

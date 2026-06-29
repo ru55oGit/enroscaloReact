@@ -21,7 +21,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Fivela", startOrContain: "start", letter: "F", definition: "Peça que fecha o cinto.", category: "cultura-geral" },
   { word: "Gibi", startOrContain: "start", letter: "G", definition: "Revistinha de histórias.", category: "arte-musica" },
   { word: "Harpa", startOrContain: "start", letter: "H", definition: "Instrumento grande de muitas cordas.", category: "arte-musica" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Casa de gelo dos esquimós.", category: "sociedade" },
+  { word: "Ioiô", startOrContain: "start", letter: "I", definition: "Brinquedo que sobe e desce por um cordão.", category: "esporte-jogo" },
   { word: "Jacaré", startOrContain: "start", letter: "J", definition: "Réptil de boca cheia de dentes.", category: "natureza" },
   { word: "Karatê", startOrContain: "start", letter: "K", definition: "Arte marcial japonesa.", category: "esporte-jogo" },
   { word: "Limão", startOrContain: "start", letter: "L", definition: "Fruta verde e azeda.", category: "gastronomia" },

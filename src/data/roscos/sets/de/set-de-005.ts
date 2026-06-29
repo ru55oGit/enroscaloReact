@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Fass", startOrContain: "start", letter: "F", definition: "Rundes Holzgefäß für Flüssigkeit.", category: "kultur" },
   { word: "Geschenk", startOrContain: "start", letter: "G", definition: "Gabe, die man jemandem macht.", category: "gesellschaft" },
   { word: "Haut", startOrContain: "start", letter: "H", definition: "Äußere Hülle des Körpers.", category: "wissenschaft" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schneeblöcken.", category: "gesellschaft" },
+  { word: "Imker", startOrContain: "start", letter: "I", definition: "Person, die Bienen hält.", category: "gesellschaft" },
   { word: "Jolle", startOrContain: "start", letter: "J", definition: "Kleines Segelboot.", category: "verkehr" },
   { word: "Kamm", startOrContain: "start", letter: "K", definition: "Gerät, das die Haare ordnet.", category: "kultur" },
   { word: "Lessing", startOrContain: "start", letter: "L", definition: "Nachname eines berühmten deutschen Dichters.", category: "personen" },

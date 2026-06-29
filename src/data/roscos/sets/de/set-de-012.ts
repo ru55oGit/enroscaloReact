@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Fontäne", startOrContain: "start", letter: "F", definition: "Hoher Wasserstrahl.", category: "natur" },
   { word: "Grabstein", startOrContain: "start", letter: "G", definition: "Stein über einem Grab.", category: "gesellschaft" },
   { word: "Heckenrose", startOrContain: "start", letter: "H", definition: "Wilde Rose der Hecken.", category: "natur" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schneeblöcken.", category: "gesellschaft" },
+  { word: "Internet", startOrContain: "start", letter: "I", definition: "Weltweites Netz aus Computern.", category: "wissenschaft" },
   { word: "Jolle", startOrContain: "start", letter: "J", definition: "Kleines Segelboot.", category: "verkehr" },
   { word: "Kanal", startOrContain: "start", letter: "K", definition: "Künstlicher Wasserlauf.", category: "verkehr" },
   { word: "Leibniz", startOrContain: "start", letter: "L", definition: "Nachname eines deutschen Mathematikers und Denkers.", category: "personen" },

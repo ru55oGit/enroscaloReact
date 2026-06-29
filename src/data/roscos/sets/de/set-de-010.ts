@@ -195,7 +195,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Fleischer", startOrContain: "start", letter: "F", definition: "Handwerker, der Fleisch verkauft.", category: "gesellschaft" },
   { word: "Gewürz", startOrContain: "start", letter: "G", definition: "Zutat, die das Essen würzt.", category: "essen" },
   { word: "Hauptstadt", startOrContain: "start", letter: "H", definition: "Wichtigste Stadt eines Landes.", category: "gesellschaft" },
-  { word: "Iglu", startOrContain: "start", letter: "I", definition: "Haus aus Schneeblöcken.", category: "gesellschaft" },
+  { word: "Idee", startOrContain: "start", letter: "I", definition: "Ein Gedanke, der einem einfällt.", category: "gesellschaft" },
   { word: "Jolle", startOrContain: "start", letter: "J", definition: "Kleines Segelboot.", category: "verkehr" },
   { word: "Knospe", startOrContain: "start", letter: "K", definition: "Geschlossene junge Blüte.", category: "natur" },
   { word: "Lahm", startOrContain: "start", letter: "L", definition: "Nachname eines deutschen Fußballspielers, Weltmeister.", category: "personen" },
