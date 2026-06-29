@@ -110,8 +110,8 @@ export default function WelcomeScreen() {
   const LANG_LOCALE: Record<string, string> = { es: "es-AR", en: "en-US", pt: "pt-BR", fr: "fr-FR", de: "de-DE" };
   const DAY_OFFSETS: Record<DayKey, number> = { sun: 0, mon: 1, tue: 2, wed: 3, thu: 4, fri: 5, sat: 6 };
 
-  const [cumulativeStats, setCumulativeStats] = useState<CumulativeStats>(() => getCumulativeStats());
-  const [bestStreak, setBestStreak] = useState<BestStreak | null>(() => getBestStreak());
+  const [cumulativeStats, setCumulativeStats] = useState<CumulativeStats>(() => getCumulativeStats(currentLanguage));
+  const [bestStreak, setBestStreak] = useState<BestStreak | null>(() => getBestStreak(currentLanguage));
 
   useEffect(() => {
     for (const day of WEEK_DAYS) {
@@ -125,6 +125,7 @@ export default function WelcomeScreen() {
       const date = new Date(y, m - 1, d + DAY_OFFSETS[day.key]);
       const isoDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
       upsertHistoryDay({
+        lang: currentLanguage,
         weekStart: activeRoscoContext.weekStart,
         dayKey: day.key,
         date: isoDate,
@@ -132,9 +133,9 @@ export default function WelcomeScreen() {
         entries: rosco.map((e) => ({ word: e.word, definition: e.definition, letter: e.letter, category: e.category })),
       });
     }
-    setCumulativeStats(getCumulativeStats());
-    setBestStreak(getBestStreak());
-  }, [weeklyState, activeRoscoContext]);
+    setCumulativeStats(getCumulativeStats(currentLanguage));
+    setBestStreak(getBestStreak(currentLanguage));
+  }, [weeklyState, activeRoscoContext, currentLanguage]);
 
   const hasCategoryStats = Object.keys(cumulativeStats.byCategory).length > 0;
   const hasGlobalStats = cumulativeStats.correct + cumulativeStats.wrong + cumulativeStats.passed > 0;

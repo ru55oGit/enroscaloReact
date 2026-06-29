@@ -8,6 +8,7 @@ export interface HistoryEntry {
 }
 
 export interface HistoryDayRecord {
+  lang: string;
   weekStart: string;
   dayKey: DayKey;
   date: string;
@@ -46,7 +47,7 @@ function getHistory(): HistoryStore {
 export function upsertHistoryDay(record: HistoryDayRecord): void {
   const store = getHistory();
   const idx = store.days.findIndex(
-    (d) => d.weekStart === record.weekStart && d.dayKey === record.dayKey
+    (d) => d.lang === record.lang && d.weekStart === record.weekStart && d.dayKey === record.dayKey
   );
   if (idx >= 0) {
     store.days[idx] = record;
@@ -56,12 +57,12 @@ export function upsertHistoryDay(record: HistoryDayRecord): void {
   localStorage.setItem(HISTORY_KEY, JSON.stringify(store));
 }
 
-export function getCumulativeStats(): CumulativeStats {
+export function getCumulativeStats(lang: string): CumulativeStats {
   const { days } = getHistory();
   let correct = 0, wrong = 0, passed = 0;
   const byCategory: Record<string, { correct: number; wrong: number }> = {};
 
-  for (const day of days) {
+  for (const day of days.filter((d) => d.lang === lang)) {
     day.statuses.forEach((status, i) => {
       if (status === "correct") correct++;
       else if (status === "wrong") wrong++;
@@ -79,11 +80,11 @@ export function getCumulativeStats(): CumulativeStats {
   return { correct, wrong, passed, byCategory };
 }
 
-export function getBestStreak(): BestStreak | null {
+export function getBestStreak(lang: string): BestStreak | null {
   const { days } = getHistory();
   let best: BestStreak | null = null;
 
-  for (const day of days) {
+  for (const day of days.filter((d) => d.lang === lang)) {
     let current: HistoryEntry[] = [];
     let longest: HistoryEntry[] = [];
 
