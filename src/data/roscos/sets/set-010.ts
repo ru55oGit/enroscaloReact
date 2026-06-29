@@ -189,7 +189,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Karaoke", startOrContain: "start", letter: "K", definition: "Actividad de cantar siguiendo la letra en una pantalla.", category: "arte-musica" },
   { word: "Lima", startOrContain: "start", letter: "L", definition: "Fruta cítrica verde y ácida, parecida al limón.", category: "gastronomia" },
   { word: "Murray", startOrContain: "start", letter: "M", definition: "Apellido del tenista británico Andy, campeón olímpico.", category: "personalidades" },
-  { word: "Naranjo", startOrContain: "start", letter: "N", definition: "Árbol que da naranjas.", category: "naturaleza" },
+  { word: "Naranjo", startOrContain: "start", letter: "N", definition: "Árbol de hojas verdes y perennes que da una fruta cítrica de color anaranjado y sabor dulce.", category: "naturaleza" },
   { word: "Omoplato", startOrContain: "start", letter: "O", definition: "Hueso plano y triangular de la parte alta de la espalda.", category: "ciencias" },
   { word: "Pantalon", startOrContain: "start", letter: "P", definition: "Prenda que cubre cada pierna por separado.", category: "cultura-general" },
   { word: "Paquete", startOrContain: "contain", letter: "Q", definition: "Conjunto de cosas envueltas para llevar o regalar.", category: "cultura-general" },

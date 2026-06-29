@@ -129,7 +129,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Interruptor", startOrContain: "start", letter: "I", definition: "Botón o llave para encender y apagar la luz.", category: "ciencias" },
   { word: "Jumento", startOrContain: "start", letter: "J", definition: "Otra forma de llamar al burro.", category: "naturaleza" },
   { word: "Kimono", startOrContain: "start", letter: "K", definition: "Túnica tradicional japonesa de mangas anchas.", category: "cultura-general" },
-  { word: "Lila", startOrContain: "start", letter: "L", definition: "Color violeta muy claro.", category: "arte-musica" },
+  { word: "Lila", startOrContain: "start", letter: "L", definition: "Color violeta muy claro y suave, parecido al de ciertas flores, ubicado entre el rosa y el morado.", category: "arte-musica" },
   { word: "Mcadams", startOrContain: "start", letter: "M", definition: "Apellido de la actriz canadiense Rachel, famosa por El diario de Noah y Mean Girls.", category: "personalidades" },
   { word: "Nautilo", startOrContain: "start", letter: "N", definition: "Molusco marino con una concha enrollada en espiral.", category: "naturaleza" },
   { word: "Operacion", startOrContain: "start", letter: "O", definition: "Cálculo matemático como la suma o la resta.", category: "educacion-sociedad" },
@@ -178,7 +178,7 @@ const ROSCO_6: RoscoEntry[] = [
 const ROSCO_7: RoscoEntry[] = [
   { word: "Ambiente", startOrContain: "start", letter: "A", definition: "Todo lo que rodea a los seres vivos: el aire, el agua y la tierra.", category: "naturaleza" },
   { word: "Beige", startOrContain: "start", letter: "B", definition: "Color marrón muy claro, como la arena.", category: "arte-musica" },
-  { word: "Christie", startOrContain: "start", letter: "C", definition: "Apellido de la escritora inglesa de novelas policiales.", category: "personalidades" },
+  { word: "Christie", startOrContain: "start", letter: "C", definition: "Escritora inglesa de novelas policiales, llamada Agatha, creadora del detective Hércules Poirot.", category: "personalidades" },
   { word: "Dorado", startOrContain: "start", letter: "D", definition: "Pez de río de escamas brillantes y doradas.", category: "naturaleza" },
   { word: "Escalon", startOrContain: "start", letter: "E", definition: "Cada uno de los peldaños de una escalera.", category: "cultura-general" },
   { word: "Forma", startOrContain: "start", letter: "F", definition: "Contorno o figura que tiene un objeto.", category: "ciencias" },

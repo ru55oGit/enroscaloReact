@@ -9,7 +9,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Empatia", startOrContain: "start", letter: "E", definition: "Capacidad de ponerse en el lugar del otro.", category: "cultura-general" },
   { word: "Futsal", startOrContain: "start", letter: "F", definition: "Fútbol que se juega en una cancha chica bajo techo.", category: "deporte-juego" },
   { word: "Gruta", startOrContain: "start", letter: "G", definition: "Cueva, a veces escondida bajo el agua.", category: "naturaleza" },
-  { word: "Higuera", startOrContain: "start", letter: "H", definition: "Árbol que da los higos.", category: "naturaleza" },
+  { word: "Higuera", startOrContain: "start", letter: "H", definition: "Árbol de hojas grandes y ásperas que da los higos, fruta dulce muy típica del Mediterráneo.", category: "naturaleza" },
   { word: "Inambu", startOrContain: "start", letter: "I", definition: "Ave criolla parecida a la perdiz que corre por el campo.", category: "naturaleza" },
   { word: "Judo", startOrContain: "start", letter: "J", definition: "Arte marcial olímpico en el que se derriba al rival.", category: "deporte-juego" },
   { word: "Kiwi", startOrContain: "start", letter: "K", definition: "Ave de Nueva Zelanda que no vuela y tiene pico largo.", category: "naturaleza" },
@@ -77,7 +77,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Olmo", startOrContain: "start", letter: "O", definition: "Árbol alto de copa ancha y buena sombra.", category: "naturaleza" },
   { word: "Pararrayos", startOrContain: "start", letter: "P", definition: "Barra que protege los edificios de los rayos.", category: "ciencias" },
   { word: "Quetzal", startOrContain: "start", letter: "Q", definition: "Ave de larguísima cola verde de las selvas de América.", category: "naturaleza" },
-  { word: "Ronaldinho", startOrContain: "start", letter: "R", definition: "Apellido del crack brasileño campeón del mundo en 2002.", category: "personalidades" },
+  { word: "Ronaldinho", startOrContain: "start", letter: "R", definition: "Apodo del crack brasileño Ronaldo de Assis, campeón del mundo en 2002, elegido mejor jugador del planeta en dos ocasiones.", category: "personalidades" },
   { word: "Sietecolores", startOrContain: "start", letter: "S", definition: "Pajarito muy colorido que vive cerca de las lagunas.", category: "naturaleza" },
   { word: "Tero", startOrContain: "start", letter: "T", definition: "Ave del campo que avisa con su grito cuando alguien se acerca.", category: "naturaleza" },
   { word: "Tubo", startOrContain: "contain", letter: "U", definition: "Pieza hueca de ensayo usada en el laboratorio.", category: "ciencias" },
@@ -91,7 +91,7 @@ const ROSCO_3: RoscoEntry[] = [
 const ROSCO_4: RoscoEntry[] = [
   { word: "Alumbrado", startOrContain: "start", letter: "A", definition: "Conjunto de luces que iluminan las calles de noche.", category: "cultura-general" },
   { word: "Bacalao", startOrContain: "start", letter: "B", definition: "Pez grande de mar muy usado como alimento.", category: "naturaleza" },
-  { word: "Cafu", startOrContain: "start", letter: "C", definition: "Apellido del lateral brasileño dos veces campeón del mundo.", category: "personalidades" },
+  { word: "Cafu", startOrContain: "start", letter: "C", definition: "Apodo del lateral brasileño Marcos, dos veces campeón del mundo, considerado el mejor lateral derecho de la historia.", category: "personalidades" },
   { word: "Datilera", startOrContain: "start", letter: "D", definition: "Palmera que da los dátiles.", category: "naturaleza" },
   { word: "Estetoscopio", startOrContain: "start", letter: "E", definition: "Instrumento con el que el médico escucha el corazón.", category: "ciencias" },
   { word: "Fresno", startOrContain: "start", letter: "F", definition: "Árbol de madera fuerte y hojas que dan buena sombra.", category: "naturaleza" },
@@ -148,7 +148,7 @@ const ROSCO_5: RoscoEntry[] = [
 
 const ROSCO_6: RoscoEntry[] = [
   { word: "Amabilidad", startOrContain: "start", letter: "A", definition: "Cualidad de tratar a los demás con cariño y buen trato.", category: "cultura-general" },
-  { word: "Bebeto", startOrContain: "start", letter: "B", definition: "Apellido del delantero brasileño campeón del mundo en 1994.", category: "personalidades" },
+  { word: "Bebeto", startOrContain: "start", letter: "B", definition: "Apodo del delantero brasileño de nombre José Roberto, campeón del mundo en 1994 y célebre por su festejo del bebé.", category: "personalidades" },
   { word: "Cardumen", startOrContain: "start", letter: "C", definition: "Gran grupo de peces que nadan juntos.", category: "naturaleza" },
   { word: "Dunst", startOrContain: "start", letter: "D", definition: "Apellido de la actriz estadounidense Kirsten, famosa por Spider-Man y Melancolía.", category: "personalidades" },
   { word: "Estacionamiento", startOrContain: "start", letter: "E", definition: "Lugar donde se dejan los autos.", category: "cultura-general" },

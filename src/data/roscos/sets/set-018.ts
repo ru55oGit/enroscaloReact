@@ -42,7 +42,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Icaco", startOrContain: "start", letter: "I", definition: "Fruta tropical de pulpa blanca, también llamada ciruela de playa.", category: "gastronomia" },
   { word: "Jarron", startOrContain: "start", letter: "J", definition: "Recipiente alto que adorna y sostiene flores.", category: "cultura-general" },
   { word: "Kiwi", startOrContain: "start", letter: "K", definition: "Fruta de cáscara peluda y pulpa verde con semillitas.", category: "gastronomia" },
-  { word: "Lluvioso", startOrContain: "start", letter: "L", definition: "Día con mucha lluvia.", category: "naturaleza" },
+  { word: "Lluvioso", startOrContain: "start", letter: "L", definition: "Día gris en que cae mucha agua del cielo, ideal para quedarse adentro con un mate bien caliente.", category: "naturaleza" },
   { word: "Madrugada", startOrContain: "start", letter: "M", definition: "Primeras horas del día, antes de que salga el sol.", category: "naturaleza" },
   { word: "Nemesis", startOrContain: "start", letter: "N", definition: "Diosa griega de la justicia y la venganza.", category: "mitologia-fantasia" },
   { word: "Ocelote", startOrContain: "start", letter: "O", definition: "Felino salvaje pequeño de pelaje manchado.", category: "naturaleza" },
@@ -81,7 +81,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Solsticio", startOrContain: "start", letter: "S", definition: "Día más largo o más corto del año.", category: "ciencias" },
   { word: "Tamarindo", startOrContain: "start", letter: "T", definition: "Fruta tropical de vaina marrón y pulpa agridulce.", category: "gastronomia" },
   { word: "Nube", startOrContain: "contain", letter: "U", definition: "Masa de vapor de agua que flota en el cielo.", category: "naturaleza" },
-  { word: "Ventanal", startOrContain: "start", letter: "V", definition: "Ventana muy grande.", category: "cultura-general" },
+  { word: "Ventanal", startOrContain: "start", letter: "V", definition: "Ventana de gran tamaño que deja entrar mucha luz, típica de salones amplios y edificios modernos.", category: "cultura-general" },
   { word: "Walhalla", startOrContain: "start", letter: "W", definition: "Palacio donde iban los héroes muertos según los mitos nórdicos.", category: "mitologia-fantasia" },
   { word: "Oxigeno", startOrContain: "contain", letter: "X", definition: "Gas del aire que necesitamos para respirar.", category: "ciencias" },
   { word: "Yarda", startOrContain: "start", letter: "Y", definition: "Medida que se usa para avanzar en el fútbol americano.", category: "deporte-juego" },
@@ -129,7 +129,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Intercepcion", startOrContain: "start", letter: "I", definition: "Acción de cortar un pase del equipo rival.", category: "deporte-juego" },
   { word: "Jugada", startOrContain: "start", letter: "J", definition: "Movimiento que hace el equipo para buscar el gol.", category: "deporte-juego" },
   { word: "Kit", startOrContain: "start", letter: "K", definition: "Conjunto de elementos para una misma tarea, como el de herramientas.", category: "cultura-general" },
-  { word: "Lobezno", startOrContain: "start", letter: "L", definition: "Cría del lobo.", category: "naturaleza" },
+  { word: "Lobezno", startOrContain: "start", letter: "L", definition: "Cría del lobo, todavía pequeña y dependiente de la manada para sobrevivir y aprender a cazar.", category: "naturaleza" },
   { word: "Mediocampista", startOrContain: "start", letter: "M", definition: "Jugador que se mueve en el medio de la cancha.", category: "deporte-juego" },
   { word: "Neymar", startOrContain: "start", letter: "N", definition: "Apellido del crack brasileño Junior, gran gambeteador.", category: "personalidades" },
   { word: "Okinawa", startOrContain: "start", letter: "O", definition: "Isla japonesa del Pacífico, escenario de una de las batallas más cruentas de la Segunda Guerra.", category: "cultura-general" },
@@ -201,7 +201,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Whippet", startOrContain: "start", letter: "W", definition: "Perro delgado y muy veloz, parecido al galgo.", category: "naturaleza" },
   { word: "Exito", startOrContain: "contain", letter: "X", definition: "Triunfo que logra un héroe en su aventura.", category: "cultura-general" },
   { word: "Yodo", startOrContain: "start", letter: "Y", definition: "Elemento químico que el cuerpo necesita en pequeña cantidad.", category: "ciencias" },
-  { word: "Llovizna", startOrContain: "contain", letter: "Z", definition: "Lluvia muy suave y fina.", category: "naturaleza" },
+  { word: "Llovizna", startOrContain: "contain", letter: "Z", definition: "Lluvia muy fina y suave, de gotitas pequeñas y casi imperceptibles, que apenas moja pero deja todo húmedo.", category: "naturaleza" },
 ];
 
 export const ROSCO_SET_018: Record<DayKey, RoscoEntry[]> = {

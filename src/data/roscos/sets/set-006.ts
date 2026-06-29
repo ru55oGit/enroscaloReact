@@ -40,7 +40,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Gondola", startOrContain: "start", letter: "G", definition: "Bote alargado típico de los canales de Venecia.", category: "transporte" },
   { word: "Hechizo", startOrContain: "start", letter: "H", definition: "Conjuro mágico que produce un efecto sorprendente.", category: "mitologia-fantasia" },
   { word: "Inundacion", startOrContain: "start", letter: "I", definition: "Gran cantidad de agua que cubre un terreno que suele estar seco.", category: "naturaleza" },
-  { word: "Junio", startOrContain: "start", letter: "J", definition: "Sexto mes del año.", category: "cultura-general" },
+  { word: "Junio", startOrContain: "start", letter: "J", definition: "Sexto mes del año, justo antes de la mitad, cuando empieza el invierno en el hemisferio sur.", category: "cultura-general" },
   { word: "Kart", startOrContain: "start", letter: "K", definition: "Pequeño vehículo de carreras sin techo ni puertas.", category: "transporte" },
   { word: "Lana", startOrContain: "start", letter: "L", definition: "Pelo suave de la oveja con el que se tejen prendas.", category: "naturaleza" },
   { word: "Marea", startOrContain: "start", letter: "M", definition: "Subida y bajada del nivel del mar a lo largo del día.", category: "naturaleza" },
@@ -60,7 +60,7 @@ const ROSCO_2: RoscoEntry[] = [
 ];
 
 const ROSCO_3: RoscoEntry[] = [
-  { word: "Almodovar", startOrContain: "start", letter: "A", definition: "Uno de los directores de cine más destacados de España.", category: "personalidades" },
+  { word: "Almodovar", startOrContain: "start", letter: "A", definition: "Director de cine español ganador del Óscar, llamado Pedro, conocido por sus películas coloridas y polémicas.", category: "personalidades" },
   { word: "Bibliotecario", startOrContain: "start", letter: "B", definition: "Persona que cuida y ordena los libros de una biblioteca.", category: "educacion-sociedad" },
   { word: "Cactus", startOrContain: "start", letter: "C", definition: "Planta del desierto cubierta de espinas que guarda agua.", category: "naturaleza" },
   { word: "Guadalajara", startOrContain: "contain", letter: "D", definition: "Segunda ciudad de México, capital de Jalisco y cuna del mariachi y el tequila.", category: "cultura-general" },
@@ -129,7 +129,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Impermeable", startOrContain: "start", letter: "I", definition: "Abrigo que no deja pasar el agua de la lluvia.", category: "cultura-general" },
   { word: "Jardinero", startOrContain: "start", letter: "J", definition: "Persona que cuida las plantas y el césped de un jardín.", category: "educacion-sociedad" },
   { word: "Kimono", startOrContain: "start", letter: "K", definition: "Túnica tradicional japonesa de mangas anchas.", category: "cultura-general" },
-  { word: "Llovizna", startOrContain: "start", letter: "L", definition: "Lluvia muy fina y suave.", category: "naturaleza" },
+  { word: "Llovizna", startOrContain: "start", letter: "L", definition: "Lluvia muy fina y suave, de gotitas pequeñas y casi imperceptibles, que apenas moja pero deja todo húmedo.", category: "naturaleza" },
   { word: "Maestro", startOrContain: "start", letter: "M", definition: "Persona que enseña en la escuela.", category: "educacion-sociedad" },
   { word: "Nubarron", startOrContain: "start", letter: "N", definition: "Nube grande y oscura que anuncia tormenta.", category: "naturaleza" },
   { word: "Ojota", startOrContain: "start", letter: "O", definition: "Calzado abierto y liviano que se usa en verano.", category: "cultura-general" },
@@ -171,7 +171,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Vivero", startOrContain: "start", letter: "V", definition: "Lugar donde se cultivan plantas para luego venderlas.", category: "naturaleza" },
   { word: "Webcam", startOrContain: "start", letter: "W", definition: "Pequeña cámara conectada a la computadora.", category: "ciencias" },
   { word: "Mixto", startOrContain: "contain", letter: "X", definition: "Que está formado por cosas de distinto tipo mezcladas.", category: "cultura-general" },
-  { word: "Yegua", startOrContain: "start", letter: "Y", definition: "Hembra del caballo.", category: "naturaleza" },
+  { word: "Yegua", startOrContain: "start", letter: "Y", definition: "Hembra adulta del caballo, usada para montar, tirar carros o dar cría a los potrillos.", category: "naturaleza" },
   { word: "Cruz", startOrContain: "contain", letter: "Z", definition: "Figura formada por dos líneas que se cruzan.", category: "cultura-general" },
 ];
 

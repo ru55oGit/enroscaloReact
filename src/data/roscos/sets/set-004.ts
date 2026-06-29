@@ -200,7 +200,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Verso", startOrContain: "start", letter: "V", definition: "Cada una de las líneas que forman un poema.", category: "educacion-sociedad" },
   { word: "Windsurfista", startOrContain: "start", letter: "W", definition: "Deportista que navega de pie sobre una tabla impulsada por una vela.", category: "deporte-juego" },
   { word: "Exacto", startOrContain: "contain", letter: "X", definition: "Que es totalmente preciso y no tiene ningún error.", category: "educacion-sociedad" },
-  { word: "Yuan", startOrContain: "start", letter: "Y", definition: "Moneda oficial de China.", category: "educacion-sociedad" },
+  { word: "Yuan", startOrContain: "start", letter: "Y", definition: "Moneda oficial de China, usada en su enorme economía, una de las más importantes del mundo actual.", category: "educacion-sociedad" },
   { word: "Brazo", startOrContain: "contain", letter: "Z", definition: "Parte del cuerpo que va desde el hombro hasta la mano.", category: "ciencias" },
 ];
 

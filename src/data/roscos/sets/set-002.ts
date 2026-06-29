@@ -149,7 +149,7 @@ const ROSCO_5: RoscoEntry[] = [
 const ROSCO_6: RoscoEntry[] = [
   { word: "Abanico", startOrContain: "start", letter: "A", definition: "Objeto plegable que se agita con la mano para darse aire en días calurosos.", category: "cultura-general" },
   { word: "Bombero", startOrContain: "start", letter: "B", definition: "Persona encargada de apagar incendios y ayudar en emergencias y rescates.", category: "educacion-sociedad" },
-  { word: "Curie", startOrContain: "start", letter: "C", definition: "Apellido de la científica polaca pionera en el estudio de la radiactividad.", category: "personalidades" },
+  { word: "Curie", startOrContain: "start", letter: "C", definition: "Científica polaca, llamada Marie, pionera en el estudio de la radiactividad y ganadora de dos premios Nobel.", category: "personalidades" },
   { word: "Dentista", startOrContain: "start", letter: "D", definition: "Profesional de la salud que cuida, cura y arregla los dientes de las personas.", category: "educacion-sociedad" },
   { word: "Empanada", startOrContain: "start", letter: "E", definition: "Masa rellena de carne, verduras o queso que se hornea o se fríe, típica de Argentina.", category: "gastronomia" },
   { word: "Filtro", startOrContain: "start", letter: "F", definition: "Elemento que separa impurezas o partículas de un líquido o gas al hacerlo pasar por él.", category: "ciencias" },

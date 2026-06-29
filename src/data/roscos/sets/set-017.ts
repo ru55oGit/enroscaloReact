@@ -4,7 +4,7 @@ import { RoscoEntry } from "./set-001";
 const ROSCO_1: RoscoEntry[] = [
   { word: "Avogadro", startOrContain: "start", letter: "A", definition: "Apellido del científico italiano Amedeo, que estudió las moléculas.", category: "personalidades" },
   { word: "Broca", startOrContain: "start", letter: "B", definition: "Punta filosa del taladro que hace agujeros.", category: "ciencias" },
-  { word: "Cordero", startOrContain: "start", letter: "C", definition: "Cría de la oveja.", category: "naturaleza" },
+  { word: "Cordero", startOrContain: "start", letter: "C", definition: "Cría de la oveja, todavía pequeña, muy apreciada por su carne tierna y por su lana suave.", category: "naturaleza" },
   { word: "Destral", startOrContain: "start", letter: "D", definition: "Hacha pequeña que se usa con una mano.", category: "ciencias" },
   { word: "Estola", startOrContain: "start", letter: "E", definition: "Tira larga de tela o piel que se pone sobre los hombros.", category: "cultura-general" },
   { word: "Franela", startOrContain: "start", letter: "F", definition: "Tela suave y abrigada de algodón.", category: "cultura-general" },
@@ -15,7 +15,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Kremlin", startOrContain: "start", letter: "K", definition: "Famoso conjunto de edificios y murallas de Moscú.", category: "cultura-general" },
   { word: "Lavandero", startOrContain: "start", letter: "L", definition: "Persona que se dedica a lavar la ropa.", category: "educacion-sociedad" },
   { word: "Marimba", startOrContain: "start", letter: "M", definition: "Instrumento de láminas de madera que se golpean.", category: "arte-musica" },
-  { word: "Naciente", startOrContain: "start", letter: "N", definition: "Lugar donde nace un río.", category: "naturaleza" },
+  { word: "Naciente", startOrContain: "start", letter: "N", definition: "Lugar donde brota y comienza a correr un río, generalmente en lo alto de las montañas.", category: "naturaleza" },
   { word: "Orfebre", startOrContain: "start", letter: "O", definition: "Persona que trabaja el oro y la plata.", category: "educacion-sociedad" },
   { word: "Punzon", startOrContain: "start", letter: "P", definition: "Herramienta con punta para hacer agujeros pequeños.", category: "ciencias" },
   { word: "Chaqueta", startOrContain: "contain", letter: "Q", definition: "Prenda abrigada que se pone sobre la camisa.", category: "cultura-general" },
@@ -46,7 +46,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Mastin", startOrContain: "start", letter: "M", definition: "Perro grande y fuerte que cuida el ganado.", category: "naturaleza" },
   { word: "Naturalista", startOrContain: "start", letter: "N", definition: "Persona que estudia las plantas y los animales.", category: "educacion-sociedad" },
   { word: "Ondina", startOrContain: "start", letter: "O", definition: "Criatura mágica que vive en los ríos y lagos.", category: "mitologia-fantasia" },
-  { word: "Potro", startOrContain: "start", letter: "P", definition: "Cría del caballo.", category: "naturaleza" },
+  { word: "Potro", startOrContain: "start", letter: "P", definition: "Cría del caballo, todavía joven, que aún no fue domada ni alcanzó el tamaño de un adulto.", category: "naturaleza" },
   { word: "Buque", startOrContain: "contain", letter: "Q", definition: "Barco grande que navega por mares y ríos.", category: "transporte" },
   { word: "Rodillo", startOrContain: "start", letter: "R", definition: "Cilindro que se usa para pintar paredes.", category: "ciencias" },
   { word: "Statham", startOrContain: "start", letter: "S", definition: "Apellido del actor británico Jason, famoso por la saga Transporter y Fast and Furious.", category: "personalidades" },
@@ -60,7 +60,7 @@ const ROSCO_2: RoscoEntry[] = [
 ];
 
 const ROSCO_3: RoscoEntry[] = [
-  { word: "Albeniz", startOrContain: "start", letter: "A", definition: "Apellido del célebre compositor español.", category: "personalidades" },
+  { word: "Albeniz", startOrContain: "start", letter: "A", definition: "Compositor y pianista español de música clásica, autor de la suite Iberia, cuyo nombre de pila era Isaac.", category: "personalidades" },
   { word: "Bosh", startOrContain: "start", letter: "B", definition: "Apellido del basquetbolista Chris, campeón de la NBA.", category: "personalidades" },
   { word: "Cincel", startOrContain: "start", letter: "C", definition: "Barra de metal con punta para tallar piedra o madera.", category: "ciencias" },
   { word: "Desembocadura", startOrContain: "start", letter: "D", definition: "Lugar donde un río llega al mar.", category: "naturaleza" },
@@ -92,7 +92,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Amsterdam", startOrContain: "start", letter: "A", definition: "Capital de los Países Bajos, famosa por sus canales, museos y fachadas angostas.", category: "cultura-general" },
   { word: "Borrego", startOrContain: "start", letter: "B", definition: "Cordero de menos de un año.", category: "naturaleza" },
   { word: "Cerrajero", startOrContain: "start", letter: "C", definition: "Persona que hace y arregla cerraduras y llaves.", category: "educacion-sociedad" },
-  { word: "Dril", startOrContain: "start", letter: "D", definition: "Tela fuerte de algodón.", category: "cultura-general" },
+  { word: "Dril", startOrContain: "start", letter: "D", definition: "Tela fuerte y resistente de algodón, usada para confeccionar pantalones y ropa de trabajo.", category: "cultura-general" },
   { word: "Embalse", startOrContain: "start", letter: "E", definition: "Lago artificial donde se junta el agua de un río.", category: "naturaleza" },
   { word: "Fontanero", startOrContain: "start", letter: "F", definition: "Persona que arregla las cañerías, también llamado plomero.", category: "educacion-sociedad" },
   { word: "Guaracha", startOrContain: "start", letter: "G", definition: "Música alegre y bailable del Caribe.", category: "arte-musica" },
@@ -113,7 +113,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Vigilante", startOrContain: "start", letter: "V", definition: "Postre de un trozo de queso con dulce de membrillo.", category: "gastronomia" },
   { word: "Web", startOrContain: "start", letter: "W", definition: "Conjunto de páginas que se ven por internet.", category: "ciencias" },
   { word: "Galaxia", startOrContain: "contain", letter: "X", definition: "Enorme conjunto de estrellas en el espacio.", category: "ciencias" },
-  { word: "Yegua", startOrContain: "start", letter: "Y", definition: "Hembra del caballo.", category: "naturaleza" },
+  { word: "Yegua", startOrContain: "start", letter: "Y", definition: "Hembra adulta del caballo, usada para montar, tirar carros o dar cría a los potrillos.", category: "naturaleza" },
   { word: "Taza", startOrContain: "contain", letter: "Z", definition: "Recipiente con asa para tomar líquidos calientes.", category: "gastronomia" },
 ];
 
@@ -155,7 +155,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Forraje", startOrContain: "start", letter: "F", definition: "Pasto y plantas con que se alimenta el ganado.", category: "naturaleza" },
   { word: "Gerrard", startOrContain: "start", letter: "G", definition: "Apellido del histórico mediocampista inglés Steven, ídolo del Liverpool.", category: "personalidades" },
   { word: "Heladero", startOrContain: "start", letter: "H", definition: "Persona que hace o vende helados.", category: "educacion-sociedad" },
-  { word: "Ivanovic", startOrContain: "start", letter: "I", definition: "Apellido de la tenista serbia que fue número uno del mundo.", category: "personalidades" },
+  { word: "Ivanovic", startOrContain: "start", letter: "I", definition: "Tenista serbia, llamada Ana, que llegó a ser número uno del mundo y ganó el torneo de Roland Garros.", category: "personalidades" },
   { word: "Jugo", startOrContain: "start", letter: "J", definition: "Bebida que se saca al exprimir una fruta.", category: "gastronomia" },
   { word: "Koala", startOrContain: "start", letter: "K", definition: "Animal australiano que vive en los árboles y come hojas.", category: "naturaleza" },
   { word: "Lanilla", startOrContain: "start", letter: "L", definition: "Tela fina y suave hecha de lana.", category: "cultura-general" },
