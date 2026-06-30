@@ -104,7 +104,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Buonanotte", startOrContain: "start", letter: "B", definition: "Surname of Argentine midfielder Facundo, who plays for Brighton in the Premier League.", category: "people" },
   { word: "Chara", startOrContain: "start", letter: "C", definition: "Surname of Colombian midfielder Diego, who plays for the Portland Timbers in MLS.", category: "people" },
   { word: "Dynamo", startOrContain: "start", letter: "D", definition: "A small machine that makes electricity.", category: "science" },
-  { word: "El Salvador", startOrContain: "start", letter: "E", definition: "A small country in Central America.", category: "society" },
+  { word: "Estonia", startOrContain: "start", letter: "E", definition: "A small country in Northern Europe on the Baltic Sea.", category: "society" },
   { word: "Frogspawn", startOrContain: "start", letter: "F", definition: "A jelly clump of frog eggs.", category: "nature" },
   { word: "Groundnut", startOrContain: "start", letter: "G", definition: "Another name for a peanut.", category: "food" },
   { word: "Honduras", startOrContain: "start", letter: "H", definition: "A country in Central America.", category: "society" },

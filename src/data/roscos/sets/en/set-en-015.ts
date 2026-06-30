@@ -191,7 +191,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Banister", startOrContain: "start", letter: "B", definition: "The rail you hold on stairs.", category: "society" },
   { word: "Cannon", startOrContain: "start", letter: "C", definition: "A big old gun on wheels.", category: "general" },
   { word: "Dial", startOrContain: "start", letter: "D", definition: "A round face with numbers.", category: "general" },
-  { word: "El Salvador", startOrContain: "start", letter: "E", definition: "A small country in Central America.", category: "society" },
+  { word: "Estonia", startOrContain: "start", letter: "E", definition: "A small country in Northern Europe on the Baltic Sea.", category: "society" },
   { word: "Fiddlehead", startOrContain: "start", letter: "F", definition: "The curled tip of a young fern.", category: "nature" },
   { word: "Geyser", startOrContain: "start", letter: "G", definition: "A spring that shoots hot water up.", category: "nature" },
   { word: "Hamburg", startOrContain: "start", letter: "H", definition: "A large port city in Germany.", category: "society" },

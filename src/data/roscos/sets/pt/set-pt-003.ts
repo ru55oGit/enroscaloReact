@@ -85,7 +85,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Lagartixa", startOrContain: "start", letter: "L", definition: "Lagarto pequeno que sobe nas paredes.", category: "natureza" },
   { word: "Membrana", startOrContain: "start", letter: "M", definition: "Pele fina entre os dedos do sapo.", category: "natureza" },
   { word: "Naipe", startOrContain: "start", letter: "N", definition: "Cada grupo das cartas: copas, ouros, paus e espadas.", category: "esporte-jogo" },
-  { word: "Ovo de Páscoa", startOrContain: "start", letter: "O", definition: "Doce de chocolate em forma de ovo.", category: "gastronomia" },
+  { word: "Ostra", startOrContain: "start", letter: "O", definition: "Molusco que vive dentro de uma concha e se come cru ou cozido.", category: "gastronomia" },
   { word: "Pulga", startOrContain: "start", letter: "P", definition: "Bichinho que pula e pica os cachorros.", category: "natureza" },
   { word: "Quarto", startOrContain: "start", letter: "Q", definition: "Cômodo onde se dorme.", category: "cultura-geral" },
   { word: "Rocambole", startOrContain: "start", letter: "R", definition: "Bolo enrolado com recheio.", category: "gastronomia" },

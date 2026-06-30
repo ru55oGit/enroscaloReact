@@ -130,7 +130,7 @@ const ROSCO_4: RoscoEntry[] = [
 
 const ROSCO_5: RoscoEntry[] = [
   { word: "Apotheke", startOrContain: "start", letter: "A", definition: "Laden, der Medikamente verkauft.", category: "gesellschaft" },
-  { word: "Blauer Planet", startOrContain: "start", letter: "B", definition: "Ein Name für die Erde.", category: "wissenschaft" },
+  { word: "Blauwal", startOrContain: "start", letter: "B", definition: "Das größte Tier der Erde, ein Meeressäuger.", category: "wissenschaft" },
   { word: "Café", startOrContain: "start", letter: "C", definition: "Ort, an dem man Kaffee und Kuchen bekommt.", category: "kultur" },
   { word: "Daimler", startOrContain: "start", letter: "D", definition: "Nachname eines Erfinders des Autos.", category: "personen" },
   { word: "Einkaufswagen", startOrContain: "start", letter: "E", definition: "Wagen zum Schieben im Supermarkt.", category: "gesellschaft" },

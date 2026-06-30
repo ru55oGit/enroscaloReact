@@ -46,7 +46,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Beehive", startOrContain: "start", letter: "B", definition: "A home where bees live.", category: "nature" },
   { word: "Chandelier", startOrContain: "start", letter: "C", definition: "A hanging light with many branches.", category: "general" },
   { word: "Drawbridge", startOrContain: "start", letter: "D", definition: "A bridge that lifts up.", category: "society" },
-  { word: "El Salvador", startOrContain: "start", letter: "E", definition: "A small country in Central America.", category: "society" },
+  { word: "Estonia", startOrContain: "start", letter: "E", definition: "A small country in Northern Europe on the Baltic Sea.", category: "society" },
   { word: "Floodlight", startOrContain: "start", letter: "F", definition: "A very bright outdoor lamp.", category: "general" },
   { word: "Grizzly", startOrContain: "start", letter: "G", definition: "A large brown bear.", category: "nature" },
   { word: "Hobart", startOrContain: "start", letter: "H", definition: "A city on the island of Tasmania.", category: "society" },

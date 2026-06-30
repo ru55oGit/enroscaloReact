@@ -56,7 +56,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Leão", startOrContain: "start", letter: "L", definition: "Felino grande, o rei dos animais.", category: "natureza" },
   { word: "Montanha", startOrContain: "start", letter: "M", definition: "Elevação muito alta de terra ou pedra.", category: "natureza" },
   { word: "Néctar", startOrContain: "start", letter: "N", definition: "Líquido doce das flores que as abelhas bebem.", category: "natureza" },
-  { word: "Ovo de Páscoa", startOrContain: "start", letter: "O", definition: "Doce de chocolate em forma de ovo.", category: "gastronomia" },
+  { word: "Ostra", startOrContain: "start", letter: "O", definition: "Molusco que vive dentro de uma concha e se come cru ou cozido.", category: "gastronomia" },
   { word: "Pé", startOrContain: "start", letter: "P", definition: "Parte do corpo usada para andar.", category: "ciencias" },
   { word: "Quati", startOrContain: "start", letter: "Q", definition: "Animal de focinho comprido e rabo listrado.", category: "natureza" },
   { word: "Relojoeiro", startOrContain: "start", letter: "R", definition: "Pessoa que conserta relógios.", category: "sociedade" },

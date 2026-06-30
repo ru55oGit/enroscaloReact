@@ -108,7 +108,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Quasar", startOrContain: "start", letter: "Q", definition: "Astre très lointain qui brille énormément.", category: "science" },
   { word: "Rabot", startOrContain: "start", letter: "R", definition: "Outil qui rend le bois bien lisse.", category: "culture" },
   { word: "Supernova", startOrContain: "start", letter: "S", definition: "L'explosion d'une étoile.", category: "science" },
-  { word: "Trou noir", startOrContain: "start", letter: "T", definition: "Endroit qui aspire tout, même la lumière.", category: "science" },
+  { word: "Télescope", startOrContain: "start", letter: "T", definition: "Un instrument optique pour observer les étoiles et les planètes.", category: "science" },
   { word: "Aluminium", startOrContain: "contain", letter: "U", definition: "Métal léger de couleur gris argenté.", category: "nature" },
   { word: "Volcan", startOrContain: "start", letter: "V", definition: "Montagne d'où peut sortir de la lave brûlante.", category: "science" },
   { word: "Wok", startOrContain: "start", letter: "W", definition: "Grande poêle creuse pour cuisiner à l'asiatique.", category: "nourriture" },

@@ -64,7 +64,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Satellite", startOrContain: "start", letter: "S", definition: "Objet qui tourne autour d'une planète.", category: "science" },
   { word: "Tomate", startOrContain: "start", letter: "T", definition: "Fruit rouge que l'on mange souvent en salade.", category: "nourriture" },
   { word: "Aventure", startOrContain: "contain", letter: "U", definition: "Voyage plein de surprises et de risques.", category: "societe" },
-  { word: "Ver luisant", startOrContain: "start", letter: "V", definition: "Insecte qui brille la nuit.", category: "nature" },
+  { word: "Vipère", startOrContain: "start", letter: "V", definition: "Un serpent venimeux aux crochets mortels.", category: "nature" },
   { word: "Wok", startOrContain: "start", letter: "W", definition: "Grande poêle creuse pour cuisiner à l'asiatique.", category: "nourriture" },
   { word: "Boxe", startOrContain: "contain", letter: "X", definition: "Sport de combat où l'on frappe avec des gants.", category: "sport-jeu" },
   { word: "Yéti", startOrContain: "start", letter: "Y", definition: "Créature poilue des neiges.", category: "mythe-fantaisie" },

@@ -63,7 +63,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Sirop", startOrContain: "start", letter: "S", definition: "Liquide sucré que l'on met dans l'eau.", category: "nourriture" },
   { word: "Toulouse-Lautrec", startOrContain: "start", letter: "T", definition: "Nom de famille d'un peintre français des affiches de spectacle.", category: "personnalites" },
   { word: "Ukulélé", startOrContain: "start", letter: "U", definition: "Petite guitare à quatre cordes.", category: "art-musique" },
-  { word: "Voie lactée", startOrContain: "start", letter: "V", definition: "Notre galaxie, traînée blanche dans le ciel.", category: "science" },
+  { word: "Vénus", startOrContain: "start", letter: "V", definition: "La deuxième planète du système solaire, la plus brillante dans le ciel.", category: "science" },
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unité qui mesure la puissance électrique.", category: "science" },
   { word: "Galaxie", startOrContain: "contain", letter: "X", definition: "Immense groupe d'étoiles dans l'espace.", category: "science" },
   { word: "Yack", startOrContain: "start", letter: "Y", definition: "Bœuf à longs poils d'Asie.", category: "nature" },

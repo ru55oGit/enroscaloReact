@@ -143,7 +143,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Lobato", startOrContain: "start", letter: "L", definition: "Sobrenome do criador do Sítio do Picapau Amarelo.", category: "personalidades" },
   { word: "Maratona", startOrContain: "start", letter: "M", definition: "Corrida bem longa, de muitos quilômetros.", category: "esporte-jogo" },
   { word: "Naipe", startOrContain: "start", letter: "N", definition: "Cada grupo das cartas: copas, ouros, paus e espadas.", category: "esporte-jogo" },
-  { word: "Ovo de Páscoa", startOrContain: "start", letter: "O", definition: "Doce de chocolate em forma de ovo.", category: "gastronomia" },
+  { word: "Ostra", startOrContain: "start", letter: "O", definition: "Molusco que vive dentro de uma concha e se come cru ou cozido.", category: "gastronomia" },
   { word: "Portinari", startOrContain: "start", letter: "P", definition: "Sobrenome do grande pintor brasileiro Cândido, autor de telas famosas como Os Retirantes e O Café.", category: "personalidades" },
   { word: "Quiabo", startOrContain: "start", letter: "Q", definition: "Legume verde e comprido.", category: "gastronomia" },
   { word: "Rúgbi", startOrContain: "start", letter: "R", definition: "Esporte jogado com uma bola oval.", category: "esporte-jogo" },

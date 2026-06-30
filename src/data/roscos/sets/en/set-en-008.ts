@@ -94,7 +94,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Ukraine", startOrContain: "start", letter: "U", definition: "A large country in eastern Europe.", category: "society" },
   { word: "Vatican", startOrContain: "start", letter: "V", definition: "The smallest country in the world.", category: "society" },
   { word: "Whiteboard", startOrContain: "start", letter: "W", definition: "A smooth board you write on with pens.", category: "society" },
-  { word: "Mexico City", startOrContain: "contain", letter: "X", definition: "The capital city of Mexico.", category: "society" },
+  { word: "Phoenix", startOrContain: "contain", letter: "X", definition: "The capital city of Arizona, known for its hot desert climate.", category: "society" },
   { word: "Yaounde", startOrContain: "start", letter: "Y", definition: "The capital city of Cameroon.", category: "society" },
   { word: "Zagreb", startOrContain: "start", letter: "Z", definition: "The capital city of Croatia.", category: "society" },
 ];
@@ -146,7 +146,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Odegaard", startOrContain: "start", letter: "O", definition: "Surname of Norwegian midfielder Martin, who captains Arsenal in the Premier League.", category: "people" },
   { word: "Pan", startOrContain: "start", letter: "P", definition: "A flat dish for frying.", category: "general" },
   { word: "Equator", startOrContain: "contain", letter: "Q", definition: "The imaginary line around the middle of the Earth.", category: "science" },
-  { word: "Rolling pin", startOrContain: "start", letter: "R", definition: "A roller for flattening dough.", category: "general" },
+  { word: "Ramekin", startOrContain: "start", letter: "R", definition: "A small ceramic dish used for baking individual portions of food.", category: "general" },
   { word: "Spoon", startOrContain: "start", letter: "S", definition: "A tool for eating soup or stirring.", category: "general" },
   { word: "Teapot", startOrContain: "start", letter: "T", definition: "A pot with a spout for making tea.", category: "general" },
   { word: "Cuba", startOrContain: "contain", letter: "U", definition: "An island country in the Caribbean.", category: "society" },
