@@ -205,7 +205,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Pier", startOrContain: "start", letter: "P", definition: "A platform that reaches out over the sea.", category: "transport" },
   { word: "Bouquet", startOrContain: "contain", letter: "Q", definition: "A bunch of flowers tied together.", category: "nature" },
   { word: "Reef", startOrContain: "start", letter: "R", definition: "A ridge of rock or coral near the surface.", category: "nature" },
-  { word: "Suarez", startOrContain: "start", letter: "S", definition: "Surname of retired Uruguayan striker Luis, who played for Barcelona in La Liga.", category: "people" },
+  { word: "Suarez", startOrContain: "start", letter: "S", definition: "Surname of Uruguayan striker Luis, who plays for Inter Miami in Major League Soccer.", category: "people" },
   { word: "Tide", startOrContain: "start", letter: "T", definition: "The rise and fall of the sea.", category: "nature" },
   { word: "Tulip", startOrContain: "contain", letter: "U", definition: "A brightly colored cup-shaped flower.", category: "nature" },
   { word: "Vanilla", startOrContain: "start", letter: "V", definition: "A flavoring from orchid seed pods.", category: "food" },
