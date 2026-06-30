@@ -48,7 +48,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Doncic", startOrContain: "start", letter: "D", definition: "Surname of Slovenian NBA star Luka, who plays for the Los Angeles Lakers.", category: "people" },
   { word: "Eclipse", startOrContain: "start", letter: "E", definition: "When the Moon hides the Sun.", category: "science" },
   { word: "Fog", startOrContain: "start", letter: "F", definition: "A thick mist near the ground.", category: "nature" },
-  { word: "Grealish", startOrContain: "start", letter: "G", definition: "Surname of English midfielder Jack, who plays for Manchester City in the Premier League.", category: "people" },
+  { word: "Grealish", startOrContain: "start", letter: "G", definition: "Surname of English midfielder Jack, who plays for Everton in the Premier League.", category: "people" },
   { word: "Hail", startOrContain: "start", letter: "H", definition: "Small balls of ice that fall from clouds.", category: "nature" },
   { word: "India", startOrContain: "start", letter: "I", definition: "A large country in southern Asia.", category: "society" },
   { word: "Japan", startOrContain: "start", letter: "J", definition: "An island country in East Asia.", category: "society" },
