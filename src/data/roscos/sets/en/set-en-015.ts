@@ -131,7 +131,7 @@ const ROSCO_4: RoscoEntry[] = [
 const ROSCO_5: RoscoEntry[] = [
   { word: "Alvarez", startOrContain: "start", letter: "A", definition: "Surname of Argentine forward Julian, who has played for Manchester City in the Premier League.", category: "people" },
   { word: "Billing", startOrContain: "start", letter: "B", definition: "Surname of Danish midfielder Philip, who plays for Bournemouth in the Premier League.", category: "people" },
-  { word: "Chilwell", startOrContain: "start", letter: "C", definition: "Surname of English defender Ben, who plays for Chelsea in the Premier League.", category: "people" },
+  { word: "Chilwell", startOrContain: "start", letter: "C", definition: "Surname of English defender Ben, who played for Chelsea in the Premier League.", category: "people" },
   { word: "Dewdrop", startOrContain: "start", letter: "D", definition: "A tiny bead of morning water.", category: "nature" },
   { word: "Eritrea", startOrContain: "start", letter: "E", definition: "A country on the Red Sea in Africa.", category: "society" },
   { word: "Ferryboat", startOrContain: "start", letter: "F", definition: "A boat that carries people across water.", category: "transport" },

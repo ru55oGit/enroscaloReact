@@ -115,7 +115,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Motocross", startOrContain: "start", letter: "M", definition: "Motorbike racing over rough ground.", category: "sport-game" },
   { word: "Nigeria", startOrContain: "start", letter: "N", definition: "A large country in West Africa.", category: "society" },
   { word: "Oslo", startOrContain: "start", letter: "O", definition: "The capital city of Norway.", category: "society" },
-  { word: "Pollard", startOrContain: "start", letter: "P", definition: "Surname of NFL running back Tony, who plays for the Tennessee Titans.", category: "people" },
+  { word: "Pollard", startOrContain: "start", letter: "P", definition: "Surname of NFL running back Tony, who played for the Dallas Cowboys.", category: "people" },
   { word: "Antique", startOrContain: "contain", letter: "Q", definition: "A very old object that is rare and valuable.", category: "general" },
   { word: "Rowing", startOrContain: "start", letter: "R", definition: "Moving a boat with oars in a race.", category: "sport-game" },
   { word: "Sengun", startOrContain: "start", letter: "S", definition: "Surname of Turkish NBA center Alperen, who plays for the Houston Rockets.", category: "people" },

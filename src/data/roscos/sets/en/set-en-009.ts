@@ -44,7 +44,7 @@ const ROSCO_1: RoscoEntry[] = [
 const ROSCO_2: RoscoEntry[] = [
   { word: "Ant", startOrContain: "start", letter: "A", definition: "A tiny insect that lives in big groups.", category: "nature" },
   { word: "Butler", startOrContain: "start", letter: "B", definition: "Surname of NBA forward Jimmy, who has played for the Miami Heat.", category: "people" },
-  { word: "Casemiro", startOrContain: "start", letter: "C", definition: "Surname of Brazilian midfielder Carlos, who plays for Manchester United in the Premier League.", category: "people" },
+  { word: "Casemiro", startOrContain: "start", letter: "C", definition: "Surname of Brazilian midfielder Carlos, who played for Real Madrid in La Liga.", category: "people" },
   { word: "Dragonfly", startOrContain: "start", letter: "D", definition: "An insect with long wings near water.", category: "nature" },
   { word: "Earwig", startOrContain: "start", letter: "E", definition: "A bug with pincers at its tail.", category: "nature" },
   { word: "Firefly", startOrContain: "start", letter: "F", definition: "A bug that glows in the dark.", category: "nature" },
@@ -180,7 +180,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Trough", startOrContain: "start", letter: "T", definition: "A long container for animals' food or water.", category: "nature" },
   { word: "Cuba", startOrContain: "contain", letter: "U", definition: "An island country in the Caribbean.", category: "society" },
   { word: "Valletta", startOrContain: "start", letter: "V", definition: "The capital city of Malta.", category: "society" },
-  { word: "Walker", startOrContain: "start", letter: "W", definition: "Surname of English defender Kyle, who plays for Manchester City in the Premier League.", category: "people" },
+  { word: "Walker", startOrContain: "start", letter: "W", definition: "Surname of English defender Kyle, who played for Manchester City in the Premier League.", category: "people" },
   { word: "Exhibit", startOrContain: "contain", letter: "X", definition: "Something put on display for people to see.", category: "art-music" },
   { word: "Hungary", startOrContain: "contain", letter: "Y", definition: "A country in central Europe.", category: "society" },
   { word: "Azerbaijan", startOrContain: "contain", letter: "Z", definition: "A country between Europe and Asia.", category: "society" },

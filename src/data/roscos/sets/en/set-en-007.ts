@@ -146,7 +146,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Overalls", startOrContain: "start", letter: "O", definition: "Trousers with a bib and straps.", category: "general" },
   { word: "Pants", startOrContain: "start", letter: "P", definition: "Clothing for the legs.", category: "general" },
   { word: "Equator", startOrContain: "contain", letter: "Q", definition: "The imaginary line around the middle of the Earth.", category: "science" },
-  { word: "Rashford", startOrContain: "start", letter: "R", definition: "Surname of English forward Marcus, who plays for Manchester United in the Premier League.", category: "people" },
+  { word: "Rashford", startOrContain: "start", letter: "R", definition: "Surname of English forward Marcus, who played for Manchester United in the Premier League.", category: "people" },
   { word: "Scarf", startOrContain: "start", letter: "S", definition: "A cloth worn around the neck for warmth.", category: "general" },
   { word: "Trousers", startOrContain: "start", letter: "T", definition: "Another word for long pants.", category: "general" },
   { word: "Peru", startOrContain: "contain", letter: "U", definition: "A country in South America.", category: "society" },
