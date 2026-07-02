@@ -342,9 +342,14 @@ export default function WelcomeScreen() {
                       </Typography>
                     </>
                   ) : (
-                    <Typography sx={{ fontSize: 14, color: "#7a7a7a", fontWeight: 700, my: "auto" }}>
-                      {`${t.unlocksOn} ${DAY_LABELS[day.key]}`}
-                    </Typography>
+                    <>
+                      <Box sx={{ width: miniRoscoSize, height: miniRoscoSize, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <Typography sx={{ fontSize: 14, color: "#7a7a7a", fontWeight: 700, textAlign: "center" }}>
+                          {`${t.unlocksOn} ${DAY_LABELS[day.key]}`}
+                        </Typography>
+                      </Box>
+                      <Box sx={{ mb: 1 }} />
+                    </>
                   )}
 
                   <Button
