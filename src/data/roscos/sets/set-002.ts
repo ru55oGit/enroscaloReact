@@ -124,7 +124,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Dedo", startOrContain: "start", letter: "D", definition: "Cada una de las cinco partes móviles en que terminan las manos y los pies.", category: "ciencias" },
   { word: "Escalera", startOrContain: "start", letter: "E", definition: "Serie de escalones que permite subir o bajar de un nivel a otro.", category: "cultura-general" },
   { word: "Fogata", startOrContain: "start", letter: "F", definition: "Fuego encendido al aire libre con leña para dar calor o iluminar de noche.", category: "cultura-general" },
-  { word: "Gandhi", startOrContain: "start", letter: "G", definition: "Apellido del líder indio Mahatma, que promovió la independencia mediante la no violencia.", category: "personalidades" },
+  { word: "Gelatina", startOrContain: "start", letter: "G", definition: "Postre blando y transparente de colores y sabores variados.", category: "gastronomia" },
   { word: "Hongo", startOrContain: "start", letter: "H", definition: "Ser vivo sin clorofila que crece en lugares húmedos, como el champiñón.", category: "naturaleza" },
   { word: "Invierno", startOrContain: "start", letter: "I", definition: "Estación del año más fría en la que los días son cortos y las noches largas.", category: "naturaleza" },
   { word: "Jarra", startOrContain: "start", letter: "J", definition: "Recipiente con asa y pico usado para servir agua u otras bebidas.", category: "gastronomia" },
