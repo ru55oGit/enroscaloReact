@@ -83,7 +83,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Burro", startOrContain: "contain", letter: "U", definition: "Animal parecido al caballo, de orejas largas.", category: "naturaleza" },
   { word: "Vibrato", startOrContain: "start", letter: "V", definition: "Pequeño temblor que se le da a una nota al cantarla o tocarla.", category: "arte-musica" },
   { word: "Web", startOrContain: "start", letter: "W", definition: "Conjunto de páginas a las que se accede por internet.", category: "ciencias" },
-  { word: "Reflexion", startOrContain: "contain", letter: "X", definition: "Gas del aire que necesitamos respirar para vivir.", category: "ciencias" },
+  { word: "Oxigeno", startOrContain: "contain", letter: "X", definition: "Gas del aire que necesitamos respirar para vivir.", category: "ciencias" },
   { word: "Yate", startOrContain: "start", letter: "Y", definition: "Embarcación de recreo elegante con motor o velas.", category: "transporte" },
   { word: "Manzana", startOrContain: "contain", letter: "Z", definition: "Fruta redonda y crujiente que puede ser roja o verde.", category: "gastronomia" },
 ];

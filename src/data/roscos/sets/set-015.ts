@@ -141,7 +141,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Unidad", startOrContain: "start", letter: "U", definition: "Estar unidos para lograr algo en común.", category: "cultura-general" },
   { word: "Viñedo", startOrContain: "start", letter: "V", definition: "Terreno plantado de vides, las plantas que dan las uvas.", category: "naturaleza" },
   { word: "Wellington", startOrContain: "start", letter: "W", definition: "Capital de Nueva Zelanda.", category: "cultura-general" },
-  { word: "Reflexion", startOrContain: "contain", letter: "X", definition: "Acción de pensar con calma sobre algo.", category: "educacion-sociedad" },
+  { word: "Explorador", startOrContain: "contain", letter: "X", definition: "Persona que viaja a lugares desconocidos para descubrirlos.", category: "cultura-general" },
   { word: "Yunque", startOrContain: "start", letter: "Y", definition: "Bloque de hierro sobre el que el herrero golpea el metal.", category: "cultura-general" },
   { word: "Buzo", startOrContain: "contain", letter: "Z", definition: "Persona que se sumerge en el agua con un equipo especial.", category: "deporte-juego" },
 ];

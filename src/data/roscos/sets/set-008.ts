@@ -141,7 +141,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Alturas", startOrContain: "contain", letter: "U", definition: "Lugares muy elevados sobre el nivel del mar.", category: "naturaleza" },
   { word: "Vals", startOrContain: "start", letter: "V", definition: "Baile elegante en el que la pareja gira al compás de la música.", category: "arte-musica" },
   { word: "Waterloo", startOrContain: "start", letter: "W", definition: "Lugar de la famosa batalla donde fue derrotado Napoleón.", category: "cultura-general" },
-  { word: "Reflexion", startOrContain: "contain", letter: "X", definition: "Acción de pensar con cuidado sobre algo.", category: "educacion-sociedad" },
+  { word: "Exquisito", startOrContain: "contain", letter: "X", definition: "De muy buen sabor o de calidad extraordinaria.", category: "cultura-general" },
   { word: "Yokohama", startOrContain: "start", letter: "Y", definition: "Ciudad portuaria japonesa junto a Tokio, famosa por su barrio chino y sus rascacielos modernos.", category: "cultura-general" },
   { word: "Mozo", startOrContain: "contain", letter: "Z", definition: "Persona que atiende las mesas en un bar o restaurante.", category: "educacion-sociedad" },
 ];
