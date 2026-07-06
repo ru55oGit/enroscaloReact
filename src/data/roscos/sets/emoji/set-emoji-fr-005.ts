@@ -1,0 +1,30 @@
+import { RoscoEntry } from "../../../weeklyRoscos";
+
+export const BONUS_SET_FR_005: RoscoEntry[] = [
+  { letter: "A", startOrContain: "start",   word: "Alpaga",       definition: "🦙",  entryType: "emoji" },
+  { letter: "B", startOrContain: "start",   word: "Boussole",     definition: "🧭",  entryType: "emoji" },
+  { letter: "C", startOrContain: "start",   word: "Coq",          definition: "🐓",  entryType: "emoji" },
+  { letter: "D", startOrContain: "start",   word: "Daim",         definition: "🦌",  entryType: "emoji" },
+  { letter: "E", startOrContain: "start",   word: "Escargot",     definition: "🐌",  entryType: "emoji" },
+  { letter: "F", startOrContain: "start",   word: "Fée",          definition: "🧚",  entryType: "emoji" },
+  { letter: "G", startOrContain: "start",   word: "Guitare",      definition: "🎸",  entryType: "emoji" },
+  { letter: "H", startOrContain: "start",   word: "Homard",       definition: "🦞",  entryType: "emoji" },
+  { letter: "I", startOrContain: "start",   word: "Iris",         definition: "🌸",  entryType: "emoji" },
+  { letter: "J", startOrContain: "start",   word: "Jeu",          definition: "🎮",  entryType: "emoji" },
+  { letter: "K", startOrContain: "start",   word: "Kangourou",    definition: "🦘",  entryType: "emoji" },
+  { letter: "L", startOrContain: "start",   word: "Lune",         definition: "🌕",  entryType: "emoji" },
+  { letter: "M", startOrContain: "start",   word: "Moustique",    definition: "🦟",  entryType: "emoji" },
+  { letter: "N", startOrContain: "start",   word: "Nuit",         definition: "🌙",  entryType: "emoji" },
+  { letter: "O", startOrContain: "start",   word: "Oie",          definition: "🪿",  entryType: "emoji" },
+  { letter: "P", startOrContain: "start",   word: "Panda",        definition: "🐼",  entryType: "emoji" },
+  { letter: "Q", startOrContain: "start",   word: "Quiz",         definition: "❓",  entryType: "emoji" },
+  { letter: "R", startOrContain: "start",   word: "Raton",        definition: "🦝",  entryType: "emoji" },
+  { letter: "S", startOrContain: "start",   word: "Sorcière",     definition: "🧙",  entryType: "emoji" },
+  { letter: "T", startOrContain: "start",   word: "Tonnerre",     definition: "⛈️",  entryType: "emoji" },
+  { letter: "U", startOrContain: "start",   word: "Uniforme",     definition: "👮",  entryType: "emoji" },
+  { letter: "V", startOrContain: "start",   word: "Vautour",      definition: "🦅",  entryType: "emoji" },
+  { letter: "W", startOrContain: "start",   word: "Wok",          definition: "🥘",  entryType: "emoji" },
+  { letter: "X", startOrContain: "contain", word: "Galaxie",      definition: "🌌",  entryType: "emoji" },  // G-A-L-A-X-I-E
+  { letter: "Y", startOrContain: "start",   word: "Yeux",         definition: "👀",  entryType: "emoji" },
+  { letter: "Z", startOrContain: "start",   word: "Zapping",      definition: "📺",  entryType: "emoji" },
+];

@@ -32,6 +32,28 @@ import { BONUS_SET_PT_008 } from "./roscos/sets/emoji/set-emoji-pt-008";
 import { BONUS_SET_PT_009 } from "./roscos/sets/emoji/set-emoji-pt-009";
 import { BONUS_SET_PT_010 } from "./roscos/sets/emoji/set-emoji-pt-010";
 import { BONUS_SET_PT_011 } from "./roscos/sets/emoji/set-emoji-pt-011";
+import { BONUS_SET_DE_001 } from "./roscos/sets/emoji/set-emoji-de-001";
+import { BONUS_SET_DE_002 } from "./roscos/sets/emoji/set-emoji-de-002";
+import { BONUS_SET_DE_003 } from "./roscos/sets/emoji/set-emoji-de-003";
+import { BONUS_SET_DE_004 } from "./roscos/sets/emoji/set-emoji-de-004";
+import { BONUS_SET_DE_005 } from "./roscos/sets/emoji/set-emoji-de-005";
+import { BONUS_SET_DE_006 } from "./roscos/sets/emoji/set-emoji-de-006";
+import { BONUS_SET_DE_007 } from "./roscos/sets/emoji/set-emoji-de-007";
+import { BONUS_SET_DE_008 } from "./roscos/sets/emoji/set-emoji-de-008";
+import { BONUS_SET_DE_009 } from "./roscos/sets/emoji/set-emoji-de-009";
+import { BONUS_SET_DE_010 } from "./roscos/sets/emoji/set-emoji-de-010";
+import { BONUS_SET_DE_011 } from "./roscos/sets/emoji/set-emoji-de-011";
+import { BONUS_SET_FR_001 } from "./roscos/sets/emoji/set-emoji-fr-001";
+import { BONUS_SET_FR_002 } from "./roscos/sets/emoji/set-emoji-fr-002";
+import { BONUS_SET_FR_003 } from "./roscos/sets/emoji/set-emoji-fr-003";
+import { BONUS_SET_FR_004 } from "./roscos/sets/emoji/set-emoji-fr-004";
+import { BONUS_SET_FR_005 } from "./roscos/sets/emoji/set-emoji-fr-005";
+import { BONUS_SET_FR_006 } from "./roscos/sets/emoji/set-emoji-fr-006";
+import { BONUS_SET_FR_007 } from "./roscos/sets/emoji/set-emoji-fr-007";
+import { BONUS_SET_FR_008 } from "./roscos/sets/emoji/set-emoji-fr-008";
+import { BONUS_SET_FR_009 } from "./roscos/sets/emoji/set-emoji-fr-009";
+import { BONUS_SET_FR_010 } from "./roscos/sets/emoji/set-emoji-fr-010";
+import { BONUS_SET_FR_011 } from "./roscos/sets/emoji/set-emoji-fr-011";
 import { ROSCO_SET_002 } from "./roscos/sets/set-002";
 import { ROSCO_SET_003 } from "./roscos/sets/set-003";
 import { ROSCO_SET_004 } from "./roscos/sets/set-004";
@@ -288,6 +310,16 @@ const BONUS_ROSCO_REGISTRY: Record<string, RoscoEntry[][]> = {
     BONUS_SET_PT_001, BONUS_SET_PT_002, BONUS_SET_PT_003, BONUS_SET_PT_004,
     BONUS_SET_PT_005, BONUS_SET_PT_006, BONUS_SET_PT_007, BONUS_SET_PT_008,
     BONUS_SET_PT_009, BONUS_SET_PT_010, BONUS_SET_PT_011,
+  ],
+  fr: [
+    BONUS_SET_FR_001, BONUS_SET_FR_002, BONUS_SET_FR_003, BONUS_SET_FR_004,
+    BONUS_SET_FR_005, BONUS_SET_FR_006, BONUS_SET_FR_007, BONUS_SET_FR_008,
+    BONUS_SET_FR_009, BONUS_SET_FR_010, BONUS_SET_FR_011,
+  ],
+  de: [
+    BONUS_SET_DE_001, BONUS_SET_DE_002, BONUS_SET_DE_003, BONUS_SET_DE_004,
+    BONUS_SET_DE_005, BONUS_SET_DE_006, BONUS_SET_DE_007, BONUS_SET_DE_008,
+    BONUS_SET_DE_009, BONUS_SET_DE_010, BONUS_SET_DE_011,
   ],
 };
 
