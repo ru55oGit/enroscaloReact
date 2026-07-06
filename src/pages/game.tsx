@@ -111,7 +111,7 @@ const Game: React.FC = () => {
   const dayKey: DayKey = (!isBonus && isDayKey(rawDay)) ? rawDay : todayKey;
 
   const activeRoscoContext = useMemo(() => getActiveRoscoContext(new Date(), currentLanguage), [currentLanguage]);
-  const bonusContext = useMemo(() => isBonus ? getActiveBonusContext(new Date()) : null, [isBonus]);
+  const bonusContext = useMemo(() => isBonus ? getActiveBonusContext(new Date(), currentLanguage) : null, [isBonus, currentLanguage]);
 
   const roscoWords = isBonus ? (bonusContext?.rosco ?? []) : activeRoscoContext.roscos[dayKey];
   const activeScopeKey = isBonus ? (bonusContext?.scopeKey ?? "bonus") : activeRoscoContext.scopeKey;
