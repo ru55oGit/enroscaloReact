@@ -21,6 +21,17 @@ import { BONUS_SET_EN_008 } from "./roscos/sets/emoji/set-emoji-en-008";
 import { BONUS_SET_EN_009 } from "./roscos/sets/emoji/set-emoji-en-009";
 import { BONUS_SET_EN_010 } from "./roscos/sets/emoji/set-emoji-en-010";
 import { BONUS_SET_EN_011 } from "./roscos/sets/emoji/set-emoji-en-011";
+import { BONUS_SET_PT_001 } from "./roscos/sets/emoji/set-emoji-pt-001";
+import { BONUS_SET_PT_002 } from "./roscos/sets/emoji/set-emoji-pt-002";
+import { BONUS_SET_PT_003 } from "./roscos/sets/emoji/set-emoji-pt-003";
+import { BONUS_SET_PT_004 } from "./roscos/sets/emoji/set-emoji-pt-004";
+import { BONUS_SET_PT_005 } from "./roscos/sets/emoji/set-emoji-pt-005";
+import { BONUS_SET_PT_006 } from "./roscos/sets/emoji/set-emoji-pt-006";
+import { BONUS_SET_PT_007 } from "./roscos/sets/emoji/set-emoji-pt-007";
+import { BONUS_SET_PT_008 } from "./roscos/sets/emoji/set-emoji-pt-008";
+import { BONUS_SET_PT_009 } from "./roscos/sets/emoji/set-emoji-pt-009";
+import { BONUS_SET_PT_010 } from "./roscos/sets/emoji/set-emoji-pt-010";
+import { BONUS_SET_PT_011 } from "./roscos/sets/emoji/set-emoji-pt-011";
 import { ROSCO_SET_002 } from "./roscos/sets/set-002";
 import { ROSCO_SET_003 } from "./roscos/sets/set-003";
 import { ROSCO_SET_004 } from "./roscos/sets/set-004";
@@ -272,6 +283,11 @@ const BONUS_ROSCO_REGISTRY: Record<string, RoscoEntry[][]> = {
     BONUS_SET_EN_001, BONUS_SET_EN_002, BONUS_SET_EN_003, BONUS_SET_EN_004,
     BONUS_SET_EN_005, BONUS_SET_EN_006, BONUS_SET_EN_007, BONUS_SET_EN_008,
     BONUS_SET_EN_009, BONUS_SET_EN_010, BONUS_SET_EN_011,
+  ],
+  pt: [
+    BONUS_SET_PT_001, BONUS_SET_PT_002, BONUS_SET_PT_003, BONUS_SET_PT_004,
+    BONUS_SET_PT_005, BONUS_SET_PT_006, BONUS_SET_PT_007, BONUS_SET_PT_008,
+    BONUS_SET_PT_009, BONUS_SET_PT_010, BONUS_SET_PT_011,
   ],
 };
 

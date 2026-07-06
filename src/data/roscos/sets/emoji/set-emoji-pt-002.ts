@@ -1,0 +1,30 @@
+import { RoscoEntry } from "../../../weeklyRoscos";
+
+export const BONUS_SET_PT_002: RoscoEntry[] = [
+  { letter: "A", startOrContain: "start",   word: "Ancora",      definition: "⚓", entryType: "emoji" },
+  { letter: "B", startOrContain: "start",   word: "Baleia",      definition: "🐋", entryType: "emoji" },
+  { letter: "C", startOrContain: "start",   word: "Cobra",       definition: "🐍", entryType: "emoji" },
+  { letter: "D", startOrContain: "start",   word: "Dragao",      definition: "🐉", entryType: "emoji" },
+  { letter: "E", startOrContain: "start",   word: "Estrela",     definition: "⭐", entryType: "emoji" },
+  { letter: "F", startOrContain: "start",   word: "Flamingo",    definition: "🦩", entryType: "emoji" },
+  { letter: "G", startOrContain: "start",   word: "Guitarra",    definition: "🎸", entryType: "emoji" },
+  { letter: "H", startOrContain: "start",   word: "Helicoptero", definition: "🚁", entryType: "emoji" },
+  { letter: "I", startOrContain: "start",   word: "Iguana",      definition: "🦎", entryType: "emoji" },
+  { letter: "J", startOrContain: "start",   word: "Jaguar",      definition: "🐆", entryType: "emoji" },
+  { letter: "K", startOrContain: "start",   word: "Kiwi",        definition: "🥝", entryType: "emoji" },
+  { letter: "L", startOrContain: "start",   word: "Lampada",     definition: "💡", entryType: "emoji" },
+  { letter: "M", startOrContain: "start",   word: "Morcego",     definition: "🦇", entryType: "emoji" },
+  { letter: "N", startOrContain: "start",   word: "Nuvem",       definition: "☁️", entryType: "emoji" },
+  { letter: "O", startOrContain: "start",   word: "Ourico",      definition: "🦔", entryType: "emoji" },
+  { letter: "P", startOrContain: "start",   word: "Pinguim",     definition: "🐧", entryType: "emoji" },
+  { letter: "Q", startOrContain: "contain", word: "Mosquito",    definition: "🦟", entryType: "emoji" },  // M-O-S-Q-U-I-T-O
+  { letter: "R", startOrContain: "start",   word: "Robo",        definition: "🤖", entryType: "emoji" },
+  { letter: "S", startOrContain: "start",   word: "Sereia",      definition: "🧜", entryType: "emoji" },
+  { letter: "T", startOrContain: "start",   word: "Tubarao",     definition: "🦈", entryType: "emoji" },
+  { letter: "U", startOrContain: "start",   word: "Unicornio",   definition: "🦄", entryType: "emoji" },
+  { letter: "V", startOrContain: "start",   word: "Violino",     definition: "🎻", entryType: "emoji" },
+  { letter: "W", startOrContain: "start",   word: "Windsurf",    definition: "🏄", entryType: "emoji" },
+  { letter: "X", startOrContain: "start",   word: "Xadrez",      definition: "♟️", entryType: "emoji" },
+  { letter: "Y", startOrContain: "start",   word: "Yak",         definition: "🐃", entryType: "emoji" },
+  { letter: "Z", startOrContain: "start",   word: "Zangao",      definition: "🐝", entryType: "emoji" },
+];

@@ -1,0 +1,30 @@
+import { RoscoEntry } from "../../../weeklyRoscos";
+
+export const BONUS_SET_PT_007: RoscoEntry[] = [
+  { letter: "A", startOrContain: "start",   word: "Abobora",       definition: "🎃", entryType: "emoji" },
+  { letter: "B", startOrContain: "start",   word: "Boi",           definition: "🐂", entryType: "emoji" },
+  { letter: "C", startOrContain: "start",   word: "Coruja",        definition: "🦉", entryType: "emoji" },
+  { letter: "D", startOrContain: "start",   word: "Destornilhador",definition: "🪛", entryType: "emoji" },
+  { letter: "E", startOrContain: "start",   word: "Erupcao",       definition: "🌋", entryType: "emoji" },
+  { letter: "F", startOrContain: "start",   word: "Foca",          definition: "🦭", entryType: "emoji" },
+  { letter: "G", startOrContain: "start",   word: "Gato",          definition: "🐱", entryType: "emoji" },
+  { letter: "H", startOrContain: "start",   word: "Halteres",      definition: "🏋️", entryType: "emoji" },
+  { letter: "I", startOrContain: "start",   word: "Incendio",      definition: "🔥", entryType: "emoji" },
+  { letter: "J", startOrContain: "start",   word: "Javali",        definition: "🐗", entryType: "emoji" },
+  { letter: "K", startOrContain: "start",   word: "Ketchup",       definition: "🍅", entryType: "emoji" },
+  { letter: "L", startOrContain: "start",   word: "Lince",         definition: "🐈", entryType: "emoji" },
+  { letter: "M", startOrContain: "start",   word: "Mamute",        definition: "🦣", entryType: "emoji" },
+  { letter: "N", startOrContain: "start",   word: "Navio",         definition: "🚢", entryType: "emoji" },
+  { letter: "O", startOrContain: "start",   word: "Onca",          definition: "🐆", entryType: "emoji" },
+  { letter: "P", startOrContain: "start",   word: "Pato",          definition: "🦆", entryType: "emoji" },
+  { letter: "Q", startOrContain: "start",   word: "Quetzal",       definition: "🦜", entryType: "emoji" },
+  { letter: "R", startOrContain: "start",   word: "Raio",          definition: "⚡", entryType: "emoji" },
+  { letter: "S", startOrContain: "start",   word: "Serpente",      definition: "🐍", entryType: "emoji" },
+  { letter: "T", startOrContain: "start",   word: "Tartaruga",     definition: "🐢", entryType: "emoji" },
+  { letter: "U", startOrContain: "start",   word: "Ukulele",       definition: "🪕", entryType: "emoji" },
+  { letter: "V", startOrContain: "start",   word: "Vespa",         definition: "🐝", entryType: "emoji" },
+  { letter: "W", startOrContain: "start",   word: "Web",           definition: "🌐", entryType: "emoji" },
+  { letter: "X", startOrContain: "contain", word: "Boxe",          definition: "🥊", entryType: "emoji" },  // B-O-X-E
+  { letter: "Y", startOrContain: "start",   word: "Yara",          definition: "🧜", entryType: "emoji" },
+  { letter: "Z", startOrContain: "start",   word: "Zoologico",     definition: "🦁", entryType: "emoji" },
+];
