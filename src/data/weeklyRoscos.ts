@@ -1,4 +1,15 @@
 import { ROSCO_SET_001 } from "./roscos/sets/set-001";
+import { BONUS_SET_001 } from "./roscos/sets/emoji/set-emoji-001";
+import { BONUS_SET_002 } from "./roscos/sets/emoji/set-emoji-002";
+import { BONUS_SET_003 } from "./roscos/sets/emoji/set-emoji-003";
+import { BONUS_SET_004 } from "./roscos/sets/emoji/set-emoji-004";
+import { BONUS_SET_005 } from "./roscos/sets/emoji/set-emoji-005";
+import { BONUS_SET_006 } from "./roscos/sets/emoji/set-emoji-006";
+import { BONUS_SET_007 } from "./roscos/sets/emoji/set-emoji-007";
+import { BONUS_SET_008 } from "./roscos/sets/emoji/set-emoji-008";
+import { BONUS_SET_009 } from "./roscos/sets/emoji/set-emoji-009";
+import { BONUS_SET_010 } from "./roscos/sets/emoji/set-emoji-010";
+import { BONUS_SET_011 } from "./roscos/sets/emoji/set-emoji-011";
 import { ROSCO_SET_002 } from "./roscos/sets/set-002";
 import { ROSCO_SET_003 } from "./roscos/sets/set-003";
 import { ROSCO_SET_004 } from "./roscos/sets/set-004";
@@ -98,6 +109,7 @@ export interface RoscoEntry {
   letter: string;
   definition: string;
   category?: string;
+  entryType?: "emoji";
 }
 
 export interface ActiveRoscoContext {
@@ -105,6 +117,13 @@ export interface ActiveRoscoContext {
   weekStart: string;
   scopeKey: string;
   roscos: Record<DayKey, RoscoEntry[]>;
+}
+
+export interface ActiveBonusContext {
+  setId: string;
+  weekStart: string;
+  scopeKey: string;
+  rosco: RoscoEntry[];
 }
 
 type LangSets = Partial<Record<string, Record<DayKey, RoscoEntry[]>>>;
@@ -230,4 +249,34 @@ export const getRoscoByDay = (
 ): RoscoEntry[] => {
   const context = getActiveRoscoContext(referenceDate, language);
   return context.roscos[dayKey];
+};
+
+const BONUS_ROSCO_REGISTRY: RoscoEntry[][] = [
+  BONUS_SET_001,
+  BONUS_SET_002,
+  BONUS_SET_003,
+  BONUS_SET_004,
+  BONUS_SET_005,
+  BONUS_SET_006,
+  BONUS_SET_007,
+  BONUS_SET_008,
+  BONUS_SET_009,
+  BONUS_SET_010,
+  BONUS_SET_011,
+];
+const BONUS_CYCLE_SIZE = BONUS_ROSCO_REGISTRY.length;
+
+export const getActiveBonusContext = (referenceDate = new Date()): ActiveBonusContext => {
+  const weekStart = getWeekStart(referenceDate);
+  const weeksSinceBase = Math.floor(
+    (new Date(weekStart).getTime() - new Date(CYCLE_BASE_DATE).getTime()) / MS_PER_WEEK,
+  );
+  const idx = ((weeksSinceBase % BONUS_CYCLE_SIZE) + BONUS_CYCLE_SIZE) % BONUS_CYCLE_SIZE;
+  const setId = `bonus-${String(idx + 1).padStart(3, "0")}`;
+  return {
+    setId,
+    weekStart,
+    scopeKey: `bonus:${weekStart}:${setId}`,
+    rosco: BONUS_ROSCO_REGISTRY[idx],
+  };
 };

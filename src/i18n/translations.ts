@@ -84,6 +84,7 @@ export interface Translation {
   viewResult: string;
   lockedDay: string;
   unlocksOn: string;
+  bonusLocked: string;
   roscoOfThe: string;
 
   // Rosco status
@@ -195,6 +196,7 @@ export const translations: Record<string, Translation> = {
     viewResult: "VER RESULTADO",
     lockedDay: "BLOQUEADO",
     unlocksOn: "Se habilita el",
+    bonusLocked: "Cuando tengas 10 correctas en cada día",
     roscoOfThe: "ROSCO DEL",
     statusCompleted: "Completado",
     statusInProgress: "En progreso",
@@ -297,6 +299,7 @@ export const translations: Record<string, Translation> = {
     viewResult: "VIEW RESULT",
     lockedDay: "LOCKED",
     unlocksOn: "Unlocks on",
+    bonusLocked: "Get 10 correct answers each day",
     roscoOfThe: "ROSCO OF",
     statusCompleted: "Completed",
     statusInProgress: "In progress",
@@ -399,6 +402,7 @@ export const translations: Record<string, Translation> = {
     viewResult: "VER RESULTADO",
     lockedDay: "BLOQUEADO",
     unlocksOn: "Disponível em",
+    bonusLocked: "Acerte 10 em cada dia",
     roscoOfThe: "ROSCO DE",
     statusCompleted: "Concluído",
     statusInProgress: "Em andamento",
@@ -501,6 +505,7 @@ export const translations: Record<string, Translation> = {
     viewResult: "VOIR RÉSULTAT",
     lockedDay: "VERROUILLÉ",
     unlocksOn: "Disponible le",
+    bonusLocked: "10 bonnes réponses par jour",
     roscoOfThe: "ROSCO DU",
     statusCompleted: "Complété",
     statusInProgress: "En cours",
@@ -603,6 +608,7 @@ export const translations: Record<string, Translation> = {
     viewResult: "ERGEBNIS SEHEN",
     lockedDay: "GESPERRT",
     unlocksOn: "Verfügbar ab",
+    bonusLocked: "10 richtige Antworten pro Tag",
     roscoOfThe: "ROSCO VOM",
     statusCompleted: "Abgeschlossen",
     statusInProgress: "In Bearbeitung",

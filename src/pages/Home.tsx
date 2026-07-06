@@ -31,6 +31,8 @@ export default function WelcomeScreen() {
   const navigate = useNavigate();
   const { t, currentLanguage } = useLanguage();
   const [refreshKey, setRefreshKey] = useState(0);
+  const [titleClickCount, setTitleClickCount] = useState(0);
+  const [devUnlocked, setDevUnlocked] = useState(false);
 
   useEffect(() => {
     const refresh = () => setRefreshKey((prev) => prev + 1);
@@ -63,10 +65,16 @@ export default function WelcomeScreen() {
     getDayState(selectedDayKey, selectedDayRosco.length, activeRoscoContext.scopeKey);
 
   useEffect(() => {
-    if (!isDayAvailable(selectedDayKey)) {
+    if (!devUnlocked && !isDayAvailable(selectedDayKey)) {
       setSelectedDayKey(currentDayKey);
     }
-  }, [currentDayKey, selectedDayKey]);
+  }, [currentDayKey, selectedDayKey, devUnlocked]);
+
+  const isSaturday = new Date().getDay() === 6;
+  const allDaysHaveMinCorrect = WEEK_DAYS
+    .filter((d) => d.key !== "sat")
+    .every((day) => (weeklyState.days[day.key]?.hits ?? 0) >= 10);
+  const isBonusUnlocked = devUnlocked || (isSaturday && allDaysHaveMinCorrect);
 
   const nowHour = new Date().getHours();
   const greeting =
@@ -162,6 +170,11 @@ export default function WelcomeScreen() {
 
         <Typography
           variant="h2"
+          onClick={() => {
+            const next = titleClickCount + 1;
+            setTitleClickCount(next);
+            if (next >= 4) setDevUnlocked(true);
+          }}
           sx={{
             color: "#fff",
             fontWeight: 700,
@@ -169,6 +182,8 @@ export default function WelcomeScreen() {
             fontFamily: "Lobster, cursive",
             textAlign: "center",
             width: "100%",
+            userSelect: "none",
+            cursor: "default",
           }}
         >
           {t.appTitle}
@@ -286,7 +301,7 @@ export default function WelcomeScreen() {
             }}
           >
             {WEEK_DAYS.map((day) => {
-              const available = isDayAvailable(day.key);
+              const available = devUnlocked || isDayAvailable(day.key);
               const rosco = activeRoscoContext.roscos[day.key];
               const dayState =
                 weeklyState.days[day.key] ??
@@ -373,6 +388,53 @@ export default function WelcomeScreen() {
                 </Box>
               );
             })}
+
+            {/* Bonus card — solo mobile, llena el hueco junto a Sábado */}
+            <Box
+              onClick={() => { if (isBonusUnlocked) navigate("/game?day=bonus"); }}
+              sx={{
+                display: { xs: "flex", md: "none" },
+                flexDirection: "column",
+                borderRadius: 3,
+                backgroundColor: "#fff",
+                border: "1px solid #d7d7d7",
+                p: 1.5,
+                opacity: isBonusUnlocked ? 1 : 0.5,
+                boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                alignItems: "center",
+                gap: 0.5,
+                cursor: isBonusUnlocked ? "pointer" : "not-allowed",
+              }}
+            >
+              <Typography sx={{ fontSize: 22, fontWeight: 800, color: "#262a33", alignSelf: "flex-start" }}>
+                ⭐ Bonus
+              </Typography>
+
+              <Box sx={{ width: miniRoscoSize, height: miniRoscoSize, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <Typography sx={{ fontSize: 14, color: "#7a7a7a", fontWeight: 700, textAlign: "center" }}>
+                  {isBonusUnlocked
+                    ? "¡Disponible!"
+                    : t.bonusLocked}
+                </Typography>
+              </Box>
+              <Box sx={{ mb: 1 }} />
+
+              <Button
+                variant="contained"
+                fullWidth
+                disabled={!isBonusUnlocked}
+                onClick={(e) => { e.stopPropagation(); navigate("/game?day=bonus"); }}
+                sx={{
+                  mt: "auto",
+                  backgroundColor: isBonusUnlocked ? "#d84331" : "#bcbcbc",
+                  borderRadius: 999,
+                  fontWeight: 700,
+                  fontSize: 9,
+                }}
+              >
+                {isBonusUnlocked ? t.playButton : t.lockedDay}
+              </Button>
+            </Box>
           </Box>
         </Box>
 

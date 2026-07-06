@@ -9,7 +9,7 @@ import Button from "@mui/material/Button";
 import VirtualKeyboard from "../components/VirtualKeyboard";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useLanguage } from "../i18n/LanguageContext";
-import { getActiveRoscoContext } from "../data/weeklyRoscos";
+import { getActiveRoscoContext, getActiveBonusContext } from "../data/weeklyRoscos";
 import {
   DayKey,
   LetterStatus,
@@ -107,12 +107,19 @@ const Game: React.FC = () => {
 
   const todayKey = getCurrentDayKey();
   const rawDay = searchParams.get("day");
-  const dayKey: DayKey = isDayKey(rawDay) ? rawDay : todayKey;
+  const isBonus = rawDay === "bonus";
+  const dayKey: DayKey = (!isBonus && isDayKey(rawDay)) ? rawDay : todayKey;
+
   const activeRoscoContext = useMemo(() => getActiveRoscoContext(new Date(), currentLanguage), [currentLanguage]);
-  const roscoWords = activeRoscoContext.roscos[dayKey];
+  const bonusContext = useMemo(() => isBonus ? getActiveBonusContext(new Date()) : null, [isBonus]);
+
+  const roscoWords = isBonus ? (bonusContext?.rosco ?? []) : activeRoscoContext.roscos[dayKey];
+  const activeScopeKey = isBonus ? (bonusContext?.scopeKey ?? "bonus") : activeRoscoContext.scopeKey;
+  const stateDayKey: DayKey = isBonus ? "sat" : dayKey;
+
   const initialDayState = useMemo(
-    () => getDayState(dayKey, roscoWords.length, activeRoscoContext.scopeKey),
-    [activeRoscoContext.scopeKey, dayKey, roscoWords.length],
+    () => getDayState(stateDayKey, roscoWords.length, activeScopeKey),
+    [activeScopeKey, stateDayKey, roscoWords.length],
   );
 
   const [hits, setHits] = useState(initialDayState.hits);
@@ -132,7 +139,7 @@ const Game: React.FC = () => {
   const [windowWidth, setWindowWidth] = useState(() => window.innerWidth);
 
   useEffect(() => {
-    if (!isDayAvailable(dayKey)) {
+    if (!isBonus && !isDayAvailable(dayKey)) {
       navigate("/", { replace: true });
       return;
     }
@@ -144,7 +151,7 @@ const Game: React.FC = () => {
     setFeedback(initialDayState.feedback);
     setRemainingSeconds(initialDayState.remainingSeconds);
     setPlayState(initialDayState.playState);
-  }, [dayKey, initialDayState, navigate]);
+  }, [dayKey, isBonus, initialDayState, navigate]);
 
   const unresolvedCount = useMemo(() => {
     return statuses.filter((status) => status === "pending" || status === "passed")
@@ -197,7 +204,7 @@ const Game: React.FC = () => {
       return;
     }
 
-    saveDayState(dayKey, {
+    saveDayState(stateDayKey, {
       hits,
       plays,
       currentIndex,
@@ -205,7 +212,7 @@ const Game: React.FC = () => {
       feedback,
       remainingSeconds,
       playState,
-    }, activeRoscoContext.scopeKey);
+    }, activeScopeKey);
   }, [activeRoscoContext.scopeKey, currentIndex, dayKey, feedback, hits, playState, plays, remainingSeconds, roscoWords.length, statuses]);
 
   useEffect(() => {
@@ -543,18 +550,32 @@ const Game: React.FC = () => {
                     ? `${t.startsWith} ${currentEntry.letter}.`
                     : `${t.contains} ${currentEntry.letter}.`}
                 </Typography>
-                <Typography
-                  sx={{
-                    color: "#5f6f86",
-                    fontWeight: 600,
-                    fontSize: isMobile ? 14 : 16,
-                    lineHeight: 1.35,
-                    opacity: showResumeOverlay ? 0 : 1,
-                    transition: "opacity 220ms ease",
-                  }}
-                >
-                  {currentEntry.definition}
-                </Typography>
+                {currentEntry.entryType === "emoji" ? (
+                  <Typography
+                    sx={{
+                      fontSize: isMobile ? 64 : 80,
+                      lineHeight: 1,
+                      mt: 0.5,
+                      opacity: showResumeOverlay ? 0 : 1,
+                      transition: "opacity 220ms ease",
+                    }}
+                  >
+                    {currentEntry.definition}
+                  </Typography>
+                ) : (
+                  <Typography
+                    sx={{
+                      color: "#5f6f86",
+                      fontWeight: 600,
+                      fontSize: isMobile ? 14 : 16,
+                      lineHeight: 1.35,
+                      opacity: showResumeOverlay ? 0 : 1,
+                      transition: "opacity 220ms ease",
+                    }}
+                  >
+                    {currentEntry.definition}
+                  </Typography>
+                )}
               </Box>
             )}
 
@@ -824,10 +845,16 @@ const Game: React.FC = () => {
                 >
                   {entry.letter}
                 </Box>
-                <Box sx={{ flex: 1 }}>
-                  <Typography sx={{ fontSize: 12, color: "#777", lineHeight: 1.3, mb: 0.25 }}>
-                    {entry.definition}
-                  </Typography>
+                <Box sx={{ flex: 1, display: "flex", alignItems: "center", gap: 1.5 }}>
+                  {entry.entryType === "emoji" ? (
+                    <Typography sx={{ fontSize: 28, lineHeight: 1, flexShrink: 0 }}>
+                      {entry.definition}
+                    </Typography>
+                  ) : (
+                    <Typography sx={{ fontSize: 12, color: "#777", lineHeight: 1.3 }}>
+                      {entry.definition}
+                    </Typography>
+                  )}
                   <Typography sx={{ fontSize: 14, fontWeight: 800, color: getLetterColor(index) }}>
                     {entry.word}
                   </Typography>
