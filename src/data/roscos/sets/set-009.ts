@@ -83,7 +83,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Luna", startOrContain: "contain", letter: "U", definition: "Satélite natural que gira alrededor de la Tierra.", category: "ciencias" },
   { word: "Vuelto", startOrContain: "start", letter: "V", definition: "Dinero que se devuelve al pagar con un billete grande.", category: "educacion-sociedad" },
   { word: "Walkman", startOrContain: "start", letter: "W", definition: "Aparato antiguo y portátil para escuchar música.", category: "cultura-general" },
-  { word: "Fenix", startOrContain: "contain", letter: "X", definition: "Gas del aire que necesitamos respirar para vivir.", category: "ciencias" },
+  { word: "Fenix", startOrContain: "contain", letter: "X", definition: "Ave mágica de las leyendas que renace de sus cenizas.", category: "mitologia-fantasia" },
   { word: "Yema", startOrContain: "start", letter: "Y", definition: "Parte amarilla y central del huevo.", category: "gastronomia" },
   { word: "Zorro", startOrContain: "start", letter: "Z", definition: "Mamífero astuto de cola peluda y hocico puntiagudo.", category: "naturaleza" },
 ];

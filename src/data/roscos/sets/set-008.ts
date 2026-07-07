@@ -200,7 +200,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Veta", startOrContain: "start", letter: "V", definition: "Franja de mineral dentro de una roca.", category: "ciencias" },
   { word: "Washington", startOrContain: "start", letter: "W", definition: "Capital de los Estados Unidos.", category: "cultura-general" },
   { word: "Taxista", startOrContain: "contain", letter: "X", definition: "Persona que conduce un taxi.", category: "educacion-sociedad" },
-  { word: "Yorkshire", startOrContain: "start", letter: "Y", definition: "Elemento químico usado para desinfectar heridas.", category: "ciencias" },
+  { word: "Yorkshire", startOrContain: "start", letter: "Y", definition: "Raza de perro pequeño de pelo largo y sedoso.", category: "naturaleza" },
   { word: "Pozo", startOrContain: "contain", letter: "Z", definition: "Hueco profundo cavado en la tierra para sacar agua.", category: "cultura-general" },
 ];
 
