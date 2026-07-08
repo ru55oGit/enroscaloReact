@@ -109,7 +109,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Remache", startOrContain: "start", letter: "R", definition: "Pieza metálica que une dos materiales con firmeza.", category: "cultura-general" },
   { word: "Stewart", startOrContain: "start", letter: "S", definition: "Piloto escocés de Fórmula 1, llamado Jackie, tres veces campeón del mundo durante los años setenta.", category: "personalidades" },
   { word: "Tomo", startOrContain: "start", letter: "T", definition: "Cada uno de los libros que forman una obra extensa.", category: "cultura-general" },
-  { word: "Buque", startOrContain: "contain", letter: "U", definition: "Embarcación grande que navega por el mar.", category: "transporte" },
+  { word: "Escudo", startOrContain: "contain", letter: "U", definition: "Objeto defensivo que se usaba en combate para protegerse de los golpes.", category: "cultura-general" },
   { word: "Venecia", startOrContain: "start", letter: "V", definition: "Ciudad italiana sobre canales, famosa por sus góndolas, el Carnaval y la Plaza de San Marcos.", category: "cultura-general" },
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unidad que mide la potencia eléctrica.", category: "ciencias" },
   { word: "Examen", startOrContain: "contain", letter: "X", definition: "Prueba para medir lo que una persona aprendió.", category: "educacion-sociedad" },
