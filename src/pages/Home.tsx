@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
 import LanguageSelector from "../components/LanguageSelector";
 import { useLanguage } from "../i18n/LanguageContext";
 import EmojiCarousel from "../components/EmojiCarousel";
@@ -256,16 +257,19 @@ export default function WelcomeScreen() {
             <Button
               variant="contained"
               onClick={() => navigate(`/game?day=${selectedDayKey}`)}
+              startIcon={<PlayArrowRoundedIcon sx={{ fontSize: "28px !important" }} />}
               sx={{
-                backgroundColor: "#f3f3f3",
+                backgroundColor: "#fff",
                 color: "#c63b2e",
                 fontWeight: 800,
                 borderRadius: 999,
-                px: 4,
+                px: 2,
                 py: 1.4,
                 fontSize: 18,
+                boxShadow: "0 0 0 4px rgba(255,255,255,0.35), 0 10px 24px rgba(0,0,0,0.4)",
                 "&:hover": {
                   backgroundColor: "#fff",
+                  boxShadow: "0 0 0 4px rgba(255,255,255,0.5), 0 12px 26px rgba(0,0,0,0.45)",
                 },
               }}
             >
