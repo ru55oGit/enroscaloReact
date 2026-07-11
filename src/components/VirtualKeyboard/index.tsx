@@ -13,6 +13,7 @@ interface VirtualKeyboardProps {
   includeActionKeys?: boolean;
   soundEnabled?: boolean;
   onSoundToggle?: () => void;
+  onPass?: () => void;
   hidden?: boolean;
 }
 
@@ -23,28 +24,27 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
   includeActionKeys = false,
   soundEnabled = true,
   onSoundToggle,
+  onPass,
   hidden = false,
 }) => {
   const isMobile = useIsMobile();
   const { t, currentLanguage } = useLanguage();
 
   const getKeyboardLayout = () => {
-    const baseLayout = [
-      "1 2 3 4 5 6 7 8 9 0",
-      "Q W E R T Y U I O P",
-      "A S D F G H J K L",
-      "Z X C V B N M",
-    ];
+    // El borrar vive dentro de la fila Z-M (rojo, como en enganchadoReact)
+    // en vez de una fila de acciones aparte.
+    const zRow = `Z X C V B N M${includeActionKeys ? " {bksp}" : ""}`;
+    const baseLayout = ["Q W E R T Y U I O P", "A S D F G H J K L", zRow];
 
     switch (currentLanguage) {
       case "es":
         return {
           default: [
-            ...baseLayout.slice(0, 2),
+            baseLayout[0],
             "A S D F G H J K L Ñ",
-            baseLayout[3],
+            zRow,
             "Á É Í Ó Ú",
-            ...(includeActionKeys ? ["{bksp} {sound}"] : []),
+            ...(includeActionKeys ? ["{pass} {sound}"] : []),
           ],
         };
       case "pt":
@@ -53,7 +53,7 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
             ...baseLayout,
             "Á À Â Ã É Ê",
             "Í Ó Ô Õ Ú Ç",
-            ...(includeActionKeys ? ["{bksp} {sound}"] : []),
+            ...(includeActionKeys ? ["{pass} {sound}"] : []),
           ],
         };
       case "fr":
@@ -63,17 +63,17 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
             "À Â Ä É È Ê Ë",
             "Í Î Ï Ó Ô Ö",
             "Ú Ù Û Ü Ç Œ",
-            ...(includeActionKeys ? ["{bksp} {sound}"] : []),
+            ...(includeActionKeys ? ["{pass} {sound}"] : []),
           ],
         };
       case "de":
         return {
           default: [
-            ...baseLayout.slice(0, 2),
+            baseLayout[0],
             "A S D F G H J K L Ö",
-            "Z X C V B N M Ü",
+            `Z X C V B N M Ü${includeActionKeys ? " {bksp}" : ""}`,
             "Ä ß",
-            ...(includeActionKeys ? ["{bksp} {sound}"] : []),
+            ...(includeActionKeys ? ["{pass} {sound}"] : []),
           ],
         };
       case "en":
@@ -82,7 +82,7 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
           default: [
             ...baseLayout,
             "Á É Í Ó Ú",
-            ...(includeActionKeys ? ["{bksp} {sound}"] : []),
+            ...(includeActionKeys ? ["{pass} {sound}"] : []),
           ],
         };
     }
@@ -93,6 +93,11 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
   const handleKeyPress = (key: string) => {
     if (key === "{sound}") {
       onSoundToggle?.();
+      return;
+    }
+
+    if (key === "{pass}") {
+      onPass?.();
       return;
     }
 
@@ -179,6 +184,11 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
             minWidth: "64px",
             fontSize: "11px",
           },
+          "& .hg-button.delete": {
+            backgroundColor: "#e74c3c",
+            borderColor: "#c0392b",
+            color: "#fff",
+          },
           "@media (max-width: 480px)": {
             "& .hg-button": {
               minWidth: "24px",
@@ -220,10 +230,14 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
           },
           {
             class: "action",
-            buttons: "{bksp} {sound}",
+            buttons: "{pass} {sound}",
+          },
+          {
+            class: "delete",
+            buttons: "{bksp}",
           },
         ]}
-        display={{ "{bksp}": t.deleteKey, "{sound}": soundEnabled ? "🔊" : "🔇" }}
+        display={{ "{bksp}": "⌫", "{sound}": soundEnabled ? "🔊" : "🔇", "{pass}": t.feedbackPassed }}
         theme="hg-theme-default"
         disableButtonHold
         preventMouseDownDefault

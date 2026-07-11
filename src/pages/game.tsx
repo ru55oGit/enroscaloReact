@@ -877,6 +877,7 @@ const Game: React.FC = () => {
             return next;
           });
         }}
+        onPass={handlePass}
       />
     </Layout>
   );
