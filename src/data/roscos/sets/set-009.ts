@@ -199,7 +199,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Ruta", startOrContain: "contain", letter: "U", definition: "Camino ancho que une ciudades o pueblos.", category: "transporte" },
   { word: "Viga", startOrContain: "start", letter: "V", definition: "Pieza larga y fuerte que sostiene un techo o un puente.", category: "cultura-general" },
   { word: "Wok", startOrContain: "start", letter: "W", definition: "Sartén honda de origen asiático para saltear alimentos.", category: "gastronomia" },
-  { word: "Saxofon", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas pelean con los puños.", category: "deporte-juego" },
+  { word: "Boxeo", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas pelean con los puños.", category: "deporte-juego" },
   { word: "Yate", startOrContain: "start", letter: "Y", definition: "Embarcación de recreo elegante con motor o velas.", category: "transporte" },
   { word: "Maiz", startOrContain: "contain", letter: "Z", definition: "Planta de granos amarillos que se come y da harina.", category: "gastronomia" },
 ];
