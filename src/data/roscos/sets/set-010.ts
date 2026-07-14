@@ -11,7 +11,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Gasol", startOrContain: "start", letter: "G", definition: "Apellido del basquetbolista español Pau, campeón de la NBA.", category: "personalidades" },
   { word: "Hakkinen", startOrContain: "start", letter: "H", definition: "Apellido del piloto finlandés Mika, campeón de Fórmula 1.", category: "personalidades" },
   { word: "Ingenio", startOrContain: "start", letter: "I", definition: "Fábrica donde se produce el azúcar a partir de la caña.", category: "educacion-sociedad" },
-  { word: "Jugular", startOrContain: "start", letter: "J", definition: "Vena importante que lleva sangre desde la cabeza al corazón.", category: "ciencias" },
+  { word: "Jennifer", startOrContain: "start", letter: "J", definition: "Nombre de la actriz estadounidense Aniston, famosa por la serie Friends.", category: "personalidades" },
   { word: "Karate", startOrContain: "start", letter: "K", definition: "Arte marcial japonés que se practica con golpes de manos y pies.", category: "deporte-juego" },
   { word: "Letra", startOrContain: "start", letter: "L", definition: "Palabras que se cantan en una canción.", category: "arte-musica" },
   { word: "Manet", startOrContain: "start", letter: "M", definition: "Apellido del pintor francés Édouard, precursor del impresionismo.", category: "personalidades" },
