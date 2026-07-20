@@ -138,7 +138,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Roddick", startOrContain: "start", letter: "R", definition: "Apellido del tenista estadounidense Andy, de potente saque.", category: "personalidades" },
   { word: "Sharapova", startOrContain: "start", letter: "S", definition: "Apellido de la tenista rusa María, cinco veces ganadora de Grand Slams y número uno del mundo.", category: "personalidades" },
   { word: "Trompo", startOrContain: "start", letter: "T", definition: "Juguete de madera que baila girando sobre su punta.", category: "deporte-juego" },
-  { word: "Tunica", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada por la que pasan líquidos o gases.", category: "ciencias" },
+  { word: "Tunica", startOrContain: "contain", letter: "U", definition: "Prenda larga y suelta, sin mangas o con mangas anchas, usada desde la antigüedad.", category: "cultura-general" },
   { word: "Videojuego", startOrContain: "start", letter: "V", definition: "Juego electrónico que se juega en una pantalla.", category: "deporte-juego" },
   { word: "Walkman", startOrContain: "start", letter: "W", definition: "Aparato antiguo y portátil para escuchar música.", category: "cultura-general" },
   { word: "Conexion", startOrContain: "contain", letter: "X", definition: "Unión o enlace entre dos cosas o lugares.", category: "ciencias" },

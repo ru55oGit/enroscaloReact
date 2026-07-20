@@ -51,7 +51,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Risco", startOrContain: "start", letter: "R", definition: "Roca alta, abrupta y escarpada, difícil de escalar, típica de montañas y acantilados peligrosos.", category: "naturaleza" },
   { word: "Savia", startOrContain: "start", letter: "S", definition: "Líquido que alimenta a las plantas por dentro.", category: "naturaleza" },
   { word: "Templado", startOrContain: "start", letter: "T", definition: "Clima que no es ni muy frío ni muy caluroso.", category: "naturaleza" },
-  { word: "Murcielago", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada por la que pasan líquidos o gases.", category: "ciencias" },
+  { word: "Murcielago", startOrContain: "contain", letter: "U", definition: "Mamífero nocturno que vuela y usa el sonido para orientarse en la oscuridad.", category: "naturaleza" },
   { word: "Vasija", startOrContain: "start", letter: "V", definition: "Recipiente de barro usado desde tiempos antiguos.", category: "cultura-general" },
   { word: "Wifi", startOrContain: "start", letter: "W", definition: "Conexión sin cables que permite acceder a internet.", category: "ciencias" },
   { word: "Saxo", startOrContain: "contain", letter: "X", definition: "Instrumento de viento de metal muy usado en el jazz.", category: "arte-musica" },
