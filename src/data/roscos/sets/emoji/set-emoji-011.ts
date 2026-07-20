@@ -16,7 +16,7 @@ export const BONUS_SET_011: RoscoEntry[] = [
   { letter: "M", startOrContain: "start",   word: "Muela",        definition: "🦷", entryType: "emoji" },
   { letter: "N", startOrContain: "start",   word: "Navidad",      definition: "🎄", entryType: "emoji" },
   { letter: "O", startOrContain: "start",   word: "Ondas",        definition: "🌊", entryType: "emoji" },
-  { letter: "P", startOrContain: "start",   word: "Pina",         definition: "🍍", entryType: "emoji" },
+  { letter: "P", startOrContain: "start",   word: "Piña",         definition: "🍍", entryType: "emoji" },
   { letter: "Q", startOrContain: "start",   word: "Quirofano",    definition: "🏥", entryType: "emoji" },  // Q-U-I-R-O-F-A-N-O
   { letter: "R", startOrContain: "start",   word: "Rompecabezas", definition: "🧩", entryType: "emoji" },
   { letter: "S", startOrContain: "start",   word: "Sello",        definition: "📮", entryType: "emoji" },
