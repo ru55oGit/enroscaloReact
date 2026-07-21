@@ -61,8 +61,8 @@ const ROSCO_2: RoscoEntry[] = [
 
 const ROSCO_3: RoscoEntry[] = [
   { word: "Altiplano", startOrContain: "start", letter: "A", definition: "Llanura muy elevada entre montañas.", category: "naturaleza" },
-  { word: "Basilisco", startOrContain: "start", letter: "B", definition: "Monstruo legendario que petrificaba con la mirada.", category: "mitologia-fantasia" },
-  { word: "Crick", startOrContain: "start", letter: "C", definition: "Apellido del científico Francis, que descubrió junto a Watson la doble hélice del ADN.", category: "personalidades" },
+  { word: "Basilisco", startOrContain: "start", letter: "B", definition: "Criatura mitológica descrita como una serpiente gigante o un ser con cabeza de gallo y cuerpo de reptil.", category: "mitologia-fantasia" },
+  { word: "Chaplin", startOrContain: "start", letter: "C", definition: "Apellido del actor y director británico Charles, creador del personaje Charlot.", category: "personalidades" },
   { word: "Deidad", startOrContain: "start", letter: "D", definition: "Ser divino al que se le rinde culto.", category: "mitologia-fantasia" },
   { word: "Estambre", startOrContain: "start", letter: "E", definition: "Parte de la flor que produce el polen.", category: "naturaleza" },
   { word: "Friccion", startOrContain: "start", letter: "F", definition: "Roce entre dos superficies que frena el movimiento.", category: "ciencias" },
@@ -83,7 +83,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Puño", startOrContain: "contain", letter: "U", definition: "Mano cerrada con los dedos doblados.", category: "ciencias" },
   { word: "Vampiro", startOrContain: "start", letter: "V", definition: "Ser de las leyendas que sale de noche a morder cuellos.", category: "mitologia-fantasia" },
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unidad que mide la potencia eléctrica.", category: "ciencias" },
-  { word: "Sexteto", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas pelean con los puños.", category: "deporte-juego" },
+  { word: "Sexteto", startOrContain: "contain", letter: "X", definition: "Grupo musical formado por seis integrantes.", category: "arte-musica" },
   { word: "Yoga", startOrContain: "start", letter: "Y", definition: "Disciplina que combina posturas del cuerpo y respiración.", category: "deporte-juego" },
   { word: "Zorro", startOrContain: "start", letter: "Z", definition: "Mamífero astuto de cola peluda y hocico puntiagudo.", category: "naturaleza" },
 ];
@@ -170,7 +170,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Humo", startOrContain: "contain", letter: "U", definition: "Gas gris que se desprende de algo que se quema.", category: "ciencias" },
   { word: "Vertiente", startOrContain: "start", letter: "V", definition: "Lugar por donde corre el agua que baja de una montaña.", category: "naturaleza" },
   { word: "Walkman", startOrContain: "start", letter: "W", definition: "Aparato antiguo y portátil para escuchar música.", category: "cultura-general" },
-  { word: "Latex", startOrContain: "contain", letter: "X", definition: "Gas del aire que necesitamos respirar para vivir.", category: "ciencias" },
+  { word: "Latex", startOrContain: "contain", letter: "X", definition: "Sustancia elástica que se obtiene de ciertos árboles y se usa para fabricar caucho.", category: "ciencias" },
   { word: "Yerba", startOrContain: "start", letter: "Y", definition: "Hojas secas y molidas con las que se prepara el mate.", category: "gastronomia" },
   { word: "Manzana", startOrContain: "contain", letter: "Z", definition: "Fruta redonda y crujiente que puede ser roja o verde.", category: "gastronomia" },
 ];
