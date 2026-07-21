@@ -112,7 +112,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Mundo", startOrContain: "contain", letter: "U", definition: "El planeta Tierra y todo lo que existe en él.", category: "cultura-general" },
   { word: "Vendaval", startOrContain: "start", letter: "V", definition: "Viento muy fuerte y violento que sopla con furia y puede arrancar techos y derribar árboles.", category: "naturaleza" },
   { word: "Wafle", startOrContain: "start", letter: "W", definition: "Masa dulce con forma de cuadrícula cocida en una plancha.", category: "gastronomia" },
-  { word: "Boxeador", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas pelean con los puños.", category: "deporte-juego" },
+  { word: "Boxeador", startOrContain: "contain", letter: "X", definition: "Deportista que se enfrenta a un rival peleando con los puños.", category: "deporte-juego" },
   { word: "Yema", startOrContain: "start", letter: "Y", definition: "Parte amarilla y central del huevo.", category: "gastronomia" },
   { word: "Zorro", startOrContain: "start", letter: "Z", definition: "Mamífero astuto de cola peluda y hocico puntiagudo.", category: "naturaleza" },
 ];

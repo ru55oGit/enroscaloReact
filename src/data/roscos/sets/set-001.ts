@@ -132,7 +132,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Alturas", startOrContain: "contain", letter: "U", definition: "Zonas elevadas del terreno o el cielo que se encuentran a gran distancia del suelo.", category: "naturaleza" },
   { word: "Vela", startOrContain: "start", letter: "V", definition: "Cilindro de cera con una mecha que al encenderse da luz y calor.", category: "cultura-general" },
   { word: "Web", startOrContain: "start", letter: "W", definition: "Conjunto interconectado de páginas y recursos disponibles en internet para usuarios globales.", category: "ciencias" },
-  { word: "Experto", startOrContain: "contain", letter: "X", definition: "Gas incoloro e inodoro esencial para la respiración de los seres vivos y la combustión.", category: "ciencias" },
+  { word: "Experto", startOrContain: "contain", letter: "X", definition: "Persona que sabe mucho sobre un tema y tiene mucha experiencia en él.", category: "cultura-general" },
   { word: "Yoyo", startOrContain: "start", letter: "Y", definition: "Juguete formado por dos discos unidos por un eje que sube y baja por un hilo enrollado.", category: "deporte-juego" },
   { word: "Pieza", startOrContain: "contain", letter: "Z", definition: "Cada una de las partes que componen un conjunto, mecanismo o rompecabezas.", category: "cultura-general" },
 ];

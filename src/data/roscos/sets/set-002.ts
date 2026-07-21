@@ -141,7 +141,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Universitario", startOrContain: "start", letter: "U", definition: "Estudiante que cursa una carrera en una universidad para obtener un título.", category: "educacion-sociedad" },
   { word: "Vidrio", startOrContain: "start", letter: "V", definition: "Material duro y transparente que se rompe con facilidad usado en ventanas y vasos.", category: "cultura-general" },
   { word: "Wonton", startOrContain: "start", letter: "W", definition: "Pequeña masa rellena de carne o verduras típica de la cocina china.", category: "gastronomia" },
-  { word: "Flexion", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas se enfrentan usando los puños con guantes.", category: "deporte-juego" },
+  { word: "Flexion", startOrContain: "contain", letter: "X", definition: "Movimiento de doblar una articulación o parte del cuerpo.", category: "deporte-juego" },
   { word: "Yellowstone", startOrContain: "start", letter: "Y", definition: "Parque Nacional en Wyoming, famoso por sus fuentes termales y el géiser Old Faithful.", category: "naturaleza" },
   { word: "Manzana", startOrContain: "contain", letter: "Z", definition: "Fruta redonda de cáscara roja o verde y pulpa jugosa muy consumida en el mundo.", category: "gastronomia" },
 ];
