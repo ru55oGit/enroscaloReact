@@ -161,7 +161,7 @@ const Layout: React.FC<LayoutProps> = ({
         flexDirection: "column",
         background: "linear-gradient(#a34747, #F44336)",
         alignItems: "center",
-        width: { md: "40vw", xs: "100%" },
+        width: { md: "480px", xs: "100%" },
         margin: "0 auto",
         position: "relative",
         overflow: "hidden",
