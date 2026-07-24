@@ -300,7 +300,7 @@ export default function WelcomeScreen() {
           <Box
             sx={{
               display: "grid",
-              gridTemplateColumns: { xs: "repeat(2, 1fr)", md: "repeat(3, 1fr)" },
+              gridTemplateColumns: "repeat(2, 1fr)",
               gap: 1.5,
             }}
           >
