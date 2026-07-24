@@ -10,6 +10,7 @@ import VirtualKeyboard from "../components/VirtualKeyboard";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useLanguage } from "../i18n/LanguageContext";
 import { getActiveRoscoContext, getActiveBonusContext } from "../data/weeklyRoscos";
+import { recordLastPlayed } from "../utils/lastPlayedState";
 import {
   DayKey,
   LetterStatus,
@@ -137,6 +138,10 @@ const Game: React.FC = () => {
     return localStorage.getItem("enroscalo_sound_enabled") !== "false";
   });
   const [windowWidth, setWindowWidth] = useState(() => window.innerWidth);
+
+  useEffect(() => {
+    recordLastPlayed();
+  }, []);
 
   useEffect(() => {
     if (!isBonus && !isDayAvailable(dayKey)) {

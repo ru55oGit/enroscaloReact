@@ -10,6 +10,7 @@ import { useLanguage } from "../i18n/LanguageContext";
 import EmojiCarousel from "../components/EmojiCarousel";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { getActiveRoscoContext } from "../data/weeklyRoscos";
+import { getDaysSinceLastPlayed } from "../utils/lastPlayedState";
 import {
   upsertHistoryDay,
   getCumulativeStats,
@@ -77,13 +78,18 @@ export default function WelcomeScreen() {
     .every((day) => (weeklyState.days[day.key]?.hits ?? 0) >= 10);
   const isBonusUnlocked = devUnlocked || (isSaturday && allDaysHaveMinCorrect);
 
+  const daysSincePlayed = getDaysSinceLastPlayed();
   const nowHour = new Date().getHours();
-  const greeting =
+  const timeGreeting =
     nowHour < 12
       ? t.goodMorning
       : nowHour < 20
         ? t.goodAfternoon
         : t.goodEvening;
+  const greeting =
+    daysSincePlayed != null && daysSincePlayed > 1
+      ? `${timeGreeting}, ${t.daysWithoutPlayingMessage(daysSincePlayed)}.`
+      : timeGreeting;
 
   const DAY_LABELS: Record<string, string> = {
     sun: t.daySun, mon: t.dayMon, tue: t.dayTue, wed: t.dayWed,
@@ -169,40 +175,42 @@ export default function WelcomeScreen() {
       >
         <LanguageSelector />
 
-        <Typography
-          variant="h2"
-          onClick={() => {
-            const next = titleClickCount + 1;
-            setTitleClickCount(next);
-            if (next >= 4) setDevUnlocked(true);
-          }}
-          sx={{
-            color: "#fff",
-            fontWeight: 700,
-            letterSpacing: "1px",
-            fontFamily: "Lobster, cursive",
-            textAlign: "center",
-            width: "100%",
-            userSelect: "none",
-            cursor: "default",
-          }}
-        >
-          {t.appTitle}
-        </Typography>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+          <Typography
+            variant="h2"
+            onClick={() => {
+              const next = titleClickCount + 1;
+              setTitleClickCount(next);
+              if (next >= 4) setDevUnlocked(true);
+            }}
+            sx={{
+              color: "#fff",
+              fontWeight: 700,
+              letterSpacing: "1px",
+              fontFamily: "Lobster, cursive",
+              textAlign: "center",
+              width: "100%",
+              userSelect: "none",
+              cursor: "default",
+            }}
+          >
+            {t.appTitle}
+          </Typography>
 
-        <Typography
-          variant="h6"
-          sx={{
-            color: "rgba(255, 255, 255, 0.64)",
-            fontStyle: "italic",
-            letterSpacing: "2px",
-            width: "100%",
-            textAlign: "center",
-            fontSize: { xs: 18, md: 22 },
-          }}
-        >
-          {t.tagline}
-        </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              color: "rgba(255, 255, 255, 0.64)",
+              fontStyle: "italic",
+              letterSpacing: "2px",
+              width: "100%",
+              textAlign: "center",
+              fontSize: { xs: 18, md: 22 },
+            }}
+          >
+            {t.tagline}
+          </Typography>
+        </Box>
 
         <Typography sx={{ color: "#ffe6e6", fontSize: 18, fontWeight: 600 }}>
           {greeting}
@@ -224,12 +232,13 @@ export default function WelcomeScreen() {
           <Box
             sx={{
               width: "100%",
+              aspectRatio: "1",
               borderRadius: 4,
-              minHeight: 260,
               backgroundColor: "#f3f3f3",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              p: 1.25,
               mb: 2,
             }}
           >
@@ -263,7 +272,7 @@ export default function WelcomeScreen() {
                 color: "#c63b2e",
                 fontWeight: 800,
                 borderRadius: 999,
-                px: 2,
+                px: 3,
                 py: 1.4,
                 fontSize: 18,
                 boxShadow: "0 0 0 4px rgba(255,255,255,0.35), 0 10px 24px rgba(0,0,0,0.4)",

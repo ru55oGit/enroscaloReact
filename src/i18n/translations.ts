@@ -69,6 +69,7 @@ export interface Translation {
   goodMorning: string;
   goodAfternoon: string;
   goodEvening: string;
+  daysWithoutPlayingMessage: (days: number) => string;
   readyToPlay: string;
   weeklySection: string;
   statsSection: string;
@@ -180,6 +181,7 @@ export const translations: Record<string, Translation> = {
     goodMorning: "Buenos días",
     goodAfternoon: "Buenas tardes",
     goodEvening: "Buenas noches",
+    daysWithoutPlayingMessage: (days) => `hace ${days} días que no jugás`,
     readyToPlay: "¿Listo para jugar Enroscado? 😳",
     weeklySection: "Semanal",
     statsSection: "Estadísticas",
@@ -282,6 +284,7 @@ export const translations: Record<string, Translation> = {
     goodMorning: "Good morning",
     goodAfternoon: "Good afternoon",
     goodEvening: "Good evening",
+    daysWithoutPlayingMessage: (days) => `it's been ${days} days since you last played`,
     readyToPlay: "Ready to play Enroscado? 😳",
     weeklySection: "Weekly",
     statsSection: "Statistics",
@@ -384,6 +387,7 @@ export const translations: Record<string, Translation> = {
     goodMorning: "Bom dia",
     goodAfternoon: "Boa tarde",
     goodEvening: "Boa noite",
+    daysWithoutPlayingMessage: (days) => `faz ${days} dias que você não joga`,
     readyToPlay: "Pronto para jogar Enroscado? 😳",
     weeklySection: "Semanal",
     statsSection: "Estatísticas",
@@ -486,6 +490,7 @@ export const translations: Record<string, Translation> = {
     goodMorning: "Bonjour",
     goodAfternoon: "Bon après-midi",
     goodEvening: "Bonsoir",
+    daysWithoutPlayingMessage: (days) => `ça fait ${days} jours que tu n'as pas joué`,
     readyToPlay: "Prêt à jouer à Enroscado? 😳",
     weeklySection: "Hebdomadaire",
     statsSection: "Statistiques",
@@ -588,6 +593,7 @@ export const translations: Record<string, Translation> = {
     goodMorning: "Guten Morgen",
     goodAfternoon: "Guten Tag",
     goodEvening: "Guten Abend",
+    daysWithoutPlayingMessage: (days) => `du hast seit ${days} Tagen nicht gespielt`,
     readyToPlay: "Bereit, Enroscado zu spielen? 😳",
     weeklySection: "Wöchentlich",
     statsSection: "Statistiken",
