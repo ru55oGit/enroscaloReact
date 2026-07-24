@@ -393,11 +393,11 @@ export default function WelcomeScreen() {
               );
             })}
 
-            {/* Bonus card — solo mobile, llena el hueco junto a Sábado */}
+            {/* Bonus card — llena el hueco junto a Sábado (grilla siempre a 2 columnas) */}
             <Box
               onClick={() => { if (isBonusUnlocked) navigate("/game?day=bonus"); }}
               sx={{
-                display: { xs: "flex", md: "none" },
+                display: "flex",
                 flexDirection: "column",
                 borderRadius: 3,
                 backgroundColor: "#fff",
