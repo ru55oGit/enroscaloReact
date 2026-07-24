@@ -9,11 +9,11 @@ export const BONUS_SET_003: RoscoEntry[] = [
   { letter: "F", startOrContain: "start",   word: "Foca",        definition: "🦭", entryType: "emoji" },
   { letter: "G", startOrContain: "start",   word: "Globo",       definition: "🎈", entryType: "emoji" },
   { letter: "H", startOrContain: "start",   word: "Hada",        definition: "🧚", entryType: "emoji" },
-  { letter: "I", startOrContain: "start",   word: "Iman",        definition: "🧲", entryType: "emoji" },
+  { letter: "I", startOrContain: "start",   word: "Imán",        definition: "🧲", entryType: "emoji" },
   { letter: "J", startOrContain: "contain", word: "Ninja",       definition: "🥷", entryType: "emoji" },  // N-I-N-J-A
   { letter: "K", startOrContain: "contain", word: "Kayak",       definition: "🛶", entryType: "emoji" },  // K-A-Y-A-K
   { letter: "L", startOrContain: "start",   word: "Loro",        definition: "🦜", entryType: "emoji" },
-  { letter: "M", startOrContain: "start",   word: "Montana",     definition: "⛰️", entryType: "emoji" },
+  { letter: "M", startOrContain: "start",   word: "Montaña",     definition: "⛰️", entryType: "emoji" },
   { letter: "N", startOrContain: "start",   word: "Nuez",        definition: "🌰", entryType: "emoji" },
   { letter: "O", startOrContain: "start",   word: "Oruga",       definition: "🐛", entryType: "emoji" },
   { letter: "P", startOrContain: "start",   word: "Paloma",      definition: "🕊️", entryType: "emoji" },
