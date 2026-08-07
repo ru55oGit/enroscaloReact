@@ -5,7 +5,7 @@ export const BONUS_SET_EN_005: RoscoEntry[] = [
   { letter: "B", startOrContain: "start",   word: "Bison",       definition: "🦬", entryType: "emoji" },
   { letter: "C", startOrContain: "start",   word: "Compass",     definition: "🧭", entryType: "emoji" },
   { letter: "D", startOrContain: "start",   word: "Deer",        definition: "🦌", entryType: "emoji" },
-  { letter: "E", startOrContain: "start",   word: "Eggplant",    definition: "🍆", entryType: "emoji" },
+  { letter: "E", startOrContain: "start",   word: "Elephant",    definition: "🐘", entryType: "emoji" },
   { letter: "F", startOrContain: "start",   word: "Fork",        definition: "🍴", entryType: "emoji" },
   { letter: "G", startOrContain: "start",   word: "Giraffe",     definition: "🦒", entryType: "emoji" },
   { letter: "H", startOrContain: "start",   word: "Hippo",       definition: "🦛", entryType: "emoji" },

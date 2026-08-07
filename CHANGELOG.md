@@ -7,6 +7,8 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
 ## [Unreleased]
 ### Changed
 - Home: agregar emoji de momento del día al saludo (☀️/🌤️/🌙), mismo tratamiento que ya tenía Enganchalo
+### Fixed
+- Datos: reemplazar pistas de emoji 🍑/🍆 (Durazno, Abricot, Peach, Eggplant) por 🍇/🍍/🍐/🐘, probable causa del rechazo de AdSense por "contenido para adultos" (esos emojis se muestran a pantalla completa como clave del rosco)
 
 ## [2026-07-26]
 ### Added

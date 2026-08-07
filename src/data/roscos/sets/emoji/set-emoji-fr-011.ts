@@ -1,7 +1,7 @@
 import { RoscoEntry } from "../../../weeklyRoscos";
 
 export const BONUS_SET_FR_011: RoscoEntry[] = [
-  { letter: "A", startOrContain: "start",   word: "Abricot",      definition: "🍑",  entryType: "emoji" },
+  { letter: "A", startOrContain: "start",   word: "Ananas",       definition: "🍍",  entryType: "emoji" },
   { letter: "B", startOrContain: "start",   word: "Biche",        definition: "🦌",  entryType: "emoji" },
   { letter: "C", startOrContain: "start",   word: "Coccinelle",   definition: "🐞",  entryType: "emoji" },
   { letter: "D", startOrContain: "start",   word: "Disque",       definition: "🥏",  entryType: "emoji" },
