@@ -1,6 +1,7 @@
 import { useMemo, useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Layout from "../components/Layout";
+import AdsenseScript from "../components/AdsenseScript";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -169,6 +170,7 @@ export default function WelcomeScreen() {
 
   return (
     <Layout showFooter={false}>
+      <AdsenseScript />
       {fromHub && (
         <Box
           component="a"
