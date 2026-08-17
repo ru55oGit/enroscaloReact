@@ -10,6 +10,9 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
 ### Changed
 - AdSense: sacar el script del `index.html` (se cargaba en todo el sitio) y cargarlo solo desde Home y Privacidad (componente `AdsenseScript`) — nunca en `/game`, que es una pantalla de juego sin texto. Mismo fix que en Enganchalo, que Google rechazó por "anuncios servidos por Google en pantallas sin contenido del editor"
 - Home: agregar emoji de momento del día al saludo (☀️/🌤️/🌙), mismo tratamiento que ya tenía Enganchalo
+
+### Fixed
+- Header: tocar el título (para volver a Home) seleccionaba el texto en mobile y disparaba el popup de "Buscar en Google" del navegador — agregar `userSelect: none`
 ### Fixed
 - Datos: reemplazar pistas de emoji 🍑/🍆 (Durazno, Abricot, Peach, Eggplant) por 🍇/🍍/🍐/🐘, probable causa del rechazo de AdSense por "contenido para adultos" (esos emojis se muestran a pantalla completa como clave del rosco)
 

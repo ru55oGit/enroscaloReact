@@ -294,6 +294,9 @@ const Layout: React.FC<LayoutProps> = ({
               cursor: "pointer",
               zIndex: 2,
               width: "max-content",
+              userSelect: "none",
+              WebkitUserSelect: "none",
+              WebkitTouchCallout: "none",
             }}
             onClick={() => window.location.replace("/")}
           >
