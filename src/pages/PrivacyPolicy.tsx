@@ -47,35 +47,45 @@ export default function PrivacyPolicy() {
         </Typography>
 
         <Typography variant="h6" sx={{ fontWeight: 700, mt: 3, mb: 1 }}>
-          3. Cookies
+          3. Analítica — Google Analytics
         </Typography>
         <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
-          Este sitio utiliza cookies propias (para guardar tu idioma y preferencias) y cookies de terceros de Google AdSense para la entrega de anuncios. Al continuar usando el sitio, aceptás el uso de cookies.
+          Usamos <strong>Google Analytics</strong> para entender cómo se usa el sitio (páginas visitadas, tiempo de uso), de forma agregada y anónima. Google Analytics utiliza sus propias cookies, independientes de las de AdSense. Para más información, consultá la{" "}
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: "#ffd" }}>
+            Política de Privacidad de Google
+          </a>.
         </Typography>
 
         <Typography variant="h6" sx={{ fontWeight: 700, mt: 3, mb: 1 }}>
-          4. Servicios de terceros
+          4. Cookies
         </Typography>
         <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
-          Únicamente utilizamos Google AdSense como servicio de terceros. No compartimos datos con otras empresas ni vendemos información a terceros.
+          Este sitio utiliza cookies propias (para guardar tu idioma y preferencias) y cookies de terceros de Google AdSense y Google Analytics. Al continuar usando el sitio, aceptás el uso de cookies.
         </Typography>
 
         <Typography variant="h6" sx={{ fontWeight: 700, mt: 3, mb: 1 }}>
-          5. Menores de edad
+          5. Servicios de terceros
+        </Typography>
+        <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
+          Utilizamos Google AdSense y Google Analytics como servicios de terceros. No compartimos datos con otras empresas ni vendemos información a terceros.
+        </Typography>
+
+        <Typography variant="h6" sx={{ fontWeight: 700, mt: 3, mb: 1 }}>
+          6. Menores de edad
         </Typography>
         <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
           Este sitio no está dirigido a menores de 13 años ni recopila intencionalmente información de ellos.
         </Typography>
 
         <Typography variant="h6" sx={{ fontWeight: 700, mt: 3, mb: 1 }}>
-          6. Cambios en esta política
+          7. Cambios en esta política
         </Typography>
         <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
-          Podemos actualizar esta política en cualquier momento. Te recomendamos revisarla periódicamente. La fecha de última actualización es junio de 2025.
+          Podemos actualizar esta política en cualquier momento. Te recomendamos revisarla periódicamente. La fecha de última actualización es agosto de 2026.
         </Typography>
 
         <Typography variant="h6" sx={{ fontWeight: 700, mt: 3, mb: 1 }}>
-          7. Contacto
+          8. Contacto
         </Typography>
         <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
           Si tenés preguntas sobre esta política, podés contactarnos en{" "}
