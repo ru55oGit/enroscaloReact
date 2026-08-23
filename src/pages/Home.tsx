@@ -6,7 +6,6 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
-import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import LanguageSelector from "../components/LanguageSelector";
 import { useLanguage } from "../i18n/LanguageContext";
 import EmojiCarousel from "../components/EmojiCarousel";
@@ -30,14 +29,19 @@ import {
   getWeeklyState,
   isDayAvailable,
 } from "../utils/weeklyRoscoState";
+import { markFromHub, cameFromHubBefore } from "../utils/hubOriginState";
 
 const ACCENT = "#e74c3c";
-const HUB_URL = "https://dejadeboludear.netlify.app/";
+const HUB_URL = "https://www.boludeando.com/";
 
 export default function WelcomeScreen() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const fromHub = searchParams.get("from") === "boludeando";
+  const fromHubParam = searchParams.get("from") === "boludeando";
+  const [showHubHeader] = useState(() => fromHubParam || cameFromHubBefore());
+  useEffect(() => {
+    if (fromHubParam) markFromHub();
+  }, [fromHubParam]);
   const { t, currentLanguage } = useLanguage();
   const [refreshKey, setRefreshKey] = useState(0);
   const [titleClickCount, setTitleClickCount] = useState(0);
@@ -171,27 +175,20 @@ export default function WelcomeScreen() {
   return (
     <Layout showFooter={false}>
       <AdsenseScript />
-      {fromHub && (
-        <Box
-          component="a"
-          href={HUB_URL}
-          aria-label="Volver"
-          sx={{
-            position: "absolute",
-            top: 16,
-            left: 16,
-            zIndex: 1000,
-            width: 40,
-            height: 40,
-            borderRadius: "8px",
-            backgroundColor: "#fff",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.25)",
-          }}
-        >
-          <ArrowBackRoundedIcon sx={{ color: ACCENT }} />
+      {showHubHeader && (
+        <Box component="header" sx={{
+          display: "flex", alignItems: "center",
+          height: 80, px: 2, mt: -2,
+          borderBottom: `2px solid ${ACCENT}`,
+          background: "#fff",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+          width: "100%", position: "relative", zIndex: 10,
+        }}>
+          <Box component="a" href={HUB_URL} aria-label="Volver" sx={{ display: "flex", alignItems: "center" }}>
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+              <path d="M26 6L14 19L26 32" stroke={ACCENT} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </Box>
         </Box>
       )}
       <Box
