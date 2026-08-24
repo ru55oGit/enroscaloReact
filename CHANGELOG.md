@@ -7,6 +7,7 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1
 ## [Unreleased]
 ### Added
 - Home: si se llega desde el hub "Boludeando" (`?from=boludeando`, ahora en www.boludeando.com), se muestra un header blanco real arriba del título (mismo estilo que el header del juego, ya no una cajita flotante que podía pisarse con el título) con flecha para volver. Queda persistido en localStorage para siempre en ese dispositivo — si alguien comparte la URL directa sin pasar por el hub, no aparece
+- `/game`: bloque colapsable "¿Cómo jugar?" (cerrado por default, reusa el mismo texto que ya existía en Home) — suma contenido de texto real a la pantalla de juego, que antes era pura UI sin texto
 ### Changed
 - Política de Privacidad: agregar sección de Google Analytics (el sitio carga gtag.js pero no estaba declarado, solo se mencionaba AdSense) y actualizar la fecha de última actualización (junio 2025 → agosto 2026)
 - AdSense: sacar el script del `index.html` (se cargaba en todo el sitio) y cargarlo solo desde Home y Privacidad (componente `AdsenseScript`) — nunca en `/game`, que es una pantalla de juego sin texto. Mismo fix que en Enganchalo, que Google rechazó por "anuncios servidos por Google en pantallas sin contenido del editor"

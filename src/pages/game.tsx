@@ -3,6 +3,7 @@ import Hypher from "hypher";
 import spanishHyphenation from "hyphenation.es";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Layout from "../components/Layout";
+import HowToPlayCollapse from "../components/HowToPlayCollapse";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
@@ -868,6 +869,8 @@ const Game: React.FC = () => {
             ))}
           </Box>
         )}
+
+        <HowToPlayCollapse title={t.howToPlayTitle} body={t.howToPlayText} />
       </Box>
 
       <VirtualKeyboard
