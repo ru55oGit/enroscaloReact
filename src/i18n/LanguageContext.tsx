@@ -33,8 +33,9 @@ export const availableLanguages = [
   { code: "es" as SupportedLanguage, name: "Español", flag: "🇦🇷" },
   { code: "en" as SupportedLanguage, name: "English", flag: "🇺🇸" },
   { code: "pt" as SupportedLanguage, name: "Português", flag: "🇧🇷" },
-  { code: "fr" as SupportedLanguage, name: "Français", flag: "🇫🇷" },
-  { code: "de" as SupportedLanguage, name: "Deutsch", flag: "🇩🇪" },
+  // fr/de ocultos del selector (siguen soportados en `translations`, solo no se ofrecen en la UI)
+  // { code: "fr" as SupportedLanguage, name: "Français", flag: "🇫🇷" },
+  // { code: "de" as SupportedLanguage, name: "Deutsch", flag: "🇩🇪" },
 ];
 
 interface LanguageProviderProps {

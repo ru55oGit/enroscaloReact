@@ -89,8 +89,8 @@ export default function PrivacyPolicy() {
         </Typography>
         <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
           Si tenés preguntas sobre esta política, podés contactarnos en{" "}
-          <a href="mailto:patricio.ezequiel.toledo@gmail.com" style={{ color: "#ffd" }}>
-            patricio.ezequiel.toledo@gmail.com
+          <a href="mailto:boludeando.app@gmail.com" style={{ color: "#ffd" }}>
+            boludeando.app@gmail.com
           </a>.
         </Typography>
       </Box>
