@@ -124,6 +124,8 @@ export interface Translation {
   aboutText: string;
   howToPlayTitle: string;
   howToPlayText: string;
+  faqTitle: string;
+  faq: { q: string; a: string }[];
 }
 
 export const translations: Record<string, Translation> = {
@@ -228,6 +230,15 @@ export const translations: Record<string, Translation> = {
     aboutText: "Enroscado es un juego de vocabulario diario inspirado en el clásico rosco. Cada día aparece un nuevo rosco con 27 letras del abecedario — tenés que adivinar una palabra para cada letra usando la definición como pista. Jugá en español, inglés, portugués, francés o alemán y poné a prueba tu conocimiento.",
     howToPlayTitle: "¿Cómo jugar?",
     howToPlayText: "Cada letra del rosco tiene una definición. Escribí la palabra que creés que corresponde y confirmala. Si acertás, la letra queda en verde. Si errás, queda en rojo. Podés pasar una letra y volver a ella más tarde. El objetivo es completar el rosco con la mayor cantidad de aciertos posibles. Un nuevo rosco aparece cada día, así que ¡volvé mañana!",
+    faqTitle: "Preguntas frecuentes",
+    faq: [
+      { q: "¿Enroscado es gratis?", a: "Sí, jugar a Enroscado es completamente gratis. La app se sostiene con publicidad, nunca vas a tener que pagar para jugar." },
+      { q: "¿Necesito crear una cuenta?", a: "No. Tu progreso y tus estadísticas se guardan en este dispositivo automáticamente, no hace falta registrarse ni iniciar sesión." },
+      { q: "¿Cuánto tiempo tengo para completar el rosco?", a: "Tenés 3 minutos para el rosco completo de 27 letras. Podés pasar una letra en cualquier momento y volver a ella más tarde, mientras te quede tiempo." },
+      { q: "¿Qué pasa si se me acaba el tiempo?", a: "La partida del día queda marcada como \"tiempo agotado\", con los aciertos que hayas logrado hasta ese momento." },
+      { q: "¿Qué es el rosco bonus del sábado?", a: "Se desbloquea si completás los roscos de lunes a viernes con al menos 10 aciertos en cada uno." },
+      { q: "¿En qué idiomas puedo jugar?", a: "Enroscado está disponible en español, inglés y portugués. Podés cambiar el idioma desde el selector de la parte de arriba de esta pantalla." },
+    ],
   },
 
   en: {
@@ -331,6 +342,15 @@ export const translations: Record<string, Translation> = {
     aboutText: "Enroscado is a daily vocabulary game inspired by the classic rosco. Every day a new rosco appears with 27 letters of the alphabet — you have to guess one word per letter using the definition as a clue. Play in Spanish, English, Portuguese, French or German and put your knowledge to the test.",
     howToPlayTitle: "How to play?",
     howToPlayText: "Each letter of the rosco has a definition. Type the word you think matches and confirm it. If you're right, the letter turns green. If you're wrong, it turns red. You can skip a letter and come back to it later. The goal is to complete the rosco with as many correct answers as possible. A new rosco appears every day, so come back tomorrow!",
+    faqTitle: "Frequently asked questions",
+    faq: [
+      { q: "Is Enroscado free?", a: "Yes, playing Enroscado is completely free. The app runs on ads, so you'll never have to pay to play." },
+      { q: "Do I need to create an account?", a: "No. Your progress and stats are saved automatically on this device — no sign-up or login required." },
+      { q: "How much time do I have to complete the rosco?", a: "You get 3 minutes for the full 27-letter rosco. You can skip a letter at any point and come back to it later, as long as you still have time left." },
+      { q: "What happens if I run out of time?", a: "That day's game is marked as \"timed out\", keeping the correct answers you managed to get up to that point." },
+      { q: "What's the Saturday bonus rosco?", a: "It unlocks if you complete the Monday-to-Friday roscos with at least 10 correct answers each." },
+      { q: "What languages can I play in?", a: "Enroscado is available in Spanish, English and Portuguese. You can switch languages from the selector at the top of this screen." },
+    ],
   },
 
   pt: {
@@ -434,6 +454,15 @@ export const translations: Record<string, Translation> = {
     aboutText: "Enroscado é um jogo de vocabulário diário inspirado no clássico rosco. Todos os dias aparece um novo rosco com 27 letras do alfabeto — você precisa adivinhar uma palavra por letra usando a definição como pista. Jogue em espanhol, inglês, português, francês ou alemão e teste seus conhecimentos.",
     howToPlayTitle: "Como jogar?",
     howToPlayText: "Cada letra do rosco tem uma definição. Digite a palavra que acha que corresponde e confirme. Se acertar, a letra fica verde. Se errar, fica vermelha. Você pode pular uma letra e voltar a ela mais tarde. O objetivo é completar o rosco com o maior número de acertos possível. Um novo rosco aparece todos os dias, então volte amanhã!",
+    faqTitle: "Perguntas frequentes",
+    faq: [
+      { q: "O Enroscado é grátis?", a: "Sim, jogar Enroscado é totalmente grátis. O app se sustenta com publicidade, você nunca vai precisar pagar para jogar." },
+      { q: "Preciso criar uma conta?", a: "Não. Seu progresso e suas estatísticas são salvos automaticamente neste dispositivo, não precisa se cadastrar nem fazer login." },
+      { q: "Quanto tempo eu tenho para completar o rosco?", a: "Você tem 3 minutos para o rosco completo de 27 letras. Pode pular uma letra em qualquer momento e voltar a ela mais tarde, enquanto ainda tiver tempo." },
+      { q: "O que acontece se o tempo acabar?", a: "A partida do dia fica marcada como \"tempo esgotado\", com os acertos que você conseguiu até aquele momento." },
+      { q: "O que é o rosco bônus de sábado?", a: "Ele é desbloqueado se você completar os roscos de segunda a sexta com pelo menos 10 acertos em cada um." },
+      { q: "Em quais idiomas posso jogar?", a: "O Enroscado está disponível em espanhol, inglês e português. Você pode trocar o idioma no seletor na parte de cima desta tela." },
+    ],
   },
 
   fr: {
@@ -537,6 +566,15 @@ export const translations: Record<string, Translation> = {
     aboutText: "Enroscado est un jeu de vocabulaire quotidien inspiré du classique rosco. Chaque jour, un nouveau rosco apparaît avec 27 lettres de l'alphabet — vous devez deviner un mot par lettre en utilisant la définition comme indice. Jouez en espagnol, anglais, portugais, français ou allemand et testez vos connaissances.",
     howToPlayTitle: "Comment jouer ?",
     howToPlayText: "Chaque lettre du rosco a une définition. Tapez le mot que vous pensez correspondre et confirmez. Si vous avez raison, la lettre devient verte. Si vous avez tort, elle devient rouge. Vous pouvez passer une lettre et y revenir plus tard. L'objectif est de compléter le rosco avec le maximum de bonnes réponses. Un nouveau rosco apparaît chaque jour, alors revenez demain !",
+    faqTitle: "Questions fréquentes",
+    faq: [
+      { q: "Enroscado est-il gratuit ?", a: "Oui, jouer à Enroscado est entièrement gratuit. L'application vit de la publicité, vous n'aurez jamais à payer pour jouer." },
+      { q: "Dois-je créer un compte ?", a: "Non. Votre progression et vos statistiques sont enregistrées automatiquement sur cet appareil, pas besoin de vous inscrire ni de vous connecter." },
+      { q: "Combien de temps ai-je pour compléter le rosco ?", a: "Vous avez 3 minutes pour le rosco complet de 27 lettres. Vous pouvez passer une lettre à tout moment et y revenir plus tard, tant qu'il vous reste du temps." },
+      { q: "Que se passe-t-il si le temps est écoulé ?", a: "La partie du jour est marquée comme \"temps écoulé\", avec les bonnes réponses obtenues jusqu'à ce moment-là." },
+      { q: "Qu'est-ce que le rosco bonus du samedi ?", a: "Il se débloque si vous complétez les roscos du lundi au vendredi avec au moins 10 bonnes réponses chacun." },
+      { q: "Dans quelles langues puis-je jouer ?", a: "Enroscado est disponible en espagnol, anglais et portugais. Vous pouvez changer de langue depuis le sélecteur en haut de cet écran." },
+    ],
   },
 
   de: {
@@ -640,6 +678,15 @@ export const translations: Record<string, Translation> = {
     aboutText: "Enroscado ist ein tägliches Vokabelspiel, inspiriert vom klassischen Rosco. Jeden Tag erscheint ein neuer Rosco mit 27 Buchstaben des Alphabets — du musst pro Buchstabe ein Wort erraten, wobei die Definition als Hinweis dient. Spiele auf Spanisch, Englisch, Portugiesisch, Französisch oder Deutsch und teste dein Wissen.",
     howToPlayTitle: "Wie spielt man?",
     howToPlayText: "Jeder Buchstabe des Roscos hat eine Definition. Tippe das Wort ein, das du für richtig hältst, und bestätige es. Wenn du richtig liegst, wird der Buchstabe grün. Wenn du falsch liegst, wird er rot. Du kannst einen Buchstaben überspringen und später zurückkehren. Das Ziel ist es, den Rosco mit so vielen richtigen Antworten wie möglich abzuschließen. Jeden Tag erscheint ein neuer Rosco — also komm morgen wieder!",
+    faqTitle: "Häufig gestellte Fragen",
+    faq: [
+      { q: "Ist Enroscado kostenlos?", a: "Ja, Enroscado zu spielen ist komplett kostenlos. Die App finanziert sich über Werbung, du musst nie bezahlen, um zu spielen." },
+      { q: "Muss ich ein Konto erstellen?", a: "Nein. Dein Fortschritt und deine Statistiken werden automatisch auf diesem Gerät gespeichert, keine Anmeldung nötig." },
+      { q: "Wie viel Zeit habe ich, um den Rosco zu vervollständigen?", a: "Du hast 3 Minuten für den kompletten Rosco mit 27 Buchstaben. Du kannst jederzeit einen Buchstaben überspringen und später zurückkehren, solange dir noch Zeit bleibt." },
+      { q: "Was passiert, wenn die Zeit abläuft?", a: "Die Partie des Tages wird als \"Zeit abgelaufen\" markiert, mit den richtigen Antworten, die du bis zu diesem Zeitpunkt erreicht hast." },
+      { q: "Was ist der Samstags-Bonus-Rosco?", a: "Er wird freigeschaltet, wenn du die Roscos von Montag bis Freitag mit jeweils mindestens 10 richtigen Antworten abschließt." },
+      { q: "In welchen Sprachen kann ich spielen?", a: "Enroscado ist auf Spanisch, Englisch und Portugiesisch verfügbar. Du kannst die Sprache oben auf diesem Bildschirm wechseln." },
+    ],
   },
 };
 
