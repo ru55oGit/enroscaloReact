@@ -31,6 +31,7 @@ import {
 } from "../utils/weeklyRoscoState";
 import { markFromHub, cameFromHubBefore } from "../utils/hubOriginState";
 import { isAdFree, purchaseAdFree, syncAdFreeAfterReturn } from "../ads/adFreeEntitlement";
+import HouseAdBanner from "../ads/HouseAdBanner";
 
 const ACCENT = "#e74c3c";
 const HUB_URL = "https://www.boludeando.com/";
@@ -571,6 +572,8 @@ export default function WelcomeScreen() {
             </Box>
           );
         })()}
+
+        <HouseAdBanner slot="enroscado-stats-banner" gameSlug="enroscado" locale={currentLanguage} />
 
         {hasCategoryStats && (
           <Box

@@ -107,6 +107,9 @@ export interface Translation {
   resultLabel: string;
   backToHome: string;
   reloadTime: string;
+  rewardedAdConfirmButton: string;
+  rewardedAdSkipButton: string;
+  rewardedAdWaitLabel: (seconds: number) => string;
   startsWith: string;
   contains: string;
 
@@ -219,7 +222,10 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "Pendientes",
     resultLabel: "Resultado",
     backToHome: "Volver al inicio",
-    reloadTime: "Recargar tiempo",
+    reloadTime: "Mirá un video y sumá tiempo",
+    rewardedAdConfirmButton: "Reclamar recompensa",
+    rewardedAdSkipButton: "Cerrar",
+    rewardedAdWaitLabel: (seconds) => `Esperá ${seconds}s...`,
     startsWith: "Comienza con",
     contains: "Contiene",
     daySun: "Domingo",
@@ -333,7 +339,10 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "Pending",
     resultLabel: "Result",
     backToHome: "Back to home",
-    reloadTime: "Add time",
+    reloadTime: "Watch a video and add time",
+    rewardedAdConfirmButton: "Claim reward",
+    rewardedAdSkipButton: "Close",
+    rewardedAdWaitLabel: (seconds) => `Wait ${seconds}s...`,
     startsWith: "Starts with",
     contains: "Contains",
     daySun: "Sunday",
@@ -447,7 +456,10 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "Pendentes",
     resultLabel: "Resultado",
     backToHome: "Voltar ao início",
-    reloadTime: "Recarregar tempo",
+    reloadTime: "Assista a um vídeo e some tempo",
+    rewardedAdConfirmButton: "Resgatar recompensa",
+    rewardedAdSkipButton: "Fechar",
+    rewardedAdWaitLabel: (seconds) => `Espere ${seconds}s...`,
     startsWith: "Começa com",
     contains: "Contém",
     daySun: "Domingo",
@@ -561,7 +573,10 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "En attente",
     resultLabel: "Résultat",
     backToHome: "Retour à l'accueil",
-    reloadTime: "Recharger le temps",
+    reloadTime: "Regarde une pub et ajoute du temps",
+    rewardedAdConfirmButton: "Réclamer la récompense",
+    rewardedAdSkipButton: "Fermer",
+    rewardedAdWaitLabel: (seconds) => `Attends ${seconds}s...`,
     startsWith: "Commence par",
     contains: "Contient",
     daySun: "Dimanche",
@@ -675,7 +690,10 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "Ausstehend",
     resultLabel: "Ergebnis",
     backToHome: "Zurück zum Start",
-    reloadTime: "Zeit aufladen",
+    reloadTime: "Sieh dir ein Video an und bekomme mehr Zeit",
+    rewardedAdConfirmButton: "Belohnung einlösen",
+    rewardedAdSkipButton: "Schließen",
+    rewardedAdWaitLabel: (seconds) => `Warte ${seconds}s...`,
     startsWith: "Beginnt mit",
     contains: "Enthält",
     daySun: "Sonntag",

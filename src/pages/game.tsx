@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Hypher from "hypher";
 import spanishHyphenation from "hyphenation.es";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -8,6 +8,8 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import VirtualKeyboard from "../components/VirtualKeyboard";
+import { useRewardedAd } from "../ads/useRewardedAd";
+import RewardedAdModal from "../ads/RewardedAdModal";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useLanguage } from "../i18n/LanguageContext";
 import { getActiveRoscoContext, getActiveBonusContext } from "../data/weeklyRoscos";
@@ -174,6 +176,17 @@ const Game: React.FC = () => {
   const currentEntry = isFinished ? null : roscoWords[currentIndex];
   const isTimerRunning = playState === "running" && !isFinished && !isTimeOver;
   const showResumeOverlay = !isFinished && !isTimeOver && playState !== "running";
+
+  // Recompensa de rewarded ad cuando se acaba el tiempo: suma tiempo y
+  // reanuda el rosco en vez de dejarlo cortado con palabras pendientes.
+  // Mismo monto que tenía el botón "Recargar tiempo" gratuito de antes.
+  const grantExtraTime = useCallback(() => {
+    setRemainingSeconds((prev) => prev + RELOAD_TIME_SECONDS);
+    setFeedback("");
+    setPlayState("running");
+  }, []);
+
+  const rewardedAd = useRewardedAd("enroscado-timeover-rewarded", "enroscado", currentLanguage, grantExtraTime);
 
   useEffect(() => {
     if (!currentEntry || isFinished || isTimeOver) {
@@ -440,12 +453,6 @@ const Game: React.FC = () => {
     }
 
     setPlayState("running");
-  };
-
-  const handleReloadTime = () => {
-    setRemainingSeconds((prev) => prev + RELOAD_TIME_SECONDS);
-    setPlayState("running");
-    setFeedback("");
   };
 
   const getLetterColor = (index: number): string => {
@@ -776,7 +783,8 @@ const Game: React.FC = () => {
               <Box sx={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 1.5 }}>
                 <Button
                   variant="contained"
-                  onClick={handleReloadTime}
+                  onClick={rewardedAd.requestAd}
+                  disabled={!rewardedAd.canShowAd}
                   sx={{
                     backgroundColor: "#f0b429",
                     color: "#1a1a1a",
@@ -785,7 +793,7 @@ const Game: React.FC = () => {
                     "&:hover": { backgroundColor: "#d99f1a" },
                   }}
                 >
-                  {t.reloadTime}
+                  {rewardedAd.loadingAd ? "..." : t.reloadTime}
                 </Button>
                 <Button
                   variant="outlined"
@@ -896,6 +904,18 @@ const Game: React.FC = () => {
           });
         }}
         onPass={handlePass}
+      />
+
+      <RewardedAdModal
+        open={rewardedAd.showingAd}
+        adCreative={rewardedAd.adCreative}
+        canConfirmReward={rewardedAd.canConfirmReward}
+        secondsUntilCanConfirm={rewardedAd.secondsUntilCanConfirm}
+        onConfirm={rewardedAd.handleAdWatched}
+        onSkip={rewardedAd.handleAdSkipped}
+        confirmLabel={t.rewardedAdConfirmButton}
+        skipLabel={t.rewardedAdSkipButton}
+        waitLabel={t.rewardedAdWaitLabel}
       />
     </Layout>
   );
