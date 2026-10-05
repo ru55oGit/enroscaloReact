@@ -5,6 +5,7 @@ import "react-simple-keyboard/build/css/index.css";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { useLanguage } from "../../i18n/LanguageContext";
 import { normalizeText } from "../../utils/textNormalization";
+import HouseAdBanner from "../../ads/HouseAdBanner";
 
 interface VirtualKeyboardProps {
   onKeyPress: (key: string) => void;
@@ -15,6 +16,11 @@ interface VirtualKeyboardProps {
   onSoundToggle?: () => void;
   onPass?: () => void;
   hidden?: boolean;
+  // Arranca cerrado (muestra un banner en su lugar) hasta que el juego pide
+  // abrirlo — distinto de `hidden`, que es la animación de ocultar/mostrar
+  // ya existente del teclado una vez abierto.
+  open?: boolean;
+  gameSlug?: string;
 }
 
 const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
@@ -26,6 +32,8 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
   onSoundToggle,
   onPass,
   hidden = false,
+  open = true,
+  gameSlug = "enroscado",
 }) => {
   const isMobile = useIsMobile();
   const { t, currentLanguage } = useLanguage();
@@ -212,36 +220,42 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
         },
       }}
     >
-      <Keyboard
-        layout={layout}
-        layoutName="default"
-        onChange={() => {}}
-        onKeyPress={handleKeyPress}
-        buttonTheme={[
-          {
-            class: "correct",
-            buttons: guessedLetters
-              .filter((letter) => !wrongLetters.includes(letter))
-              .join(" "),
-          },
-          {
-            class: "incorrect",
-            buttons: wrongLetters.join(" "),
-          },
-          {
-            class: "action",
-            buttons: "{pass} {sound}",
-          },
-          {
-            class: "delete",
-            buttons: "{bksp}",
-          },
-        ]}
-        display={{ "{bksp}": "⌫", "{sound}": soundEnabled ? "🔊" : "🔇", "{pass}": t.feedbackPassed }}
-        theme="hg-theme-default"
-        disableButtonHold
-        preventMouseDownDefault
-      />
+      {open ? (
+        <Keyboard
+          layout={layout}
+          layoutName="default"
+          onChange={() => {}}
+          onKeyPress={handleKeyPress}
+          buttonTheme={[
+            {
+              class: "correct",
+              buttons: guessedLetters
+                .filter((letter) => !wrongLetters.includes(letter))
+                .join(" "),
+            },
+            {
+              class: "incorrect",
+              buttons: wrongLetters.join(" "),
+            },
+            {
+              class: "action",
+              buttons: "{pass} {sound}",
+            },
+            {
+              class: "delete",
+              buttons: "{bksp}",
+            },
+          ]}
+          display={{ "{bksp}": "⌫", "{sound}": soundEnabled ? "🔊" : "🔇", "{pass}": t.feedbackPassed }}
+          theme="hg-theme-default"
+          disableButtonHold
+          preventMouseDownDefault
+        />
+      ) : (
+        <Box sx={{ display: "flex", justifyContent: "center", py: 0.5 }}>
+          <HouseAdBanner slot={`${gameSlug}-keyboard-banner`} gameSlug={gameSlug} locale={currentLanguage} />
+        </Box>
+      )}
     </Box>
   );
 };

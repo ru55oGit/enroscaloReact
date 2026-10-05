@@ -129,6 +129,10 @@ const Game: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(initialDayState.currentIndex);
   const [statuses, setStatuses] = useState<LetterStatus[]>(initialDayState.statuses);
   const [answerChars, setAnswerChars] = useState<string[]>([]);
+  // Arranca cerrado con un banner en su lugar; se abre al tocar un casillero
+  // de la respuesta. No se vuelve a cerrar solo entre palabras — el rosco
+  // avanza rápido, cerrarlo en cada letra sería muy molesto.
+  const [keyboardOpen, setKeyboardOpen] = useState(false);
   const [pendingAdvance, setPendingAdvance] = useState(false);
   const [feedback, setFeedback] = useState(initialDayState.feedback);
   const [remainingSeconds, setRemainingSeconds] = useState(
@@ -687,6 +691,7 @@ const Game: React.FC = () => {
                 {tileRow1.map((char, i) => (
                   <Box
                     key={`${currentEntry.letter}-${i}`}
+                    onClick={() => setKeyboardOpen(true)}
                     sx={{
                       width: tileSize,
                       height: tileSize,
@@ -702,6 +707,7 @@ const Game: React.FC = () => {
                       pb: 0.5,
                       boxShadow: "0 4px 10px rgba(0,0,0,0.18)",
                       opacity: showResumeOverlay ? 0.8 : 1,
+                      cursor: "pointer",
                     }}
                   >
                     {char || "_"}
@@ -718,6 +724,7 @@ const Game: React.FC = () => {
                   {tileRow2.map((char, i) => (
                     <Box
                       key={`${currentEntry.letter}-${(tileBreakPoint ?? 0) + i}`}
+                      onClick={() => setKeyboardOpen(true)}
                       sx={{
                         width: tileSize,
                         height: tileSize,
@@ -733,6 +740,7 @@ const Game: React.FC = () => {
                         pb: 0.5,
                         boxShadow: "0 4px 10px rgba(0,0,0,0.18)",
                         opacity: showResumeOverlay ? 0.8 : 1,
+                        cursor: "pointer",
                       }}
                     >
                       {char || "_"}
@@ -878,6 +886,8 @@ const Game: React.FC = () => {
         includeActionKeys
         soundEnabled={soundEnabled}
         hidden={showResumeOverlay || isFinished || isTimeOver}
+        open={keyboardOpen}
+        gameSlug="enroscado"
         onSoundToggle={() => {
           setSoundEnabled((prev) => {
             const next = !prev;
