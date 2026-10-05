@@ -119,6 +119,9 @@ export interface Translation {
   dayFri: string;
   daySat: string;
 
+  removeAdsButton: string;
+  removeAdsButtonBuying: string;
+
   // About / How to play sections
   aboutTitle: string;
   aboutText: string;
@@ -226,6 +229,8 @@ export const translations: Record<string, Translation> = {
     dayThu: "Jueves",
     dayFri: "Viernes",
     daySat: "Sábado",
+    removeAdsButton: "Sacar los anuncios",
+    removeAdsButtonBuying: "Redirigiendo a MercadoPago...",
     aboutTitle: "¿Qué es Enroscado?",
     aboutText: "Enroscado es un juego de vocabulario diario inspirado en el clásico rosco. Cada día aparece un nuevo rosco con 27 letras del abecedario — tenés que adivinar una palabra para cada letra usando la definición como pista. Jugá en español, inglés, portugués, francés o alemán y poné a prueba tu conocimiento.",
     howToPlayTitle: "¿Cómo jugar?",
@@ -338,6 +343,8 @@ export const translations: Record<string, Translation> = {
     dayThu: "Thursday",
     dayFri: "Friday",
     daySat: "Saturday",
+    removeAdsButton: "Remove ads",
+    removeAdsButtonBuying: "Redirecting to MercadoPago...",
     aboutTitle: "What is Enroscado?",
     aboutText: "Enroscado is a daily vocabulary game inspired by the classic rosco. Every day a new rosco appears with 27 letters of the alphabet — you have to guess one word per letter using the definition as a clue. Play in Spanish, English, Portuguese, French or German and put your knowledge to the test.",
     howToPlayTitle: "How to play?",
@@ -450,6 +457,8 @@ export const translations: Record<string, Translation> = {
     dayThu: "Quinta",
     dayFri: "Sexta",
     daySat: "Sábado",
+    removeAdsButton: "Remover anúncios",
+    removeAdsButtonBuying: "Redirecionando para o MercadoPago...",
     aboutTitle: "O que é Enroscado?",
     aboutText: "Enroscado é um jogo de vocabulário diário inspirado no clássico rosco. Todos os dias aparece um novo rosco com 27 letras do alfabeto — você precisa adivinhar uma palavra por letra usando a definição como pista. Jogue em espanhol, inglês, português, francês ou alemão e teste seus conhecimentos.",
     howToPlayTitle: "Como jogar?",
@@ -562,6 +571,8 @@ export const translations: Record<string, Translation> = {
     dayThu: "Jeudi",
     dayFri: "Vendredi",
     daySat: "Samedi",
+    removeAdsButton: "Retirer les publicités",
+    removeAdsButtonBuying: "Redirection vers MercadoPago...",
     aboutTitle: "Qu'est-ce qu'Enroscado ?",
     aboutText: "Enroscado est un jeu de vocabulaire quotidien inspiré du classique rosco. Chaque jour, un nouveau rosco apparaît avec 27 lettres de l'alphabet — vous devez deviner un mot par lettre en utilisant la définition comme indice. Jouez en espagnol, anglais, portugais, français ou allemand et testez vos connaissances.",
     howToPlayTitle: "Comment jouer ?",
@@ -674,6 +685,8 @@ export const translations: Record<string, Translation> = {
     dayThu: "Donnerstag",
     dayFri: "Freitag",
     daySat: "Samstag",
+    removeAdsButton: "Werbung entfernen",
+    removeAdsButtonBuying: "Weiterleitung zu MercadoPago...",
     aboutTitle: "Was ist Enroscado?",
     aboutText: "Enroscado ist ein tägliches Vokabelspiel, inspiriert vom klassischen Rosco. Jeden Tag erscheint ein neuer Rosco mit 27 Buchstaben des Alphabets — du musst pro Buchstabe ein Wort erraten, wobei die Definition als Hinweis dient. Spiele auf Spanisch, Englisch, Portugiesisch, Französisch oder Deutsch und teste dein Wissen.",
     howToPlayTitle: "Wie spielt man?",

@@ -30,19 +30,52 @@ import {
   isDayAvailable,
 } from "../utils/weeklyRoscoState";
 import { markFromHub, cameFromHubBefore } from "../utils/hubOriginState";
+import { isAdFree, purchaseAdFree, syncAdFreeAfterReturn } from "../ads/adFreeEntitlement";
 
 const ACCENT = "#e74c3c";
 const HUB_URL = "https://www.boludeando.com/";
 
 export default function WelcomeScreen() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const fromHubParam = searchParams.get("from") === "boludeando";
   const [showHubHeader] = useState(() => fromHubParam || cameFromHubBefore());
   useEffect(() => {
     if (fromHubParam) markFromHub();
   }, [fromHubParam]);
   const { t, currentLanguage } = useLanguage();
+
+  const [adFree, setAdFree] = useState(false);
+  const [buyingAdFree, setBuyingAdFree] = useState(false);
+
+  useEffect(() => {
+    if (searchParams.get("adfree_return") === "1") {
+      syncAdFreeAfterReturn().then((active) => {
+        setAdFree(active);
+        setSearchParams(
+          (prev) => {
+            prev.delete("adfree_return");
+            return prev;
+          },
+          { replace: true },
+        );
+      });
+    } else {
+      isAdFree().then(setAdFree);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleRemoveAds = async () => {
+    setBuyingAdFree(true);
+    const returnUrl = `${window.location.origin}${window.location.pathname}?adfree_return=1`;
+    const checkoutUrl = await purchaseAdFree(returnUrl);
+    if (checkoutUrl) {
+      window.location.href = checkoutUrl;
+    } else {
+      setBuyingAdFree(false);
+    }
+  };
   const [refreshKey, setRefreshKey] = useState(0);
   const [titleClickCount, setTitleClickCount] = useState(0);
   const [devUnlocked, setDevUnlocked] = useState(false);
@@ -614,6 +647,20 @@ export default function WelcomeScreen() {
             </Box>
           </Box>
         )}
+
+        {!adFree && (
+          <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
+            <Button
+              size="small"
+              onClick={handleRemoveAds}
+              disabled={buyingAdFree}
+              sx={{ color: "rgba(255,255,255,0.7)", textTransform: "none", fontSize: 13 }}
+            >
+              {buyingAdFree ? t.removeAdsButtonBuying : t.removeAdsButton}
+            </Button>
+          </Box>
+        )}
+
          <Box
           component="section"
           sx={{
