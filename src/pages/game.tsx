@@ -790,8 +790,11 @@ const Game: React.FC = () => {
                     backgroundColor: "#f0b429",
                     color: "#1a1a1a",
                     fontWeight: 800,
+                    textTransform: "none",
+                    borderRadius: 999,
                     minWidth: 200,
                     "&:hover": { backgroundColor: "#d99f1a" },
+                    "&.Mui-disabled": { backgroundColor: "rgba(240,180,41,0.35)", color: "rgba(26,26,26,0.5)" },
                   }}
                 >
                   {rewardedAd.loadingAd ? "..." : t.reloadTime}
