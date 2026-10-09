@@ -356,6 +356,13 @@ export default function WelcomeScreen() {
           </Box>
         </Box>
 
+        <HouseAdBanner
+          slot="enroscado-home-double-banner"
+          gameSlug="enroscado"
+          locale={currentLanguage}
+          format="banner_double"
+        />
+
         <Box
           sx={{
             borderRadius: 4,
@@ -572,8 +579,6 @@ export default function WelcomeScreen() {
             </Box>
           );
         })()}
-
-        <HouseAdBanner slot="enroscado-stats-banner" gameSlug="enroscado" locale={currentLanguage} />
 
         {hasCategoryStats && (
           <Box
