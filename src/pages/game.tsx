@@ -913,6 +913,7 @@ const Game: React.FC = () => {
         secondsUntilCanConfirm={rewardedAd.secondsUntilCanConfirm}
         onConfirm={rewardedAd.handleAdWatched}
         onSkip={rewardedAd.handleAdSkipped}
+        onImageClick={rewardedAd.handleImageClick}
         confirmLabel={t.rewardedAdConfirmButton}
         skipLabel={t.rewardedAdSkipButton}
         waitLabel={t.rewardedAdWaitLabel}
