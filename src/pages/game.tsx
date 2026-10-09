@@ -3,6 +3,7 @@ import Hypher from "hypher";
 import spanishHyphenation from "hyphenation.es";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Layout from "../components/Layout";
+import HouseAdBanner from "../ads/HouseAdBanner";
 import HowToPlayCollapse from "../components/HowToPlayCollapse";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -887,6 +888,8 @@ const Game: React.FC = () => {
         )}
 
         <HowToPlayCollapse title={t.howToPlayTitle} body={t.howToPlayText} />
+
+        <HouseAdBanner slot="enroscado-game-banner" gameSlug="enroscado" locale={currentLanguage} />
       </Box>
 
       <VirtualKeyboard
