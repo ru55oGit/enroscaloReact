@@ -363,6 +363,19 @@ export default function WelcomeScreen() {
           format="banner_double"
         />
 
+        {!adFree && (
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <Button
+              size="small"
+              onClick={handleRemoveAds}
+              disabled={buyingAdFree}
+              sx={{ color: "rgba(255,255,255,0.7)", textTransform: "none", fontSize: 13 }}
+            >
+              {buyingAdFree ? t.removeAdsButtonBuying : t.removeAdsButton}
+            </Button>
+          </Box>
+        )}
+
         <Box
           sx={{
             borderRadius: 4,
@@ -657,16 +670,12 @@ export default function WelcomeScreen() {
         )}
 
         {!adFree && (
-          <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
-            <Button
-              size="small"
-              onClick={handleRemoveAds}
-              disabled={buyingAdFree}
-              sx={{ color: "rgba(255,255,255,0.7)", textTransform: "none", fontSize: 13 }}
-            >
-              {buyingAdFree ? t.removeAdsButtonBuying : t.removeAdsButton}
-            </Button>
-          </Box>
+          <HouseAdBanner
+            slot="enroscado-home-double-banner-2"
+            gameSlug="enroscado"
+            locale={currentLanguage}
+            format="banner_double"
+          />
         )}
 
          <Box
