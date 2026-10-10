@@ -67,25 +67,32 @@ export default function PrivacyPolicy() {
           5. Servicios de terceros
         </Typography>
         <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
-          Utilizamos Google AdSense y Google Analytics como servicios de terceros. No compartimos datos con otras empresas ni vendemos información a terceros.
+          Además de Google AdSense y Google Analytics, utilizamos nuestro propio servicio de anuncios (Boludeando Ads) y MercadoPago como procesador de pagos. No compartimos datos con otras empresas ni vendemos información a terceros.
         </Typography>
 
         <Typography variant="h6" sx={{ fontWeight: 700, mt: 3, mb: 1 }}>
-          6. Menores de edad
+          6. Publicidad propia y pago para sacar anuncios
+        </Typography>
+        <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
+          Además de Google AdSense, mostramos avisos propios de otros juegos de Boludeando y anuncios "rewarded" (a cambio de recompensas en el juego). Para esto enviamos a nuestro propio servidor (ads-api.boludeando.com) datos anónimos: un identificador de sesión generado en tu dispositivo (sin relación con tu identidad), tu país aproximado (por IP), tipo de dispositivo e idioma. No incluye nombre, email ni ningún dato que te identifique. Si elegís comprar la opción de sacarte los anuncios, el pago se procesa a través de MercadoPago; nosotros no recibimos ni guardamos los datos de tu tarjeta — eso queda entre vos y MercadoPago.
+        </Typography>
+
+        <Typography variant="h6" sx={{ fontWeight: 700, mt: 3, mb: 1 }}>
+          7. Menores de edad
         </Typography>
         <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
           Este sitio no está dirigido a menores de 13 años ni recopila intencionalmente información de ellos.
         </Typography>
 
         <Typography variant="h6" sx={{ fontWeight: 700, mt: 3, mb: 1 }}>
-          7. Cambios en esta política
+          8. Cambios en esta política
         </Typography>
         <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
           Podemos actualizar esta política en cualquier momento. Te recomendamos revisarla periódicamente. La fecha de última actualización es agosto de 2026.
         </Typography>
 
         <Typography variant="h6" sx={{ fontWeight: 700, mt: 3, mb: 1 }}>
-          8. Contacto
+          9. Contacto
         </Typography>
         <Typography sx={{ mb: 2, lineHeight: 1.7 }}>
           Si tenés preguntas sobre esta política, podés contactarnos en{" "}
