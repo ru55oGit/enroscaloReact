@@ -300,7 +300,7 @@ const Layout: React.FC<LayoutProps> = ({
             }}
             onClick={() => window.location.replace("/")}
           >
-            Enroscado
+            Boludeando
           </Box>
           {headerRightText && (
             <Box
