@@ -85,7 +85,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Wolframio", startOrContain: "start", letter: "W", definition: "Metal muy resistente al calor usado en el filamento de los focos.", category: "ciencias" },
   { word: "Reflexion", startOrContain: "contain", letter: "X", definition: "Acción de pensar con detenimiento y cuidado sobre algún asunto.", category: "educacion-sociedad" },
   { word: "Paraguay", startOrContain: "contain", letter: "Y", definition: "País sin salida al mar en el corazón de Sudamérica, vecino de Argentina, Brasil y Bolivia.", category: "cultura-general" },
-  { word: "Pinza", startOrContain: "contain", letter: "Z", definition: "Herramienta de dos brazos usada para sujetar o apretar objetos pequeños.", category: "cultura-general" },
+  { word: "Cerveza", startOrContain: "contain", letter: "Z", definition: "Bebida alcohólica hecha con cebada fermentada y lúpulo.", category: "gastronomia" },
 ];
 
 const ROSCO_4: RoscoEntry[] = [

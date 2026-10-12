@@ -56,7 +56,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Welter", startOrContain: "start", letter: "W", definition: "Una de las categorías de peso en el boxeo.", category: "deporte-juego" },
   { word: "Taxista", startOrContain: "contain", letter: "X", definition: "Persona que se dedica a conducir un taxi para transportar pasajeros.", category: "transporte" },
   { word: "Yapa", startOrContain: "start", letter: "Y", definition: "Pequeño regalo que el vendedor da de más al cliente en una compra.", category: "cultura-general" },
-  { word: "Cruz", startOrContain: "contain", letter: "Z", definition: "Figura formada por dos líneas que se cruzan en ángulo recto.", category: "cultura-general" },
+  { word: "Calabaza", startOrContain: "contain", letter: "Z", definition: "Fruto grande y redondo, de cáscara dura y pulpa naranja, típico del otoño.", category: "gastronomia" },
 ];
 
 const ROSCO_3: RoscoEntry[] = [

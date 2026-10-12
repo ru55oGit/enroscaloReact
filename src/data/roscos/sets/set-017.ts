@@ -27,7 +27,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Whatsapp", startOrContain: "start", letter: "W", definition: "Aplicación de mensajería instantánea muy usada para chatear y mandar audios.", category: "cultura-general" },
   { word: "Fax", startOrContain: "contain", letter: "X", definition: "Aparato antiguo que enviaba documentos escritos a través de la línea telefónica.", category: "cultura-general" },
   { word: "Yate", startOrContain: "start", letter: "Y", definition: "Embarcación de recreo elegante.", category: "transporte" },
-  { word: "Arroz", startOrContain: "contain", letter: "Z", definition: "Cereal blanco que se cultiva en campos inundados.", category: "gastronomia" },
+  { word: "Zanja", startOrContain: "start", letter: "Z", definition: "Surco largo y angosto cavado en la tierra, para drenar agua o enterrar caños.", category: "naturaleza" },
 ];
 
 const ROSCO_2: RoscoEntry[] = [
@@ -56,7 +56,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Wimbledon", startOrContain: "start", letter: "W", definition: "Famoso torneo de tenis que se juega sobre césped.", category: "deporte-juego" },
   { word: "Saxo", startOrContain: "contain", letter: "X", definition: "Instrumento de viento dorado, abreviatura de saxofón.", category: "arte-musica" },
   { word: "Yema", startOrContain: "start", letter: "Y", definition: "Parte amarilla del huevo, usada en muchos postres.", category: "gastronomia" },
-  { word: "Plaza", startOrContain: "contain", letter: "Z", definition: "Espacio público abierto con bancos y árboles.", category: "cultura-general" },
+  { word: "Vergonzoso", startOrContain: "contain", letter: "Z", definition: "Que siente vergüenza con facilidad, tímido.", category: "educacion-sociedad" },
 ];
 
 const ROSCO_3: RoscoEntry[] = [

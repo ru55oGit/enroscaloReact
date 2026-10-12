@@ -56,7 +56,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unidad que mide la potencia eléctrica.", category: "ciencias" },
   { word: "Boxer", startOrContain: "contain", letter: "X", definition: "Perro fuerte y musculoso de hocico chato.", category: "naturaleza" },
   { word: "Yermo", startOrContain: "start", letter: "Y", definition: "Terreno seco sobre el que casi nunca llueve.", category: "naturaleza" },
-  { word: "Cruz", startOrContain: "contain", letter: "Z", definition: "Figura formada por dos líneas que se cruzan.", category: "cultura-general" },
+  { word: "Azul", startOrContain: "contain", letter: "Z", definition: "Color del cielo despejado y del mar.", category: "cultura-general" },
 ];
 
 const ROSCO_3: RoscoEntry[] = [
@@ -114,7 +114,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Waterpolo", startOrContain: "start", letter: "W", definition: "Deporte de equipo que se juega dentro de una pileta.", category: "deporte-juego" },
   { word: "Galaxia", startOrContain: "contain", letter: "X", definition: "Enorme conjunto de estrellas que se ve en el cielo.", category: "ciencias" },
   { word: "Yugular", startOrContain: "start", letter: "Y", definition: "Vena grande del cuello que lleva la sangre desde la cabeza hacia el corazón.", category: "ciencias" },
-  { word: "Pieza", startOrContain: "contain", letter: "Z", definition: "Cada una de las habitaciones de una casa.", category: "cultura-general" },
+  { word: "Zapatilla", startOrContain: "start", letter: "Z", definition: "Calzado cómodo y liviano, usado para hacer deporte o andar por casa.", category: "cultura-general" },
 ];
 
 const ROSCO_5: RoscoEntry[] = [

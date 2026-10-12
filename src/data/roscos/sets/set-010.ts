@@ -27,7 +27,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Wasabi", startOrContain: "start", letter: "W", definition: "Pasta verde y muy picante de la cocina japonesa.", category: "gastronomia" },
   { word: "Extra", startOrContain: "contain", letter: "X", definition: "Algo que se agrega de más a lo que ya hay.", category: "cultura-general" },
   { word: "Yacimiento", startOrContain: "start", letter: "Y", definition: "Lugar donde se encuentran minerales o restos antiguos.", category: "ciencias" },
-  { word: "Lazo", startOrContain: "contain", letter: "Z", definition: "Cuerda con un nudo corredizo que usan los gauchos.", category: "cultura-general" },
+  { word: "Zancudo", startOrContain: "start", letter: "Z", definition: "Nombre que se le da en varios países de América al mosquito.", category: "naturaleza" },
 ];
 
 const ROSCO_2: RoscoEntry[] = [

@@ -56,7 +56,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Wagyu", startOrContain: "start", letter: "W", definition: "Raza de vaca japonesa famosa por su carne muy tierna y jugosa.", category: "gastronomia" },
   { word: "Xilofono", startOrContain: "start", letter: "X", definition: "Instrumento musical de percusión con láminas de madera que se golpean con mazos.", category: "arte-musica" },
   { word: "Yerba", startOrContain: "start", letter: "Y", definition: "Hojas secas y molidas con las que se prepara el mate.", category: "gastronomia" },
-  { word: "Pieza", startOrContain: "contain", letter: "Z", definition: "Obra musical o cada parte que compone un conjunto.", category: "arte-musica" },
+  { word: "Zarzamora", startOrContain: "start", letter: "Z", definition: "Fruto pequeño, oscuro y jugoso que crece en arbustos con espinas.", category: "naturaleza" },
 ];
 
 const ROSCO_3: RoscoEntry[] = [
@@ -143,7 +143,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Wifi", startOrContain: "start", letter: "W", definition: "Conexión sin cables que permite acceder a internet.", category: "ciencias" },
   { word: "Exilio", startOrContain: "contain", letter: "X", definition: "Vivir fuera del propio país, generalmente por motivos políticos.", category: "educacion-sociedad" },
   { word: "Yucateco", startOrContain: "start", letter: "Y", definition: "Adjetivo que describe lo relativo al estado mexicano de Yucatán y su cultura maya.", category: "cultura-general" },
-  { word: "Plaza", startOrContain: "contain", letter: "Z", definition: "Espacio público abierto en una ciudad, con bancos y árboles.", category: "cultura-general" },
+  { word: "Capaz", startOrContain: "contain", letter: "Z", definition: "Que tiene la habilidad o posibilidad de hacer algo.", category: "educacion-sociedad" },
 ];
 
 const ROSCO_6: RoscoEntry[] = [

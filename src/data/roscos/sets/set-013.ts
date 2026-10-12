@@ -56,7 +56,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Wagon", startOrContain: "start", letter: "W", definition: "Cada uno de los vagones que arrastra una locomotora.", category: "transporte" },
   { word: "Saxo", startOrContain: "contain", letter: "X", definition: "Instrumento de viento de metal muy usado en el jazz.", category: "arte-musica" },
   { word: "Yuri", startOrContain: "start", letter: "Y", definition: "Nombre del cosmonauta soviético Gagarin, la primera persona en viajar al espacio.", category: "personalidades" },
-  { word: "Plaza", startOrContain: "contain", letter: "Z", definition: "Espacio público abierto de una ciudad, con bancos y árboles.", category: "cultura-general" },
+  { word: "Perezoso", startOrContain: "contain", letter: "Z", definition: "Animal lento que vive colgado de los árboles; también alguien que no tiene ganas de hacer nada.", category: "naturaleza" },
 ];
 
 const ROSCO_3: RoscoEntry[] = [
@@ -172,7 +172,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Wifi", startOrContain: "start", letter: "W", definition: "Conexión sin cables que permite acceder a internet.", category: "ciencias" },
   { word: "Examen", startOrContain: "contain", letter: "X", definition: "Prueba para medir lo que una persona aprendió.", category: "educacion-sociedad" },
   { word: "Yoga", startOrContain: "start", letter: "Y", definition: "Disciplina que combina posturas del cuerpo y respiración.", category: "deporte-juego" },
-  { word: "Cruz", startOrContain: "contain", letter: "Z", definition: "Figura formada por dos líneas que se cruzan.", category: "cultura-general" },
+  { word: "Garbanzo", startOrContain: "contain", letter: "Z", definition: "Legumbre redonda y amarillenta con la que se hace el hummus.", category: "gastronomia" },
 ];
 
 const ROSCO_7: RoscoEntry[] = [

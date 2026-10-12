@@ -56,7 +56,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Western", startOrContain: "start", letter: "W", definition: "Tipo de película ambientada en el lejano oeste americano.", category: "cultura-general" },
   { word: "Galaxia", startOrContain: "contain", letter: "X", definition: "Enorme conjunto de estrellas unidas por la gravedad.", category: "ciencias" },
   { word: "Yoyo", startOrContain: "start", letter: "Y", definition: "Juguete redondo que sube y baja por un hilo.", category: "deporte-juego" },
-  { word: "Manzana", startOrContain: "contain", letter: "Z", definition: "Fruta redonda y crujiente que puede ser roja o verde.", category: "gastronomia" },
+  { word: "Zangano", startOrContain: "start", letter: "Z", definition: "Abeja macho que no trabaja ni pica; también se usa para nombrar a alguien vago.", category: "naturaleza" },
 ];
 
 const ROSCO_3: RoscoEntry[] = [
@@ -114,7 +114,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Winston", startOrContain: "start", letter: "W", definition: "Nombre de pila de Churchill, primer ministro británico en la Segunda Guerra Mundial.", category: "personalidades" },
   { word: "Examen", startOrContain: "contain", letter: "X", definition: "Prueba para medir lo que una persona aprendió.", category: "educacion-sociedad" },
   { word: "Yoga", startOrContain: "start", letter: "Y", definition: "Disciplina que combina posturas del cuerpo y respiración.", category: "deporte-juego" },
-  { word: "Cruz", startOrContain: "contain", letter: "Z", definition: "Figura formada por dos líneas que se cruzan.", category: "cultura-general" },
+  { word: "Cerezo", startOrContain: "contain", letter: "Z", definition: "Árbol frutal que da cerezas, con flores blancas o rosadas en primavera.", category: "naturaleza" },
 ];
 
 const ROSCO_5: RoscoEntry[] = [
@@ -143,7 +143,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Wushu", startOrContain: "start", letter: "W", definition: "Arte marcial tradicional de China.", category: "deporte-juego" },
   { word: "Saxo", startOrContain: "contain", letter: "X", definition: "Instrumento de viento de metal muy usado en el jazz.", category: "arte-musica" },
   { word: "Yacare", startOrContain: "start", letter: "Y", definition: "Reptil parecido al cocodrilo que vive en ríos del Litoral.", category: "naturaleza" },
-  { word: "Plaza", startOrContain: "contain", letter: "Z", definition: "Espacio público abierto de una ciudad, con bancos y árboles.", category: "cultura-general" },
+  { word: "Cazador", startOrContain: "contain", letter: "Z", definition: "Persona que caza animales salvajes.", category: "naturaleza" },
 ];
 
 const ROSCO_6: RoscoEntry[] = [

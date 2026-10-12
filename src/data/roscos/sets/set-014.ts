@@ -85,7 +85,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Wushu", startOrContain: "start", letter: "W", definition: "Arte marcial tradicional de China.", category: "deporte-juego" },
   { word: "Extra", startOrContain: "contain", letter: "X", definition: "Algo que se agrega de más a lo que ya hay.", category: "cultura-general" },
   { word: "Yak", startOrContain: "start", letter: "Y", definition: "Buey de largo pelaje que vive en las montañas de Asia.", category: "naturaleza" },
-  { word: "Taza", startOrContain: "contain", letter: "Z", definition: "Recipiente con asa para tomar bebidas calientes.", category: "gastronomia" },
+  { word: "Terraza", startOrContain: "contain", letter: "Z", definition: "Espacio al aire libre, en la parte alta o al costado de una casa, para tomar sol o comer afuera.", category: "cultura-general" },
 ];
 
 const ROSCO_4: RoscoEntry[] = [
@@ -114,7 +114,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Windsurf", startOrContain: "start", letter: "W", definition: "Deporte de deslizarse sobre el agua en una tabla con vela.", category: "deporte-juego" },
   { word: "Oxido", startOrContain: "contain", letter: "X", definition: "Capa que se forma sobre el metal cuando se arruina con el aire.", category: "ciencias" },
   { word: "Yacimiento", startOrContain: "start", letter: "Y", definition: "Lugar donde se encuentran minerales o restos antiguos.", category: "ciencias" },
-  { word: "Pieza", startOrContain: "contain", letter: "Z", definition: "Cada una de las partes que forman un objeto.", category: "cultura-general" },
+  { word: "Zapato", startOrContain: "start", letter: "Z", definition: "Calzado que cubre el pie, generalmente de cuero o material duro.", category: "cultura-general" },
 ];
 
 const ROSCO_5: RoscoEntry[] = [

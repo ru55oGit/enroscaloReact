@@ -27,7 +27,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Wushu", startOrContain: "start", letter: "W", definition: "Arte marcial tradicional de China.", category: "deporte-juego" },
   { word: "Texto", startOrContain: "contain", letter: "X", definition: "Conjunto de palabras escritas que forman un escrito.", category: "educacion-sociedad" },
   { word: "Payaso", startOrContain: "contain", letter: "Y", definition: "Artista del circo que hace reír con sus bromas y su ropa colorida.", category: "arte-musica" },
-  { word: "Nariz", startOrContain: "contain", letter: "Z", definition: "Parte de la cara con la que respiramos y olemos.", category: "ciencias" },
+  { word: "Zambullir", startOrContain: "start", letter: "Z", definition: "Meterse de golpe en el agua, sumergiendo todo el cuerpo.", category: "deporte-juego" },
 ];
 
 const ROSCO_2: RoscoEntry[] = [

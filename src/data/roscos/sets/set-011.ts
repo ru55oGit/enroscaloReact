@@ -114,7 +114,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Wafle", startOrContain: "start", letter: "W", definition: "Masa dulce con forma de cuadrícula cocida en una plancha.", category: "gastronomia" },
   { word: "Conexion", startOrContain: "contain", letter: "X", definition: "Unión o enlace entre dos cosas o lugares.", category: "ciencias" },
   { word: "Yate", startOrContain: "start", letter: "Y", definition: "Embarcación de recreo elegante con motor o velas.", category: "transporte" },
-  { word: "Arroz", startOrContain: "contain", letter: "Z", definition: "Cereal en granos blancos que acompaña muchas comidas.", category: "gastronomia" },
+  { word: "Zueco", startOrContain: "start", letter: "Z", definition: "Calzado de madera o suela gruesa, típico de algunos oficios como la cocina.", category: "cultura-general" },
 ];
 
 const ROSCO_5: RoscoEntry[] = [

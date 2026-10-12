@@ -27,7 +27,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Waterpolista", startOrContain: "start", letter: "W", definition: "Deportista que juega al waterpolo dentro de una piscina.", category: "deporte-juego" },
   { word: "Oxido", startOrContain: "contain", letter: "X", definition: "Capa rojiza que se forma sobre los metales al combinarse con el oxígeno y la humedad.", category: "ciencias" },
   { word: "Subrayar", startOrContain: "contain", letter: "Y", definition: "Marcar una línea debajo de una palabra o frase para destacarla.", category: "educacion-sociedad" },
-  { word: "Buzo", startOrContain: "contain", letter: "Z", definition: "Persona que se sumerge bajo el agua con equipo especial para respirar.", category: "deporte-juego" },
+  { word: "Zozobra", startOrContain: "start", letter: "Z", definition: "Sensación de angustia o inquietud por algo que puede salir mal.", category: "educacion-sociedad" },
 ];
 
 const ROSCO_2: RoscoEntry[] = [

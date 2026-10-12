@@ -56,7 +56,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Wikipedia", startOrContain: "start", letter: "W", definition: "Enciclopedia libre que se consulta por internet.", category: "educacion-sociedad" },
   { word: "Oxigeno", startOrContain: "contain", letter: "X", definition: "Gas que también está disuelto en el agua del mar.", category: "ciencias" },
   { word: "Yoga", startOrContain: "start", letter: "Y", definition: "Disciplina que combina posturas del cuerpo y respiración.", category: "deporte-juego" },
-  { word: "Lazo", startOrContain: "contain", letter: "Z", definition: "Vínculo de cariño que une a las personas.", category: "cultura-general" },
+  { word: "Zafiro", startOrContain: "start", letter: "Z", definition: "Piedra preciosa de color azul muy valorada en joyería.", category: "naturaleza" },
 ];
 
 const ROSCO_3: RoscoEntry[] = [

@@ -105,7 +105,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Wok", startOrContain: "start", letter: "W", definition: "Sartén profunda de forma cónica usada en la cocina asiática para saltear a fuego muy alto.", category: "gastronomia" },
   { word: "Conexion", startOrContain: "contain", letter: "X", definition: "Enlace o vínculo que une dos o más elementos, personas o sistemas entre sí.", category: "ciencias" },
   { word: "Payaso", startOrContain: "contain", letter: "Y", definition: "Artista que usa vestuario colorido, maquillaje exagerado y humor para entretener al público.", category: "arte-musica" },
-  { word: "Lazo", startOrContain: "contain", letter: "Z", definition: "Cuerda o cinta atada formando un nudo decorativo o funcional para sujetar algo.", category: "cultura-general" },
+  { word: "Zorrino", startOrContain: "start", letter: "Z", definition: "Animal de pelaje oscuro con una franja blanca que larga un olor muy fuerte si se asusta.", category: "naturaleza" },
 ];
 
 const ROSCO_4: RoscoEntry[] = [
@@ -221,7 +221,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Wellington", startOrContain: "start", letter: "W", definition: "Bota impermeable de goma que cubre hasta la rodilla y protege del agua y el barro.", category: "cultura-general" },
   { word: "Saxofon", startOrContain: "contain", letter: "X", definition: "Instrumento de viento con cuerpo metálico y boquilla de caña muy usado en el jazz.", category: "arte-musica" },
   { word: "Yema", startOrContain: "start", letter: "Y", definition: "Parte amarilla y nutritiva del huevo rodeada por la clara transparente.", category: "gastronomia" },
-  { word: "Zorro", startOrContain: "start", letter: "Z", definition: "Mamífero cánido de hocico fino, orejas puntiagudas y cola tupida conocido por su astucia.", category: "naturaleza" },
+  { word: "Zafar", startOrContain: "start", letter: "Z", definition: "Soltarse o liberarse de algo que sujeta o complica.", category: "educacion-sociedad" },
 ];
 
 export const ROSCO_SET_001: Record<DayKey, RoscoEntry[]> = {
