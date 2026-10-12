@@ -113,7 +113,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Valkiria", startOrContain: "start", letter: "V", definition: "Guerrera de las leyendas nórdicas.", category: "mitologia-fantasia" },
   { word: "Waterpolo", startOrContain: "start", letter: "W", definition: "Deporte de equipo que se juega dentro de una pileta.", category: "deporte-juego" },
   { word: "Galaxia", startOrContain: "contain", letter: "X", definition: "Enorme conjunto de estrellas que se ve en el cielo.", category: "ciencias" },
-  { word: "Yeso", startOrContain: "start", letter: "Y", definition: "Material blanco con el que se revisten las paredes.", category: "ciencias" },
+  { word: "Yugular", startOrContain: "start", letter: "Y", definition: "Vena grande del cuello que lleva la sangre desde la cabeza hacia el corazón.", category: "ciencias" },
   { word: "Pieza", startOrContain: "contain", letter: "Z", definition: "Cada una de las habitaciones de una casa.", category: "cultura-general" },
 ];
 

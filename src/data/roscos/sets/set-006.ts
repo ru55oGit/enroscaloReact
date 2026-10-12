@@ -56,7 +56,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Wikipedia", startOrContain: "start", letter: "W", definition: "Enciclopedia de internet escrita y editada por muchas personas.", category: "cultura-general" },
   { word: "Extra", startOrContain: "contain", letter: "X", definition: "Algo que se suma de más a lo que ya había.", category: "cultura-general" },
   { word: "Yogur", startOrContain: "start", letter: "Y", definition: "Alimento cremoso hecho a partir de la leche fermentada.", category: "gastronomia" },
-  { word: "Maiz", startOrContain: "contain", letter: "Z", definition: "Planta de granos amarillos que se come y da harina.", category: "gastronomia" },
+  { word: "Zarigueya", startOrContain: "start", letter: "Z", definition: "Marsupial americano parecido a una rata grande que se hace el muerto cuando se siente en peligro.", category: "naturaleza" },
 ];
 
 const ROSCO_3: RoscoEntry[] = [
@@ -142,7 +142,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Varita", startOrContain: "start", letter: "V", definition: "Palito mágico con el que las hadas hacen sus encantamientos.", category: "mitologia-fantasia" },
   { word: "Wagon", startOrContain: "start", letter: "W", definition: "Cada uno de los vagones que arrastra una locomotora.", category: "transporte" },
   { word: "Maximo", startOrContain: "contain", letter: "X", definition: "Lo más alto o lo más grande que algo puede llegar a ser.", category: "cultura-general" },
-  { word: "Yuca", startOrContain: "start", letter: "Y", definition: "Raíz comestible muy usada en la cocina de varios países.", category: "gastronomia" },
+  { word: "Ayudar", startOrContain: "contain", letter: "Y", definition: "Colaborar con alguien para que pueda lograr algo más fácil.", category: "educacion-sociedad" },
   { word: "Manzana", startOrContain: "contain", letter: "Z", definition: "Fruta redonda y crujiente que puede ser roja o verde.", category: "gastronomia" },
 ];
 

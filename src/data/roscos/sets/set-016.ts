@@ -171,7 +171,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Vaquita", startOrContain: "start", letter: "V", definition: "Escarabajito rojo con puntos negros, también llamado mariquita.", category: "naturaleza" },
   { word: "Wasabi", startOrContain: "start", letter: "W", definition: "Pasta verde y muy picante de la comida japonesa.", category: "gastronomia" },
   { word: "Anexo", startOrContain: "contain", letter: "X", definition: "Parte que se agrega a algo principal.", category: "cultura-general" },
-  { word: "Yuca", startOrContain: "start", letter: "Y", definition: "Raíz comestible de la que se obtiene harina, también llamada mandioca.", category: "gastronomia" },
+  { word: "Joyas", startOrContain: "contain", letter: "Y", definition: "Objetos de valor, como anillos o collares, hechos con metales y piedras preciosas.", category: "cultura-general" },
   { word: "Pinza", startOrContain: "contain", letter: "Z", definition: "Herramienta para sujetar o apretar cosas pequeñas.", category: "ciencias" },
 ];
 

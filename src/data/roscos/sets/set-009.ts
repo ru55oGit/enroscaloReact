@@ -25,7 +25,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Puma", startOrContain: "contain", letter: "U", definition: "Felino salvaje americano de pelaje pardo y gran agilidad.", category: "naturaleza" },
   { word: "Viñeta", startOrContain: "start", letter: "V", definition: "Cada uno de los recuadros con dibujos de una historieta.", category: "arte-musica" },
   { word: "Wafle", startOrContain: "start", letter: "W", definition: "Masa dulce con forma de cuadrículas cocida en una plancha.", category: "gastronomia" },
-  { word: "Taxi", startOrContain: "contain", letter: "X", definition: "Automóvil con conductor que transporta pasajeros.", category: "transporte" },
+  { word: "Xenon", startOrContain: "start", letter: "X", definition: "Gas noble, pesado e incoloro, usado en algunas lámparas y faros de auto.", category: "ciencias" },
   { word: "Yeso", startOrContain: "start", letter: "Y", definition: "Pasta blanca que al endurecer inmoviliza un hueso roto.", category: "ciencias" },
   { word: "Cabeza", startOrContain: "contain", letter: "Z", definition: "Parte superior del cuerpo donde están la cara y el cerebro.", category: "ciencias" },
 ];
@@ -171,7 +171,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Vettel", startOrContain: "start", letter: "V", definition: "Apellido del piloto alemán varias veces campeón de Fórmula 1.", category: "personalidades" },
   { word: "Wagon", startOrContain: "start", letter: "W", definition: "Cada uno de los vagones que arrastra una locomotora.", category: "transporte" },
   { word: "Conexion", startOrContain: "contain", letter: "X", definition: "Unión o enlace entre dos cosas o lugares.", category: "ciencias" },
-  { word: "Yerba", startOrContain: "start", letter: "Y", definition: "Hojas secas y molidas con las que se prepara el mate.", category: "gastronomia" },
+  { word: "Yacer", startOrContain: "start", letter: "Y", definition: "Estar tendido o descansando en un lugar, como dice la frase 'aquí yace...'.", category: "cultura-general" },
   { word: "Arroz", startOrContain: "contain", letter: "Z", definition: "Cereal en granos blancos que acompaña muchas comidas.", category: "gastronomia" },
 ];
 
@@ -200,8 +200,8 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Viga", startOrContain: "start", letter: "V", definition: "Pieza larga y fuerte que sostiene un techo o un puente.", category: "cultura-general" },
   { word: "Wok", startOrContain: "start", letter: "W", definition: "Sartén honda de origen asiático para saltear alimentos.", category: "gastronomia" },
   { word: "Boxeo", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que dos personas pelean con los puños.", category: "deporte-juego" },
-  { word: "Yate", startOrContain: "start", letter: "Y", definition: "Embarcación de recreo elegante con motor o velas.", category: "transporte" },
-  { word: "Maiz", startOrContain: "contain", letter: "Z", definition: "Planta de granos amarillos que se come y da harina.", category: "gastronomia" },
+  { word: "Rey", startOrContain: "contain", letter: "Y", definition: "Monarca que gobierna un reino, máxima autoridad en una monarquía.", category: "cultura-general" },
+  { word: "Zurdo", startOrContain: "start", letter: "Z", definition: "Persona que usa la mano izquierda en vez de la derecha para la mayoría de las cosas.", category: "educacion-sociedad" },
 ];
 
 export const ROSCO_SET_009: Record<DayKey, RoscoEntry[]> = {

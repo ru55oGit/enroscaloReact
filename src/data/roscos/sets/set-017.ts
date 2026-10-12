@@ -25,7 +25,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Fruta", startOrContain: "contain", letter: "U", definition: "Alimento dulce que dan los árboles, como la manzana.", category: "gastronomia" },
   { word: "Vado", startOrContain: "start", letter: "V", definition: "Parte poco profunda de un río por donde se puede cruzar.", category: "naturaleza" },
   { word: "Wifi", startOrContain: "start", letter: "W", definition: "Conexión sin cables para entrar a internet.", category: "ciencias" },
-  { word: "Taxi", startOrContain: "contain", letter: "X", definition: "Auto que lleva pasajeros a cambio de dinero.", category: "transporte" },
+  { word: "Fax", startOrContain: "contain", letter: "X", definition: "Aparato antiguo que enviaba documentos escritos a través de la línea telefónica.", category: "cultura-general" },
   { word: "Yate", startOrContain: "start", letter: "Y", definition: "Embarcación de recreo elegante.", category: "transporte" },
   { word: "Arroz", startOrContain: "contain", letter: "Z", definition: "Cereal blanco que se cultiva en campos inundados.", category: "gastronomia" },
 ];
@@ -171,7 +171,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Vacuno", startOrContain: "start", letter: "V", definition: "Ganado formado por vacas, toros y terneros.", category: "naturaleza" },
   { word: "Wok", startOrContain: "start", letter: "W", definition: "Sartén honda de la cocina asiática.", category: "gastronomia" },
   { word: "Oxigeno", startOrContain: "contain", letter: "X", definition: "Gas que también está disuelto en el agua de los ríos.", category: "ciencias" },
-  { word: "Yoga", startOrContain: "start", letter: "Y", definition: "Disciplina de posturas y respiración para relajarse.", category: "deporte-juego" },
+  { word: "Proyecto", startOrContain: "contain", letter: "Y", definition: "Plan organizado de actividades para lograr un objetivo determinado.", category: "educacion-sociedad" },
   { word: "Pieza", startOrContain: "contain", letter: "Z", definition: "Cada parte de un conjunto o de una máquina.", category: "ciencias" },
 ];
 

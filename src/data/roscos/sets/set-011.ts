@@ -84,7 +84,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Vampiro", startOrContain: "start", letter: "V", definition: "Ser de las leyendas que sale de noche a morder cuellos.", category: "mitologia-fantasia" },
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unidad que mide la potencia eléctrica.", category: "ciencias" },
   { word: "Sexteto", startOrContain: "contain", letter: "X", definition: "Grupo musical formado por seis integrantes.", category: "arte-musica" },
-  { word: "Yoga", startOrContain: "start", letter: "Y", definition: "Disciplina que combina posturas del cuerpo y respiración.", category: "deporte-juego" },
+  { word: "Mayor", startOrContain: "contain", letter: "Y", definition: "Que tiene más edad o más cantidad que otra cosa con la que se compara.", category: "educacion-sociedad" },
   { word: "Zorro", startOrContain: "start", letter: "Z", definition: "Mamífero astuto de cola peluda y hocico puntiagudo.", category: "naturaleza" },
 ];
 
@@ -141,7 +141,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Mundo", startOrContain: "contain", letter: "U", definition: "El planeta Tierra y todo lo que existe en él.", category: "cultura-general" },
   { word: "Verano", startOrContain: "start", letter: "V", definition: "Estación más calurosa del año.", category: "naturaleza" },
   { word: "Web", startOrContain: "start", letter: "W", definition: "Conjunto de páginas a las que se accede por internet.", category: "ciencias" },
-  { word: "Taxi", startOrContain: "contain", letter: "X", definition: "Automóvil con conductor que transporta pasajeros.", category: "transporte" },
+  { word: "Hexagono", startOrContain: "contain", letter: "X", definition: "Figura geométrica de seis lados, como las celdas de un panal de abejas.", category: "educacion-sociedad" },
   { word: "Yeso", startOrContain: "start", letter: "Y", definition: "Pasta blanca que al endurecer inmoviliza un hueso roto.", category: "ciencias" },
   { word: "Zanahoria", startOrContain: "start", letter: "Z", definition: "Verdura anaranjada y alargada que crece bajo tierra.", category: "gastronomia" },
 ];
@@ -200,8 +200,8 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Vespucio", startOrContain: "start", letter: "V", definition: "Apellido del navegante italiano Américo, que dio su nombre a América.", category: "personalidades" },
   { word: "Wagon", startOrContain: "start", letter: "W", definition: "Cada uno de los vagones que arrastra una locomotora.", category: "transporte" },
   { word: "Examen", startOrContain: "contain", letter: "X", definition: "Prueba para medir lo que una persona aprendió.", category: "educacion-sociedad" },
-  { word: "Yucatan", startOrContain: "start", letter: "Y", definition: "Elemento químico usado para desinfectar heridas.", category: "ciencias" },
-  { word: "Maiz", startOrContain: "contain", letter: "Z", definition: "Planta de granos amarillos que se come y da harina.", category: "gastronomia" },
+  { word: "Yucatan", startOrContain: "start", letter: "Y", definition: "Península del sureste de México, famosa por sus ruinas mayas y playas.", category: "cultura-general" },
+  { word: "Corazon", startOrContain: "contain", letter: "Z", definition: "Órgano que bombea la sangre por todo el cuerpo.", category: "ciencias" },
 ];
 
 export const ROSCO_SET_011: Record<DayKey, RoscoEntry[]> = {

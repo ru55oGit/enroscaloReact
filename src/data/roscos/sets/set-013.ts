@@ -27,7 +27,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Watt", startOrContain: "start", letter: "W", definition: "Unidad que mide la potencia eléctrica.", category: "ciencias" },
   { word: "Galaxia", startOrContain: "contain", letter: "X", definition: "Enorme conjunto de estrellas unidas por la gravedad.", category: "ciencias" },
   { word: "Yegua", startOrContain: "start", letter: "Y", definition: "Hembra adulta del caballo, usada para montar, tirar carros o dar cría a los potrillos.", category: "naturaleza" },
-  { word: "Maiz", startOrContain: "contain", letter: "Z", definition: "Planta de granos amarillos que se come y da harina.", category: "gastronomia" },
+  { word: "Modernizar", startOrContain: "contain", letter: "Z", definition: "Actualizar algo, como una máquina o una idea, para adaptarlo a la época actual.", category: "educacion-sociedad" },
 ];
 
 const ROSCO_2: RoscoEntry[] = [
@@ -55,7 +55,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Volea", startOrContain: "start", letter: "V", definition: "Golpe a la pelota en el aire antes de que toque el suelo.", category: "deporte-juego" },
   { word: "Wagon", startOrContain: "start", letter: "W", definition: "Cada uno de los vagones que arrastra una locomotora.", category: "transporte" },
   { word: "Saxo", startOrContain: "contain", letter: "X", definition: "Instrumento de viento de metal muy usado en el jazz.", category: "arte-musica" },
-  { word: "Yuri", startOrContain: "start", letter: "Y", definition: "Elemento químico usado para desinfectar heridas.", category: "ciencias" },
+  { word: "Yuri", startOrContain: "start", letter: "Y", definition: "Nombre del cosmonauta soviético Gagarin, la primera persona en viajar al espacio.", category: "personalidades" },
   { word: "Plaza", startOrContain: "contain", letter: "Z", definition: "Espacio público abierto de una ciudad, con bancos y árboles.", category: "cultura-general" },
 ];
 
@@ -113,7 +113,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Vendaval", startOrContain: "start", letter: "V", definition: "Viento muy fuerte y violento que sopla con furia y puede arrancar techos y derribar árboles.", category: "naturaleza" },
   { word: "Wafle", startOrContain: "start", letter: "W", definition: "Masa dulce con forma de cuadrícula cocida en una plancha.", category: "gastronomia" },
   { word: "Boxeador", startOrContain: "contain", letter: "X", definition: "Deportista que se enfrenta a un rival peleando con los puños.", category: "deporte-juego" },
-  { word: "Yema", startOrContain: "start", letter: "Y", definition: "Parte amarilla y central del huevo.", category: "gastronomia" },
+  { word: "Inyectar", startOrContain: "contain", letter: "Y", definition: "Introducir un líquido en el cuerpo con una jeringa.", category: "ciencias" },
   { word: "Zorro", startOrContain: "start", letter: "Z", definition: "Mamífero astuto de cola peluda y hocico puntiagudo.", category: "naturaleza" },
 ];
 
@@ -199,7 +199,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Humo", startOrContain: "contain", letter: "U", definition: "Gas gris que se desprende de algo que se quema.", category: "ciencias" },
   { word: "Vitral", startOrContain: "start", letter: "V", definition: "Ventana hecha con vidrios de colores.", category: "arte-musica" },
   { word: "Western", startOrContain: "start", letter: "W", definition: "Tipo de película ambientada en el lejano oeste americano.", category: "cultura-general" },
-  { word: "Taxi", startOrContain: "contain", letter: "X", definition: "Automóvil con conductor que transporta pasajeros.", category: "transporte" },
+  { word: "Toxico", startOrContain: "contain", letter: "X", definition: "Que es venenoso o dañino para la salud.", category: "ciencias" },
   { word: "Yeso", startOrContain: "start", letter: "Y", definition: "Pasta blanca que al endurecer inmoviliza un hueso roto.", category: "ciencias" },
   { word: "Zanahoria", startOrContain: "start", letter: "Z", definition: "Verdura anaranjada y alargada que crece bajo tierra.", category: "gastronomia" },
 ];

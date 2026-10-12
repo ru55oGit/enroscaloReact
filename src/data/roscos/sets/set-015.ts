@@ -113,7 +113,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Latex", startOrContain: "contain", letter: "X", definition: "Líquido del árbol del caucho con el que se hace la goma.", category: "ciencias" },
   { word: "Yeruti", startOrContain: "start", letter: "Y", definition: "Palomita criolla de canto suave.", category: "naturaleza" },
   { word: "Justicia", startOrContain: "start", letter: "J", definition: "Dar a cada uno lo que le corresponde.", category: "educacion-sociedad" },
-  { word: "Kilovatio", startOrContain: "start", letter: "K", definition: "Unidad que mide la potencia eléctrica.", category: "ciencias" },
+  { word: "Kilovatio", startOrContain: "start", letter: "K", definition: "Unidad que equivale a mil vatios, usada para medir grandes consumos de energía eléctrica.", category: "ciencias" },
   { word: "Zorzal", startOrContain: "start", letter: "Z", definition: "Pájaro pardo de canto muy bello, común en los patios.", category: "naturaleza" },
 ];
 
@@ -171,7 +171,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Voragine", startOrContain: "start", letter: "V", definition: "Remolino fuerte que gira en el agua.", category: "naturaleza" },
   { word: "Wifi", startOrContain: "start", letter: "W", definition: "Conexión sin cables que permite acceder a internet.", category: "ciencias" },
   { word: "Fenix", startOrContain: "contain", letter: "X", definition: "Ave mágica de las leyendas que renace de sus cenizas.", category: "mitologia-fantasia" },
-  { word: "Yate", startOrContain: "start", letter: "Y", definition: "Embarcación de recreo elegante con motor o velas.", category: "transporte" },
+  { word: "Leyenda", startOrContain: "contain", letter: "Y", definition: "Relato tradicional que mezcla hechos reales con elementos fantásticos.", category: "mitologia-fantasia" },
   { word: "Pizarra", startOrContain: "contain", letter: "Z", definition: "Tablero donde se escribe con tiza o marcador.", category: "educacion-sociedad" },
 ];
 

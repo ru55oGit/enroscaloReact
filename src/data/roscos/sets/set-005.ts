@@ -23,10 +23,10 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Salchicha", startOrContain: "start", letter: "S", definition: "Embutido alargado de carne picada que suele comerse caliente.", category: "gastronomia" },
   { word: "Tarantula", startOrContain: "start", letter: "T", definition: "Araña grande y peluda que vive en zonas cálidas.", category: "naturaleza" },
   { word: "Universo", startOrContain: "start", letter: "U", definition: "Todo lo que existe: estrellas, planetas, galaxias y el espacio.", category: "ciencias" },
-  { word: "Verdura", startOrContain: "start", letter: "V", definition: "Planta comestible como la lechuga o la zanahoria.", category: "gastronomia" },
+  { word: "Verdura", startOrContain: "start", letter: "V", definition: "Alimento vegetal que se cultiva en la huerta. Ej: lechuga, espinaca, zanahoria...", category: "gastronomia" },
   { word: "Windsurf", startOrContain: "start", letter: "W", definition: "Deporte de deslizarse sobre el agua en una tabla con vela.", category: "deporte-juego" },
   { word: "Galaxia", startOrContain: "contain", letter: "X", definition: "Enorme conjunto de estrellas, gas y polvo unidos por la gravedad.", category: "ciencias" },
-  { word: "Yeti", startOrContain: "start", letter: "Y", definition: "Elemento químico usado para desinfectar heridas.", category: "ciencias" },
+  { word: "Yeti", startOrContain: "start", letter: "Y", definition: "Ser legendario, parecido a un mono gigante, que se dice habita en el Himalaya.", category: "mitologia-fantasia" },
   { word: "Zorro", startOrContain: "start", letter: "Z", definition: "Mamífero astuto de cola peluda y hocico puntiagudo.", category: "naturaleza" },
 ];
 
@@ -54,7 +54,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Ukelele", startOrContain: "start", letter: "U", definition: "Pequeño instrumento de cuatro cuerdas de origen hawaiano.", category: "arte-musica" },
   { word: "Vison", startOrContain: "start", letter: "V", definition: "Pequeño mamífero de pelaje suave que nada y vive cerca del agua.", category: "naturaleza" },
   { word: "Web", startOrContain: "start", letter: "W", definition: "Conjunto de páginas a las que se accede por internet.", category: "ciencias" },
-  { word: "Taxi", startOrContain: "contain", letter: "X", definition: "Automóvil con conductor que transporta pasajeros a cambio de dinero.", category: "transporte" },
+  { word: "Xilofono", startOrContain: "start", letter: "X", definition: "Instrumento musical de percusión con láminas de madera que se golpean con mazos.", category: "arte-musica" },
   { word: "Yerba", startOrContain: "start", letter: "Y", definition: "Hojas secas y molidas con las que se prepara el mate.", category: "gastronomia" },
   { word: "Pieza", startOrContain: "contain", letter: "Z", definition: "Obra musical o cada parte que compone un conjunto.", category: "arte-musica" },
 ];
@@ -84,7 +84,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Vajilla", startOrContain: "start", letter: "V", definition: "Conjunto de platos, vasos y fuentes para servir la comida.", category: "gastronomia" },
   { word: "Wok", startOrContain: "start", letter: "W", definition: "Sartén honda de origen asiático usada para saltear alimentos.", category: "gastronomia" },
   { word: "Auxilio", startOrContain: "contain", letter: "X", definition: "Ayuda que se le da a alguien que está en peligro o dificultad.", category: "cultura-general" },
-  { word: "Yate", startOrContain: "start", letter: "Y", definition: "Embarcación de recreo elegante con motor o velas.", category: "transporte" },
+  { word: "Playa", startOrContain: "contain", letter: "Y", definition: "Franja de arena junto al mar, ideal para nadar y tomar sol.", category: "naturaleza" },
   { word: "Arroz", startOrContain: "contain", letter: "Z", definition: "Cereal en granos blancos que se cocina y acompaña muchas comidas.", category: "gastronomia" },
 ];
 
@@ -113,7 +113,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Victoria", startOrContain: "start", letter: "V", definition: "Resultado de ganar un partido o una batalla.", category: "deporte-juego" },
   { word: "Western", startOrContain: "start", letter: "W", definition: "Tipo de película ambientada en el lejano oeste americano.", category: "cultura-general" },
   { word: "Saxo", startOrContain: "contain", letter: "X", definition: "Instrumento de viento de metal con un sonido cálido muy usado en jazz.", category: "arte-musica" },
-  { word: "Yema", startOrContain: "start", letter: "Y", definition: "Parte amarilla y central del huevo.", category: "gastronomia" },
+  { word: "Ensayar", startOrContain: "contain", letter: "Y", definition: "Practicar algo, como una obra de teatro o una canción, antes de mostrarla en público.", category: "arte-musica" },
   { word: "Lazo", startOrContain: "contain", letter: "Z", definition: "Cuerda con nudo corredizo que usan los gauchos para atrapar animales.", category: "cultura-general" },
 ];
 

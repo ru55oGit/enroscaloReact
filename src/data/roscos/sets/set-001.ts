@@ -162,7 +162,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Volcan", startOrContain: "start", letter: "V", definition: "Abertura en la corteza terrestre por donde emerge magma, ceniza y gases del interior de la Tierra.", category: "naturaleza" },
   { word: "Wagon", startOrContain: "start", letter: "W", definition: "Vagón de tren o carro grande de cuatro ruedas usado para transportar mercancías o personas.", category: "transporte" },
   { word: "Saxo", startOrContain: "contain", letter: "X", definition: "Instrumento de viento metálico con boquilla de caña muy popular en el jazz y la música moderna.", category: "arte-musica" },
-  { word: "Yoga", startOrContain: "start", letter: "Y", definition: "Disciplina de origen indio que combina posturas corporales, respiración y meditación.", category: "deporte-juego" },
+  { word: "Yerno", startOrContain: "start", letter: "Y", definition: "Esposo de la hija de una persona, dentro de la familia política.", category: "educacion-sociedad" },
   { word: "Nariz", startOrContain: "contain", letter: "Z", definition: "Órgano del sentido del olfato ubicado en el centro del rostro humano.", category: "ciencias" },
 ];
 

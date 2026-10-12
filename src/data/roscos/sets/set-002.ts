@@ -26,7 +26,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Vena", startOrContain: "start", letter: "V", definition: "Conducto del cuerpo que transporta la sangre de vuelta hacia el corazón.", category: "ciencias" },
   { word: "Waterpolista", startOrContain: "start", letter: "W", definition: "Deportista que juega al waterpolo dentro de una piscina.", category: "deporte-juego" },
   { word: "Oxido", startOrContain: "contain", letter: "X", definition: "Capa rojiza que se forma sobre los metales al combinarse con el oxígeno y la humedad.", category: "ciencias" },
-  { word: "Yegua", startOrContain: "start", letter: "Y", definition: "Hembra adulta del caballo criada para montar, trabajar o competir.", category: "naturaleza" },
+  { word: "Subrayar", startOrContain: "contain", letter: "Y", definition: "Marcar una línea debajo de una palabra o frase para destacarla.", category: "educacion-sociedad" },
   { word: "Buzo", startOrContain: "contain", letter: "Z", definition: "Persona que se sumerge bajo el agua con equipo especial para respirar.", category: "deporte-juego" },
 ];
 
