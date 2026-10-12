@@ -105,7 +105,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Nana", startOrContain: "start", letter: "N", definition: "Canción suave para dormir a los bebés.", category: "arte-musica" },
   { word: "Oeste", startOrContain: "start", letter: "O", definition: "Punto cardinal por donde se esconde el sol.", category: "cultura-general" },
   { word: "Personaje", startOrContain: "start", letter: "P", definition: "Cada uno de los seres que aparecen en una historia.", category: "cultura-general" },
-  { word: "Mosquito", startOrContain: "contain", letter: "Q", definition: "Pequeño insecto volador que pica y zumba.", category: "naturaleza" },
+  { word: "Quedar", startOrContain: "start", letter: "Q", definition: "Permanecer en un lugar o acordar encontrarse con alguien.", category: "cultura-general" },
   { word: "Resplandor", startOrContain: "start", letter: "R", definition: "Luz muy fuerte y brillante.", category: "ciencias" },
   { word: "Soneto", startOrContain: "start", letter: "S", definition: "Composición poética de catorce versos repartidos en dos cuartetos y dos tercetos, muy clásica.", category: "arte-musica" },
   { word: "Tono", startOrContain: "start", letter: "T", definition: "Qué tan grave o agudo es un sonido.", category: "arte-musica" },

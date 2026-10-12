@@ -47,7 +47,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Neceser", startOrContain: "start", letter: "N", definition: "Bolsito donde se guardan elementos de higiene y aseo personal.", category: "cultura-general" },
   { word: "Oceano", startOrContain: "start", letter: "O", definition: "Enorme extensión de agua salada que cubre gran parte del planeta.", category: "naturaleza" },
   { word: "Planeta", startOrContain: "start", letter: "P", definition: "Cuerpo celeste que gira alrededor de una estrella como el Sol.", category: "ciencias" },
-  { word: "Quesadilla", startOrContain: "start", letter: "Q", definition: "Tortilla mexicana rellena de queso derretido.", category: "gastronomia" },
+  { word: "Croqueta", startOrContain: "contain", letter: "Q", definition: "Bocadito frito, cubierto de pan rallado, relleno de jamón, pollo u otro ingrediente.", category: "gastronomia" },
   { word: "Ravioles", startOrContain: "start", letter: "R", definition: "Pasta rellena de forma cuadrada típica de la cocina italiana.", category: "gastronomia" },
   { word: "Sinfonia", startOrContain: "start", letter: "S", definition: "Obra musical extensa compuesta para una orquesta completa.", category: "arte-musica" },
   { word: "Tarta", startOrContain: "start", letter: "T", definition: "Comida horneada con masa y relleno dulce o salado.", category: "gastronomia" },

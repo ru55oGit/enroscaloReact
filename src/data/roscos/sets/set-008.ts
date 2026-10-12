@@ -18,7 +18,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Naufragio", startOrContain: "start", letter: "N", definition: "Hundimiento de un barco en el agua.", category: "cultura-general" },
   { word: "Obsequio", startOrContain: "start", letter: "O", definition: "Regalo que se da a alguien.", category: "cultura-general" },
   { word: "Paloma", startOrContain: "start", letter: "P", definition: "Ave común de las ciudades, símbolo de la paz.", category: "naturaleza" },
-  { word: "Chaqueta", startOrContain: "contain", letter: "Q", definition: "Prenda corta con mangas que se abre por delante.", category: "cultura-general" },
+  { word: "Banquillo", startOrContain: "contain", letter: "Q", definition: "Asiento donde esperan los suplentes de un equipo durante un partido.", category: "deporte-juego" },
   { word: "Rubi", startOrContain: "start", letter: "R", definition: "Piedra preciosa de color rojo intenso.", category: "naturaleza" },
   { word: "Salsa", startOrContain: "start", letter: "S", definition: "Música y baile caribeño de ritmo alegre.", category: "arte-musica" },
   { word: "Tractor", startOrContain: "start", letter: "T", definition: "Máquina potente que se usa para trabajar el campo.", category: "transporte" },

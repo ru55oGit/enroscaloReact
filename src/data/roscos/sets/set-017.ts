@@ -192,7 +192,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Navaja", startOrContain: "start", letter: "N", definition: "Cuchillo pequeño cuya hoja se pliega.", category: "ciencias" },
   { word: "Osciloscopio", startOrContain: "start", letter: "O", definition: "Aparato que muestra las señales eléctricas en una pantalla.", category: "cultura-general" },
   { word: "Paul", startOrContain: "start", letter: "P", definition: "Apellido del base estadounidense Chris, estrella de la NBA.", category: "personalidades" },
-  { word: "Raqueta", startOrContain: "contain", letter: "Q", definition: "Pala con cuerdas para jugar al tenis.", category: "deporte-juego" },
+  { word: "Quitar", startOrContain: "start", letter: "Q", definition: "Sacar algo del lugar donde estaba.", category: "educacion-sociedad" },
   { word: "Redil", startOrContain: "start", letter: "R", definition: "Corral donde se encierran las ovejas.", category: "naturaleza" },
   { word: "Sitar", startOrContain: "start", letter: "S", definition: "Instrumento de cuerda de la India.", category: "arte-musica" },
   { word: "Tapicero", startOrContain: "start", letter: "T", definition: "Persona que arregla y forra sillones y sillas.", category: "educacion-sociedad" },

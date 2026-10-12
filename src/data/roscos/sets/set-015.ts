@@ -163,7 +163,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Noctambulo", startOrContain: "start", letter: "N", definition: "Persona que está despierta y activa de noche.", category: "cultura-general" },
   { word: "Obturador", startOrContain: "start", letter: "O", definition: "Parte de la cámara que se abre para tomar la foto.", category: "ciencias" },
   { word: "Pirlo", startOrContain: "start", letter: "P", definition: "Apellido del elegante mediocampista italiano Andrea, campeón del mundo.", category: "personalidades" },
-  { word: "Parque", startOrContain: "contain", letter: "Q", definition: "Espacio verde con juegos y arboles para pasear.", category: "cultura-general" },
+  { word: "Estanque", startOrContain: "contain", letter: "Q", definition: "Depósito de agua, natural o artificial, donde suele haber peces o plantas.", category: "naturaleza" },
   { word: "Rape", startOrContain: "start", letter: "R", definition: "Pez de las profundidades con una luz que cuelga de su cabeza.", category: "naturaleza" },
   { word: "Sismografo", startOrContain: "start", letter: "S", definition: "Aparato que registra los terremotos.", category: "ciencias" },
   { word: "Tentaculo", startOrContain: "start", letter: "T", definition: "Brazo largo y flexible del pulpo o el calamar.", category: "naturaleza" },

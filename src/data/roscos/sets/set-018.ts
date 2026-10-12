@@ -134,7 +134,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Neymar", startOrContain: "start", letter: "N", definition: "Apellido del crack brasileño Junior, gran gambeteador.", category: "personalidades" },
   { word: "Okinawa", startOrContain: "start", letter: "O", definition: "Isla japonesa del Pacífico, escenario de una de las batallas más cruentas de la Segunda Guerra.", category: "cultura-general" },
   { word: "Pekines", startOrContain: "start", letter: "P", definition: "Perro pequeño de hocico chato y pelo largo.", category: "naturaleza" },
-  { word: "Quimica", startOrContain: "start", letter: "Q", definition: "Ciencia que estudia de qué está hecha la materia.", category: "ciencias" },
+  { word: "Equivocar", startOrContain: "contain", letter: "Q", definition: "Cometer un error al hacer o decir algo, usado como 'equivocarse'.", category: "educacion-sociedad" },
   { word: "Ronaldo", startOrContain: "start", letter: "R", definition: "Apellido del astro portugués Cristiano, uno de los máximos goleadores de la historia.", category: "personalidades" },
   { word: "Soluto", startOrContain: "start", letter: "S", definition: "Sustancia que se disuelve dentro de un líquido.", category: "ciencias" },
   { word: "Tactica", startOrContain: "start", letter: "T", definition: "Plan que sigue un equipo para ganar el partido.", category: "deporte-juego" },

@@ -134,7 +134,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Nuca", startOrContain: "start", letter: "N", definition: "Parte de atrás del cuello.", category: "ciencias" },
   { word: "Orientacion", startOrContain: "start", letter: "O", definition: "Deporte de encontrar un camino usando mapa y brújula.", category: "deporte-juego" },
   { word: "Puerro", startOrContain: "start", letter: "P", definition: "Verdura alargada y blanca de sabor parecido a la cebolla.", category: "gastronomia" },
-  { word: "Quena", startOrContain: "start", letter: "Q", definition: "Flauta de caña típica de los pueblos andinos.", category: "arte-musica" },
+  { word: "Quimbombo", startOrContain: "start", letter: "Q", definition: "Vegetal verde y alargado, típico de la cocina caribeña y africana.", category: "gastronomia" },
   { word: "Rotula", startOrContain: "start", letter: "R", definition: "Hueso redondo que protege la rodilla.", category: "ciencias" },
   { word: "Saque", startOrContain: "start", letter: "S", definition: "Golpe con el que se pone en juego la pelota en el tenis.", category: "deporte-juego" },
   { word: "Turner", startOrContain: "start", letter: "T", definition: "Apellido del célebre pintor inglés William, famoso por sus paisajes y mares.", category: "personalidades" },

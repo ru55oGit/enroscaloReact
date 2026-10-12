@@ -38,7 +38,7 @@ export const ROSCO_1: RoscoEntry[] = [
   { word: "Nube", startOrContain: "start", letter: "N", definition: "Conjunto visible de diminutas gotas de agua suspendidas en la atmósfera.", category: "naturaleza" },
   { word: "Oso", startOrContain: "start", letter: "O", definition: "Mamífero grande y robusto con pelaje abundante que habita en bosques y montañas.", category: "naturaleza" },
   { word: "Pelota", startOrContain: "start", letter: "P", definition: "Objeto esférico de goma o cuero utilizado en distintos deportes y juegos.", category: "deporte-juego" },
-  { word: "Bosque", startOrContain: "contain", letter: "Q", definition: "Terreno densamente poblado de árboles y vegetación donde viven muchos animales.", category: "naturaleza" },
+  { word: "Quiosco", startOrContain: "start", letter: "Q", definition: "Pequeño local, a veces en la calle, donde se venden diarios, revistas o golosinas.", category: "cultura-general" },
   { word: "Reloj", startOrContain: "start", letter: "R", definition: "Instrumento mecánico o digital que mide y muestra el tiempo transcurrido.", category: "cultura-general" },
   { word: "Silla", startOrContain: "start", letter: "S", definition: "Mueble con asiento, respaldo y patas diseñado para que una persona se siente.", category: "cultura-general" },
   { word: "Tren", startOrContain: "start", letter: "T", definition: "Medio de transporte terrestre formado por vagones que circulan sobre rieles.", category: "transporte" },

@@ -163,7 +163,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Neurona", startOrContain: "start", letter: "N", definition: "Célula del cerebro que transmite información.", category: "ciencias" },
   { word: "Odisea", startOrContain: "start", letter: "O", definition: "Viaje largo lleno de aventuras y dificultades.", category: "cultura-general" },
   { word: "Pattinson", startOrContain: "start", letter: "P", definition: "Apellido del actor británico Robert, famoso por la saga Crepúsculo y Batman.", category: "personalidades" },
-  { word: "Maqueta", startOrContain: "contain", letter: "Q", definition: "Modelo pequeño que representa un edificio o un objeto.", category: "cultura-general" },
+  { word: "Quinto", startOrContain: "start", letter: "Q", definition: "Que ocupa el lugar número cinco en una serie.", category: "educacion-sociedad" },
   { word: "Radiacion", startOrContain: "start", letter: "R", definition: "Energía que se desplaza por el espacio en forma de ondas.", category: "ciencias" },
   { word: "Solido", startOrContain: "start", letter: "S", definition: "Estado de la materia que tiene forma firme, como una piedra.", category: "ciencias" },
   { word: "Tribu", startOrContain: "start", letter: "T", definition: "Grupo de familias que viven juntas con un mismo jefe.", category: "educacion-sociedad" },

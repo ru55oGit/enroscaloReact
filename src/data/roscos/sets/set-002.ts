@@ -163,7 +163,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Nadador", startOrContain: "start", letter: "N", definition: "Deportista que compite desplazándose por el agua con distintos estilos.", category: "deporte-juego" },
   { word: "Olfato", startOrContain: "start", letter: "O", definition: "Sentido que permite percibir y reconocer los olores a través de la nariz.", category: "ciencias" },
   { word: "Pinguino", startOrContain: "start", letter: "P", definition: "Ave marina de las zonas frías que no vuela pero nada muy bien con sus aletas.", category: "naturaleza" },
-  { word: "Quena", startOrContain: "start", letter: "Q", definition: "Flauta de origen andino fabricada con caña que se toca soplando por un extremo.", category: "arte-musica" },
+  { word: "Queque", startOrContain: "start", letter: "Q", definition: "Nombre que se le da en varios países de América a la torta o bizcochuelo.", category: "gastronomia" },
   { word: "Reja", startOrContain: "start", letter: "R", definition: "Conjunto de barrotes de metal que protege ventanas o cierra un espacio.", category: "cultura-general" },
   { word: "Soldado", startOrContain: "start", letter: "S", definition: "Persona que forma parte de un ejército y sirve en la defensa de su país.", category: "educacion-sociedad" },
   { word: "Tortilla", startOrContain: "start", letter: "T", definition: "Plato de la gastronomía española de huevo batido y patatas fritas, con o sin cebolla.", category: "gastronomia" },

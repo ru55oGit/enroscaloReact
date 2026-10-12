@@ -192,7 +192,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Negocio", startOrContain: "start", letter: "N", definition: "Actividad de comprar y vender para ganar dinero.", category: "educacion-sociedad" },
   { word: "Orangutan", startOrContain: "start", letter: "O", definition: "Gran mono de pelo rojizo que vive en los árboles de Asia.", category: "naturaleza" },
   { word: "Periodico", startOrContain: "start", letter: "P", definition: "Publicación diaria con las noticias del día.", category: "educacion-sociedad" },
-  { word: "Bosque", startOrContain: "contain", letter: "Q", definition: "Terreno extenso cubierto de muchos árboles.", category: "naturaleza" },
+  { word: "Quinta", startOrContain: "start", letter: "Q", definition: "Casa de campo con jardín grande, usada para descansar o pasar el fin de semana.", category: "cultura-general" },
   { word: "Radio", startOrContain: "start", letter: "R", definition: "Aparato que transmite música y noticias por ondas.", category: "ciencias" },
   { word: "Salamandra", startOrContain: "start", letter: "S", definition: "Pequeño anfibio de piel húmeda y colores llamativos.", category: "naturaleza" },
   { word: "Turquia", startOrContain: "start", letter: "T", definition: "País que se encuentra entre Europa y Asia.", category: "cultura-general" },

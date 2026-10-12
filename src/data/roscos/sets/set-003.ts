@@ -134,7 +134,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Niebla", startOrContain: "start", letter: "N", definition: "Nube baja de gotitas que dificulta ver a lo lejos.", category: "naturaleza" },
   { word: "Olimpiada", startOrContain: "start", letter: "O", definition: "Gran competencia deportiva mundial que se celebra cada cuatro años.", category: "deporte-juego" },
   { word: "Penelope", startOrContain: "start", letter: "P", definition: "Nombre de la actriz española de apellido Cruz, ganadora del Óscar e icono del cine internacional.", category: "personalidades" },
-  { word: "Raqueta", startOrContain: "contain", letter: "Q", definition: "Pala con un marco y cuerdas usada para golpear la pelota en el tenis.", category: "deporte-juego" },
+  { word: "Querer", startOrContain: "start", letter: "Q", definition: "Sentir cariño o amor por alguien o algo.", category: "educacion-sociedad" },
   { word: "Redoblante", startOrContain: "start", letter: "R", definition: "Tambor de sonido seco y vibrante usado en bandas y desfiles.", category: "arte-musica" },
   { word: "Sanchez", startOrContain: "start", letter: "S", definition: "Apellido de la cantante pop madrileña, ex vocalista de Olé Olé, famosa por Desesperada.", category: "personalidades" },
   { word: "Tenis", startOrContain: "start", letter: "T", definition: "Deporte en el que dos rivales golpean una pelota con raquetas sobre una red.", category: "deporte-juego" },

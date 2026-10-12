@@ -163,7 +163,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Nado", startOrContain: "start", letter: "N", definition: "Acción de moverse en el agua, como hacen los anfibios.", category: "deporte-juego" },
   { word: "Operario", startOrContain: "start", letter: "O", definition: "Trabajador que realiza tareas con sus manos.", category: "educacion-sociedad" },
   { word: "Pedestal", startOrContain: "start", letter: "P", definition: "Base sobre la que se apoya una estatua.", category: "arte-musica" },
-  { word: "Paquete", startOrContain: "contain", letter: "Q", definition: "Conjunto de cosas envueltas para llevar o regalar.", category: "cultura-general" },
+  { word: "Mantequilla", startOrContain: "contain", letter: "Q", definition: "Alimento graso y untable que se obtiene de la crema de la leche.", category: "gastronomia" },
   { word: "Reactivo", startOrContain: "start", letter: "R", definition: "Sustancia que provoca una reacción química.", category: "ciencias" },
   { word: "Sierpe", startOrContain: "start", letter: "S", definition: "Otra forma de nombrar a la serpiente.", category: "naturaleza" },
   { word: "Tamiz", startOrContain: "start", letter: "T", definition: "Colador muy fino que separa lo grueso de lo delgado.", category: "ciencias" },
