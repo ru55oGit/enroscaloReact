@@ -127,7 +127,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Habitat", startOrContain: "start", letter: "H", definition: "Lugar natural donde vive una especie.", category: "naturaleza" },
   { word: "Invernadero", startOrContain: "start", letter: "I", definition: "Construcción de vidrio donde se cultivan plantas protegidas.", category: "naturaleza" },
   { word: "Jote", startOrContain: "start", letter: "J", definition: "Ave grande y oscura que se alimenta de restos de animales.", category: "naturaleza" },
-  { word: "Karma", startOrContain: "start", letter: "K", definition: "Idea de que las buenas o malas acciones traen sus consecuencias.", category: "cultura-general" },
+  { word: "Bunker", startOrContain: "contain", letter: "K", definition: "Refugio subterráneo y reforzado, pensado para protegerse de bombardeos o ataques.", category: "cultura-general" },
   { word: "Litoral", startOrContain: "start", letter: "L", definition: "Franja de tierra que está junto al mar o a un gran río.", category: "naturaleza" },
   { word: "Monet", startOrContain: "start", letter: "M", definition: "Pintor francés impresionista, llamado Claude, célebre por sus series de nenúfares y de catedrales.", category: "personalidades" },
   { word: "Borg", startOrContain: "start", letter: "B", definition: "Tenista sueco de los años setenta, llamado Björn, que ganó cinco veces seguidas el torneo de Wimbledon.", category: "personalidades" },

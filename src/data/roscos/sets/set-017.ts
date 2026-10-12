@@ -41,7 +41,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Hoz", startOrContain: "start", letter: "H", definition: "Herramienta curva para cortar pasto o cereales.", category: "ciencias" },
   { word: "Ilustrador", startOrContain: "start", letter: "I", definition: "Persona que hace los dibujos de los libros.", category: "educacion-sociedad" },
   { word: "Jota", startOrContain: "start", letter: "J", definition: "Baile y música tradicional de España.", category: "arte-musica" },
-  { word: "Karate", startOrContain: "start", letter: "K", definition: "Arte marcial de golpes con manos y pies.", category: "deporte-juego" },
+  { word: "Kripton", startOrContain: "start", letter: "K", definition: "Elemento químico gaseoso, uno de los gases nobles, también conocido por el planeta natal de Superman.", category: "ciencias" },
   { word: "Licuado", startOrContain: "start", letter: "L", definition: "Bebida dulce de frutas mezcladas con leche.", category: "gastronomia" },
   { word: "Mastin", startOrContain: "start", letter: "M", definition: "Perro grande y fuerte que cuida el ganado.", category: "naturaleza" },
   { word: "Naturalista", startOrContain: "start", letter: "N", definition: "Persona que estudia las plantas y los animales.", category: "educacion-sociedad" },

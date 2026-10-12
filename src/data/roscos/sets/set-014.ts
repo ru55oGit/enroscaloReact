@@ -186,7 +186,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Horquilla", startOrContain: "start", letter: "H", definition: "Herramienta de dientes para levantar pasto o tierra.", category: "cultura-general" },
   { word: "Insectivoro", startOrContain: "start", letter: "I", definition: "Animal que se alimenta de insectos.", category: "ciencias" },
   { word: "Jofaina", startOrContain: "start", letter: "J", definition: "Recipiente ancho y poco profundo para lavarse.", category: "cultura-general" },
-  { word: "Kilo", startOrContain: "start", letter: "K", definition: "Unidad para medir el peso, igual a mil gramos.", category: "ciencias" },
+  { word: "Taekwondo", startOrContain: "contain", letter: "K", definition: "Arte marcial coreana que se basa en patadas y golpes rápidos.", category: "deporte-juego" },
   { word: "Leonard", startOrContain: "start", letter: "L", definition: "Apellido del boxeador estadounidense apodado Sugar Ray.", category: "personalidades" },
   { word: "Microscopio", startOrContain: "start", letter: "M", definition: "Aparato que agranda lo muy pequeño para poder verlo.", category: "ciencias" },
   { word: "Naranjal", startOrContain: "start", letter: "N", definition: "Terreno plantado de naranjos.", category: "naturaleza" },

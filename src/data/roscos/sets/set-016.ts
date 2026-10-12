@@ -128,7 +128,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Hondonada", startOrContain: "start", letter: "H", definition: "Terreno hundido entre las montañas.", category: "naturaleza" },
   { word: "Invisible", startOrContain: "start", letter: "I", definition: "Que no se puede ver, como una capa mágica.", category: "mitologia-fantasia" },
   { word: "Jarabe", startOrContain: "start", letter: "J", definition: "Remedio líquido y dulce para la tos.", category: "ciencias" },
-  { word: "Kayak", startOrContain: "start", letter: "K", definition: "Bote angosto que se impulsa con un remo de dos palas.", category: "deporte-juego" },
+  { word: "Pakistan", startOrContain: "contain", letter: "K", definition: "País del sur de Asia, limita con India, Afganistán e Irán.", category: "cultura-general" },
   { word: "Ladera", startOrContain: "start", letter: "L", definition: "Lado inclinado de una montaña.", category: "naturaleza" },
   { word: "Montura", startOrContain: "start", letter: "M", definition: "Silla que se coloca sobre el caballo para montarlo.", category: "transporte" },
   { word: "Nova", startOrContain: "start", letter: "N", definition: "Estrella que de repente brilla muchísimo más.", category: "ciencias" },

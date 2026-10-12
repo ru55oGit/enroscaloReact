@@ -90,7 +90,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Hacha", startOrContain: "start", letter: "H", definition: "Herramienta de metal con filo curvo y mango largo usada para cortar leña y madera.", category: "cultura-general" },
   { word: "Iglesia", startOrContain: "start", letter: "I", definition: "Templo cristiano donde los fieles se reúnen para orar y celebrar ceremonias religiosas.", category: "educacion-sociedad" },
   { word: "Jirafa", startOrContain: "start", letter: "J", definition: "Animal africano de cuello larguísimo que le permite alcanzar hojas en las ramas más altas.", category: "naturaleza" },
-  { word: "Karate", startOrContain: "start", letter: "K", definition: "Arte marcial de origen japonés que utiliza golpes de manos y pies como técnica de defensa.", category: "deporte-juego" },
+  { word: "Kombucha", startOrContain: "start", letter: "K", definition: "Bebida fermentada a base de té, popular por sus supuestos beneficios para la digestión.", category: "gastronomia" },
   { word: "Libro", startOrContain: "start", letter: "L", definition: "Conjunto de hojas impresas o en blanco encuadernadas que transmiten conocimiento o historias.", category: "educacion-sociedad" },
   { word: "Maradona", startOrContain: "start", letter: "M", definition: "Apellido del futbolista argentino llamado Diego, autor del gol del siglo en 1986.", category: "personalidades" },
   { word: "Nevera", startOrContain: "start", letter: "N", definition: "Electrodoméstico que mantiene los alimentos fríos para conservarlos por más tiempo.", category: "cultura-general" },

@@ -12,7 +12,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Hakkinen", startOrContain: "start", letter: "H", definition: "Apellido del piloto finlandés Mika, campeón de Fórmula 1.", category: "personalidades" },
   { word: "Ingenio", startOrContain: "start", letter: "I", definition: "Fábrica donde se produce el azúcar a partir de la caña.", category: "educacion-sociedad" },
   { word: "Jennifer", startOrContain: "start", letter: "J", definition: "Nombre de la actriz estadounidense Aniston, famosa por la serie Friends.", category: "personalidades" },
-  { word: "Karate", startOrContain: "start", letter: "K", definition: "Arte marcial japonés que se practica con golpes de manos y pies.", category: "deporte-juego" },
+  { word: "Kimchi", startOrContain: "start", letter: "K", definition: "Plato coreano hecho con repollo fermentado y especias picantes.", category: "gastronomia" },
   { word: "Letra", startOrContain: "start", letter: "L", definition: "Palabras que se cantan en una canción.", category: "arte-musica" },
   { word: "Manet", startOrContain: "start", letter: "M", definition: "Apellido del pintor francés Édouard, precursor del impresionismo.", category: "personalidades" },
   { word: "Nicholson", startOrContain: "start", letter: "N", definition: "Apellido del actor estadounidense Jack, ganador del Óscar y famoso por El resplandor y Batman.", category: "personalidades" },

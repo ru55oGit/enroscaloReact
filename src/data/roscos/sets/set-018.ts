@@ -99,7 +99,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Halogeno", startOrContain: "start", letter: "H", definition: "Grupo de elementos químicos como el cloro y el flúor.", category: "ciencias" },
   { word: "Inestable", startOrContain: "start", letter: "I", definition: "Tiempo que cambia mucho y puede traer lluvia.", category: "naturaleza" },
   { word: "Jiron", startOrContain: "start", letter: "J", definition: "Pedazo de nube que queda suelto en el cielo.", category: "naturaleza" },
-  { word: "Kelvin", startOrContain: "start", letter: "K", definition: "Unidad con la que se mide la temperatura en la ciencia.", category: "ciencias" },
+  { word: "Vikingo", startOrContain: "contain", letter: "K", definition: "Guerrero y navegante del norte de Europa que vivió entre los siglos VIII y XI.", category: "cultura-general" },
   { word: "Localia", startOrContain: "start", letter: "L", definition: "Ventaja de jugar el partido en la cancha propia.", category: "deporte-juego" },
   { word: "Mesada", startOrContain: "start", letter: "M", definition: "Superficie plana de la cocina donde se prepara la comida.", category: "cultura-general" },
   { word: "Nochero", startOrContain: "start", letter: "N", definition: "Mesita que se pone al lado de la cama.", category: "cultura-general" },

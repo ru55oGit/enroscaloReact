@@ -12,7 +12,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Hemsworth", startOrContain: "start", letter: "H", definition: "Apellido del actor australiano Chris, famoso por interpretar a Thor en el universo Marvel.", category: "personalidades" },
   { word: "Internacional", startOrContain: "start", letter: "I", definition: "Que va o pasa de un país a otro.", category: "cultura-general" },
   { word: "Joroba", startOrContain: "start", letter: "J", definition: "Bulto en el lomo de animales como el camello.", category: "naturaleza" },
-  { word: "Kiwi", startOrContain: "start", letter: "K", definition: "Fruta de cáscara marrón peluda y pulpa verde.", category: "gastronomia" },
+  { word: "Irak", startOrContain: "contain", letter: "K", definition: "País de Medio Oriente, cuna de la antigua Mesopotamia.", category: "cultura-general" },
   { word: "Llegada", startOrContain: "start", letter: "L", definition: "Momento en que se alcanza el destino del viaje.", category: "cultura-general" },
   { word: "Malabarista", startOrContain: "start", letter: "M", definition: "Artista que lanza y atrapa varios objetos a la vez.", category: "arte-musica" },
   { word: "Notable", startOrContain: "start", letter: "N", definition: "Calificación muy buena, cercana a la máxima.", category: "educacion-sociedad" },

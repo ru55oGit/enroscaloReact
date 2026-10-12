@@ -99,7 +99,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Hortensia", startOrContain: "start", letter: "H", definition: "Planta de grandes flores agrupadas en forma de bola.", category: "naturaleza" },
   { word: "Injerto", startOrContain: "start", letter: "I", definition: "Unión de una rama de una planta con otra para que crezcan juntas.", category: "naturaleza" },
   { word: "Jersey", startOrContain: "start", letter: "J", definition: "Prenda de lana tejida que abriga la parte de arriba del cuerpo.", category: "cultura-general" },
-  { word: "Kayak", startOrContain: "start", letter: "K", definition: "Bote angosto que se impulsa con un remo de dos palas.", category: "deporte-juego" },
+  { word: "Kermes", startOrContain: "start", letter: "K", definition: "Fiesta popular al aire libre con juegos y puestos de comida, usada para juntar fondos.", category: "cultura-general" },
   { word: "Lechero", startOrContain: "start", letter: "L", definition: "Persona que reparte o vende la leche.", category: "educacion-sociedad" },
   { word: "Manga", startOrContain: "start", letter: "M", definition: "Parte de la prenda que cubre el brazo.", category: "cultura-general" },
   { word: "Nenufar", startOrContain: "start", letter: "N", definition: "Planta acuática de hojas redondas que flotan sobre el agua.", category: "naturaleza" },

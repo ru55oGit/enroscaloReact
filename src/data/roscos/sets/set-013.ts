@@ -70,7 +70,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Hobby", startOrContain: "start", letter: "H", definition: "Actividad que se hace por gusto en el tiempo libre.", category: "cultura-general" },
   { word: "Imaginacion", startOrContain: "start", letter: "I", definition: "Capacidad de inventar imágenes e historias en la mente.", category: "cultura-general" },
   { word: "Jovial", startOrContain: "start", letter: "J", definition: "Persona alegre, simpática y de muy buen humor, que contagia su entusiasmo y cae bien a todos.", category: "cultura-general" },
-  { word: "Kremlin", startOrContain: "start", letter: "K", definition: "Famosa fortaleza amurallada en el centro de Moscú.", category: "cultura-general" },
+  { word: "Bikini", startOrContain: "contain", letter: "K", definition: "Traje de baño femenino de dos piezas.", category: "cultura-general" },
   { word: "Ludo", startOrContain: "start", letter: "L", definition: "Juego de mesa de fichas y dados para varios jugadores.", category: "deporte-juego" },
   { word: "Meridiano", startOrContain: "start", letter: "M", definition: "Línea imaginaria que va de un polo al otro de la Tierra.", category: "ciencias" },
   { word: "Novelista", startOrContain: "start", letter: "N", definition: "Escritor que crea novelas.", category: "cultura-general" },

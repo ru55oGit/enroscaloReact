@@ -186,7 +186,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Higo", startOrContain: "start", letter: "H", definition: "Fruta dulce de piel oscura y muchas semillas pequeñas por dentro.", category: "gastronomia" },
   { word: "Istmo", startOrContain: "start", letter: "I", definition: "Franja estrecha de tierra que une dos zonas más grandes.", category: "naturaleza" },
   { word: "Jornada", startOrContain: "start", letter: "J", definition: "Período de un día dedicado a una actividad o al trabajo.", category: "educacion-sociedad" },
-  { word: "Kiwi", startOrContain: "start", letter: "K", definition: "Fruta de cáscara marrón peluda y pulpa verde con semillas negras.", category: "gastronomia" },
+  { word: "Uzbekistan", startOrContain: "contain", letter: "K", definition: "País de Asia Central, antigua república soviética.", category: "cultura-general" },
   { word: "Lente", startOrContain: "start", letter: "L", definition: "Cristal curvo que agranda o achica las imágenes.", category: "ciencias" },
   { word: "Meseta", startOrContain: "start", letter: "M", definition: "Terreno llano y elevado sobre el nivel del mar.", category: "naturaleza" },
   { word: "Narval", startOrContain: "start", letter: "N", definition: "Mamífero marino con un largo colmillo en espiral como un cuerno.", category: "naturaleza" },

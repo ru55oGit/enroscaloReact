@@ -128,7 +128,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Himno", startOrContain: "start", letter: "H", definition: "Canto solemne que representa a un país, equipo o institución.", category: "arte-musica" },
   { word: "Invento", startOrContain: "start", letter: "I", definition: "Objeto o idea nueva creada por una persona ingeniosa.", category: "ciencias" },
   { word: "Jabali", startOrContain: "start", letter: "J", definition: "Cerdo salvaje de colmillos afilados que vive en los bosques.", category: "naturaleza" },
-  { word: "Kremlin", startOrContain: "start", letter: "K", definition: "Fortaleza amurallada de Moscú que es sede del gobierno ruso.", category: "cultura-general" },
+  { word: "Tokio", startOrContain: "contain", letter: "K", definition: "Capital de Japón, una de las ciudades más pobladas del mundo.", category: "cultura-general" },
   { word: "Lobo", startOrContain: "start", letter: "L", definition: "Mamífero salvaje parecido al perro que caza en manada y aúlla a la luna.", category: "naturaleza" },
   { word: "Mono", startOrContain: "start", letter: "M", definition: "Animal trepador de cola larga muy emparentado con el ser humano.", category: "naturaleza" },
   { word: "Niebla", startOrContain: "start", letter: "N", definition: "Nube baja de gotitas que dificulta ver a lo lejos.", category: "naturaleza" },

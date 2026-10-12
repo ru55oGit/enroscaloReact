@@ -128,7 +128,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Hidalgo", startOrContain: "start", letter: "H", definition: "Noble de baja categoría en la antigua España.", category: "cultura-general" },
   { word: "Ion", startOrContain: "start", letter: "I", definition: "Partícula que tiene carga eléctrica.", category: "ciencias" },
   { word: "Jorobado", startOrContain: "start", letter: "J", definition: "Personaje de cuentos con una joroba en la espalda.", category: "cultura-general" },
-  { word: "Kayak", startOrContain: "start", letter: "K", definition: "Bote angosto que se impulsa con un remo de dos palas.", category: "deporte-juego" },
+  { word: "Kamikaze", startOrContain: "start", letter: "K", definition: "Piloto japonés que durante la Segunda Guerra Mundial estrellaba su avión como arma; también alguien que actúa sin medir el riesgo.", category: "cultura-general" },
   { word: "Llanura", startOrContain: "start", letter: "L", definition: "Gran extensión de terreno plano.", category: "naturaleza" },
   { word: "Momia", startOrContain: "start", letter: "M", definition: "Cuerpo conservado de la antigüedad, como las de Egipto.", category: "cultura-general" },
   { word: "Noroeste", startOrContain: "start", letter: "N", definition: "Punto entre el norte y el oeste.", category: "cultura-general" },
