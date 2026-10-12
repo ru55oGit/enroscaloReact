@@ -128,7 +128,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Horario", startOrContain: "start", letter: "H", definition: "Cuadro que indica a qué hora ocurre cada actividad.", category: "educacion-sociedad" },
   { word: "Iluminacion", startOrContain: "start", letter: "I", definition: "Conjunto de luces que alumbran un lugar.", category: "cultura-general" },
   { word: "Jaspe", startOrContain: "start", letter: "J", definition: "Piedra de colores muy usada para hacer adornos.", category: "naturaleza" },
-  { word: "Kaki", startOrContain: "start", letter: "K", definition: "Fruta dulce y anaranjada de pulpa muy blanda.", category: "gastronomia" },
+  { word: "Block", startOrContain: "contain", letter: "K", definition: "Conjunto de hojas de papel unidas por un lado, usado para escribir o dibujar.", category: "cultura-general" },
   { word: "Linea", startOrContain: "start", letter: "L", definition: "Trazo largo y fino que une dos puntos.", category: "ciencias" },
   { word: "Mortero", startOrContain: "start", letter: "M", definition: "Recipiente donde se machacan especias y semillas.", category: "gastronomia" },
   { word: "Numerador", startOrContain: "start", letter: "N", definition: "Número de arriba en una fracción.", category: "ciencias" },

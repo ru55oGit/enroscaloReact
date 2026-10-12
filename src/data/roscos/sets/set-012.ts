@@ -99,7 +99,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Harden", startOrContain: "start", letter: "H", definition: "Apellido del basquetbolista estadounidense James, estrella de la NBA.", category: "personalidades" },
   { word: "Ilusionista", startOrContain: "start", letter: "I", definition: "Artista que hace trucos de magia.", category: "arte-musica" },
   { word: "Jauria", startOrContain: "start", letter: "J", definition: "Grupo de perros o de fieras que andan juntos.", category: "naturaleza" },
-  { word: "Koala", startOrContain: "start", letter: "K", definition: "Animal australiano que vive en los árboles y come eucalipto.", category: "naturaleza" },
+  { word: "Anorak", startOrContain: "contain", letter: "K", definition: "Campera gruesa con capucha, impermeable, usada para protegerse del frío y la lluvia.", category: "cultura-general" },
   { word: "Leccion", startOrContain: "start", letter: "L", definition: "Tema o enseñanza que se aprende en clase.", category: "educacion-sociedad" },
   { word: "Musgo", startOrContain: "start", letter: "M", definition: "Planta pequeña y suave que crece en lugares húmedos.", category: "naturaleza" },
   { word: "Nutriente", startOrContain: "start", letter: "N", definition: "Sustancia que alimenta a las plantas y a los animales.", category: "ciencias" },

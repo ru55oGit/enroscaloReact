@@ -41,7 +41,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Hueco", startOrContain: "start", letter: "H", definition: "Espacio libre por donde se pasa la pelota.", category: "deporte-juego" },
   { word: "Icaco", startOrContain: "start", letter: "I", definition: "Fruta tropical de pulpa blanca, también llamada ciruela de playa.", category: "gastronomia" },
   { word: "Jarron", startOrContain: "start", letter: "J", definition: "Recipiente alto que adorna y sostiene flores.", category: "cultura-general" },
-  { word: "Kiwi", startOrContain: "start", letter: "K", definition: "Fruta de cáscara peluda y pulpa verde con semillitas.", category: "gastronomia" },
+  { word: "Punk", startOrContain: "contain", letter: "K", definition: "Estilo musical y movimiento contracultural, rebelde y con actitud provocadora, surgido en los años 70.", category: "arte-musica" },
   { word: "Lluvioso", startOrContain: "start", letter: "L", definition: "Día gris en que cae mucha agua del cielo, ideal para quedarse adentro con un mate bien caliente.", category: "naturaleza" },
   { word: "Madrugada", startOrContain: "start", letter: "M", definition: "Primeras horas del día, antes de que salga el sol.", category: "naturaleza" },
   { word: "Nemesis", startOrContain: "start", letter: "N", definition: "Diosa griega de la justicia y la venganza.", category: "mitologia-fantasia" },

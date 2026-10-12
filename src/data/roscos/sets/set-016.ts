@@ -12,7 +12,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Heisenberg", startOrContain: "start", letter: "H", definition: "Apellido del físico alemán Werner, de la física cuántica.", category: "personalidades" },
   { word: "Irrigacion", startOrContain: "start", letter: "I", definition: "Riego del agua que reciben las plantas de la huerta.", category: "naturaleza" },
   { word: "Jeep", startOrContain: "start", letter: "J", definition: "Vehículo robusto que anda por terrenos difíciles.", category: "transporte" },
-  { word: "Kilo", startOrContain: "start", letter: "K", definition: "Unidad para medir el peso de las cosas.", category: "ciencias" },
+  { word: "Yak", startOrContain: "contain", letter: "K", definition: "Buey de largo pelaje que vive en las montañas de Asia.", category: "naturaleza" },
   { word: "Lahm", startOrContain: "start", letter: "L", definition: "Apellido del defensor alemán Philipp, capitán campeón del mundo.", category: "personalidades" },
   { word: "Mantis", startOrContain: "start", letter: "M", definition: "Insecto que junta las patas delanteras como si rezara.", category: "naturaleza" },
   { word: "Name", startOrContain: "start", letter: "N", definition: "Raíz comestible parecida a la papa, típica de zonas tropicales.", category: "gastronomia" },

@@ -70,7 +70,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Harry", startOrContain: "start", letter: "H", definition: "Styles. Icono global del pop y de la moda británica.", category: "personalidades" },
   { word: "Infusion", startOrContain: "start", letter: "I", definition: "Bebida caliente que se prepara echando agua sobre hierbas o frutas.", category: "gastronomia" },
   { word: "Jamon", startOrContain: "start", letter: "J", definition: "Pieza de carne de cerdo salada y curada que se corta en finas lonjas.", category: "gastronomia" },
-  { word: "Kebab", startOrContain: "start", letter: "K", definition: "Comida de origen árabe hecha con carne asada servida en pan con verduras.", category: "gastronomia" },
+  { word: "Rock", startOrContain: "contain", letter: "K", definition: "Género musical con guitarras eléctricas y batería, surgido en los años 50.", category: "arte-musica" },
   { word: "Lechuza", startOrContain: "start", letter: "L", definition: "Ave nocturna de ojos grandes y vuelo silencioso que caza pequeños roedores.", category: "naturaleza" },
   { word: "Mozart", startOrContain: "start", letter: "M", definition: "Apellido del compositor austríaco Wolfgang Amadeus, que creó música genial desde muy niño.", category: "personalidades" },
   { word: "Neblina", startOrContain: "start", letter: "N", definition: "Niebla ligera que reduce la visibilidad al flotar cerca del suelo.", category: "naturaleza" },

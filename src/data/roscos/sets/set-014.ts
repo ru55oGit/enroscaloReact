@@ -128,7 +128,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Hillary", startOrContain: "start", letter: "H", definition: "Apellido del montañista Edmund, que subió por primera vez el Everest.", category: "personalidades" },
   { word: "Intensidad", startOrContain: "start", letter: "I", definition: "Fuerza y ritmo con que se juega.", category: "deporte-juego" },
   { word: "Jiron", startOrContain: "start", letter: "J", definition: "Trozo desgarrado de una tela.", category: "cultura-general" },
-  { word: "Karaoke", startOrContain: "start", letter: "K", definition: "Actividad de cantar siguiendo la letra en una pantalla.", category: "arte-musica" },
+  { word: "Break", startOrContain: "contain", letter: "K", definition: "Pausa corta para descansar, muy usada en ámbitos de trabajo.", category: "cultura-general" },
   { word: "Lona", startOrContain: "start", letter: "L", definition: "Tela fuerte que se usa para cubrir o proteger del clima.", category: "cultura-general" },
   { word: "Muda", startOrContain: "start", letter: "M", definition: "Cambio de piel que hacen las serpientes al crecer.", category: "naturaleza" },
   { word: "Nitrogeno", startOrContain: "start", letter: "N", definition: "Gas que forma la mayor parte del aire.", category: "ciencias" },

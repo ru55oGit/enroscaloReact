@@ -186,7 +186,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Hostal", startOrContain: "start", letter: "H", definition: "Lugar sencillo donde los viajeros pasan la noche.", category: "cultura-general" },
   { word: "Impresora", startOrContain: "start", letter: "I", definition: "Aparato que pasa al papel lo que está en la computadora.", category: "ciencias" },
   { word: "Jeringa", startOrContain: "start", letter: "J", definition: "Instrumento con aguja para dar inyecciones.", category: "ciencias" },
-  { word: "Kiosco", startOrContain: "start", letter: "K", definition: "Pequeño negocio que de noche sigue abierto.", category: "cultura-general" },
+  { word: "Crack", startOrContain: "contain", letter: "K", definition: "Jugador o persona que se destaca mucho por encima del resto en lo que hace.", category: "deporte-juego" },
   { word: "Ledger", startOrContain: "start", letter: "L", definition: "Apellido del actor australiano Heath, recordado por su icónico papel del Joker en Batman.", category: "personalidades" },
   { word: "Manzano", startOrContain: "start", letter: "M", definition: "Árbol que da las manzanas.", category: "naturaleza" },
   { word: "Nordico", startOrContain: "start", letter: "N", definition: "Tipo de esquí que combina salto y carrera por la nieve.", category: "deporte-juego" },
