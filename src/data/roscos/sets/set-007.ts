@@ -24,7 +24,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Tunel", startOrContain: "start", letter: "T", definition: "Camino excavado bajo la tierra o una montaña.", category: "transporte" },
   { word: "Cuna", startOrContain: "contain", letter: "U", definition: "Camita con barandas donde duermen los bebés.", category: "cultura-general" },
   { word: "Valentia", startOrContain: "start", letter: "V", definition: "Capacidad de enfrentar el miedo con coraje.", category: "cultura-general" },
-  { word: "Waterpolo", startOrContain: "start", letter: "W", definition: "Deporte de equipo que se juega dentro de una pileta con una pelota.", category: "deporte-juego" },
+  { word: "Kuwait", startOrContain: "contain", letter: "W", definition: "País del Golfo Pérsico, rico en petróleo.", category: "cultura-general" },
   { word: "Latex", startOrContain: "contain", letter: "X", definition: "Sustancia elástica con la que se fabrica el caucho.", category: "ciencias" },
   { word: "Yarda", startOrContain: "start", letter: "Y", definition: "Medida de longitud usada en países de habla inglesa.", category: "cultura-general" },
   { word: "Cazo", startOrContain: "contain", letter: "Z", definition: "Recipiente con mango para calentar comida.", category: "gastronomia" },

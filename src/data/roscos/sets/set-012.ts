@@ -82,7 +82,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Tarea", startOrContain: "start", letter: "T", definition: "Trabajo que se hace en casa para la escuela.", category: "educacion-sociedad" },
   { word: "Buho", startOrContain: "contain", letter: "U", definition: "Ave nocturna de ojos grandes que caza de noche.", category: "naturaleza" },
   { word: "Vacaciones", startOrContain: "start", letter: "V", definition: "Días de descanso en los que no se trabaja ni se estudia.", category: "cultura-general" },
-  { word: "Wimbledon", startOrContain: "start", letter: "W", definition: "Famoso torneo de tenis que se juega sobre césped en Inglaterra.", category: "deporte-juego" },
+  { word: "Kiwi", startOrContain: "contain", letter: "W", definition: "Fruta de piel marrón y pulpa verde con muchas semillas chiquitas.", category: "naturaleza" },
   { word: "Anexo", startOrContain: "contain", letter: "X", definition: "Parte que se agrega a algo principal.", category: "cultura-general" },
   { word: "Yelmo", startOrContain: "start", letter: "Y", definition: "Casco de metal que usaban los antiguos guerreros.", category: "cultura-general" },
   { word: "Avestruz", startOrContain: "contain", letter: "Z", definition: "Ave corredora muy grande que no puede volar.", category: "naturaleza" },

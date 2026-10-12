@@ -169,7 +169,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Tribu", startOrContain: "start", letter: "T", definition: "Grupo de familias que viven juntas con un mismo jefe.", category: "educacion-sociedad" },
   { word: "Humo", startOrContain: "contain", letter: "U", definition: "Gas gris que se desprende de algo que se quema.", category: "ciencias" },
   { word: "Vertiente", startOrContain: "start", letter: "V", definition: "Lugar por donde corre el agua que baja de una montaña.", category: "naturaleza" },
-  { word: "Walkman", startOrContain: "start", letter: "W", definition: "Aparato antiguo y portátil para escuchar música.", category: "cultura-general" },
+  { word: "Wincha", startOrContain: "start", letter: "W", definition: "Cinta métrica flexible que se usa para medir distancias cortas.", category: "cultura-general" },
   { word: "Latex", startOrContain: "contain", letter: "X", definition: "Sustancia elástica que se obtiene de ciertos árboles y se usa para fabricar caucho.", category: "ciencias" },
   { word: "Yerba", startOrContain: "start", letter: "Y", definition: "Hojas secas y molidas con las que se prepara el mate.", category: "gastronomia" },
   { word: "Manzana", startOrContain: "contain", letter: "Z", definition: "Fruta redonda y crujiente que puede ser roja o verde.", category: "gastronomia" },

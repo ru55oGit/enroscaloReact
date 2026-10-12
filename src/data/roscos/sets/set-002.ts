@@ -169,7 +169,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Tortilla", startOrContain: "start", letter: "T", definition: "Plato de la gastronomía española de huevo batido y patatas fritas, con o sin cebolla.", category: "gastronomia" },
   { word: "Uniforme", startOrContain: "start", letter: "U", definition: "Conjunto de ropa igual que usan los integrantes de un grupo, escuela o profesión.", category: "cultura-general" },
   { word: "Vaso", startOrContain: "start", letter: "V", definition: "Recipiente cilíndrico sin asa usado para beber líquidos.", category: "cultura-general" },
-  { word: "Windsurf", startOrContain: "start", letter: "W", definition: "Deporte acuático que combina una tabla con una vela impulsada por el viento.", category: "deporte-juego" },
+  { word: "Hawaii", startOrContain: "contain", letter: "W", definition: "Archipiélago de islas volcánicas en medio del océano Pacífico, parte de Estados Unidos.", category: "cultura-general" },
   { word: "Maxilar", startOrContain: "contain", letter: "X", definition: "Hueso de la cara donde se sostienen los dientes y que permite masticar.", category: "ciencias" },
   { word: "Yunque", startOrContain: "start", letter: "Y", definition: "Bloque de hierro macizo sobre el que el herrero golpea y moldea los metales.", category: "cultura-general" },
   { word: "Zoologo", startOrContain: "start", letter: "Z", definition: "Científico que estudia a los animales y su comportamiento en la naturaleza.", category: "ciencias" },

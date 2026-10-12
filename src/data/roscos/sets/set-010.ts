@@ -169,7 +169,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Tendon", startOrContain: "start", letter: "T", definition: "Cuerda fuerte que une el músculo con el hueso.", category: "ciencias" },
   { word: "Universo", startOrContain: "start", letter: "U", definition: "Todo lo que existe: las estrellas, los planetas y el espacio.", category: "ciencias" },
   { word: "Velero", startOrContain: "start", letter: "V", definition: "Barco que se mueve gracias al viento en sus velas.", category: "transporte" },
-  { word: "Wok", startOrContain: "start", letter: "W", definition: "Sartén honda asiática para saltear alimentos.", category: "gastronomia" },
+  { word: "Sandwich", startOrContain: "contain", letter: "W", definition: "Comida armada con dos rebanadas de pan y algo en el medio, como jamón y queso.", category: "gastronomia" },
   { word: "Texto", startOrContain: "contain", letter: "X", definition: "Conjunto de palabras escritas que forman un escrito.", category: "educacion-sociedad" },
   { word: "Yunque", startOrContain: "start", letter: "Y", definition: "Bloque de hierro sobre el que el herrero golpea el metal.", category: "cultura-general" },
   { word: "Nariz", startOrContain: "contain", letter: "Z", definition: "Parte de la cara con la que respiramos y olemos.", category: "ciencias" },

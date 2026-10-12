@@ -53,7 +53,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Tostadora", startOrContain: "start", letter: "T", definition: "Aparato que dora las rebanadas de pan.", category: "gastronomia" },
   { word: "Fruta", startOrContain: "contain", letter: "U", definition: "Alimento dulce y jugoso que dan las plantas.", category: "gastronomia" },
   { word: "Vertebrado", startOrContain: "start", letter: "V", definition: "Animal que tiene huesos y columna vertebral.", category: "ciencias" },
-  { word: "Wombat", startOrContain: "start", letter: "W", definition: "Animal australiano robusto que cava madrigueras.", category: "naturaleza" },
+  { word: "Taiwan", startOrContain: "contain", letter: "W", definition: "Isla y territorio de Asia, frente a la costa de China.", category: "cultura-general" },
   { word: "Exacto", startOrContain: "contain", letter: "X", definition: "Que es justo y sin ningún error.", category: "ciencias" },
   { word: "Yuca", startOrContain: "start", letter: "Y", definition: "Raíz comestible muy usada en la cocina tropical.", category: "gastronomia" },
   { word: "Pinza", startOrContain: "contain", letter: "Z", definition: "Herramienta de dos brazos para sujetar cosas pequeñas.", category: "cultura-general" },

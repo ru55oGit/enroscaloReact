@@ -53,7 +53,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Tarta", startOrContain: "start", letter: "T", definition: "Comida horneada con masa y relleno dulce o salado.", category: "gastronomia" },
   { word: "Ukelele", startOrContain: "start", letter: "U", definition: "Pequeño instrumento de cuatro cuerdas de origen hawaiano.", category: "arte-musica" },
   { word: "Vison", startOrContain: "start", letter: "V", definition: "Pequeño mamífero de pelaje suave que nada y vive cerca del agua.", category: "naturaleza" },
-  { word: "Web", startOrContain: "start", letter: "W", definition: "Conjunto de páginas a las que se accede por internet.", category: "ciencias" },
+  { word: "Wagyu", startOrContain: "start", letter: "W", definition: "Raza de vaca japonesa famosa por su carne muy tierna y jugosa.", category: "gastronomia" },
   { word: "Xilofono", startOrContain: "start", letter: "X", definition: "Instrumento musical de percusión con láminas de madera que se golpean con mazos.", category: "arte-musica" },
   { word: "Yerba", startOrContain: "start", letter: "Y", definition: "Hojas secas y molidas con las que se prepara el mate.", category: "gastronomia" },
   { word: "Pieza", startOrContain: "contain", letter: "Z", definition: "Obra musical o cada parte que compone un conjunto.", category: "arte-musica" },

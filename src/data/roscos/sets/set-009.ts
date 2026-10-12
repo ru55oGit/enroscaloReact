@@ -111,7 +111,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Tomo", startOrContain: "start", letter: "T", definition: "Cada uno de los libros que forman una obra extensa.", category: "cultura-general" },
   { word: "Escudo", startOrContain: "contain", letter: "U", definition: "Objeto defensivo que se usaba en combate para protegerse de los golpes.", category: "cultura-general" },
   { word: "Venecia", startOrContain: "start", letter: "V", definition: "Ciudad italiana sobre canales, famosa por sus góndolas, el Carnaval y la Plaza de San Marcos.", category: "cultura-general" },
-  { word: "Watt", startOrContain: "start", letter: "W", definition: "Unidad que mide la potencia eléctrica.", category: "ciencias" },
+  { word: "Winston", startOrContain: "start", letter: "W", definition: "Nombre de pila de Churchill, primer ministro británico en la Segunda Guerra Mundial.", category: "personalidades" },
   { word: "Examen", startOrContain: "contain", letter: "X", definition: "Prueba para medir lo que una persona aprendió.", category: "educacion-sociedad" },
   { word: "Yoga", startOrContain: "start", letter: "Y", definition: "Disciplina que combina posturas del cuerpo y respiración.", category: "deporte-juego" },
   { word: "Cruz", startOrContain: "contain", letter: "Z", definition: "Figura formada por dos líneas que se cruzan.", category: "cultura-general" },

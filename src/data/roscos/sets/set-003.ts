@@ -53,7 +53,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Trofeo", startOrContain: "start", letter: "T", definition: "Premio, generalmente una copa, que recibe el ganador de una competencia.", category: "deporte-juego" },
   { word: "Puño", startOrContain: "contain", letter: "U", definition: "Mano cerrada con los dedos doblados hacia la palma.", category: "ciencias" },
   { word: "Voley", startOrContain: "start", letter: "V", definition: "Deporte de equipo que consiste en pasar la pelota por encima de una red con las manos.", category: "deporte-juego" },
-  { word: "Wushu", startOrContain: "start", letter: "W", definition: "Arte marcial chino que combina distintas técnicas de combate y acrobacia.", category: "deporte-juego" },
+  { word: "Zimbabwe", startOrContain: "contain", letter: "W", definition: "País del sur de África, antes llamado Rodesia.", category: "cultura-general" },
   { word: "Exito", startOrContain: "contain", letter: "X", definition: "Resultado muy bueno que se obtiene al lograr lo que se buscaba.", category: "educacion-sociedad" },
   { word: "Rayo", startOrContain: "contain", letter: "Y", definition: "Descarga eléctrica intensa entre las nubes y la tierra durante una tormenta.", category: "naturaleza" },
   { word: "Pozo", startOrContain: "contain", letter: "Z", definition: "Hoyo profundo cavado en la tierra para sacar agua del subsuelo.", category: "cultura-general" },

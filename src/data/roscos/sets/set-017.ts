@@ -24,7 +24,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Taladro", startOrContain: "start", letter: "T", definition: "Herramienta eléctrica que hace agujeros.", category: "ciencias" },
   { word: "Fruta", startOrContain: "contain", letter: "U", definition: "Alimento dulce que dan los árboles, como la manzana.", category: "gastronomia" },
   { word: "Vado", startOrContain: "start", letter: "V", definition: "Parte poco profunda de un río por donde se puede cruzar.", category: "naturaleza" },
-  { word: "Wifi", startOrContain: "start", letter: "W", definition: "Conexión sin cables para entrar a internet.", category: "ciencias" },
+  { word: "Whatsapp", startOrContain: "start", letter: "W", definition: "Aplicación de mensajería instantánea muy usada para chatear y mandar audios.", category: "cultura-general" },
   { word: "Fax", startOrContain: "contain", letter: "X", definition: "Aparato antiguo que enviaba documentos escritos a través de la línea telefónica.", category: "cultura-general" },
   { word: "Yate", startOrContain: "start", letter: "Y", definition: "Embarcación de recreo elegante.", category: "transporte" },
   { word: "Arroz", startOrContain: "contain", letter: "Z", definition: "Cereal blanco que se cultiva en campos inundados.", category: "gastronomia" },

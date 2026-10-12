@@ -111,7 +111,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Tuberculo", startOrContain: "start", letter: "T", definition: "Parte gruesa de algunas plantas que crece bajo tierra, como la papa.", category: "naturaleza" },
   { word: "Cuna", startOrContain: "contain", letter: "U", definition: "Camita con barrotes para los bebés.", category: "cultura-general" },
   { word: "Ventisquero", startOrContain: "start", letter: "V", definition: "Gran masa de hielo y nieve en lo alto de la montaña.", category: "naturaleza" },
-  { word: "Wagon", startOrContain: "start", letter: "W", definition: "Cada vagón de un tren, escrito a la antigua.", category: "transporte" },
+  { word: "Taekwondo", startOrContain: "contain", letter: "W", definition: "Arte marcial coreana que se basa en patadas y golpes rápidos.", category: "deporte-juego" },
   { word: "Oxido", startOrContain: "contain", letter: "X", definition: "Capa rojiza que aparece en el hierro viejo y húmedo.", category: "ciencias" },
   { word: "Yen", startOrContain: "start", letter: "Y", definition: "Moneda que se usa en Japón.", category: "cultura-general" },
   { word: "Lombriz", startOrContain: "contain", letter: "Z", definition: "Gusano alargado que vive bajo la tierra.", category: "naturaleza" },

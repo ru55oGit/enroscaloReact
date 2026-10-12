@@ -169,7 +169,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Titan", startOrContain: "start", letter: "T", definition: "Cada uno de los seres gigantes de los mitos griegos.", category: "mitologia-fantasia" },
   { word: "Tunica", startOrContain: "contain", letter: "U", definition: "Vestimenta larga y suelta que usaban los héroes antiguos.", category: "mitologia-fantasia" },
   { word: "Variedad", startOrContain: "start", letter: "V", definition: "Conjunto de cosas distintas, como un plato de muchas frutas.", category: "gastronomia" },
-  { word: "Webcam", startOrContain: "start", letter: "W", definition: "Pequeña cámara conectada a la computadora.", category: "ciencias" },
+  { word: "Wikipedista", startOrContain: "start", letter: "W", definition: "Persona que escribe o edita artículos de Wikipedia.", category: "cultura-general" },
   { word: "Boxeo", startOrContain: "contain", letter: "X", definition: "Deporte de combate en el que se pelea con los puños.", category: "deporte-juego" },
   { word: "Yeti", startOrContain: "start", letter: "Y", definition: "Criatura legendaria peluda que viviría en las montañas nevadas.", category: "mitologia-fantasia" },
   { word: "Zapote", startOrContain: "start", letter: "Z", definition: "Fruta tropical de pulpa dulce y blanda.", category: "gastronomia" },

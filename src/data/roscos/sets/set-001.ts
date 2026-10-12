@@ -73,7 +73,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Telescopio", startOrContain: "start", letter: "T", definition: "Instrumento óptico que permite observar objetos muy distantes como estrellas y planetas.", category: "ciencias" },
   { word: "Burbuja", startOrContain: "contain", letter: "U", definition: "Esfera hueca de aire o gas atrapado dentro de un líquido como el agua o el jabón.", category: "ciencias" },
   { word: "Viento", startOrContain: "start", letter: "V", definition: "Aire que se desplaza horizontalmente sobre la superficie terrestre por diferencias de presión.", category: "naturaleza" },
-  { word: "Wifi", startOrContain: "start", letter: "W", definition: "Tecnología que permite la conexión inalámbrica a internet desde distintos dispositivos.", category: "ciencias" },
+  { word: "Webinario", startOrContain: "start", letter: "W", definition: "Seminario o charla que se da a través de internet, en vivo o grabado.", category: "cultura-general" },
   { word: "Texto", startOrContain: "contain", letter: "X", definition: "Conjunto organizado de palabras escritas que transmiten un mensaje o idea.", category: "educacion-sociedad" },
   { word: "Yogur", startOrContain: "start", letter: "Y", definition: "Producto lácteo obtenido por fermentación de la leche con bacterias beneficiosas.", category: "gastronomia" },
   { word: "Ceniza", startOrContain: "contain", letter: "Z", definition: "Polvo grisáceo que queda como residuo después de la combustión completa de un material.", category: "ciencias" },

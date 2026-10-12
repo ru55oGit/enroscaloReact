@@ -24,7 +24,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Tolstoi", startOrContain: "start", letter: "T", definition: "Apellido del escritor ruso León, autor de grandes novelas.", category: "personalidades" },
   { word: "Ruta", startOrContain: "contain", letter: "U", definition: "Camino ancho que une ciudades o pueblos.", category: "transporte" },
   { word: "Vocablo", startOrContain: "start", letter: "V", definition: "Cada una de las palabras de un idioma.", category: "educacion-sociedad" },
-  { word: "Watt", startOrContain: "start", letter: "W", definition: "Unidad que mide la potencia eléctrica.", category: "ciencias" },
+  { word: "Wilson", startOrContain: "start", letter: "W", definition: "Marca de pelotas muy usada en tenis y básquet.", category: "deporte-juego" },
   { word: "Galaxia", startOrContain: "contain", letter: "X", definition: "Enorme conjunto de estrellas unidas por la gravedad.", category: "ciencias" },
   { word: "Yegua", startOrContain: "start", letter: "Y", definition: "Hembra adulta del caballo, usada para montar, tirar carros o dar cría a los potrillos.", category: "naturaleza" },
   { word: "Modernizar", startOrContain: "contain", letter: "Z", definition: "Actualizar algo, como una máquina o una idea, para adaptarlo a la época actual.", category: "educacion-sociedad" },

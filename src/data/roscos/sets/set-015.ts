@@ -24,7 +24,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Teatro", startOrContain: "start", letter: "T", definition: "Lugar donde se ven obras en un escenario.", category: "arte-musica" },
   { word: "Usain", startOrContain: "start", letter: "U", definition: "Nombre del velocista jamaicano Bolt, el hombre más rápido del mundo, con tres oros olímpicos.", category: "personalidades" },
   { word: "Veracidad", startOrContain: "start", letter: "V", definition: "Cualidad de decir y hacer las cosas con verdad.", category: "cultura-general" },
-  { word: "Web", startOrContain: "start", letter: "W", definition: "Conjunto de páginas a las que se accede por internet.", category: "ciencias" },
+  { word: "Whiskeria", startOrContain: "start", letter: "W", definition: "Bar especializado en vender y degustar distintos tipos de whisky.", category: "gastronomia" },
   { word: "Anexo", startOrContain: "contain", letter: "X", definition: "Parte que se agrega a algo principal.", category: "cultura-general" },
   { word: "Yoyo", startOrContain: "start", letter: "Y", definition: "Juguete redondo que sube y baja por un hilo.", category: "deporte-juego" },
   { word: "Brazo", startOrContain: "contain", letter: "Z", definition: "Cada uno de los apéndices largos de la estrella de mar.", category: "naturaleza" },
