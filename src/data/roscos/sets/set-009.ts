@@ -167,7 +167,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Rebaja", startOrContain: "start", letter: "R", definition: "Descuento en el precio de un producto.", category: "educacion-sociedad" },
   { word: "Saga", startOrContain: "start", letter: "S", definition: "Conjunto de varias historias relacionadas entre sí.", category: "cultura-general" },
   { word: "Telegrama", startOrContain: "start", letter: "T", definition: "Mensaje breve que antiguamente se enviaba a distancia por cable.", category: "cultura-general" },
-  { word: "Uva", startOrContain: "start", letter: "U", definition: "Fruta pequeña y dulce que crece en racimos.", category: "gastronomia" },
+  { word: "Urgencia", startOrContain: "start", letter: "U", definition: "Necesidad de resolver algo rápido, sin poder esperar.", category: "cultura-general" },
   { word: "Vettel", startOrContain: "start", letter: "V", definition: "Apellido del piloto alemán varias veces campeón de Fórmula 1.", category: "personalidades" },
   { word: "Wagon", startOrContain: "start", letter: "W", definition: "Cada uno de los vagones que arrastra una locomotora.", category: "transporte" },
   { word: "Conexion", startOrContain: "contain", letter: "X", definition: "Unión o enlace entre dos cosas o lugares.", category: "ciencias" },

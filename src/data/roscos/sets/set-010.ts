@@ -80,7 +80,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Repollo", startOrContain: "start", letter: "R", definition: "Verdura redonda formada por muchas hojas apretadas.", category: "gastronomia" },
   { word: "Schubert", startOrContain: "start", letter: "S", definition: "Apellido del célebre compositor austríaco Franz.", category: "personalidades" },
   { word: "Tchaikovsky", startOrContain: "start", letter: "T", definition: "Apellido del compositor ruso Piotr Ilich, autor de El lago de los cisnes.", category: "personalidades" },
-  { word: "Cubo", startOrContain: "contain", letter: "U", definition: "Cuerpo con seis caras cuadradas iguales.", category: "ciencias" },
+  { word: "Tribu", startOrContain: "contain", letter: "U", definition: "Grupo de personas con la misma cultura, costumbres y, a veces, el mismo territorio.", category: "educacion-sociedad" },
   { word: "Violonchelo", startOrContain: "start", letter: "V", definition: "Instrumento de cuerda grande que se toca sentado con un arco.", category: "arte-musica" },
   { word: "Wushu", startOrContain: "start", letter: "W", definition: "Arte marcial tradicional de China.", category: "deporte-juego" },
   { word: "Mixto", startOrContain: "contain", letter: "X", definition: "Que está formado por elementos de distinta clase.", category: "cultura-general" },

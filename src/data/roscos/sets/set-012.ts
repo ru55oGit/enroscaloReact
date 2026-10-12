@@ -109,7 +109,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Raikkonen", startOrContain: "start", letter: "R", definition: "Apellido del piloto finlandés Kimi, campeón de Fórmula 1.", category: "personalidades" },
   { word: "Sepia", startOrContain: "start", letter: "S", definition: "Molusco marino parecido al calamar que suelta tinta.", category: "naturaleza" },
   { word: "Tierra", startOrContain: "start", letter: "T", definition: "Nuestro planeta y el suelo donde crecen las plantas.", category: "naturaleza" },
-  { word: "Puma", startOrContain: "contain", letter: "U", definition: "Felino salvaje americano de pelaje pardo y gran agilidad.", category: "naturaleza" },
+  { word: "Nandu", startOrContain: "contain", letter: "U", definition: "Ave grande sudamericana que no vuela, parecida al avestruz.", category: "naturaleza" },
   { word: "Vegetacion", startOrContain: "start", letter: "V", definition: "Conjunto de plantas que crecen en un lugar.", category: "naturaleza" },
   { word: "Wolframio", startOrContain: "start", letter: "W", definition: "Metal muy resistente usado en el filamento de las lámparas.", category: "ciencias" },
   { word: "Maxilar", startOrContain: "contain", letter: "X", definition: "Hueso de la cara que forma la mandíbula.", category: "ciencias" },

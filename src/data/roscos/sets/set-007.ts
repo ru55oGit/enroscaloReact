@@ -22,7 +22,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Ropero", startOrContain: "start", letter: "R", definition: "Mueble alto con puertas para colgar y guardar la ropa.", category: "cultura-general" },
   { word: "Sofa", startOrContain: "start", letter: "S", definition: "Asiento amplio y mullido para varias personas.", category: "cultura-general" },
   { word: "Tunel", startOrContain: "start", letter: "T", definition: "Camino excavado bajo la tierra o una montaña.", category: "transporte" },
-  { word: "Cuna", startOrContain: "contain", letter: "U", definition: "Camita con barandas donde duermen los bebés.", category: "cultura-general" },
+  { word: "Impetu", startOrContain: "contain", letter: "U", definition: "Fuerza o energía con la que se hace algo.", category: "educacion-sociedad" },
   { word: "Valentia", startOrContain: "start", letter: "V", definition: "Capacidad de enfrentar el miedo con coraje.", category: "cultura-general" },
   { word: "Kuwait", startOrContain: "contain", letter: "W", definition: "País del Golfo Pérsico, rico en petróleo.", category: "cultura-general" },
   { word: "Latex", startOrContain: "contain", letter: "X", definition: "Sustancia elástica con la que se fabrica el caucho.", category: "ciencias" },
