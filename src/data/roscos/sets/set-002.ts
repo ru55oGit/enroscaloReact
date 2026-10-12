@@ -13,7 +13,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Imperio", startOrContain: "start", letter: "I", definition: "Conjunto de territorios y pueblos gobernados por un mismo emperador.", category: "educacion-sociedad" },
   { word: "Jalea", startOrContain: "start", letter: "J", definition: "Dulce gelatinoso y transparente elaborado con el jugo de las frutas.", category: "gastronomia" },
   { word: "Kilometro", startOrContain: "start", letter: "K", definition: "Unidad de longitud equivalente a mil metros usada para medir distancias.", category: "ciencias" },
-  { word: "Lamine", startOrContain: "start", letter: "L", definition: "Yamal. Extremo del FC Barcelona.", category: "personalidades" },
+  { word: "Lamine", startOrContain: "start", letter: "L", definition: "Apellido Yamal, joven extremo español del FC Barcelona.", category: "personalidades" },
   { word: "Madrid", startOrContain: "start", letter: "M", definition: "Capital de España, sede del gobierno y del famoso museo del Prado.", category: "cultura-general" },
   { word: "Nutria", startOrContain: "start", letter: "N", definition: "Mamífero acuático de pelaje denso y cuerpo alargado que nada con gran agilidad.", category: "naturaleza" },
   { word: "Olivo", startOrContain: "start", letter: "O", definition: "Árbol de hojas plateadas cuyo fruto, la aceituna, da el aceite de oliva.", category: "naturaleza" },
@@ -67,7 +67,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Escuela", startOrContain: "start", letter: "E", definition: "Institución educativa donde los niños aprenden y desarrollan sus habilidades.", category: "educacion-sociedad" },
   { word: "Fosforo", startOrContain: "start", letter: "F", definition: "Pequeño palito con punta inflamable que produce fuego al frotarlo.", category: "cultura-general" },
   { word: "Gandhi", startOrContain: "start", letter: "G", definition: "Apellido del líder indio Mahatma, que encabezó la independencia de la India mediante la resistencia pacífica.", category: "personalidades" },
-  { word: "Harry", startOrContain: "start", letter: "H", definition: "Styles. Icono global del pop y de la moda británica.", category: "personalidades" },
+  { word: "Harry", startOrContain: "start", letter: "H", definition: "Apellido Styles, cantante británico y ícono global del pop.", category: "personalidades" },
   { word: "Infusion", startOrContain: "start", letter: "I", definition: "Bebida caliente que se prepara echando agua sobre hierbas o frutas.", category: "gastronomia" },
   { word: "Jamon", startOrContain: "start", letter: "J", definition: "Pieza de carne de cerdo salada y curada que se corta en finas lonjas.", category: "gastronomia" },
   { word: "Rock", startOrContain: "contain", letter: "K", definition: "Género musical con guitarras eléctricas y batería, surgido en los años 50.", category: "arte-musica" },
@@ -200,7 +200,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Veterinario", startOrContain: "start", letter: "V", definition: "Profesional que cuida y cura la salud de los animales.", category: "educacion-sociedad" },
   { word: "Wasabi", startOrContain: "start", letter: "W", definition: "Pasta verde de sabor muy picante típica de la cocina japonesa.", category: "gastronomia" },
   { word: "Galaxia", startOrContain: "contain", letter: "X", definition: "Enorme conjunto de estrellas, gas y polvo unidos por la gravedad en el espacio.", category: "ciencias" },
-  { word: "Yokohama", startOrContain: "start", letter: "Y", definition: "Elemento químico usado como antiséptico para desinfectar heridas en la piel.", category: "ciencias" },
+  { word: "Yokohama", startOrContain: "start", letter: "Y", definition: "Ciudad portuaria de Japón, cerca de Tokio, famosa por su barrio chino y sus rascacielos modernos.", category: "cultura-general" },
   { word: "Avestruz", startOrContain: "contain", letter: "Z", definition: "Ave corredora de gran tamaño que no vuela, posee patas largas y es la más grande del mundo.", category: "naturaleza" },
 ];
 
