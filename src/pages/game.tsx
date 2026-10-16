@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Hypher from "hypher";
 import spanishHyphenation from "hyphenation.es";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -15,6 +15,7 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import { useLanguage } from "../i18n/LanguageContext";
 import { getActiveRoscoContext, getActiveBonusContext } from "../data/weeklyRoscos";
 import { recordLastPlayed } from "../utils/lastPlayedState";
+import { track } from "../lib/analytics";
 import {
   DayKey,
   LetterStatus,
@@ -25,6 +26,7 @@ import {
   isDayAvailable,
   isDayKey,
   saveDayState,
+  DEFAULT_ROSCO_TIME_SECONDS,
 } from "../utils/weeklyRoscoState";
 
 const normalizeText = (value: string): string => {
@@ -220,8 +222,31 @@ const Game: React.FC = () => {
     if (remainingSeconds === 0 && !isFinished) {
       setFeedback(t.feedbackTimeout);
       setPlayState("paused");
+      // "timeout" es la única causa real de game over acá: no hay otra
+      // forma de "perder" un rosco más que agotar el tiempo.
+      track("game_over", {
+        mode: isBonus ? "bonus" : dayKey,
+        score: hits,
+        duration_sec: DEFAULT_ROSCO_TIME_SECONDS,
+        reason: "timeout",
+      });
     }
   }, [isFinished, remainingSeconds]);
+
+  // Se guarda si isFinished ya era true al montar (día ya completado antes,
+  // solo se está viendo el resultado) para no re-trackear una finalización
+  // vieja como si fuera nueva en esta sesión.
+  const prevIsFinishedRef = useRef(isFinished);
+  useEffect(() => {
+    if (isFinished && !prevIsFinishedRef.current) {
+      track("level_complete", {
+        mode: isBonus ? "bonus" : dayKey,
+        score: hits,
+        duration_sec: DEFAULT_ROSCO_TIME_SECONDS - remainingSeconds,
+      });
+    }
+    prevIsFinishedRef.current = isFinished;
+  }, [isFinished]);
 
   useEffect(() => {
     if (statuses.length !== roscoWords.length) {
@@ -446,6 +471,10 @@ const Game: React.FC = () => {
   const handleResume = () => {
     if (isFinished || isTimeOver) {
       return;
+    }
+
+    if (playState === "idle") {
+      track("game_start", { mode: isBonus ? "bonus" : dayKey });
     }
 
     if (pendingAdvance) {
