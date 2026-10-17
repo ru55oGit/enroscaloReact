@@ -43,10 +43,10 @@ export async function buildRoscoResultPngFile(
   if (!entries || entries.length === 0) return null;
 
   const width = 560;
-  const height = 700;
+  const height = 660;
   const circleSize = 420;
   const circleCenterX = width / 2;
-  const circleCenterY = 300;
+  const circleCenterY = 320;
   const dotSize = 34;
   const dotRadius = circleSize / 2 - dotSize / 2 - 6;
 
@@ -67,11 +67,6 @@ export async function buildRoscoResultPngFile(
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
   ctx.fillText("www.enroscado.com", width / 2, 56);
-
-  // Fecha y día.
-  ctx.fillStyle = "#5f6f86";
-  ctx.font = "600 18px sans-serif";
-  ctx.fillText(dateLabel, width / 2, 92);
 
   // Anillo del rosco: un punto de color por letra.
   ctx.strokeStyle = "rgba(21, 101, 192, 0.15)";
@@ -102,6 +97,11 @@ export async function buildRoscoResultPngFile(
   ctx.fillStyle = "#1f2937";
   ctx.font = "bold 40px sans-serif";
   ctx.fillText(`${hits}/${entries.length}`, circleCenterX, circleCenterY);
+
+  // Fecha y día, debajo del anillo.
+  ctx.fillStyle = "#000000";
+  ctx.font = "bold 20px sans-serif";
+  ctx.fillText(dateLabel, width / 2, circleCenterY + circleSize / 2 + 40);
 
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/png"));
   if (!blob) return null;

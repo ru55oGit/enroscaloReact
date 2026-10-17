@@ -21,6 +21,7 @@ import {
   DayKey,
   LetterStatus,
   PlayState,
+  WEEK_DAYS,
   deriveStatus,
   getCurrentDayKey,
   getDayState,
@@ -100,6 +101,18 @@ const findNextPlayableIndex = (
 };
 
 const RELOAD_TIME_SECONDS = 120;
+
+// weekStart es el domingo de esa semana ("YYYY-MM-DD"); WEEK_DAYS trae los
+// días en ese mismo orden (sun=0), así que sumarle el índice da la fecha
+// real del rosco — no la fecha de hoy, que es lo que se compartía antes
+// (mal: si compartís un sábado el rosco del lunes, tiene que decir lunes).
+const dateFromWeekStart = (weekStart: string, dayKey: DayKey): Date => {
+  const [year, month, day] = weekStart.split("-").map(Number);
+  const date = new Date(year, month - 1, day);
+  const dayIndex = WEEK_DAYS.findIndex((d) => d.key === dayKey);
+  date.setDate(date.getDate() + Math.max(0, dayIndex));
+  return date;
+};
 
 const formatTime = (totalSeconds: number): string => {
   const minutes = Math.floor(totalSeconds / 60);
@@ -514,12 +527,14 @@ const Game: React.FC = () => {
     track("share", { method, mode: isBonus ? "bonus" : dayKey });
 
     try {
+      const roscoWeekStart = isBonus ? bonusContext?.weekStart : activeRoscoContext.weekStart;
+      const roscoDate = roscoWeekStart ? dateFromWeekStart(roscoWeekStart, stateDayKey) : new Date();
       const dateLabel = new Intl.DateTimeFormat(currentLanguage, {
         weekday: "long",
         day: "numeric",
         month: "long",
         year: "numeric",
-      }).format(new Date());
+      }).format(roscoDate);
 
       const shareEntries = roscoWords.map((entry, index) => ({
         letter: entry.letter,
