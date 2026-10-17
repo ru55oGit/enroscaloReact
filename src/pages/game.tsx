@@ -15,6 +15,7 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import { useLanguage } from "../i18n/LanguageContext";
 import { getActiveRoscoContext, getActiveBonusContext } from "../data/weeklyRoscos";
 import { recordLastPlayed } from "../utils/lastPlayedState";
+import { buildRoscoResultPngFile } from "../utils/shareImage";
 import { track } from "../lib/analytics";
 import {
   DayKey,
@@ -148,6 +149,8 @@ const Game: React.FC = () => {
     return localStorage.getItem("enroscalo_sound_enabled") !== "false";
   });
   const [windowWidth, setWindowWidth] = useState(() => window.innerWidth);
+  const [sharingResult, setSharingResult] = useState(false);
+  const canShareResult = typeof navigator !== "undefined" && typeof navigator.share === "function";
 
   useEffect(() => {
     recordLastPlayed();
@@ -501,6 +504,46 @@ const Game: React.FC = () => {
     }
   };
 
+  // No hay forma de confirmar a qué red terminó yendo el share (WhatsApp o
+  // Facebook son solo accesos visuales al mismo navigator.share nativo del
+  // sistema — es la única forma confiable de adjuntar una imagen al
+  // compartir desde la web, los links tipo wa.me no soportan archivos).
+  const handleShareResult = async (method: "whatsapp" | "facebook") => {
+    if (!canShareResult || sharingResult) return;
+    setSharingResult(true);
+    track("share", { method, mode: isBonus ? "bonus" : dayKey });
+
+    try {
+      const dateLabel = new Intl.DateTimeFormat(currentLanguage, {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      }).format(new Date());
+
+      const shareEntries = roscoWords.map((entry, index) => ({
+        letter: entry.letter,
+        status: statuses[index] === "correct" ? ("correct" as const) : ("wrong" as const),
+      }));
+
+      const imageFile = await buildRoscoResultPngFile(shareEntries, hits, dateLabel, "rosco-enroscado.png");
+      const shareUrl = "https://www.enroscado.com";
+      const shareData: ShareData = {
+        title: "Enroscado",
+        text: `${t.shareResultText(hits, roscoWords.length)}\n${shareUrl}`,
+      };
+      if (imageFile && (!navigator.canShare || navigator.canShare({ files: [imageFile] }))) {
+        shareData.files = [imageFile];
+      }
+
+      await navigator.share(shareData);
+    } catch {
+      // Canceló el panel de compartir sin elegir nada: no hay nada que hacer.
+    } finally {
+      setSharingResult(false);
+    }
+  };
+
   const currentWordStr = currentEntry ? normalizeKeyUpper(currentEntry.word) : "";
   const maxChunkLength = Math.max(2, charsPerRow - 1);
   const tileBreakPoint = (currentWordStr && currentWordStr.length > charsPerRow)
@@ -846,6 +889,80 @@ const Game: React.FC = () => {
             >
               {feedback}
             </Typography>
+          </Box>
+        )}
+
+        {isFinished && canShareResult && (
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: 520,
+              borderRadius: 3,
+              backgroundColor: "#fff",
+              border: "1px solid #d7d7d7",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+              p: 2,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 1.5,
+            }}
+          >
+            <Typography sx={{ fontSize: 16, fontWeight: 800, color: "#222" }}>
+              {t.shareResultTitle}
+            </Typography>
+            <Box sx={{ display: "flex", gap: 1.5 }}>
+              <Box
+                component="button"
+                type="button"
+                onClick={() => handleShareResult("whatsapp")}
+                disabled={sharingResult}
+                aria-label="Compartir por WhatsApp"
+                sx={{
+                  display: "grid",
+                  placeItems: "center",
+                  width: 48,
+                  height: 48,
+                  borderRadius: "50%",
+                  border: "none",
+                  backgroundColor: "#25D366",
+                  color: "#fff",
+                  cursor: sharingResult ? "default" : "pointer",
+                  opacity: sharingResult ? 0.6 : 1,
+                  transition: "transform 0.15s ease",
+                  "&:hover": { transform: sharingResult ? "none" : "translateY(-2px)" },
+                }}
+              >
+                <svg viewBox="0 0 24 24" width={24} height={24} fill="currentColor">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.74.46 3.43 1.32 4.92L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.14.82.84-3.06-.2-.31a8.17 8.17 0 0 1-1.25-4.36c0-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.09 0 1.23.9 2.42 1.02 2.58.12.17 1.75 2.67 4.3 3.74.6.26 1.07.41 1.44.52.6.19 1.15.17 1.58.1.48-.07 1.48-.6 1.69-1.19.21-.58.21-1.08.15-1.19-.06-.1-.23-.17-.48-.29-.25-.12-1.48-.73-1.71-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.79.98-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.23-.73-.66-1.23-1.46-1.37-1.71-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.37-.78-1.87-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01Z" />
+                </svg>
+              </Box>
+              <Box
+                component="button"
+                type="button"
+                onClick={() => handleShareResult("facebook")}
+                disabled={sharingResult}
+                aria-label="Compartir por Facebook"
+                sx={{
+                  display: "grid",
+                  placeItems: "center",
+                  width: 48,
+                  height: 48,
+                  borderRadius: "50%",
+                  border: "none",
+                  backgroundColor: "#1877F2",
+                  color: "#fff",
+                  cursor: sharingResult ? "default" : "pointer",
+                  opacity: sharingResult ? 0.6 : 1,
+                  transition: "transform 0.15s ease",
+                  "&:hover": { transform: sharingResult ? "none" : "translateY(-2px)" },
+                }}
+              >
+                <svg viewBox="0 0 24 24" width={24} height={24} fill="currentColor">
+                  <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95Z" />
+                </svg>
+              </Box>
+            </Box>
           </Box>
         )}
 

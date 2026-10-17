@@ -105,6 +105,8 @@ export interface Translation {
   hitsLabel: string;
   pendingLabel: string;
   resultLabel: string;
+  shareResultTitle: string;
+  shareResultText: (hits: number, total: number) => string;
   backToHome: string;
   reloadTime: string;
   rewardedAdConfirmButton: string;
@@ -221,6 +223,8 @@ export const translations: Record<string, Translation> = {
     hitsLabel: "Aciertos",
     pendingLabel: "Pendientes",
     resultLabel: "Resultado",
+    shareResultTitle: "Comparte tu resultado",
+    shareResultText: (hits, total) => `¡Completé el rosco de Enroscado! Acerté ${hits}/${total} 🎯`,
     backToHome: "Volver al inicio",
     reloadTime: "Mirá un video y sumá tiempo",
     rewardedAdConfirmButton: "Reclamar recompensa",
@@ -338,6 +342,8 @@ export const translations: Record<string, Translation> = {
     hitsLabel: "Correct",
     pendingLabel: "Pending",
     resultLabel: "Result",
+    shareResultTitle: "Share your result",
+    shareResultText: (hits, total) => `I finished the Enroscado rosco! Got ${hits}/${total} right 🎯`,
     backToHome: "Back to home",
     reloadTime: "Watch a video and add time",
     rewardedAdConfirmButton: "Claim reward",
@@ -455,6 +461,8 @@ export const translations: Record<string, Translation> = {
     hitsLabel: "Acertos",
     pendingLabel: "Pendentes",
     resultLabel: "Resultado",
+    shareResultTitle: "Compartilhe seu resultado",
+    shareResultText: (hits, total) => `Completei o rosco do Enroscado! Acertei ${hits}/${total} 🎯`,
     backToHome: "Voltar ao início",
     reloadTime: "Assista a um vídeo e some tempo",
     rewardedAdConfirmButton: "Resgatar recompensa",
@@ -572,6 +580,8 @@ export const translations: Record<string, Translation> = {
     hitsLabel: "Bons réponses",
     pendingLabel: "En attente",
     resultLabel: "Résultat",
+    shareResultTitle: "Partage ton résultat",
+    shareResultText: (hits, total) => `J'ai terminé le rosco d'Enroscado ! ${hits}/${total} bonnes réponses 🎯`,
     backToHome: "Retour à l'accueil",
     reloadTime: "Regarde une pub et ajoute du temps",
     rewardedAdConfirmButton: "Réclamer la récompense",
@@ -689,6 +699,8 @@ export const translations: Record<string, Translation> = {
     hitsLabel: "Treffer",
     pendingLabel: "Ausstehend",
     resultLabel: "Ergebnis",
+    shareResultTitle: "Teile dein Ergebnis",
+    shareResultText: (hits, total) => `Ich habe das Enroscado-Rosco abgeschlossen! ${hits}/${total} richtig 🎯`,
     backToHome: "Zurück zum Start",
     reloadTime: "Sieh dir ein Video an und bekomme mehr Zeit",
     rewardedAdConfirmButton: "Belohnung einlösen",
