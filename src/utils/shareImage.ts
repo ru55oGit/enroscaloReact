@@ -46,8 +46,10 @@ function roundRectPath(
 
 // ── Constantes visuales (tocar acá para ajustar el look, no en el medio de
 // las funciones de dibujo) ──────────────────────────────────────────────
-const BG_GRADIENT_FROM = "#1a1f3a";
-const BG_GRADIENT_TO = "#2d1b4e";
+// Mismo degradé que el fondo de toda la app (ver Layout/index.tsx), no un
+// color aparte inventado para esta imagen.
+const BG_GRADIENT_FROM = "#a34747";
+const BG_GRADIENT_TO = "#F44336";
 const COLOR_CORRECT = "#2ecc71";
 const COLOR_WRONG = "#c0392b"; // rojo apagado — respondida, pero mal
 const COLOR_UNANSWERED = "#7a8699"; // gris — ni respondida ni pasada a limpio
@@ -82,6 +84,7 @@ interface Layout {
   width: number;
   height: number;
   cardRadius: number;
+  urlY: number;
   titleY: number;
   circleCenterY: number;
   circleSize: number;
@@ -93,7 +96,8 @@ const SQUARE_LAYOUT: Layout = {
   width: 1080,
   height: 1080,
   cardRadius: 64,
-  titleY: 110,
+  urlY: 60,
+  titleY: 150,
   circleCenterY: 560,
   circleSize: 680,
   statsY: 960,
@@ -104,7 +108,8 @@ const STORY_LAYOUT: Layout = {
   width: 1080,
   height: 1920,
   cardRadius: 64,
-  titleY: 300,
+  urlY: 220,
+  titleY: 310,
   circleCenterY: 860,
   circleSize: 680,
   statsY: 1260,
@@ -120,12 +125,17 @@ export async function buildRoscoResultPngFile(
   if (!entries || entries.length === 0) return null;
 
   const layout = format === "story" ? STORY_LAYOUT : SQUARE_LAYOUT;
-  const { width, height, cardRadius, titleY, circleCenterY, circleSize, statsY, ctaY } = layout;
+  const { width, height, cardRadius, urlY, titleY, circleCenterY, circleSize, statsY, ctaY } = layout;
   const circleCenterX = width / 2;
 
   const isPerfect = stats.hits >= stats.total;
   const dotSize = 58;
-  const dotRadius = circleSize / 2 - dotSize / 2 - 6;
+  // Margen entre las letras y el borde del anillo: más grande hacia afuera
+  // (que no se corten contra el borde externo) y más chico hacia adentro
+  // (que no sobre tanto hueco), para que las letras queden bien asentadas
+  // dentro de la banda en vez de pegadas a un borde.
+  const dotOuterMargin = 30;
+  const dotRadius = circleSize / 2 - dotSize / 2 - dotOuterMargin;
   // Igual criterio que el anillo del demo de Home (EmojiCarousel): grosor
   // suficiente para que el anillo tape las letras, no un borde fino.
   const ringBorderWidth = dotSize + 40;
@@ -146,6 +156,13 @@ export async function buildRoscoResultPngFile(
   ctx.fillStyle = gradient;
   roundRectPath(ctx, 0, 0, width, height, cardRadius);
   ctx.fill();
+
+  // URL arriba de todo, más grande que el título — es lo primero que se lee.
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillStyle = COLOR_WHITE;
+  ctx.font = "bold 72px sans-serif";
+  ctx.fillText("enroscado.com", circleCenterX, urlY);
 
   // Encabezado: "Enroscado" + número de partida, en dos tonos.
   ctx.font = "bold 58px sans-serif";
@@ -240,22 +257,15 @@ export async function buildRoscoResultPngFile(
   return new File([blob], filename, { type: "image/png" });
 }
 
-// Grid de emojis tipo Wordle para pegar junto con la imagen (navigator.share
-// / portapapeles). No depende de idioma — solo números y emoji — así que no
-// necesita pasar por el sistema de traducciones.
-export function buildRoscoShareText(entries: RoscoShareEntry[], stats: RoscoShareStats): string {
-  const squares = entries.map((entry) => (entry.status === "correct" ? "🟢" : "⚪"));
-  const rowSize = Math.ceil(entries.length / 2);
-  const rows = [squares.slice(0, rowSize).join(""), squares.slice(rowSize).join("")];
-
+// Texto para pegar junto con la imagen (navigator.share / portapapeles). Sin
+// emojis a pedido — solo el número de partida y el resultado. No depende de
+// idioma, así que no necesita pasar por el sistema de traducciones. No
+// incluye la URL: el caller la agrega aparte (como link real, no como texto
+// plano) para que quede clickeable/autolinkeada en el share.
+export function buildRoscoShareText(stats: RoscoShareStats): string {
   const statsParts = [`${stats.hits}/${stats.total}`];
-  if (stats.durationLabel) statsParts.push(`⏱ ${stats.durationLabel}`);
-  if (stats.streak) statsParts.push(`🔥${stats.streak}`);
+  if (stats.durationLabel) statsParts.push(stats.durationLabel);
+  if (stats.streak) statsParts.push(`Racha: ${stats.streak}`);
 
-  return [
-    `Enroscado #${stats.gameNumber} 🌀`,
-    ...rows,
-    statsParts.join(" "),
-    "enroscado.com",
-  ].join("\n");
+  return [`Enroscado #${stats.gameNumber}`, statsParts.join(" · ")].join("\n");
 }

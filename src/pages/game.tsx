@@ -553,7 +553,7 @@ const Game: React.FC = () => {
       const shareUrl = "https://www.enroscado.com";
       const shareData: ShareData = {
         title: "Enroscado",
-        text: `${buildRoscoShareText(shareEntries, stats)}\n${shareUrl}`,
+        text: `${buildRoscoShareText(stats)}\n${shareUrl}`,
       };
       if (imageFile && (!navigator.canShare || navigator.canShare({ files: [imageFile] }))) {
         shareData.files = [imageFile];
