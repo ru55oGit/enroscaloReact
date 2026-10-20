@@ -540,11 +540,19 @@ const Game: React.FC = () => {
               : ("unanswered" as const),
       }));
 
+      const dateLabel = new Intl.DateTimeFormat(currentLanguage, {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      }).format(roscoDate);
+
       const stats = {
         gameNumber: getGameNumber(roscoDate),
         hits,
         total: roscoWords.length,
         durationLabel: formatDurationLabel(DEFAULT_ROSCO_TIME_SECONDS - remainingSeconds),
+        dateLabel,
         // Racha de días: todavía no hay tracking de esto, se deja sin pasar
         // (ver comentario en RoscoShareStats, shareImage.ts).
       };

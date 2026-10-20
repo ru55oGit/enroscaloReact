@@ -23,6 +23,9 @@ export interface RoscoShareStats {
   // Racha de días jugados seguidos — todavía no existe ningún tracking de
   // esto en el código. Prop preparado a pedido, sin usar hasta que exista.
   streak?: number;
+  // "miércoles, 14 de octubre de 2026" — día y fecha del rosco compartido
+  // (no la de hoy, ver dateFromWeekStart en game.tsx), ya formateada.
+  dateLabel?: string;
 }
 
 export type ShareImageFormat = "square" | "story";
@@ -93,6 +96,7 @@ interface Layout {
   circleCenterY: number;
   circleSize: number;
   statsY: number;
+  dateY: number;
   ctaY: number;
 }
 
@@ -103,8 +107,9 @@ const SQUARE_LAYOUT: Layout = {
   titleY: 150,
   circleCenterY: 560,
   circleSize: 680,
-  statsY: 960,
-  ctaY: 1015,
+  statsY: 950,
+  dateY: 995,
+  ctaY: 1040,
 };
 
 const STORY_LAYOUT: Layout = {
@@ -114,8 +119,9 @@ const STORY_LAYOUT: Layout = {
   titleY: 310,
   circleCenterY: 860,
   circleSize: 680,
-  statsY: 1260,
-  ctaY: 1320,
+  statsY: 1250,
+  dateY: 1295,
+  ctaY: 1340,
 };
 
 export async function buildRoscoResultPngFile(
@@ -128,7 +134,7 @@ export async function buildRoscoResultPngFile(
   if (!entries || entries.length === 0) return null;
 
   const layout = format === "story" ? STORY_LAYOUT : SQUARE_LAYOUT;
-  const { width, height, urlY, titleY, circleCenterY, circleSize, statsY, ctaY } = layout;
+  const { width, height, urlY, titleY, circleCenterY, circleSize, statsY, dateY, ctaY } = layout;
   const circleCenterX = width / 2;
 
   const isPerfect = stats.hits >= stats.total;
@@ -163,7 +169,7 @@ export async function buildRoscoResultPngFile(
   ctx.textBaseline = "middle";
   ctx.fillStyle = COLOR_WHITE;
   ctx.font = "bold 72px sans-serif";
-  ctx.fillText("enroscado.com", circleCenterX, urlY);
+  ctx.fillText("www.enroscado.com", circleCenterX, urlY);
 
   // Encabezado: "Enroscado" + número de partida, en dos tonos.
   ctx.font = "bold 58px sans-serif";
@@ -245,6 +251,13 @@ export async function buildRoscoResultPngFile(
     ctx.fillStyle = COLOR_MUTED;
     ctx.font = "600 34px sans-serif";
     ctx.fillText(statsParts.join("   "), circleCenterX, statsY);
+  }
+
+  // Día y fecha del rosco compartido, debajo de las stats y arriba del CTA.
+  if (stats.dateLabel) {
+    ctx.fillStyle = COLOR_MUTED;
+    ctx.font = "600 30px sans-serif";
+    ctx.fillText(stats.dateLabel, circleCenterX, dateY);
   }
 
   // CTA abajo, chico: la URL ya no es el título, es la invitación a jugar.
