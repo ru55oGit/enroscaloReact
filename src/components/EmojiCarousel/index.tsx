@@ -41,7 +41,10 @@ const EmojiCarousel: React.FC<EmojiCarouselProps> = ({
   dotFontSize = 13,
   mb = 2,
 }) => {
-  const borderWidth = 3;
+  // Borde grueso a propósito: suficiente para que el anillo tape las letras
+  // (no solo un borde fino alrededor), look elegido a mano con las devtools
+  // sobre el tamaño grande (boardSize 250 / dotSize 24 → 42px).
+  const borderWidth = dotSize + 18;
   const radius = boardSize / 2 - dotSize / 2 - 8;
   // Absolute children are measured from the padding edge (inside the border),
   // so the visual center in absolute coords is boardSize/2 - borderWidth.
