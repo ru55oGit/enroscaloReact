@@ -56,7 +56,7 @@ const COLOR_UNANSWERED = "#7a8699"; // gris — ni respondida ni pasada a limpio
 const COLOR_PERFECT = "#f5b700"; // dorado, 26/26
 const COLOR_WHITE = "#ffffff";
 const COLOR_MUTED = "rgba(255, 255, 255, 0.65)";
-const RING_COLOR = "rgba(59, 130, 246, 0.28)";
+const RING_COLOR = "rgba(209, 213, 219, 0.4)"; // gris claro
 const RING_COLOR_PERFECT = "rgba(245, 183, 0, 0.35)";
 
 const RESULT_MESSAGES = {
@@ -130,17 +130,15 @@ export async function buildRoscoResultPngFile(
 
   const isPerfect = stats.hits >= stats.total;
   const dotSize = 58;
-  // Margen entre las letras y el borde del anillo: más grande hacia afuera
-  // (que no se corten contra el borde externo) y más chico hacia adentro
-  // (que no sobre tanto hueco), para que las letras queden bien asentadas
-  // dentro de la banda en vez de pegadas a un borde.
-  const dotOuterMargin = 30;
-  const dotRadius = circleSize / 2 - dotSize / 2 - dotOuterMargin;
   // Igual criterio que el anillo del demo de Home (EmojiCarousel): grosor
   // suficiente para que el anillo tape las letras, no un borde fino.
   const ringBorderWidth = dotSize + 40;
   const ringOuterRadius = circleSize / 2;
   const ringInnerRadius = ringOuterRadius - ringBorderWidth;
+  // Margen simétrico entre las letras y los dos bordes del anillo (afuera y
+  // adentro), para que queden centradas dentro de la banda.
+  const dotMargin = (ringBorderWidth - dotSize) / 2;
+  const dotRadius = ringOuterRadius - dotSize / 2 - dotMargin;
 
   const canvas = document.createElement("canvas");
   canvas.width = width;
