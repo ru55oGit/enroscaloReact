@@ -88,7 +88,6 @@ export function formatDurationLabel(totalSeconds: number): string {
 interface Layout {
   width: number;
   height: number;
-  cardRadius: number;
   urlY: number;
   titleY: number;
   circleCenterY: number;
@@ -100,7 +99,6 @@ interface Layout {
 const SQUARE_LAYOUT: Layout = {
   width: 1080,
   height: 1080,
-  cardRadius: 64,
   urlY: 60,
   titleY: 150,
   circleCenterY: 560,
@@ -112,7 +110,6 @@ const SQUARE_LAYOUT: Layout = {
 const STORY_LAYOUT: Layout = {
   width: 1080,
   height: 1920,
-  cardRadius: 64,
   urlY: 220,
   titleY: 310,
   circleCenterY: 860,
@@ -131,7 +128,7 @@ export async function buildRoscoResultPngFile(
   if (!entries || entries.length === 0) return null;
 
   const layout = format === "story" ? STORY_LAYOUT : SQUARE_LAYOUT;
-  const { width, height, cardRadius, urlY, titleY, circleCenterY, circleSize, statsY, ctaY } = layout;
+  const { width, height, urlY, titleY, circleCenterY, circleSize, statsY, ctaY } = layout;
   const circleCenterX = width / 2;
 
   const isPerfect = stats.hits >= stats.total;
@@ -152,14 +149,14 @@ export async function buildRoscoResultPngFile(
   const ctx = canvas.getContext("2d");
   if (!ctx) return null;
 
-  // Tarjeta: la imagen entera es la tarjeta (bordes redondeados + fondo en
-  // degradé oscuro de marca, reemplaza el blanco plano de antes).
+  // Fondo: degradé oscuro de marca a todo el ancho/alto, sin bordes
+  // redondeados — con border-radius, las esquinas fuera del redondeo
+  // quedan transparentes y muchos visores las muestran blancas.
   const gradient = ctx.createLinearGradient(0, 0, width, height);
   gradient.addColorStop(0, BG_GRADIENT_FROM);
   gradient.addColorStop(1, BG_GRADIENT_TO);
   ctx.fillStyle = gradient;
-  roundRectPath(ctx, 0, 0, width, height, cardRadius);
-  ctx.fill();
+  ctx.fillRect(0, 0, width, height);
 
   // URL arriba de todo, más grande que el título — es lo primero que se lee.
   ctx.textAlign = "center";
