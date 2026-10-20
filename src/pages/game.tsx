@@ -549,11 +549,19 @@ const Game: React.FC = () => {
         // (ver comentario en RoscoShareStats, shareImage.ts).
       };
 
-      const imageFile = await buildRoscoResultPngFile(shareEntries, stats, "rosco-enroscado.png");
+      const shareLabels = {
+        resultPerfect: t.shareResultPerfect,
+        resultGreat: t.shareResultGreat,
+        resultGood: t.shareResultGood,
+        resultLow: t.shareResultLow,
+        ctaPhrase: t.shareCtaPhrase,
+        streakLabel: t.shareStreakLabel,
+      };
+      const imageFile = await buildRoscoResultPngFile(shareEntries, stats, shareLabels, "rosco-enroscado.png");
       const shareUrl = "https://www.enroscado.com";
       const shareData: ShareData = {
         title: "Enroscado",
-        text: `${buildRoscoShareText(stats)}\n${shareUrl}`,
+        text: `${buildRoscoShareText(stats, shareLabels)}\n${shareUrl}`,
       };
       if (imageFile && (!navigator.canShare || navigator.canShare({ files: [imageFile] }))) {
         shareData.files = [imageFile];

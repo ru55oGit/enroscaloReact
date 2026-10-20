@@ -27,6 +27,18 @@ export interface RoscoShareStats {
 
 export type ShareImageFormat = "square" | "story";
 
+// Textos ya traducidos por el caller (t.shareResultPerfect, etc.) — esta
+// función no sabe de idiomas, solo dibuja. "Enroscado"/"enroscado.com" no
+// están acá porque son el nombre de marca y el dominio, no se traducen.
+export interface RoscoShareLabels {
+  resultPerfect: string;
+  resultGreat: string;
+  resultGood: string;
+  resultLow: string;
+  ctaPhrase: string; // ej "¿Te animás?" — se le agrega " enroscado.com" acá
+  streakLabel: (n: number) => string;
+}
+
 function roundRectPath(
   ctx: CanvasRenderingContext2D,
   x: number,
@@ -59,18 +71,11 @@ const COLOR_MUTED = "rgba(255, 255, 255, 0.65)";
 const RING_COLOR = "rgba(209, 213, 219, 0.4)"; // gris claro
 const RING_COLOR_PERFECT = "rgba(245, 183, 0, 0.35)";
 
-const RESULT_MESSAGES = {
-  perfect: "¡PERFECTO!",
-  great: "¡Casi!",
-  good: "Bien ahí",
-  low: "Seguí intentando",
-};
-
-function getResultMessage(hits: number, total: number): string {
-  if (hits >= total) return RESULT_MESSAGES.perfect;
-  if (hits >= 20) return RESULT_MESSAGES.great;
-  if (hits >= 10) return RESULT_MESSAGES.good;
-  return RESULT_MESSAGES.low;
+function getResultMessage(hits: number, total: number, labels: RoscoShareLabels): string {
+  if (hits >= total) return labels.resultPerfect;
+  if (hits >= 20) return labels.resultGreat;
+  if (hits >= 10) return labels.resultGood;
+  return labels.resultLow;
 }
 
 export function formatDurationLabel(totalSeconds: number): string {
@@ -119,6 +124,7 @@ const STORY_LAYOUT: Layout = {
 export async function buildRoscoResultPngFile(
   entries: RoscoShareEntry[],
   stats: RoscoShareStats,
+  labels: RoscoShareLabels,
   filename: string,
   format: ShareImageFormat = "square",
 ): Promise<File | null> {
@@ -231,7 +237,7 @@ export async function buildRoscoResultPngFile(
 
   ctx.fillStyle = isPerfect ? COLOR_PERFECT : COLOR_MUTED;
   ctx.font = "bold 40px sans-serif";
-  ctx.fillText(getResultMessage(stats.hits, stats.total), circleCenterX, circleCenterY + 80);
+  ctx.fillText(getResultMessage(stats.hits, stats.total, labels), circleCenterX, circleCenterY + 80);
 
   // Stats extra (duración siempre que exista; racha solo si el caller la
   // tiene — hoy nadie la pasa, ver comentario en RoscoShareStats).
@@ -247,7 +253,7 @@ export async function buildRoscoResultPngFile(
   // CTA abajo, chico: la URL ya no es el título, es la invitación a jugar.
   ctx.fillStyle = "rgba(255, 255, 255, 0.55)";
   ctx.font = "600 32px sans-serif";
-  ctx.fillText("¿Te animás? enroscado.com", circleCenterX, ctaY);
+  ctx.fillText(`${labels.ctaPhrase} enroscado.com`, circleCenterX, ctaY);
 
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/png"));
   if (!blob) return null;
@@ -256,14 +262,13 @@ export async function buildRoscoResultPngFile(
 }
 
 // Texto para pegar junto con la imagen (navigator.share / portapapeles). Sin
-// emojis a pedido — solo el número de partida y el resultado. No depende de
-// idioma, así que no necesita pasar por el sistema de traducciones. No
-// incluye la URL: el caller la agrega aparte (como link real, no como texto
-// plano) para que quede clickeable/autolinkeada en el share.
-export function buildRoscoShareText(stats: RoscoShareStats): string {
+// emojis a pedido — solo el número de partida y el resultado. No incluye la
+// URL: el caller la agrega aparte (como link real, no como texto plano) para
+// que quede clickeable/autolinkeada en el share.
+export function buildRoscoShareText(stats: RoscoShareStats, labels: RoscoShareLabels): string {
   const statsParts = [`${stats.hits}/${stats.total}`];
   if (stats.durationLabel) statsParts.push(stats.durationLabel);
-  if (stats.streak) statsParts.push(`Racha: ${stats.streak}`);
+  if (stats.streak) statsParts.push(labels.streakLabel(stats.streak));
 
   return [`Enroscado #${stats.gameNumber}`, statsParts.join(" · ")].join("\n");
 }

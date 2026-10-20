@@ -106,6 +106,12 @@ export interface Translation {
   pendingLabel: string;
   resultLabel: string;
   shareResultTitle: string;
+  shareResultPerfect: string;
+  shareResultGreat: string;
+  shareResultGood: string;
+  shareResultLow: string;
+  shareCtaPhrase: string;
+  shareStreakLabel: (n: number) => string;
   backToHome: string;
   reloadTime: string;
   rewardedAdConfirmButton: string;
@@ -223,6 +229,12 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "Pendientes",
     resultLabel: "Resultado",
     shareResultTitle: "Comparte tu resultado",
+    shareResultPerfect: "¡PERFECTO!",
+    shareResultGreat: "¡Casi!",
+    shareResultGood: "Bien ahí",
+    shareResultLow: "Seguí intentando",
+    shareCtaPhrase: "¿Te animás?",
+    shareStreakLabel: (n) => `Racha: ${n}`,
     backToHome: "Volver al inicio",
     reloadTime: "Mirá un anuncio y sumá tiempo",
     rewardedAdConfirmButton: "Reclamar recompensa",
@@ -341,6 +353,12 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "Pending",
     resultLabel: "Result",
     shareResultTitle: "Share your result",
+    shareResultPerfect: "PERFECT!",
+    shareResultGreat: "So close!",
+    shareResultGood: "Nice one",
+    shareResultLow: "Keep trying",
+    shareCtaPhrase: "Ready to play?",
+    shareStreakLabel: (n) => `Streak: ${n}`,
     backToHome: "Back to home",
     reloadTime: "Watch an ad and add time",
     rewardedAdConfirmButton: "Claim reward",
@@ -459,6 +477,12 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "Pendentes",
     resultLabel: "Resultado",
     shareResultTitle: "Compartilhe seu resultado",
+    shareResultPerfect: "PERFEITO!",
+    shareResultGreat: "Quase!",
+    shareResultGood: "Mandou bem",
+    shareResultLow: "Continue tentando",
+    shareCtaPhrase: "Topa jogar?",
+    shareStreakLabel: (n) => `Sequência: ${n}`,
     backToHome: "Voltar ao início",
     reloadTime: "Assista a um anúncio e some tempo",
     rewardedAdConfirmButton: "Resgatar recompensa",
@@ -577,6 +601,12 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "En attente",
     resultLabel: "Résultat",
     shareResultTitle: "Partage ton résultat",
+    shareResultPerfect: "PARFAIT !",
+    shareResultGreat: "Presque !",
+    shareResultGood: "Pas mal",
+    shareResultLow: "Continue d'essayer",
+    shareCtaPhrase: "Envie de jouer ?",
+    shareStreakLabel: (n) => `Série : ${n}`,
     backToHome: "Retour à l'accueil",
     reloadTime: "Regarde une pub et ajoute du temps",
     rewardedAdConfirmButton: "Réclamer la récompense",
@@ -695,6 +725,12 @@ export const translations: Record<string, Translation> = {
     pendingLabel: "Ausstehend",
     resultLabel: "Ergebnis",
     shareResultTitle: "Teile dein Ergebnis",
+    shareResultPerfect: "PERFEKT!",
+    shareResultGreat: "Fast geschafft!",
+    shareResultGood: "Gut gemacht",
+    shareResultLow: "Weiter versuchen",
+    shareCtaPhrase: "Lust zu spielen?",
+    shareStreakLabel: (n) => `Serie: ${n}`,
     backToHome: "Zurück zum Start",
     reloadTime: "Sieh dir eine Werbung an und bekomme mehr Zeit",
     rewardedAdConfirmButton: "Belohnung einlösen",
