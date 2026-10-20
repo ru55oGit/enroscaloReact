@@ -13,9 +13,9 @@ import { useRewardedAd } from "../ads/useRewardedAd";
 import RewardedAdModal from "../ads/RewardedAdModal";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useLanguage } from "../i18n/LanguageContext";
-import { getActiveRoscoContext, getActiveBonusContext } from "../data/weeklyRoscos";
+import { getActiveRoscoContext, getActiveBonusContext, getGameNumber } from "../data/weeklyRoscos";
 import { recordLastPlayed } from "../utils/lastPlayedState";
-import { buildRoscoResultPngFile } from "../utils/shareImage";
+import { buildRoscoResultPngFile, buildRoscoShareText, formatDurationLabel } from "../utils/shareImage";
 import { track } from "../lib/analytics";
 import {
   DayKey,
@@ -529,23 +529,31 @@ const Game: React.FC = () => {
     try {
       const roscoWeekStart = isBonus ? bonusContext?.weekStart : activeRoscoContext.weekStart;
       const roscoDate = roscoWeekStart ? dateFromWeekStart(roscoWeekStart, stateDayKey) : new Date();
-      const dateLabel = new Intl.DateTimeFormat(currentLanguage, {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-      }).format(roscoDate);
 
       const shareEntries = roscoWords.map((entry, index) => ({
         letter: entry.letter,
-        status: statuses[index] === "correct" ? ("correct" as const) : ("wrong" as const),
+        status:
+          statuses[index] === "correct"
+            ? ("correct" as const)
+            : statuses[index] === "wrong"
+              ? ("wrong" as const)
+              : ("unanswered" as const),
       }));
 
-      const imageFile = await buildRoscoResultPngFile(shareEntries, hits, dateLabel, "rosco-enroscado.png");
+      const stats = {
+        gameNumber: getGameNumber(roscoDate),
+        hits,
+        total: roscoWords.length,
+        durationLabel: formatDurationLabel(DEFAULT_ROSCO_TIME_SECONDS - remainingSeconds),
+        // Racha de días: todavía no hay tracking de esto, se deja sin pasar
+        // (ver comentario en RoscoShareStats, shareImage.ts).
+      };
+
+      const imageFile = await buildRoscoResultPngFile(shareEntries, stats, "rosco-enroscado.png");
       const shareUrl = "https://www.enroscado.com";
       const shareData: ShareData = {
         title: "Enroscado",
-        text: `${t.shareResultText(hits, roscoWords.length)}\n${shareUrl}`,
+        text: `${buildRoscoShareText(shareEntries, stats)}\n${shareUrl}`,
       };
       if (imageFile && (!navigator.canShare || navigator.canShare({ files: [imageFile] }))) {
         shareData.files = [imageFile];

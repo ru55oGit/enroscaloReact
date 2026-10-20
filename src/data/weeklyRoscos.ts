@@ -259,7 +259,21 @@ const resolveSetById = (setId: string, language: string): Record<DayKey, RoscoEn
 
 const CYCLE_BASE_DATE = "2025-12-29"; // domingo de la semana del 01/01/2026, set-001
 const CYCLE_SIZE = 18;
-const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
+const MS_PER_DAY = 24 * 60 * 60 * 1000;
+const MS_PER_WEEK = 7 * MS_PER_DAY;
+
+// Número de partida tipo Wordle, para el share: días transcurridos desde la
+// misma fecha ancla que ya usa la rotación semanal de sets (CYCLE_BASE_DATE),
+// así no hay una segunda fecha mágica suelta por otro lado. Sigue subiendo
+// aunque el contenido rote cada 18 semanas — no necesita ser único.
+export const getGameNumber = (referenceDate = new Date()): number => {
+  const localDate = new Date(referenceDate);
+  localDate.setHours(0, 0, 0, 0);
+  const daysSinceBase = Math.floor(
+    (localDate.getTime() - new Date(CYCLE_BASE_DATE).getTime()) / MS_PER_DAY,
+  );
+  return daysSinceBase + 1;
+};
 
 const resolveScheduleItem = (referenceDate = new Date()) => {
   const weekStart = getWeekStart(referenceDate);
