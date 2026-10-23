@@ -36,8 +36,8 @@ import HubAdPromoBanner from "../ads/HubAdPromoBanner";
 import ShareButtons from "../ads/ShareButtons";
 
 const ACCENT = "#e74c3c";
-// UTM: distingue en GA4 del hub cuÃ¡nto trÃ¡fico de "volver" viene
-// especÃ­ficamente del header de este juego.
+// UTM: distingue en GA4 del hub cuánto tráfico de "volver" viene
+// específicamente del header de este juego.
 const HUB_URL = "https://www.boludeando.com/?utm_source=enroscado&utm_medium=cross_game&utm_campaign=header_back";
 
 function handleHubLinkClick() {
@@ -48,10 +48,6 @@ export default function WelcomeScreen() {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const { t, currentLanguage } = useLanguage();
-  // El idioma viaja hub→juego por query param al entrar; esto lo hace
-  // viajar también juego→hub al volver, para que no se pierda si el
-  // usuario lo cambió acá adentro.
-  const hubUrlWithLang = `${HUB_URL}&lang=${currentLanguage}`;
 
   const [adFree, setAdFree] = useState(false);
   const [buyingAdFree, setBuyingAdFree] = useState(false);
@@ -151,27 +147,27 @@ export default function WelcomeScreen() {
   const statusLabels = { completed: t.statusCompleted, inProgress: t.statusInProgress, notStarted: t.statusNotStarted, timedOut: t.statusTimedOut };
 
   const CATEGORY_META: Record<string, { label: string; icon: string }> = {
-    "naturaleza": { label: "Naturaleza", icon: "ð¿" },
-    "ciencias": { label: "Ciencias", icon: "ð¬" },
-    "cultura-general": { label: "Cultura General", icon: "ð" },
-    "gastronomia": { label: "GastronomÃ­a", icon: "ð½ï¸" },
-    "arte-musica": { label: "Arte y MÃºsica", icon: "ð¨" },
-    "transporte": { label: "Transporte", icon: "ð" },
-    "deporte-juego": { label: "Deporte y Juego", icon: "â½" },
-    "mitologia-fantasia": { label: "MitologÃ­a y FantasÃ­a", icon: "ð" },
-    "educacion-sociedad": { label: "EducaciÃ³n y Sociedad", icon: "ð" },
-    "personalidades": { label: "Personalidades", icon: "ð" },
+    "naturaleza": { label: "Naturaleza", icon: "🌿" },
+    "ciencias": { label: "Ciencias", icon: "🔬" },
+    "cultura-general": { label: "Cultura General", icon: "📚" },
+    "gastronomia": { label: "Gastronomía", icon: "🍽️" },
+    "arte-musica": { label: "Arte y Música", icon: "🎨" },
+    "transporte": { label: "Transporte", icon: "🚗" },
+    "deporte-juego": { label: "Deporte y Juego", icon: "⚽" },
+    "mitologia-fantasia": { label: "Mitología y Fantasía", icon: "🐉" },
+    "educacion-sociedad": { label: "Educación y Sociedad", icon: "🎓" },
+    "personalidades": { label: "Personalidades", icon: "🌟" },
     // English categories
-    "nature": { label: "Nature", icon: "ð¿" },
-    "science": { label: "Science", icon: "ð¬" },
-    "general": { label: "General Knowledge", icon: "ð" },
-    "food": { label: "Food", icon: "ð½ï¸" },
-    "art-music": { label: "Art & Music", icon: "ð¨" },
-    "transport": { label: "Transport", icon: "ð" },
-    "sport-game": { label: "Sport & Games", icon: "â½" },
-    "myth-fantasy": { label: "Myth & Fantasy", icon: "ð" },
-    "society": { label: "Society", icon: "ð" },
-    "people": { label: "People", icon: "ð" },
+    "nature": { label: "Nature", icon: "🌿" },
+    "science": { label: "Science", icon: "🔬" },
+    "general": { label: "General Knowledge", icon: "📚" },
+    "food": { label: "Food", icon: "🍽️" },
+    "art-music": { label: "Art & Music", icon: "🎨" },
+    "transport": { label: "Transport", icon: "🚗" },
+    "sport-game": { label: "Sport & Games", icon: "⚽" },
+    "myth-fantasy": { label: "Myth & Fantasy", icon: "🐉" },
+    "society": { label: "Society", icon: "🎓" },
+    "people": { label: "People", icon: "🌟" },
   };
 
   const LANG_LOCALE: Record<string, string> = { es: "es-AR", en: "en-US", pt: "pt-BR", fr: "fr-FR", de: "de-DE" };
@@ -218,14 +214,14 @@ export default function WelcomeScreen() {
       <AdsenseScript />
       {
         // Shell fijo a todo el ancho del viewport (sin estilo propio) que
-        // centra con flexbox el header real de 480px adentro â mÃ¡s robusto
+        // centra con flexbox el header real de 480px adentro — más robusto
         // que left:50%+transform. boxSizing:border-box en el header es
         // necesario para que el px:2 (padding) no se sume por fuera del
         // width:480px (encontrado en emojinaloReact: sin esto el header
-        // termina ~32px mÃ¡s ancho que la columna de contenido). Siempre
+        // termina ~32px más ancho que la columna de contenido). Siempre
         // visible (no solo viniendo del hub): con los shares de resultado,
         // alguien puede entrar directo a este juego sin haber pasado por
-        // boludeando.com antes, y necesita igual una forma de llegar ahÃ­.
+        // boludeando.com antes, y necesita igual una forma de llegar ahí.
       }
       <Box sx={{ position: "fixed", top: 0, left: 0, width: "100%", zIndex: 10, display: "flex", justifyContent: "center" }}>
         <Box component="header" sx={{
@@ -237,14 +233,14 @@ export default function WelcomeScreen() {
           boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
           width: { xs: "100%", md: "480px" }, position: "relative",
         }}>
-          <Box component="a" href={hubUrlWithLang} onClick={handleHubLinkClick} aria-label="Volver" sx={{ display: "flex", alignItems: "center", zIndex: 1 }}>
+          <Box component="a" href={HUB_URL} onClick={handleHubLinkClick} aria-label="Volver" sx={{ display: "flex", alignItems: "center", zIndex: 1 }}>
             <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
               <path d="M26 6L14 19L26 32" stroke={ACCENT} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Box>
           <Box
             component="a"
-            href={hubUrlWithLang}
+            href={HUB_URL}
             onClick={handleHubLinkClick}
             sx={{
               position: "absolute", left: "50%", top: "50%", transform: "translate(-50%, -50%)",
@@ -515,7 +511,7 @@ export default function WelcomeScreen() {
               );
             })}
 
-            {/* Bonus card â llena el hueco junto a SÃ¡bado (grilla siempre a 2 columnas) */}
+            {/* Bonus card — llena el hueco junto a Sábado (grilla siempre a 2 columnas) */}
             <Box
               onClick={() => { if (isBonusUnlocked) navigate("/game?day=bonus"); }}
               sx={{
@@ -533,13 +529,13 @@ export default function WelcomeScreen() {
               }}
             >
               <Typography sx={{ fontSize: 22, fontWeight: 800, color: "#262a33", alignSelf: "flex-start" }}>
-                â­ Bonus
+                ⭐ Bonus
               </Typography>
 
               <Box sx={{ width: miniRoscoSize, height: miniRoscoSize, display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <Typography sx={{ fontSize: 14, color: "#7a7a7a", fontWeight: 700, textAlign: "center" }}>
                   {isBonusUnlocked
-                    ? "Â¡Disponible!"
+                    ? "¡Disponible!"
                     : t.bonusLocked}
                 </Typography>
               </Box>
@@ -577,13 +573,13 @@ export default function WelcomeScreen() {
             const totalB = a[1].correct + a[1].wrong;
             return totalA > 3 && totalB > 3 ? pctA - pctB : totalA - totalB;
           }).pop();
-          const topMeta = topCategory ? (CATEGORY_META[topCategory[0]] ?? { label: topCategory[0], icon: "ð" }) : null;
+          const topMeta = topCategory ? (CATEGORY_META[topCategory[0]] ?? { label: topCategory[0], icon: "📌" }) : null;
 
           const StatRow = ({ label, count, pct, color }: { label: string; count: number; pct: number; color: string }) => (
             <Box>
               <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 0.5 }}>
                 <Typography sx={{ fontSize: 13, fontWeight: 700, color: "#333" }}>{label}</Typography>
-                <Typography sx={{ fontSize: 12, fontWeight: 700, color: "#555" }}>{count}/{total} Â· {pct}%</Typography>
+                <Typography sx={{ fontSize: 12, fontWeight: 700, color: "#555" }}>{count}/{total} · {pct}%</Typography>
               </Box>
               <Box sx={{ height: 8, borderRadius: 4, backgroundColor: "#d0d0d0", overflow: "hidden" }}>
                 <Box sx={{ height: "100%", width: `${pct}%`, backgroundColor: color, borderRadius: 4, transition: "width 0.5s ease" }} />
@@ -643,7 +639,7 @@ export default function WelcomeScreen() {
                 .map(([cat, { correct, wrong }]) => {
                   const total = correct + wrong;
                   const pct = Math.round((correct / total) * 100);
-                  const meta = CATEGORY_META[cat] ?? { label: cat, icon: "ð" };
+                  const meta = CATEGORY_META[cat] ?? { label: cat, icon: "📌" };
                   const barColor = pct >= 70 ? "#2ecc71" : pct >= 40 ? "#f39c12" : "#e74c3c";
 
                   return (
@@ -653,7 +649,7 @@ export default function WelcomeScreen() {
                           {meta.icon} {meta.label}
                         </Typography>
                         <Typography sx={{ fontSize: 12, fontWeight: 700, color: "#555" }}>
-                          {correct}/{total} Â· {pct}%
+                          {correct}/{total} · {pct}%
                         </Typography>
                       </Box>
                       <Box sx={{ height: 8, borderRadius: 4, backgroundColor: "#d0d0d0", overflow: "hidden" }}>
@@ -678,7 +674,7 @@ export default function WelcomeScreen() {
           <Box sx={{ borderRadius: 4, backgroundColor: "#fff", p: 2, boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}>
             <Typography sx={{ fontSize: 28, fontWeight: 800, color: "#222" }}>{t.bestStreakSection}</Typography>
             <Typography sx={{ fontSize: 13, color: "#888", mb: 2 }}>
-              {bestStreak.words.length} {t.bestStreakWords} Â· {(() => { const [y,m,d] = bestStreak.date.split("-").map(Number); return new Date(y, m-1, d).toLocaleDateString(LANG_LOCALE[currentLanguage], { weekday: "long", day: "numeric", month: "long" }); })()}
+              {bestStreak.words.length} {t.bestStreakWords} · {(() => { const [y,m,d] = bestStreak.date.split("-").map(Number); return new Date(y, m-1, d).toLocaleDateString(LANG_LOCALE[currentLanguage], { weekday: "long", day: "numeric", month: "long" }); })()}
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
               {bestStreak.words.map((entry) => (
@@ -768,10 +764,10 @@ export default function WelcomeScreen() {
           </Box>
         </Box>
 
-        {/* Banner fijo "anunciÃ¡ acÃ¡" â no es un ad_slot real, nunca se
-            reemplaza por una campaÃ±a comprada. Siempre hay un lugar visible
+        {/* Banner fijo "anunciá acá" — no es un ad_slot real, nunca se
+            reemplaza por una campaña comprada. Siempre hay un lugar visible
             para que alguien descubra que puede anunciar, incluso si todos
-            los slots de verdad ya estÃ¡n vendidos. Reemplazado por el banner
+            los slots de verdad ya están vendidos. Reemplazado por el banner
             doble del hub (3 precios + URLs rotando) el 2026-10-10. */}
         {!adFree && (
           <>
