@@ -99,7 +99,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Habilidad", startOrContain: "start", letter: "H", definition: "Capacidad de hacer algo muy bien.", category: "cultura-general" },
   { word: "Insumo", startOrContain: "start", letter: "I", definition: "Material que se usa para producir algo en el campo.", category: "educacion-sociedad" },
   { word: "Juncal", startOrContain: "start", letter: "J", definition: "Terreno poblado de juncos donde viven aves y reptiles.", category: "naturaleza" },
-  { word: "Kit", startOrContain: "start", letter: "K", definition: "Conjunto de elementos que sirven para una misma tarea.", category: "cultura-general" },
+  { word: "Poker", startOrContain: "contain", letter: "K", definition: "Juego de cartas donde se apuesta y gana quien arma la mejor combinación de manos.", category: "deporte-juego" },
   { word: "Libre", startOrContain: "start", letter: "L", definition: "Tiro sin oposición que se cobra tras una falta.", category: "deporte-juego" },
   { word: "Maguire", startOrContain: "start", letter: "M", definition: "Apellido del actor estadounidense Tobey, famoso por interpretar a Spider-Man en la trilogía de Sam Raimi.", category: "personalidades" },
   { word: "Nudillos", startOrContain: "start", letter: "N", definition: "Salientes de los dedos al cerrar la mano.", category: "ciencias" },

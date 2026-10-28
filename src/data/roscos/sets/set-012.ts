@@ -41,7 +41,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Historia", startOrContain: "start", letter: "H", definition: "Materia que estudia lo que pasó en el pasado.", category: "educacion-sociedad" },
   { word: "Inscripcion", startOrContain: "start", letter: "I", definition: "Acción de anotarse para entrar a una escuela o curso.", category: "educacion-sociedad" },
   { word: "Jaspeado", startOrContain: "start", letter: "J", definition: "Que tiene manchas o vetas de varios colores.", category: "arte-musica" },
-  { word: "Kiosco", startOrContain: "start", letter: "K", definition: "Pequeño negocio donde se venden golosinas y diarios.", category: "cultura-general" },
+  { word: "Alaska", startOrContain: "contain", letter: "K", definition: "Estado de Estados Unidos ubicado en el extremo noroeste, conocido por su clima frío y sus glaciares.", category: "cultura-general" },
   { word: "Liquen", startOrContain: "start", letter: "L", definition: "Ser vivo que crece como una costra sobre las rocas y los árboles.", category: "naturaleza" },
   { word: "Modric", startOrContain: "start", letter: "M", definition: "Apellido del mediocampista croata Luka, ganador del Balón de Oro.", category: "personalidades" },
   { word: "Noche", startOrContain: "start", letter: "N", definition: "Momento del día en que se hacen muchos espectáculos.", category: "cultura-general" },

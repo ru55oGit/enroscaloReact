@@ -31,7 +31,7 @@ const ROSCO_1: RoscoEntry[] = [
 ];
 
 const ROSCO_2: RoscoEntry[] = [
-  { word: "Kahlo", startOrContain: "contain", letter: "A", definition: "Apellido de Frida, icónica pintora mexicana famosa por sus autorretratos cargados de simbolismo.", category: "personalidades" },
+  { word: "Guanaco", startOrContain: "contain", letter: "A", definition: "Mamífero sudamericano parecido a la llama que vive en zonas de altura.", category: "naturaleza" },
   { word: "Boligrafo", startOrContain: "start", letter: "B", definition: "Instrumento de escritura con tinta en cartucho, conocido como pluma en México o boli en España.", category: "educacion-sociedad" },
   { word: "Colador", startOrContain: "start", letter: "C", definition: "Utensilio con agujeritos para separar el líquido de lo sólido.", category: "gastronomia" },
   { word: "Dimension", startOrContain: "start", letter: "D", definition: "Cada una de las medidas del espacio como el largo o el ancho.", category: "ciencias" },

@@ -157,7 +157,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Hanks", startOrContain: "start", letter: "H", definition: "Apellido del actor estadounidense Tom, ganador del Óscar y famoso por Forrest Gump y Cast Away.", category: "personalidades" },
   { word: "Incisivo", startOrContain: "start", letter: "I", definition: "Diente filoso de adelante que sirve para cortar la comida.", category: "ciencias" },
   { word: "Jefe", startOrContain: "start", letter: "J", definition: "Persona que dirige y manda a un grupo de trabajo.", category: "educacion-sociedad" },
-  { word: "Kabuki", startOrContain: "start", letter: "K", definition: "Teatro tradicional japonés de vestuarios llamativos.", category: "arte-musica" },
+  { word: "Kendo", startOrContain: "start", letter: "K", definition: "Arte marcial japonés que se practica con espadas de bambú y armadura protectora.", category: "deporte-juego" },
   { word: "Levantamiento", startOrContain: "start", letter: "L", definition: "Deporte de alzar pesas lo más alto posible.", category: "deporte-juego" },
   { word: "Montañismo", startOrContain: "start", letter: "M", definition: "Actividad de recorrer y subir montañas.", category: "deporte-juego" },
   { word: "Nylon", startOrContain: "start", letter: "N", definition: "Tela sintética resistente con la que se hacen muchas prendas.", category: "ciencias" },

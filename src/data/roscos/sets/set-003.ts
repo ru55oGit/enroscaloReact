@@ -41,7 +41,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Halcon", startOrContain: "start", letter: "H", definition: "Ave rapaz muy veloz capaz de cazar a sus presas en pleno vuelo.", category: "naturaleza" },
   { word: "Ingrediente", startOrContain: "start", letter: "I", definition: "Cada uno de los componentes que se usan para preparar una receta.", category: "gastronomia" },
   { word: "Jazz", startOrContain: "start", letter: "J", definition: "Género musical nacido en Estados Unidos con mucha improvisación.", category: "arte-musica" },
-  { word: "Ketchup", startOrContain: "start", letter: "K", definition: "Salsa roja de tomate usada para acompañar papas fritas y hamburguesas.", category: "gastronomia" },
+  { word: "Kenia", startOrContain: "start", letter: "K", definition: "País de África famoso por sus safaris y sus grandes corredores de fondo.", category: "cultura-general" },
   { word: "Lenteja", startOrContain: "start", letter: "L", definition: "Pequeña legumbre con forma de disco usada en guisos nutritivos.", category: "gastronomia" },
   { word: "Marquez", startOrContain: "start", letter: "M", definition: "Apellido del piloto español Marc, ocho veces campeón del mundo de motociclismo.", category: "personalidades" },
   { word: "Nota", startOrContain: "start", letter: "N", definition: "Cada uno de los sonidos que forman la escala musical.", category: "arte-musica" },

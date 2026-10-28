@@ -70,7 +70,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Hamilton", startOrContain: "start", letter: "H", definition: "Piloto británico de Fórmula 1, llamado Lewis, múltiple campeón del mundo al volante de un Mercedes.", category: "personalidades" },
   { word: "Ibice", startOrContain: "start", letter: "I", definition: "Cabra salvaje de grandes cuernos que vive en las montañas.", category: "naturaleza" },
   { word: "Jubilacion", startOrContain: "start", letter: "J", definition: "Dinero que cobra quien dejó de trabajar por su edad.", category: "educacion-sociedad" },
-  { word: "Kiwi", startOrContain: "start", letter: "K", definition: "Fruta de cáscara marrón peluda y pulpa verde.", category: "gastronomia" },
+  { word: "Vodka", startOrContain: "contain", letter: "K", definition: "Bebida alcohólica destilada e incolora, típica de países como Rusia y Polonia.", category: "gastronomia" },
   { word: "Lija", startOrContain: "start", letter: "L", definition: "Papel áspero que sirve para alisar la madera.", category: "cultura-general" },
   { word: "Mexico", startOrContain: "start", letter: "M", definition: "País de América famoso por sus mariachis y su comida picante.", category: "cultura-general" },
   { word: "Noruega", startOrContain: "start", letter: "N", definition: "País del norte de Europa de fríos paisajes y fiordos.", category: "cultura-general" },

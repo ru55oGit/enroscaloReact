@@ -41,7 +41,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Hamburguesa", startOrContain: "start", letter: "H", definition: "Comida formada por carne picada y cocida servida dentro de un pan redondo.", category: "gastronomia" },
   { word: "Iguana", startOrContain: "start", letter: "I", definition: "Reptil de gran tamaño y piel escamosa que vive en zonas cálidas y trepa a los árboles.", category: "naturaleza" },
   { word: "Juez", startOrContain: "start", letter: "J", definition: "Persona con autoridad para impartir justicia y dictar sentencias en un tribunal.", category: "educacion-sociedad" },
-  { word: "Krill", startOrContain: "start", letter: "K", definition: "Diminuto crustáceo marino del que se alimentan las ballenas en grandes cantidades.", category: "naturaleza" },
+  { word: "Kosovo", startOrContain: "start", letter: "K", definition: "País de los Balcanes en el sudeste de Europa, cuya capital es Pristina.", category: "cultura-general" },
   { word: "Lampara", startOrContain: "start", letter: "L", definition: "Aparato que produce luz artificial para iluminar un espacio.", category: "cultura-general" },
   { word: "Manta", startOrContain: "start", letter: "M", definition: "Tela gruesa y cálida usada para abrigarse al dormir o protegerse del frío.", category: "cultura-general" },
   { word: "Nudo", startOrContain: "start", letter: "N", definition: "Lazo apretado que se hace al entrelazar y ajustar una cuerda o hilo.", category: "cultura-general" },

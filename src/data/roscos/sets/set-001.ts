@@ -32,7 +32,7 @@ export const ROSCO_1: RoscoEntry[] = [
   { word: "Helado", startOrContain: "start", letter: "H", definition: "Postre frío y dulce elaborado con leche, azúcar y distintos sabores.", category: "gastronomia" },
   { word: "Isla", startOrContain: "start", letter: "I", definition: "Porción de tierra completamente rodeada de agua por todos sus lados.", category: "naturaleza" },
   { word: "Jardin", startOrContain: "start", letter: "J", definition: "Espacio al aire libre cultivado con plantas, flores y árboles ornamentales.", category: "naturaleza" },
-  { word: "Koala", startOrContain: "start", letter: "K", definition: "Marsupial australiano de pelaje gris que vive en los eucaliptos y duerme muchas horas.", category: "naturaleza" },
+  { word: "Trekking", startOrContain: "contain", letter: "K", definition: "Actividad de caminar largas distancias por senderos naturales, generalmente en montaña.", category: "deporte-juego" },
   { word: "Lupa", startOrContain: "start", letter: "L", definition: "Lente convexa que aumenta el tamaño aparente de los objetos al observarlos.", category: "ciencias" },
   { word: "Messi", startOrContain: "start", letter: "M", definition: "Apellido del futbolista argentino de nombre Lionel, campeón del mundo en 2022.", category: "personalidades" },
   { word: "Nube", startOrContain: "start", letter: "N", definition: "Conjunto visible de diminutas gotas de agua suspendidas en la atmósfera.", category: "naturaleza" },

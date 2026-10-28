@@ -99,7 +99,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Hazaña", startOrContain: "start", letter: "H", definition: "Logro extraordinario que merece admiración.", category: "deporte-juego" },
   { word: "Itinerario", startOrContain: "start", letter: "I", definition: "Recorrido o ruta planificada de un viaje.", category: "cultura-general" },
   { word: "Jota", startOrContain: "start", letter: "J", definition: "Baile y canto popular tradicional de España.", category: "arte-musica" },
-  { word: "Kremlin", startOrContain: "start", letter: "K", definition: "Famosa fortaleza amurallada en el centro de Moscú.", category: "cultura-general" },
+  { word: "Kahlo", startOrContain: "start", letter: "K", definition: "Apellido de Frida, icónica pintora mexicana famosa por sus autorretratos cargados de simbolismo.", category: "personalidades" },
   { word: "Llavero", startOrContain: "start", letter: "L", definition: "Objeto donde se guardan y ordenan las llaves.", category: "cultura-general" },
   { word: "Monroe", startOrContain: "start", letter: "M", definition: "Apellido de la actriz y modelo estadounidense Marilyn, ícono del cine y la cultura pop de los años 50.", category: "personalidades" },
   { word: "Natilla", startOrContain: "start", letter: "N", definition: "Postre cremoso hecho con leche, huevo y azúcar.", category: "gastronomia" },

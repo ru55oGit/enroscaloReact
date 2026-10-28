@@ -186,7 +186,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Hombrera", startOrContain: "start", letter: "H", definition: "Relleno que se pone en los hombros de algunas prendas.", category: "cultura-general" },
   { word: "Intestino", startOrContain: "start", letter: "I", definition: "Órgano largo y enrollado donde se terminan de digerir los alimentos.", category: "ciencias" },
   { word: "Jaqueca", startOrContain: "start", letter: "J", definition: "Dolor de cabeza fuerte y molesto.", category: "ciencias" },
-  { word: "Karma", startOrContain: "start", letter: "K", definition: "Idea de que las buenas o malas acciones traen sus consecuencias.", category: "cultura-general" },
+  { word: "Karting", startOrContain: "start", letter: "K", definition: "Deporte de carreras con pequeños autos sin techo que se corre en circuitos cerrados.", category: "deporte-juego" },
   { word: "Lengua", startOrContain: "start", letter: "L", definition: "Órgano de la boca con el que sentimos los sabores y hablamos.", category: "ciencias" },
   { word: "Maceta", startOrContain: "start", letter: "M", definition: "Recipiente con tierra donde se cultiva una planta.", category: "naturaleza" },
   { word: "Nervio", startOrContain: "start", letter: "N", definition: "Fibra del cuerpo que lleva las señales hasta el cerebro.", category: "ciencias" },
