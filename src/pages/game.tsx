@@ -579,29 +579,54 @@ const Game: React.FC = () => {
         : hits >= 10 ? shareLabels.resultGood
         : shareLabels.resultLow;
       const statusesParam = shareEntries.map((e) => (e.status === "correct" ? "c" : e.status === "wrong" ? "w" : "u")).join("");
+      const shareLinkPayload = {
+        domain: "www.enroscado.com",
+        game: "Enroscado",
+        n: String(stats.gameNumber),
+        hits: String(stats.hits),
+        total: String(stats.total),
+        dur: stats.durationLabel,
+        date: dateLabel,
+        msg: resultMessage,
+        cta: shareLabels.ctaPhrase,
+        statuses: statusesParam,
+        target: targetUrl,
+        // El PNG se cachea 1 año (immutable) del lado de boludeando-ads —
+        // bumpear este número cada vez que cambie el diseño del PNG
+        // server-side, sino un link ya compartido sigue sirviendo la
+        // versión vieja (pasó de verdad con el rediseño del anillo).
+        v: "5",
+      };
+
       const shareImageApiUrl = new URL("https://ads-api.boludeando.com/api/share/rosco");
-      shareImageApiUrl.searchParams.set("domain", "www.enroscado.com");
-      shareImageApiUrl.searchParams.set("game", "Enroscado");
-      shareImageApiUrl.searchParams.set("n", String(stats.gameNumber));
-      shareImageApiUrl.searchParams.set("hits", String(stats.hits));
-      shareImageApiUrl.searchParams.set("total", String(stats.total));
-      if (stats.durationLabel) shareImageApiUrl.searchParams.set("dur", stats.durationLabel);
-      shareImageApiUrl.searchParams.set("date", dateLabel);
-      shareImageApiUrl.searchParams.set("msg", resultMessage);
-      shareImageApiUrl.searchParams.set("cta", shareLabels.ctaPhrase);
-      shareImageApiUrl.searchParams.set("statuses", statusesParam);
-      shareImageApiUrl.searchParams.set("target", targetUrl);
-      // El PNG se cachea 1 año (immutable) del lado de boludeando-ads — un
-      // cambio de diseño ahí no invalida URLs ya pedidas con los mismos
-      // parámetros (pasó de verdad: WhatsApp siguió mostrando el anillo
-      // viejo de 26 letras después de rediseñarlo). Bumpear este número
-      // cada vez que cambie el diseño del PNG server-side.
-      shareImageApiUrl.searchParams.set("v", "4");
+      Object.entries(shareLinkPayload).forEach(([key, value]) => {
+        if (value) shareImageApiUrl.searchParams.set(key, value);
+      });
+
+      // La URL de arriba (con 11 query params) aparece como texto plano
+      // larguísimo en el cuerpo del mensaje de WhatsApp debajo de la
+      // preview — se pide un short link al mismo payload. Si el pedido
+      // falla (red caída, etc.) se comparte igual con la URL larga en vez
+      // de romper el share.
+      let shareUrl = shareImageApiUrl.toString();
+      try {
+        const linkResponse = await fetch("https://ads-api.boludeando.com/api/share/rosco/link", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(shareLinkPayload),
+        });
+        if (linkResponse.ok) {
+          const { id } = await linkResponse.json();
+          if (id) shareUrl = `https://ads-api.boludeando.com/api/s/${id}`;
+        }
+      } catch {
+        // Sigue con shareUrl = la URL larga ya armada arriba.
+      }
 
       const shareData: ShareData = {
         title: "Enroscado",
         text: buildRoscoShareText(stats, shareLabels),
-        url: shareImageApiUrl.toString(),
+        url: shareUrl,
       };
 
       await navigator.share(shareData);
