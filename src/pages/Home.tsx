@@ -99,6 +99,23 @@ export default function WelcomeScreen() {
     };
   }, []);
 
+  // Volver desde el juego (?scrollTo=weekly) lleva directo a la sección
+  // Semanal — de otro modo queda arriba de todo y no es obvio que hay más
+  // contenido debajo (confundió a un usuario probando en iPhone).
+  useEffect(() => {
+    if (searchParams.get("scrollTo") === "weekly") {
+      document.getElementById("weekly-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      setSearchParams(
+        (prev) => {
+          prev.delete("scrollTo");
+          return prev;
+        },
+        { replace: true },
+      );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const isMobile = useIsMobile();
   const miniRoscoSize = isMobile ? 93 : 118;
   const miniDotSize = isMobile ? 9 : 11;
@@ -408,6 +425,7 @@ export default function WelcomeScreen() {
         )}
 
         <Box
+          id="weekly-section"
           sx={{
             borderRadius: 4,
             backgroundColor: "#ededed",

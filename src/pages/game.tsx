@@ -596,7 +596,7 @@ const Game: React.FC = () => {
       // parámetros (pasó de verdad: WhatsApp siguió mostrando el anillo
       // viejo de 26 letras después de rediseñarlo). Bumpear este número
       // cada vez que cambie el diseño del PNG server-side.
-      shareImageApiUrl.searchParams.set("v", "2");
+      shareImageApiUrl.searchParams.set("v", "4");
 
       const shareData: ShareData = {
         title: "Enroscado",
@@ -941,7 +941,7 @@ const Game: React.FC = () => {
                 </Button>
                 <Button
                   variant="outlined"
-                  onClick={() => navigate("/")}
+                  onClick={() => navigate("/?scrollTo=weekly")}
                   sx={{ color: "#fff", borderColor: "#fff", fontWeight: 700, minWidth: 200, mb: 2 }}
                 >
                   {t.backToHome}
@@ -1050,7 +1050,7 @@ const Game: React.FC = () => {
             <Box sx={{ textAlign: "center", mb: 2 }}>
               <Button
                 variant="outlined"
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/?scrollTo=weekly")}
                 sx={{ color: "#d84331", borderColor: "#d84331", fontWeight: 700 }}
               >
                 {t.backToHome}
