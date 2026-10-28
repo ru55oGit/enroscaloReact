@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Keyboard from "react-simple-keyboard";
 import { Box } from "@mui/material";
 import "react-simple-keyboard/build/css/index.css";
+import VolumeUpRoundedIcon from "@mui/icons-material/VolumeUpRounded";
+import VolumeOffRoundedIcon from "@mui/icons-material/VolumeOffRounded";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { useLanguage } from "../../i18n/LanguageContext";
 import { normalizeText } from "../../utils/textNormalization";
@@ -23,6 +25,39 @@ interface VirtualKeyboardProps {
   gameSlug?: string;
 }
 
+// Filas/offsets calcados del teclado español de iPhone: fila 1 y fila 2
+// comparten las mismas 10 columnas (sin offset entre ellas), y la fila
+// Z-M (7 teclas) queda centrada bajo esas 10 columnas — por eso la M cae
+// justo abajo de la mitad entre K y L. Con flexbox ponderado (flex-grow)
+// alcanza ese mismo resultado visual sin pixeles fijos: la fila corta
+// "cede" 1.5 columnas de ancho a cada lado para el acento y el borrar.
+const ES_ROW_1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
+const ES_ROW_2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L", "Ñ"];
+const ES_ROW_3 = ["Z", "X", "C", "V", "B", "N", "M"];
+const ACCENTED_VOWEL: Record<string, string> = { A: "Á", E: "É", I: "Í", O: "Ó", U: "Ú" };
+const IS_VOWEL = (letter: string) => letter in ACCENTED_VOWEL;
+
+const keyButtonSx = (variant: "default" | "correct" | "incorrect" | "action") => ({
+  flex: 1,
+  minWidth: 0,
+  height: 36,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: "4px",
+  border: "1px solid #666",
+  fontSize: 12,
+  fontWeight: 600,
+  fontFamily: "inherit",
+  cursor: variant === "correct" || variant === "incorrect" ? "not-allowed" : "pointer",
+  transition: "all 0.15s ease",
+  "&:active": { transform: "scale(0.96)" },
+  ...(variant === "default" && { backgroundColor: "#444", color: "#fff" }),
+  ...(variant === "correct" && { backgroundColor: "#27ae60", borderColor: "#1e8449", color: "#fff" }),
+  ...(variant === "incorrect" && { backgroundColor: "#e74c3c", borderColor: "#c0392b", color: "#fff" }),
+  ...(variant === "action" && { backgroundColor: "#223a75", borderColor: "#1a2d58", color: "#fff", fontSize: 11 }),
+});
+
 const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
   onKeyPress,
   guessedLetters = [],
@@ -37,6 +72,7 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
 }) => {
   const isMobile = useIsMobile();
   const { t, currentLanguage } = useLanguage();
+  const [accentActive, setAccentActive] = useState(false);
 
   const getKeyboardLayout = () => {
     // El borrar vive dentro de la fila Z-M (rojo, como en enganchadoReact)
@@ -45,16 +81,6 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
     const baseLayout = ["Q W E R T Y U I O P", "A S D F G H J K L", zRow];
 
     switch (currentLanguage) {
-      case "es":
-        return {
-          default: [
-            baseLayout[0],
-            "A S D F G H J K L Ñ",
-            zRow,
-            "Á É Í Ó Ú",
-            ...(includeActionKeys ? ["{pass} {sound}"] : []),
-          ],
-        };
       case "pt":
         return {
           default: [
@@ -96,7 +122,49 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
     }
   };
 
-  const layout = getKeyboardLayout();
+  const isAlreadyGuessed = (letter: string) =>
+    guessedLetters.some((guessed) => normalizeText(guessed) === letter);
+  const isWrong = (letter: string) => wrongLetters.some((wrong) => normalizeText(wrong) === letter);
+
+  const pressLetter = (displayChar: string) => {
+    const normalizedKey = normalizeText(displayChar);
+    const alreadyTried = guessedLetters.some((guessed) => normalizeText(guessed) === normalizedKey);
+    if (!alreadyTried) {
+      onKeyPress(displayChar);
+    }
+  };
+
+  const handleEsLetterClick = (letter: string) => {
+    const display = accentActive && IS_VOWEL(letter) ? ACCENTED_VOWEL[letter] : letter;
+    pressLetter(display);
+    // Una vez tocada una vocal o cualquier consonante, el acento se
+    // desactiva — es una tecla "muerta", no un modo que queda prendido.
+    setAccentActive(false);
+  };
+
+  const handleSoundButton = (target: boolean) => {
+    if (target !== soundEnabled) {
+      onSoundToggle?.();
+    }
+  };
+
+  const renderEsLetterKey = (letter: string, flex = 1) => {
+    const correct = isAlreadyGuessed(letter) && !isWrong(letter);
+    const wrong = isWrong(letter);
+    const variant = correct ? "correct" : wrong ? "incorrect" : "default";
+    const display = accentActive && IS_VOWEL(letter) ? ACCENTED_VOWEL[letter] : letter;
+    return (
+      <Box
+        key={letter}
+        component="button"
+        type="button"
+        onClick={() => handleEsLetterClick(letter)}
+        sx={{ ...keyButtonSx(variant), flex }}
+      >
+        {display}
+      </Box>
+    );
+  };
 
   const handleKeyPress = (key: string) => {
     if (key === "{sound}") {
@@ -109,37 +177,130 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
       return;
     }
 
-    const normalizedKey = normalizeText(key);
-    const alreadyTried = guessedLetters.some(
-      (guessed) => normalizeText(guessed) === normalizedKey,
-    );
-
-    if (alreadyTried) {
-      return;
-    }
-
-    onKeyPress(key);
+    pressLetter(key);
   };
 
   if (!isMobile) {
     return null;
   }
 
+  const wrapperSx = {
+    position: "fixed" as const,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: "rgba(0, 0, 0, 0.9)",
+    padding: "8px 4px 12px",
+    zIndex: 9999,
+    borderTop: "1px solid #555",
+    opacity: hidden ? 0 : 1,
+    transform: hidden ? "translateY(40px)" : "translateY(0px)",
+    transition: "opacity 0.3s ease, transform 0.3s ease",
+    pointerEvents: hidden ? ("none" as const) : ("auto" as const),
+  };
+
+  if (currentLanguage === "es") {
+    return (
+      <Box sx={wrapperSx}>
+        {open ? (
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+            <Box sx={{ display: "flex", justifyContent: "center", gap: "2px" }}>
+              {ES_ROW_1.map((letter) => renderEsLetterKey(letter))}
+            </Box>
+            <Box sx={{ display: "flex", justifyContent: "center", gap: "2px" }}>
+              {ES_ROW_2.map((letter) => renderEsLetterKey(letter))}
+            </Box>
+            <Box sx={{ display: "flex", justifyContent: "center", gap: "2px" }}>
+              <Box
+                component="button"
+                type="button"
+                onClick={() => setAccentActive((prev) => !prev)}
+                aria-label="Acento"
+                sx={{
+                  ...keyButtonSx("default"),
+                  flex: 1.5,
+                  fontSize: 16,
+                  fontWeight: 800,
+                  backgroundColor: accentActive ? "#f0b429" : "#444",
+                  color: accentActive ? "#1a1a1a" : "#fff",
+                  borderColor: accentActive ? "#d99f1a" : "#666",
+                }}
+              >
+                ´
+              </Box>
+              {ES_ROW_3.map((letter) => renderEsLetterKey(letter))}
+              {includeActionKeys && (
+                <Box
+                  component="button"
+                  type="button"
+                  onClick={() => onKeyPress("{bksp}")}
+                  aria-label="Borrar"
+                  sx={{ ...keyButtonSx("default"), flex: 1.5, backgroundColor: "#e74c3c", borderColor: "#c0392b" }}
+                >
+                  ⌫
+                </Box>
+              )}
+            </Box>
+            {includeActionKeys && (
+              <Box sx={{ display: "flex", justifyContent: "center", gap: "4px" }}>
+                <Box
+                  component="button"
+                  type="button"
+                  onClick={() => handleSoundButton(true)}
+                  sx={{
+                    ...keyButtonSx("action"),
+                    flex: 1.4,
+                    height: 40,
+                    gap: "4px",
+                    backgroundColor: soundEnabled ? "#2ecc71" : "#223a75",
+                    borderColor: soundEnabled ? "#1e8449" : "#1a2d58",
+                  }}
+                >
+                  <VolumeUpRoundedIcon sx={{ fontSize: 16 }} />
+                  On
+                </Box>
+                <Box
+                  component="button"
+                  type="button"
+                  onClick={() => onPass?.()}
+                  sx={{ ...keyButtonSx("action"), flex: 7.2, height: 40, fontSize: 13 }}
+                >
+                  {t.feedbackPassed}
+                </Box>
+                <Box
+                  component="button"
+                  type="button"
+                  onClick={() => handleSoundButton(false)}
+                  sx={{
+                    ...keyButtonSx("action"),
+                    flex: 1.4,
+                    height: 40,
+                    gap: "4px",
+                    backgroundColor: !soundEnabled ? "#e74c3c" : "#223a75",
+                    borderColor: !soundEnabled ? "#c0392b" : "#1a2d58",
+                  }}
+                >
+                  <VolumeOffRoundedIcon sx={{ fontSize: 16 }} />
+                  Off
+                </Box>
+              </Box>
+            )}
+          </Box>
+        ) : (
+          <Box sx={{ display: "flex", justifyContent: "center", py: 0.5 }}>
+            <HouseAdBanner slot={`${gameSlug}-keyboard-banner`} gameSlug={gameSlug} locale={currentLanguage} />
+          </Box>
+        )}
+      </Box>
+    );
+  }
+
+  const layout = getKeyboardLayout();
+
   return (
     <Box
       sx={{
-        position: "fixed",
-        bottom: 0,
-        left: 0,
-        right: 0,
-        backgroundColor: "rgba(0, 0, 0, 0.9)",
-        padding: "8px 4px 12px",
-        zIndex: 9999,
-        borderTop: "1px solid #555",
-        opacity: hidden ? 0 : 1,
-        transform: hidden ? "translateY(40px)" : "translateY(0px)",
-        transition: "opacity 0.3s ease, transform 0.3s ease",
-        pointerEvents: hidden ? "none" : "auto",
+        ...wrapperSx,
         "& .hg-theme-default": {
           backgroundColor: "transparent",
           maxWidth: "100%",
