@@ -591,6 +591,12 @@ const Game: React.FC = () => {
       shareImageApiUrl.searchParams.set("cta", shareLabels.ctaPhrase);
       shareImageApiUrl.searchParams.set("statuses", statusesParam);
       shareImageApiUrl.searchParams.set("target", targetUrl);
+      // El PNG se cachea 1 año (immutable) del lado de boludeando-ads — un
+      // cambio de diseño ahí no invalida URLs ya pedidas con los mismos
+      // parámetros (pasó de verdad: WhatsApp siguió mostrando el anillo
+      // viejo de 26 letras después de rediseñarlo). Bumpear este número
+      // cada vez que cambie el diseño del PNG server-side.
+      shareImageApiUrl.searchParams.set("v", "2");
 
       const shareData: ShareData = {
         title: "Enroscado",
