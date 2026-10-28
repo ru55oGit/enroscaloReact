@@ -192,7 +192,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Nervio", startOrContain: "start", letter: "N", definition: "Fibra del cuerpo que lleva las señales hasta el cerebro.", category: "ciencias" },
   { word: "Ocaso", startOrContain: "start", letter: "O", definition: "Momento en que el Sol se esconde al final del día.", category: "naturaleza" },
   { word: "Tapas", startOrContain: "contain", letter: "P", definition: "Pequeñas porciones de comida típicas de España, servidas como aperitivo junto a una bebida.", category: "gastronomia" },
-  { word: "Quejar", startOrContain: "start", letter: "Q", definition: "Expresar disgusto o malestar por algo, usado como 'quejarse'.", category: "educacion-sociedad" },
+  { word: "Queja", startOrContain: "start", letter: "Q", definition: "Reclamo que se hace cuando algo genera malestar o no resultó como se esperaba.", category: "educacion-sociedad" },
   { word: "Relojero", startOrContain: "start", letter: "R", definition: "Persona que arregla y fabrica relojes.", category: "educacion-sociedad" },
   { word: "Sirena", startOrContain: "start", letter: "S", definition: "Criatura mágica mitad mujer y mitad pez.", category: "mitologia-fantasia" },
   { word: "Tapado", startOrContain: "start", letter: "T", definition: "Abrigo largo que se usa sobre la demás ropa.", category: "cultura-general" },
