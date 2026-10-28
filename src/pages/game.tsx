@@ -15,7 +15,7 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import { useLanguage } from "../i18n/LanguageContext";
 import { getActiveRoscoContext, getActiveBonusContext, getGameNumber } from "../data/weeklyRoscos";
 import { recordLastPlayed } from "../utils/lastPlayedState";
-import { buildRoscoResultPngFile, buildRoscoShareText, formatDurationLabel } from "../utils/shareImage";
+import { buildRoscoShareText, formatDurationLabel } from "../utils/shareImage";
 import { track } from "../lib/analytics";
 import {
   DayKey,
@@ -565,15 +565,38 @@ const Game: React.FC = () => {
         ctaPhrase: t.shareCtaPhrase,
         streakLabel: t.shareStreakLabel,
       };
-      const imageFile = await buildRoscoResultPngFile(shareEntries, stats, shareLabels, "rosco-enroscado.png");
-      const shareUrl = "https://www.enroscado.com";
+      const targetUrl = "https://www.enroscado.com";
+      // Antes se adjuntaba la imagen directo con navigator.share({files:[...]})
+      // — pero con un archivo adjunto WhatsApp deja de tratar el share como
+      // "link" y no arma la tarjeta clickeable (la URL queda como texto
+      // plano, ver conversación). En vez de la imagen, se comparte un link a
+      // boludeando-ads que sirve HTML con <meta og:image> para los bots de
+      // preview (ahí sí se genera el PNG, server-side) y redirige directo a
+      // una persona real que clickee — imagen Y link clickeable a la vez.
+      const resultMessage =
+        hits >= stats.total ? shareLabels.resultPerfect
+        : hits >= 20 ? shareLabels.resultGreat
+        : hits >= 10 ? shareLabels.resultGood
+        : shareLabels.resultLow;
+      const statusesParam = shareEntries.map((e) => (e.status === "correct" ? "c" : e.status === "wrong" ? "w" : "u")).join("");
+      const shareImageApiUrl = new URL("https://ads-api.boludeando.com/api/share/rosco");
+      shareImageApiUrl.searchParams.set("domain", "www.enroscado.com");
+      shareImageApiUrl.searchParams.set("game", "Enroscado");
+      shareImageApiUrl.searchParams.set("n", String(stats.gameNumber));
+      shareImageApiUrl.searchParams.set("hits", String(stats.hits));
+      shareImageApiUrl.searchParams.set("total", String(stats.total));
+      if (stats.durationLabel) shareImageApiUrl.searchParams.set("dur", stats.durationLabel);
+      shareImageApiUrl.searchParams.set("date", dateLabel);
+      shareImageApiUrl.searchParams.set("msg", resultMessage);
+      shareImageApiUrl.searchParams.set("cta", shareLabels.ctaPhrase);
+      shareImageApiUrl.searchParams.set("statuses", statusesParam);
+      shareImageApiUrl.searchParams.set("target", targetUrl);
+
       const shareData: ShareData = {
         title: "Enroscado",
-        text: `${buildRoscoShareText(stats, shareLabels)}\n${shareUrl}`,
+        text: buildRoscoShareText(stats, shareLabels),
+        url: shareImageApiUrl.toString(),
       };
-      if (imageFile && (!navigator.canShare || navigator.canShare({ files: [imageFile] }))) {
-        shareData.files = [imageFile];
-      }
 
       await navigator.share(shareData);
     } catch {
