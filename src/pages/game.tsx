@@ -1140,7 +1140,6 @@ const Game: React.FC = () => {
         soundEnabled={soundEnabled}
         hidden={showResumeOverlay || isFinished || isTimeOver}
         open={keyboardOpen}
-        gameSlug="enroscado"
         onSoundToggle={() => {
           setSoundEnabled((prev) => {
             const next = !prev;
