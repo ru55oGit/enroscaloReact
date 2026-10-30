@@ -1148,6 +1148,8 @@ const Game: React.FC = () => {
           });
         }}
         onPass={handlePass}
+        hasPtAccents={/[áàâãéêíóôõúç]/i.test(currentEntry?.word ?? "")}
+        onClose={() => setKeyboardOpen(false)}
       />
 
       <RewardedAdModal

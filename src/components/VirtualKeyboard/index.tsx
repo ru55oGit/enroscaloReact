@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 import "react-simple-keyboard/build/css/index.css";
 import VolumeUpRoundedIcon from "@mui/icons-material/VolumeUpRounded";
 import VolumeOffRoundedIcon from "@mui/icons-material/VolumeOffRounded";
+import KeyboardHideRoundedIcon from "@mui/icons-material/KeyboardHideRounded";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { useLanguage } from "../../i18n/LanguageContext";
 import { normalizeText } from "../../utils/textNormalization";
@@ -16,6 +17,15 @@ interface VirtualKeyboardProps {
   soundEnabled?: boolean;
   onSoundToggle?: () => void;
   onPass?: () => void;
+  // Las dos filas de acentos de pt (Á À Â Ã É Ê / Í Ó Ô Õ Ú Ç) solo tienen
+  // sentido cuando la palabra actual realmente usa alguno — el resto de
+  // las veces son dos filas enteras que no sirven para nada y tapan
+  // mucha pantalla (ver conversación, mismo criterio que imaginalo/emojinalo).
+  hasPtAccents?: boolean;
+  // Cierra el teclado (el "huequito" que quedaba vacío en en/pt donde no
+  // hay acento ni borrar que poner, ahora lo ocupa este botón en vez de
+  // quedar como espacio muerto).
+  onClose?: () => void;
   hidden?: boolean;
   // Antes mostraba un banner de house-ad en su lugar mientras estaba
   // cerrado, pero la página ya tiene uno propio más arriba (HouseAdBanner
@@ -79,6 +89,8 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
   soundEnabled = true,
   onSoundToggle,
   onPass,
+  hasPtAccents = false,
+  onClose,
   hidden = false,
   open = true,
 }) => {
@@ -174,6 +186,18 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
       </Box>
     );
 
+  const renderCloseKeyboard = () => (
+    <Box
+      component="button"
+      type="button"
+      onClick={() => onClose?.()}
+      aria-label="Cerrar teclado"
+      sx={{ ...keyButtonSx("default"), flex: 1.5, backgroundColor: "#e74c3c", borderColor: "#c0392b" }}
+    >
+      <KeyboardHideRoundedIcon sx={{ fontSize: 18 }} />
+    </Box>
+  );
+
   const renderPtAccentRows = () => (
     <>
       {PT_ACCENT_ROWS.map((row, rowIndex) => (
@@ -201,12 +225,11 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
   );
 
   // row2: 10 teclas en es (con Ñ) o 9 en el resto (sin letra extra).
-  // hasAccentKey: solo es tiene vocales acentuadas — una tecla "muerta" (´)
-  // ocupa el lugar del shift. En los demás idiomas no hace falta acento
-  // (en) o ya alcanza con tocar la letra base porque la comparación del
-  // juego ignora diacríticos (pt) — ahí esa posición se duplica como un
-  // segundo borrar, para no dejar un hueco asimétrico en la fila.
-  const renderMainRows = (row2: string[], hasAccentKey: boolean) => (
+  // leftFlank: qué va a la izquierda de la fila Z-M. "accent" en es (tecla
+  // "muerta" ´ en el lugar del shift). en/pt no necesitan acento ni un
+  // segundo borrar (con el de la derecha alcanza) — ese hueco lo ocupa
+  // cerrar el teclado en vez de quedar vacío o duplicar el borrar.
+  const renderMainRows = (row2: string[], leftFlank: "accent" | "close") => (
     <>
       <Box sx={{ display: "flex", justifyContent: "center", gap: "2px" }}>
         {ROW_1.map((letter) => renderLetterKey(letter))}
@@ -215,7 +238,7 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
         {row2.map((letter) => renderLetterKey(letter))}
       </Box>
       <Box sx={{ display: "flex", justifyContent: "center", gap: "2px" }}>
-        {hasAccentKey ? (
+        {leftFlank === "accent" ? (
           <Box
             component="button"
             type="button"
@@ -234,7 +257,7 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
             ´
           </Box>
         ) : (
-          renderBksp("Borrar")
+          renderCloseKeyboard()
         )}
         {ROW_3.map((letter) => renderLetterKey(letter))}
         {renderBksp("Borrar")}
@@ -325,8 +348,11 @@ const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
     return (
       <Box sx={wrapperSx}>
         <Box sx={{ display: "flex", flexDirection: "column", gap: "4px" }}>
-          {currentLanguage === "pt" && renderPtAccentRows()}
-          {renderMainRows(currentLanguage === "es" ? ES_ROW_2 : LATIN_ROW_2, currentLanguage === "es")}
+          {currentLanguage === "pt" && hasPtAccents && renderPtAccentRows()}
+          {renderMainRows(
+            currentLanguage === "es" ? ES_ROW_2 : LATIN_ROW_2,
+            currentLanguage === "es" ? "accent" : "close",
+          )}
           {renderActionRow()}
         </Box>
       </Box>
