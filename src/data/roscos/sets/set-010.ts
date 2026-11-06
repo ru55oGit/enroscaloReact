@@ -83,7 +83,7 @@ const ROSCO_3: RoscoEntry[] = [
   { word: "Tribu", startOrContain: "contain", letter: "U", definition: "Grupo de personas con la misma cultura, costumbres y, a veces, el mismo territorio.", category: "educacion-sociedad" },
   { word: "Violonchelo", startOrContain: "start", letter: "V", definition: "Instrumento de cuerda grande que se toca sentado con un arco.", category: "arte-musica" },
   { word: "Wushu", startOrContain: "start", letter: "W", definition: "Arte marcial tradicional de China.", category: "deporte-juego" },
-  { word: "Mixto", startOrContain: "contain", letter: "X", definition: "Que está formado por elementos de distinta clase.", category: "cultura-general" },
+  { word: "Exterior", startOrContain: "contain", letter: "X", definition: "Parte de afuera de algo, lo contrario del interior.", category: "cultura-general" },
   { word: "Yuca", startOrContain: "start", letter: "Y", definition: "Raíz comestible muy usada en la cocina tropical.", category: "gastronomia" },
   { word: "Pieza", startOrContain: "contain", letter: "Z", definition: "Cada una de las partes que forman un objeto.", category: "cultura-general" },
 ];
@@ -199,7 +199,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Triunfo", startOrContain: "contain", letter: "U", definition: "Victoria o logro importante.", category: "cultura-general" },
   { word: "Velodromo", startOrContain: "start", letter: "V", definition: "Pista cerrada donde se corren carreras de ciclismo.", category: "deporte-juego" },
   { word: "Wikipedia", startOrContain: "start", letter: "W", definition: "Enciclopedia libre que se consulta por internet.", category: "educacion-sociedad" },
-  { word: "Exito", startOrContain: "contain", letter: "X", definition: "Buen resultado que se logra al hacer algo.", category: "cultura-general" },
+  { word: "Luxemburgo", startOrContain: "contain", letter: "X", definition: "País europeo muy pequeño, uno de los fundadores de la Unión Europea.", category: "cultura-general" },
   { word: "Yen", startOrContain: "start", letter: "Y", definition: "Moneda que se usa en Japón.", category: "cultura-general" },
   { word: "Buzo", startOrContain: "contain", letter: "Z", definition: "Persona que se sumerge en el agua con un equipo especial.", category: "deporte-juego" },
 ];

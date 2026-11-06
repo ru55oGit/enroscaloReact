@@ -49,7 +49,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Piñata", startOrContain: "start", letter: "P", definition: "Figura de papel llena de golosinas que se rompe en las fiestas.", category: "cultura-general" },
   { word: "Maniqui", startOrContain: "contain", letter: "Q", definition: "Muñeco con forma de persona para mostrar la ropa.", category: "cultura-general" },
   { word: "Rancho", startOrContain: "start", letter: "R", definition: "Casa sencilla y humilde del campo, hecha de adobe o materiales precarios, típica del interior.", category: "cultura-general" },
-  { word: "Siriri", startOrContain: "start", letter: "S", definition: "Pajarito que defiende su nido con valentía.", category: "naturaleza" },
+  { word: "Siriri", startOrContain: "start", letter: "S", definition: "Especie de pato de cara blanca y canto muy ruidoso, común en humedales de Sudamérica y África.", category: "naturaleza" },
   { word: "Tradicion", startOrContain: "start", letter: "T", definition: "Costumbre que se transmite de padres a hijos.", category: "educacion-sociedad" },
   { word: "Universitario", startOrContain: "start", letter: "U", definition: "Estudiante que asiste a la universidad.", category: "educacion-sociedad" },
   { word: "Vencejo", startOrContain: "start", letter: "V", definition: "Ave muy veloz que pasa casi toda su vida volando.", category: "naturaleza" },

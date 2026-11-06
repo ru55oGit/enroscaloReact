@@ -141,7 +141,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Mueble", startOrContain: "contain", letter: "U", definition: "Objeto como una mesa o un ropero que sirve en la casa.", category: "cultura-general" },
   { word: "Visitante", startOrContain: "start", letter: "V", definition: "Equipo que juega en la cancha del rival.", category: "deporte-juego" },
   { word: "Wafle", startOrContain: "start", letter: "W", definition: "Masa con forma de cuadrícula que se sirve con frutas.", category: "gastronomia" },
-  { word: "Anexo", startOrContain: "contain", letter: "X", definition: "Cuarto que se agrega a la parte principal de la casa.", category: "cultura-general" },
+  { word: "Climax", startOrContain: "contain", letter: "X", definition: "Punto culminante de mayor tensión o emoción en una historia.", category: "arte-musica" },
   { word: "Yorkshire", startOrContain: "start", letter: "Y", definition: "Perro muy pequeño de pelo largo y sedoso.", category: "naturaleza" },
   { word: "Mestizo", startOrContain: "contain", letter: "Z", definition: "Animal nacido de la mezcla de dos razas.", category: "naturaleza" },
 ];

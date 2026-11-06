@@ -170,7 +170,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Luna", startOrContain: "contain", letter: "U", definition: "Satélite natural que gira alrededor de la Tierra y brilla de noche.", category: "ciencias" },
   { word: "Vacuna", startOrContain: "start", letter: "V", definition: "Preparado que ayuda al cuerpo a defenderse de las enfermedades.", category: "ciencias" },
   { word: "Wafle", startOrContain: "start", letter: "W", definition: "Masa dulce con forma de cuadrículas que se cocina en una plancha.", category: "gastronomia" },
-  { word: "Examen", startOrContain: "contain", letter: "X", definition: "Prueba para medir lo que una persona aprendió.", category: "educacion-sociedad" },
+  { word: "Axila", startOrContain: "contain", letter: "X", definition: "Hueco que se forma debajo del brazo, donde se une con el hombro.", category: "ciencias" },
   { word: "Yoga", startOrContain: "start", letter: "Y", definition: "Disciplina que combina posturas del cuerpo y respiración para relajarse.", category: "deporte-juego" },
   { word: "Ceniza", startOrContain: "contain", letter: "Z", definition: "Polvo gris que queda después de quemarse algo por completo.", category: "ciencias" },
 ];

@@ -12,7 +12,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Hula", startOrContain: "start", letter: "H", definition: "Baile tradicional de las islas de Hawái.", category: "arte-musica" },
   { word: "Inseparable", startOrContain: "start", letter: "I", definition: "Pajarito de colores que se tiene de mascota en pareja.", category: "naturaleza" },
   { word: "Jaula", startOrContain: "start", letter: "J", definition: "Caja con barrotes donde se tienen algunas mascotas.", category: "cultura-general" },
-  { word: "Kremlin", startOrContain: "start", letter: "K", definition: "Famoso conjunto de edificios y murallas de Moscú.", category: "cultura-general" },
+  { word: "Kubrick", startOrContain: "start", letter: "K", definition: "Apellido del director de cine estadounidense Stanley, autor de 2001: Odisea del espacio y El resplandor.", category: "personalidades" },
   { word: "Lavandero", startOrContain: "start", letter: "L", definition: "Persona que se dedica a lavar la ropa.", category: "educacion-sociedad" },
   { word: "Marimba", startOrContain: "start", letter: "M", definition: "Instrumento de láminas de madera que se golpean.", category: "arte-musica" },
   { word: "Naciente", startOrContain: "start", letter: "N", definition: "Lugar donde brota y comienza a correr un río, generalmente en lo alto de las montañas.", category: "naturaleza" },
@@ -54,7 +54,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Tubo", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada por donde pasa el agua.", category: "ciencias" },
   { word: "Vidriero", startOrContain: "start", letter: "V", definition: "Persona que coloca y arregla los vidrios.", category: "educacion-sociedad" },
   { word: "Wimbledon", startOrContain: "start", letter: "W", definition: "Famoso torneo de tenis que se juega sobre césped.", category: "deporte-juego" },
-  { word: "Saxo", startOrContain: "contain", letter: "X", definition: "Instrumento de viento dorado, abreviatura de saxofón.", category: "arte-musica" },
+  { word: "Flexible", startOrContain: "contain", letter: "X", definition: "Que se puede doblar, estirar o adaptar con facilidad.", category: "cultura-general" },
   { word: "Yema", startOrContain: "start", letter: "Y", definition: "Parte amarilla del huevo, usada en muchos postres.", category: "gastronomia" },
   { word: "Vergonzoso", startOrContain: "contain", letter: "Z", definition: "Que siente vergüenza con facilidad, tímido.", category: "educacion-sociedad" },
 ];

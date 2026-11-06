@@ -25,7 +25,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Ruta", startOrContain: "contain", letter: "U", definition: "Camino ancho que une ciudades o pueblos.", category: "transporte" },
   { word: "Vocablo", startOrContain: "start", letter: "V", definition: "Cada una de las palabras de un idioma.", category: "educacion-sociedad" },
   { word: "Wilson", startOrContain: "start", letter: "W", definition: "Marca de pelotas muy usada en tenis y básquet.", category: "deporte-juego" },
-  { word: "Galaxia", startOrContain: "contain", letter: "X", definition: "Enorme conjunto de estrellas unidas por la gravedad.", category: "ciencias" },
+  { word: "Contexto", startOrContain: "contain", letter: "X", definition: "Conjunto de circunstancias que rodean un hecho o una frase y ayudan a entenderlo.", category: "educacion-sociedad" },
   { word: "Yegua", startOrContain: "start", letter: "Y", definition: "Hembra adulta del caballo, usada para montar, tirar carros o dar cría a los potrillos.", category: "naturaleza" },
   { word: "Modernizar", startOrContain: "contain", letter: "Z", definition: "Actualizar algo, como una máquina o una idea, para adaptarlo a la época actual.", category: "educacion-sociedad" },
 ];
@@ -54,7 +54,7 @@ const ROSCO_2: RoscoEntry[] = [
   { word: "Utensilio", startOrContain: "start", letter: "U", definition: "Herramienta u objeto que se usa para hacer una tarea, como los de cocina.", category: "cultura-general" },
   { word: "Volea", startOrContain: "start", letter: "V", definition: "Golpe a la pelota en el aire antes de que toque el suelo.", category: "deporte-juego" },
   { word: "Wagon", startOrContain: "start", letter: "W", definition: "Cada uno de los vagones que arrastra una locomotora.", category: "transporte" },
-  { word: "Saxo", startOrContain: "contain", letter: "X", definition: "Instrumento de viento de metal muy usado en el jazz.", category: "arte-musica" },
+  { word: "Anexion", startOrContain: "contain", letter: "X", definition: "Acción de incorporar un territorio al de otro país.", category: "educacion-sociedad" },
   { word: "Yuri", startOrContain: "start", letter: "Y", definition: "Nombre del cosmonauta soviético Gagarin, la primera persona en viajar al espacio.", category: "personalidades" },
   { word: "Perezoso", startOrContain: "contain", letter: "Z", definition: "Animal lento que vive colgado de los árboles; también alguien que no tiene ganas de hacer nada.", category: "naturaleza" },
 ];
@@ -111,7 +111,7 @@ const ROSCO_4: RoscoEntry[] = [
   { word: "Tono", startOrContain: "start", letter: "T", definition: "Qué tan grave o agudo es un sonido.", category: "arte-musica" },
   { word: "Mundo", startOrContain: "contain", letter: "U", definition: "El planeta Tierra y todo lo que existe en él.", category: "cultura-general" },
   { word: "Vendaval", startOrContain: "start", letter: "V", definition: "Viento muy fuerte y violento que sopla con furia y puede arrancar techos y derribar árboles.", category: "naturaleza" },
-  { word: "Wafle", startOrContain: "start", letter: "W", definition: "Masa dulce con forma de cuadrícula cocida en una plancha.", category: "gastronomia" },
+  { word: "Waze", startOrContain: "start", letter: "W", definition: "Aplicación de navegación GPS muy usada para evitar el tráfico.", category: "transporte" },
   { word: "Boxeador", startOrContain: "contain", letter: "X", definition: "Deportista que se enfrenta a un rival peleando con los puños.", category: "deporte-juego" },
   { word: "Inyectar", startOrContain: "contain", letter: "Y", definition: "Introducir un líquido en el cuerpo con una jeringa.", category: "ciencias" },
   { word: "Zorro", startOrContain: "start", letter: "Z", definition: "Mamífero astuto de cola peluda y hocico puntiagudo.", category: "naturaleza" },
@@ -141,7 +141,7 @@ const ROSCO_5: RoscoEntry[] = [
   { word: "Tunica", startOrContain: "contain", letter: "U", definition: "Prenda larga y suelta, sin mangas o con mangas anchas, usada desde la antigüedad.", category: "cultura-general" },
   { word: "Videojuego", startOrContain: "start", letter: "V", definition: "Juego electrónico que se juega en una pantalla.", category: "deporte-juego" },
   { word: "Walkman", startOrContain: "start", letter: "W", definition: "Aparato antiguo y portátil para escuchar música.", category: "cultura-general" },
-  { word: "Conexion", startOrContain: "contain", letter: "X", definition: "Unión o enlace entre dos cosas o lugares.", category: "ciencias" },
+  { word: "Experiencia", startOrContain: "contain", letter: "X", definition: "Conocimiento que se adquiere a través de vivir o practicar algo.", category: "educacion-sociedad" },
   { word: "Yerba", startOrContain: "start", letter: "Y", definition: "Hojas secas y molidas con las que se prepara el mate.", category: "gastronomia" },
   { word: "Arroz", startOrContain: "contain", letter: "Z", definition: "Cereal en granos blancos que acompaña muchas comidas.", category: "gastronomia" },
 ];
@@ -170,7 +170,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Urna", startOrContain: "start", letter: "U", definition: "Caja donde se depositan los votos en una elección.", category: "educacion-sociedad" },
   { word: "Ventaja", startOrContain: "start", letter: "V", definition: "Estar por delante del rival en el marcador.", category: "deporte-juego" },
   { word: "Wifi", startOrContain: "start", letter: "W", definition: "Conexión sin cables que permite acceder a internet.", category: "ciencias" },
-  { word: "Examen", startOrContain: "contain", letter: "X", definition: "Prueba para medir lo que una persona aprendió.", category: "educacion-sociedad" },
+  { word: "Excusa", startOrContain: "contain", letter: "X", definition: "Motivo o pretexto que se da para justificar algo.", category: "cultura-general" },
   { word: "Yoga", startOrContain: "start", letter: "Y", definition: "Disciplina que combina posturas del cuerpo y respiración.", category: "deporte-juego" },
   { word: "Garbanzo", startOrContain: "contain", letter: "Z", definition: "Legumbre redonda y amarillenta con la que se hace el hummus.", category: "gastronomia" },
 ];

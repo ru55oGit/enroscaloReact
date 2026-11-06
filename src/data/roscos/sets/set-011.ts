@@ -25,7 +25,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Uva", startOrContain: "start", letter: "U", definition: "Fruta pequeña y dulce que crece en racimos.", category: "gastronomia" },
   { word: "Velocidad", startOrContain: "start", letter: "V", definition: "Qué tan rápido se mueve algo.", category: "ciencias" },
   { word: "Western", startOrContain: "start", letter: "W", definition: "Tipo de película ambientada en el lejano oeste americano.", category: "cultura-general" },
-  { word: "Galaxia", startOrContain: "contain", letter: "X", definition: "Enorme conjunto de estrellas unidas por la gravedad.", category: "ciencias" },
+  { word: "Expediente", startOrContain: "contain", letter: "X", definition: "Conjunto de documentos relacionados con un mismo asunto, caso o persona.", category: "educacion-sociedad" },
   { word: "Yema", startOrContain: "start", letter: "Y", definition: "Brote nuevo de una planta; también la parte amarilla del huevo.", category: "naturaleza" },
   { word: "Plaza", startOrContain: "contain", letter: "Z", definition: "Espacio público abierto de una ciudad, con bancos y árboles.", category: "cultura-general" },
 ];

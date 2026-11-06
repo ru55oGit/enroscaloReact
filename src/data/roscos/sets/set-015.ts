@@ -26,7 +26,7 @@ const ROSCO_1: RoscoEntry[] = [
   { word: "Veracidad", startOrContain: "start", letter: "V", definition: "Cualidad de decir y hacer las cosas con verdad.", category: "cultura-general" },
   { word: "Whiskeria", startOrContain: "start", letter: "W", definition: "Bar especializado en vender y degustar distintos tipos de whisky.", category: "gastronomia" },
   { word: "Anexo", startOrContain: "contain", letter: "X", definition: "Parte que se agrega a algo principal.", category: "cultura-general" },
-  { word: "Yoyo", startOrContain: "start", letter: "Y", definition: "Juguete redondo que sube y baja por un hilo.", category: "deporte-juego" },
+  { word: "Stanley", startOrContain: "contain", letter: "Y", definition: "Nombre de pila del director de cine Kubrick, autor de 2001: Odisea del espacio y El resplandor.", category: "personalidades" },
   { word: "Brazo", startOrContain: "contain", letter: "Z", definition: "Cada uno de los apéndices largos de la estrella de mar.", category: "naturaleza" },
 ];
 
@@ -198,8 +198,8 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Travolta", startOrContain: "start", letter: "T", definition: "Apellido del actor estadounidense John, famoso por Pulp Fiction y Fiebre del sábado noche.", category: "personalidades" },
   { word: "Esquina", startOrContain: "contain", letter: "U", definition: "Punto donde se cruzan dos calles.", category: "cultura-general" },
   { word: "Verderon", startOrContain: "start", letter: "V", definition: "Pajarito verdoso de canto agradable.", category: "naturaleza" },
-  { word: "Western", startOrContain: "start", letter: "W", definition: "Tipo de película ambientada en el lejano oeste.", category: "cultura-general" },
-  { word: "Conexion", startOrContain: "contain", letter: "X", definition: "Unión o enlace entre dos aparatos o lugares.", category: "ciencias" },
+  { word: "Wally", startOrContain: "start", letter: "W", definition: "Personaje de los libros ilustrados ¿Dónde está Wally?, siempre vestido de rayas rojas y blancas.", category: "cultura-general" },
+  { word: "Pixar", startOrContain: "contain", letter: "X", definition: "Estudio de animación creador de películas como Toy Story, Buscando a Nemo y Coco.", category: "arte-musica" },
   { word: "Coyote", startOrContain: "contain", letter: "Y", definition: "Cánido salvaje típico de México y el oeste de Norteamérica, ágil y oportunista.", category: "naturaleza" },
   { word: "Zapote", startOrContain: "start", letter: "Z", definition: "Árbol tropical que da una fruta dulce y blanda.", category: "naturaleza" },
 ];

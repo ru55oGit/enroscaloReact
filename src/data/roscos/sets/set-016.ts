@@ -199,7 +199,7 @@ const ROSCO_7: RoscoEntry[] = [
   { word: "Tubo", startOrContain: "contain", letter: "U", definition: "Pieza hueca y alargada, generalmente cilíndrica, que sirve para conducir líquidos o gases.", category: "ciencias" },
   { word: "Villano", startOrContain: "start", letter: "V", definition: "Personaje malo de la historia.", category: "mitologia-fantasia" },
   { word: "Walkman", startOrContain: "start", letter: "W", definition: "Aparato antiguo y portátil para escuchar música.", category: "ciencias" },
-  { word: "Exito", startOrContain: "contain", letter: "X", definition: "Buen resultado de algo que se intenta.", category: "cultura-general" },
+  { word: "Relax", startOrContain: "contain", letter: "X", definition: "Estado de descanso y tranquilidad, sin tensión ni esfuerzo.", category: "cultura-general" },
   { word: "Yermo", startOrContain: "start", letter: "Y", definition: "Terreno vacío y sin cultivar.", category: "naturaleza" },
   { word: "Pozo", startOrContain: "contain", letter: "Z", definition: "Hueco profundo cavado en la tierra para sacar agua.", category: "cultura-general" },
 ];

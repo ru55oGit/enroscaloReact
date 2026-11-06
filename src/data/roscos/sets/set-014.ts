@@ -170,7 +170,7 @@ const ROSCO_6: RoscoEntry[] = [
   { word: "Unico", startOrContain: "start", letter: "U", definition: "Que no hay otro igual.", category: "cultura-general" },
   { word: "Vara", startOrContain: "start", letter: "V", definition: "Palo largo y delgado que sirve para guiar las plantas.", category: "naturaleza" },
   { word: "Wok", startOrContain: "start", letter: "W", definition: "Sartén honda asiática para saltear alimentos.", category: "gastronomia" },
-  { word: "Mixto", startOrContain: "contain", letter: "X", definition: "Que está formado por elementos de distinta clase.", category: "cultura-general" },
+  { word: "Proximo", startOrContain: "contain", letter: "X", definition: "Que está cerca en el espacio o en el tiempo.", category: "cultura-general" },
   { word: "Yen", startOrContain: "start", letter: "Y", definition: "Moneda que se usa en Japón.", category: "cultura-general" },
   { word: "Buzo", startOrContain: "contain", letter: "Z", definition: "Persona que se sumerge en el agua con un equipo especial.", category: "deporte-juego" },
 ];
